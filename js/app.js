@@ -184,14 +184,14 @@ function submit_contact_form_ajax(){
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("Gracias!", "Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!", "success");  
+                        swal("Gracias!", "¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!", "success");  
                     },
                     error: function(err) {
                         $('#contact_form .wrapper_button img').css("display", "none");
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("Algo ocurrió!", "Algo occurrió enviando tu mensaje, por favor intenta otra vez!", "error");
+                        swal("Algo ocurrió!", "¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!", "error");
                     }
                 });
             }
