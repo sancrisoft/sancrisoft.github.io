@@ -104,11 +104,9 @@ function apply_carousel_info(){
   })
 }
 function main_nav_items_click(){
-    $(".main-nav li a").click(function(event){
+    $('body').on('click', '.main-nav li a', function(){
         if($("body").width() < 1009){
             $(".main-nav").hide();
-            event.stopPropagation();
-
             return false;
         }
     });
@@ -120,7 +118,7 @@ function menu_bar_fixed(){
         $('.main-nav').slideToggle();
         event.stopPropagation();
 
-        return false; 
+        return false;                                                                                   
     });
 }
 
