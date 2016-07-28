@@ -480,11 +480,6 @@ img {
 	-webkit-transition:all 0.3s ease-in-out;
 }
 
-.quote-right:hover{
-color: #fff;
-border: 2px solid #fff;
-}
-
 .c-logo-part{
 	background:#f48600;
 	padding:25px 0;
@@ -802,10 +797,6 @@ border: 2px solid #fff;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
-}
-
-.res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
-	color: #f48600 !important;
 }
 
 .portfolioContainer{

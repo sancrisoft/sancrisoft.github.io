@@ -19,7 +19,14 @@
 	        nav{
 	        	.container{
 	        		.res-nav_click{
-	        			&:active, &:focus, &:visited{
+	        			&.selected{
+	        				color: #cc7000 !important;
+
+	        				&:hover, &:active, &:focus, &:visited{
+		        				color: #cc7000 !important;
+		        			}
+	        			}
+	        			&:hover, &:active, &:focus, &:visited{
 	        				color: #777777 !important;
 	        			}
 	        		}
@@ -127,7 +134,7 @@
     			    	width: 40px;
 
     			    	a{
-    			    		font-size: 25px;
+    			    		font-size: 20px;
     			    		color: #888888;
     			    	}
 
