@@ -16,6 +16,15 @@
 	            position: relative;
 	            height: 365px;
 	        }
+	        nav{
+	        	.container{
+	        		.res-nav_click{
+	        			&:active, &:focus, &:visited{
+	        				color: #777777 !important;
+	        			}
+	        		}
+	        	}
+	        }
 	        ul{
 	        	&.main-nav{
 	        		display: none;
@@ -35,68 +44,99 @@
 	        	height: auto;
 	        	max-width: 350px!important
 	        }
-        .carousel{
-            .owl-carousel{
-                width: 92%;
-                margin: 0 auto;
-                z-index: 2;
-                .owl-wrapper-outer{
-                	width: 98%;
-                }
-                .item{
-                    margin: 10px;
-                }
-                .owl-pagination{
-                    text-align: center;
-                }
-                .owl-page{
-                    display: inline-block;
-                    span {
-                        display: block;
-                        width: 12px;
-                        height: 12px;
-                        margin: 5px 7px;
-                        filter: Alpha(Opacity=50);
-                        opacity: 0.5;
-                        -webkit-border-radius: 20px;
-                        -moz-border-radius: 20px;
-                        border-radius: 20px;
-                        background: #869791;
-                    }   
-                }
-                
-                
-            }
-            .prev{
-                float: left;
-                padding: 0px;
-                i{
-                    font-size: 50px;
-                    color: black;
-                    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.34);
+	        .carousel{
+	            .owl-carousel{
+	                width: 92%;
+	                margin: 0 auto;
+	                z-index: 2;
+	                .owl-wrapper-outer{
+	                	width: 98%;
+	                }
+	                .item{
+	                    margin: 10px;
+	                }
+	                .owl-pagination{
+	                    text-align: center;
+	                }
+	                .owl-page{
+	                    display: inline-block;
+	                    span {
+	                        display: block;
+	                        width: 12px;
+	                        height: 12px;
+	                        margin: 5px 7px;
+	                        filter: Alpha(Opacity=50);
+	                        opacity: 0.5;
+	                        -webkit-border-radius: 20px;
+	                        -moz-border-radius: 20px;
+	                        border-radius: 20px;
+	                        background: #869791;
+	                    }   
+	                }
+	                
+	                
+	            }
+	            .prev{
+	                float: left;
+	                padding: 0px;
+	                i{
+	                    font-size: 50px;
+	                    color: black;
+	                    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.34);
 
-                }
-            }
-            .next{
-                float: right;
-                padding: 0px;
-                i{
-                    font-size: 50px;
-                    color: black;
-                    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.34);
+	                }
+	            }
+	            .next{
+	                float: right;
+	                padding: 0px;
+	                i{
+	                    font-size: 50px;
+	                    color: black;
+	                    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.34);
 
-                }
-            }
-            .customNavigation{
-                position: absolute;
-                top: 48%;
-                width: 100%;
-                z-index: 1;
-            }
-        }
+	                }
+	            }
+	            .customNavigation{
+	                position: absolute;
+	                top: 48%;
+	                width: 100%;
+	                z-index: 1;
+	            }
+	        }
 	        .team-leader-box{
 	            width: 70%;
 	            margin: 0 auto;
+
+	            .team-leader-shadow{
+	            	display: none;
+	            }
+
+	            ul.social-networks-desktop{
+	            	display: none;
+	            }
+
+	            ul.social-networks-mobile{
+	            	display: block;
+        			text-align: center;
+    			    list-style: none;
+    			    margin-bottom: 40px;
+    			    padding: 0;
+
+    			    li{
+    			    	display: inline-block;
+    			    	width: 40px;
+
+    			    	a{
+    			    		font-size: 25px;
+    			    		color: #888888;
+    			    	}
+
+    			    	&.write-us{
+    			    		text-decoration: underline;
+    			    		width: 100%;
+    			    	}
+    			    }
+	        	}
 	        }
 			.video-container {
 	            position: relative;
@@ -105,7 +145,7 @@
 	            height: 100%;
 	            width: 100%;
 	            overflow: hidden;
-	            background: #000;
+	            background: #CCC;
 
 	            video{
 	                position: absolute;
@@ -165,6 +205,7 @@
 	        		}
 	        	}
 	        }
+
 
 	        /* Modal */
 	        .modal{
