@@ -189,14 +189,14 @@ function submit_contact_form_ajax(){
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("Gracias!", "¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!", "success");  
+                        swal("¡Gracias!", "¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!", "success");  
                     },
                     error: function(err) {
                         $('#contact_form .wrapper_button img').css("display", "none");
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("Algo ocurrió!", "¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!", "error");
+                        swal("¡Algo ocurrió!", "¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!", "error");
                     }
                 });
             }
@@ -309,11 +309,21 @@ function smart_resize(){
 
 function show_menu_resize(){
     $(window ).resize(function() {
-       if($("body").width() > 1009){
-            $(".main-nav").show();
-       }else{
-           $(".main-nav").hide(); 
-       }
+            var initialize = $('input[name="nav-initialize"]').val();
+
+            console.log(initialize);
+
+            if($("body").width() > 1009){
+                if(initialize === false){
+                    $('input[name="nav-initialize"]').val("true");
+                    $(".main-nav").show();
+                }
+            }else{
+                if(initialize === false){
+                    $('input[name="nav-initialize"]').val("true");
+                    $(".main-nav").hide();
+                }
+            }
     });
 }
 
