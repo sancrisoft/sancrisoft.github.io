@@ -141,17 +141,17 @@ function scroll_top_event(){
         var $anchor = $(this);
         var addtop = 0;
 
-        if($anchor.attr('href') == "#technologies"){
-            addtop = 30;
-        }
-        
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 80 - addtop
-        }, 800,'easeInOutExpo');
-
         if($("body").width() < 1009){
             $(".main-nav").hide();
         }
+
+        if($anchor.attr('href') == "#technologies"){
+            addtop = 30;
+        }
+
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 80 - addtop
+        }, 800,'easeInOutExpo');
     });
 }
 
