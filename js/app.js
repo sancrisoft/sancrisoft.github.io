@@ -104,17 +104,22 @@ function apply_carousel_info(){
   })
 }
 function main_nav_items_click(){
-    $(".main-nav li a").click(function(){
+    $(".main-nav li a").click(function(event){
         if($("body").width() < 1009){
             $(".main-nav").hide();
+            event.stopPropagation();
+
+            return false;
         }
     });
 }
 
 function menu_bar_fixed(){
     $('#test').scrollToFixed();
-    $('.res-nav_click').click(function(){
+    $('.res-nav_click').click(function(event){
         $('.main-nav').slideToggle();
+        event.stopPropagation();
+
         return false; 
     });
 }
