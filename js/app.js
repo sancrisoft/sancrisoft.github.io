@@ -2,7 +2,6 @@
 //jQuery is required to run this code
 $( document ).ready(function() {
     //Custom methods of theme
-    main_nav_items_click();
     menu_bar_fixed();
     request_access_portfolio();
     slick_gallery_technologies();
@@ -103,14 +102,6 @@ function apply_carousel_info(){
     owl.trigger('owl.prev');
   })
 }
-function main_nav_items_click(){
-    $('body').on('click', '.main-nav li a', function(){
-        if($("body").width() < 1009){
-            $(".main-nav").hide();
-            return false;
-        }
-    });
-}
 
 function menu_bar_fixed(){
     $('#test').scrollToFixed();
@@ -146,18 +137,21 @@ function request_access_portfolio(){
 }
 
 function scroll_top_event(){
-    $(window).load(function(){
-        $('.main-nav li a, a.scroll-top-event').bind('click',function(event){
-            var $anchor = $(this);
-            var addtop = 0;
-            if($anchor.attr('href') == "#technologies"){
-                addtop = 30;
-            }
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 80 - addtop
-            }, 800,'easeInOutExpo');
-            event.preventDefault();
-        });
+    $('body').on('click', '.main-nav li a, a.scroll-top-event', function(){
+        var $anchor = $(this);
+        var addtop = 0;
+
+        if($anchor.attr('href') == "#technologies"){
+            addtop = 30;
+        }
+        
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 80 - addtop
+        }, 800,'easeInOutExpo');
+
+        if($("body").width() < 1009){
+            $(".main-nav").hide();
+        }
     });
 }
 
@@ -308,8 +302,6 @@ function smart_resize(){
 function show_menu_resize(){
     $(window ).resize(function() {
             var initialize = $('input[name="nav-initialize"]').val();
-
-            console.log(initialize);
 
             if($("body").width() > 1009){
                 if(initialize === false){
