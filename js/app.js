@@ -345,7 +345,7 @@ function validate_code_portfolio(){
             '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box branding">'+
-            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/ipad-home.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box photography">'+
             '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
