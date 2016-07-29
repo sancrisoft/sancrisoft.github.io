@@ -170,13 +170,13 @@ function scroll_top_event(){
 function submit_contact_form_ajax(){
     var contactForm = $('#contact_form');
 
-    $("#contact_form").attr('action', '//formspree.io/' + 'contacto' + '@' + 'sancrisoft' + '.' + 'com');
+    $("#contact_form").attr('action', '//formspree.io/' + 'info' + '@' + 'sancrisoft' + '.' + 'com');
     
         contactForm.submit(function(e) {
             e.preventDefault();
             if($("#contact_form").valid()){
                 $.ajax({
-                    url: "https://formspree.io/contacto@sancrisoft.com", 
+                    url: "https://formspree.io/info@sancrisoft.com", 
                     method: 'POST',
                     data: $(this).serialize(),
                     dataType: 'json',
