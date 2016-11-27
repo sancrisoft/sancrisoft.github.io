@@ -414,7 +414,7 @@ function validate_code_portfolio_function(){
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box photography">'+
             '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservation’s System</h3><p>Sistema Web</p>'+
+            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
         '</div>'+
     '</div>';
     
