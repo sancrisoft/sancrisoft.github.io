@@ -19,6 +19,17 @@
 			}
 			.res-nav_click{
 				display: block;
+				
+				&.selected{
+    				color: #cc7000 !important;
+
+    				&:hover, &:active, &:focus, &:visited{
+        				color: #cc7000 !important;
+        			}
+    			}
+				&:hover, &:active, &:focus, &:visited{
+    				color: #777777 !important;
+    			}
 			}
 			ul.main-nav{
 				display: none;
@@ -98,6 +109,11 @@
 
 	        .team-leader-box{
 	        	margin-bottom: 0px !important;
+
+	        	span{
+	        		margin-bottom: 10px;
+	        		min-height: 36px;
+	        	}
 	        	
 	            .team-leader-shadow{
 	            	display: none;
@@ -119,7 +135,7 @@
     			    	width: 40px;
 
     			    	a{
-    			    		font-size: 25px;
+    			    		font-size: 20px;
     			    		color: #888888;
     			    	}
 

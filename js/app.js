@@ -109,7 +109,15 @@ function menu_bar_fixed(){
         $('.main-nav').slideToggle();
         event.stopPropagation();
 
-        return false;                                                                                   
+        //Add class selected
+        if($('.res-nav_click').hasClass('selected')){
+            $('.res-nav_click').removeClass('selected');
+        }
+        else{
+            $('.res-nav_click').addClass('selected');
+        }
+
+        return false;
     });
 }
 
@@ -141,8 +149,12 @@ function scroll_top_event(){
         var $anchor = $(this);
         var addtop = 0;
 
-        if($("body").width() < 1009){
+        if($("body").width() <= 1024){
             $(".main-nav").css('display', 'none');
+
+            if($('.res-nav_click').hasClass('selected')){
+                $('.res-nav_click').removeClass('selected');
+            }
         }
 
         if($anchor.attr('href') == "#technologies"){
@@ -158,13 +170,13 @@ function scroll_top_event(){
 function submit_contact_form_ajax(){
     var contactForm = $('#contact_form');
 
-    $("#contact_form").attr('action', '//formspree.io/' + 'contacto' + '@' + 'sancrisoft' + '.' + 'com');
+    $("#contact_form").attr('action', '//formspree.io/' + 'info' + '@' + 'sancrisoft' + '.' + 'com');
     
         contactForm.submit(function(e) {
             e.preventDefault();
             if($("#contact_form").valid()){
                 $.ajax({
-                    url: "https://formspree.io/contacto@sancrisoft.com", 
+                    url: "https://formspree.io/info@sancrisoft.com", 
                     method: 'POST',
                     data: $(this).serialize(),
                     dataType: 'json',
@@ -303,7 +315,7 @@ function show_menu_resize(){
     $(window ).resize(function() {
         var initialize = $('input[name="nav-initialize"]').val();
 
-        if($("body").width() > 1009){
+        if($("body").width() > 1024){
             if(initialize === false){
                 $('input[name="nav-initialize"]').val("true");
                 $(".main-nav").show();
@@ -333,11 +345,11 @@ function validate_code_portfolio(){
             '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box branding">'+
-            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/ipad-home.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box photography">'+
             '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservation’s System</h3><p>Sistema Web</p>'+
+            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
         '</div>'+
     '</div>';
 
@@ -398,11 +410,11 @@ function validate_code_portfolio_function(){
             '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box branding">'+
-            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/ipad-home.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
             '<p>Sistema Web</p></div>'+
         '<div class=" Portfolio-box photography">'+
             '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservation’s System</h3><p>Sistema Web</p>'+
+            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
         '</div>'+
     '</div>';
     
