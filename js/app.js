@@ -142,7 +142,7 @@ function scroll_top_event(){
         var addtop = 0;
 
         if($("body").width() < 1009){
-            $(".main-nav").hide();
+            $(".main-nav").css('display', 'none');
         }
 
         if($anchor.attr('href') == "#technologies"){
@@ -301,19 +301,19 @@ function smart_resize(){
 
 function show_menu_resize(){
     $(window ).resize(function() {
-            var initialize = $('input[name="nav-initialize"]').val();
+        var initialize = $('input[name="nav-initialize"]').val();
 
-            if($("body").width() > 1009){
-                if(initialize === false){
-                    $('input[name="nav-initialize"]').val("true");
-                    $(".main-nav").show();
-                }
-            }else{
-                if(initialize === false){
-                    $('input[name="nav-initialize"]').val("true");
-                    $(".main-nav").hide();
-                }
+        if($("body").width() > 1009){
+            if(initialize === false){
+                $('input[name="nav-initialize"]').val("true");
+                $(".main-nav").show();
             }
+        }else{
+            if(initialize === false){
+                $('input[name="nav-initialize"]').val("true");
+                $(".main-nav").hide();
+            }
+        }
     });
 }
 
