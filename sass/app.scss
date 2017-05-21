@@ -1,4 +1,3 @@
-
 html{
     body{
         /* General Style */
@@ -252,13 +251,20 @@ html{
                 .container-who-we-are{
                     .row {
                         figure {
+                            display: inline-block;
+                            margin-top: 35px;
                             padding: 0px 15px;
+                            vertical-align: top;
+                            width: 50%;
                         }
 
                         div {
                             &.who-we-are {
+                                display: inline-block;
                                 font-size: 17px;
                                 text-align: justify;
+                                vertical-align: top;
+                                width: 50%;
 
                                 p {
                                     line-height: 30px;
