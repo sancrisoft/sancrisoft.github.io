@@ -349,7 +349,7 @@ function validate_code_portfolio(){
                                 '<p>Web System</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Web System</p>'+
                             '</div>'+
                         '</div>';
 
@@ -364,8 +364,6 @@ function validate_code_portfolio(){
     //Validate if the user is already valid
     if(localStorage.getItem("portfolioValid")){
         if(localStorage.getItem("portfolioValid") === "isValid"){
-            var hrefSite = window.location.origin + window.location.pathname;
-
             //Portfolio valid!, hide buttons to request portfolio and open portfolio
             if($('.portfolioContainer').length === 0){
                $('#Portfolio').append(divPortfolio);
@@ -373,7 +371,7 @@ function validate_code_portfolio(){
 
                 //Get info of modals
                 $.ajax({
-                    url: hrefSite + '/js/portfolio-content/content-en', 
+                    url: '/js/portfolio-content/content-en', 
                     method: 'GET',
                     success: function(data) {
                         var key = CryptoJS.enc.Base64.parse("#base64Key#");
@@ -414,7 +412,7 @@ function validate_code_portfolio_function(){
                                 '<p>Web System</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Web System</p>'+
                             '</div>'+
                         '</div>';
     
@@ -440,7 +438,7 @@ function validate_code_portfolio_function(){
 
             //Get info of modals
             $.ajax({
-                url: hrefSite + '/js/portfolio-content/content-en', 
+                url: '/js/portfolio-content/content-en', 
                 method: 'GET',
                 success: function(data) {
                     var key = CryptoJS.enc.Base64.parse("#base64Key#");
