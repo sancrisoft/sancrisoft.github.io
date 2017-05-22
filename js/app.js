@@ -61,11 +61,9 @@ function apply_carousel_info(){
 function detect_browser_language() {
     var pathname = window.location.pathname;
     var userLang = navigator.language || navigator.userLanguage; 
-    
-    console.log(pathname, userLang);
 
     if(userLang !== 'en-US' && pathname !== '/index-es.html') {
-        //window.location = './index-es.html';
+        window.location = './index-es.html';
     }
 }
 
