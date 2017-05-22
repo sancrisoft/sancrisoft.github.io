@@ -1,6 +1,9 @@
 
 //jQuery is required to run this code
 $( document ).ready(function() {
+    //Method to load language of website (Text)
+    load_language_page();
+
     //Custom methods of theme
     menu_bar_fixed();
     request_access_portfolio();
@@ -16,8 +19,52 @@ $( document ).ready(function() {
     scroll_top_event();
 });
 
-function validate_contact_form() {
+function load_language_page () {
+    var language_page = $('input[name="language-page"]').val();
 
+    if(language_page === 'ES') {
+        var languages = {
+            your_not_robot: 'Por favor verifica que no eres un robot.',
+            please_enter_name: 'Por favor ingresa tu nombre',
+            please_enter_email: 'Por favor ingresa un e-mail',
+            enter_email_valid: 'Ingresa una dirección de correo válida',
+            please_enter_message: 'Por favor ingresa tu mensaje.',
+            please_need_access_portfolio: 'Hola, por favor necesito acceso al portafolio de proyectos...',
+            thanks: '¡Gracias!',
+            we_have_received_your_message: '¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!',
+            something_happen: '¡Algo ocurrió!',
+            something_happen_sending_message : '¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!',
+            app_mobile_android_ios : 'Aplicación Móvil para iOS y Android',
+            web_system : 'Sistema Web',
+            code_invalid : 'El código que ingresaste no es válido. Contáctanos para obtener uno válido.',
+            url_content_portfolio : '/js/portfolio-content/content'
+        };
+
+        window.translation = languages;
+    }
+    else {
+        var languages = {
+            your_not_robot : 'Please verify that you are not a robot.',
+            please_enter_name : 'Please enter your name',
+            please_enter_email : 'Please enter an email',
+            enter_email_valid : 'Enter a valid email',
+            please_enter_message : 'Please enter your message.',
+            please_need_access_portfolio : 'Hello, please need access to the portfolio projects...',
+            thanks : 'Thank you!',
+            we_have_received_your_message : 'We have receive your message and we will contact you as soon as possible!',
+            something_happen : 'Something happen!',
+            something_happen_sending_message : 'Something happen sending your message, please try again!',
+            app_mobile_android_ios : 'Mobile App for IOs and Android',
+            web_system : 'Web System',
+            code_invalid : 'The code you enter is not valid!. Contact us to get a valid code!.',
+            url_content_portfolio : '/js/portfolio-content/content-en'
+        };
+
+        window.translation = languages;
+    }
+}
+
+function validate_contact_form() {
     $("#contact_form").validate({
         rules: {
             _name: {
@@ -33,7 +80,7 @@ function validate_contact_form() {
             "hiddenRecaptcha": {
                 required: function() {
                     if(grecaptcha.getResponse() == '') {
-                    var spanError = '<div class="recaptcha-error-message">Please verify that you are not a robot.</div>';
+                    var spanError = '<div class="recaptcha-error-message">' + window.translation.your_not_robot + '</div>';
 
                     if($(".recaptcha-error-message").length == 0){
                         //Add error to recaptcha
@@ -57,15 +104,16 @@ function validate_contact_form() {
             }
         },
         messages: {
-            _name: "Por favor ingresa tu nombre",
+            _name: window.translation.please_enter_name,
             _replyto: {
-                required: "Por favor ingresa un e-mail",
-                email: "Ingresa una dirección de correo válida",
+                required: window.translation.please_enter_email,
+                email: window.translation.enter_email_valid,
             },
-            _message: "Por favor ingresa tu mensaje.",
+            _message: window.translation.please_enter_message,
         }       
     });
 }
+
 function apply_carousel_info(){
     $(".owl-carousel").each(function(){
         var owl = $(this);
@@ -125,7 +173,7 @@ function request_access_portfolio(){
     //Event to request access
     $(document).on('click', '.access-portfolio.request', function(){
         var contactLink = "#contact";
-        var messageRequest = "Hola, por favor necesito acceso al portafolio de proyectos..."
+        var messageRequest = window.translation.please_need_access_portfolio;
 
         //Move to contact section
         $('html, body').stop().animate({
@@ -193,21 +241,19 @@ function submit_contact_form_ajax(){
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("¡Gracias!", "¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!", "success");  
+                        swal(window.translation.thanks, window.translation.we_have_received_your_message, "success");  
                     },
                     error: function(err) {
                         $('#contact_form .wrapper_button img').css("display", "none");
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal("¡Algo ocurrió!", "¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!", "error");
+                        swal(window.translation.something_happen, window.translation.something_happen_sending_message, "error");
                     }
                 });
             }
             return false;
         });    
-    
-    
 }
 
 function slick_gallery_technologies(){
@@ -334,30 +380,33 @@ function validate_code_portfolio(){
                             '<div class=" Portfolio-box printdesign">'+
                                 '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
                                     '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                                    '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                    '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class="Portfolio-box webdesign">'+
                                 '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class=" Portfolio-box branding">'+
                                 '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class=" Portfolio-box photography" >'+
                                 '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-                                '<p>Sistema Web</p></div>'+
+                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box branding">'+
                                 '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-                                '<p>Sistema Web</p></div>'+
+                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3>' +
+                                '<p>' + window.translation.web_system + '</p>' +
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>Aplicación Móvil para iOS y Android</p>'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' + 
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
-                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Sistema Web</p>'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>' +
+                                '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                         '</div>';
 
@@ -381,7 +430,7 @@ function validate_code_portfolio(){
 
                 //Get info of modals
                 $.ajax({
-                    url: hrefSite + '/js/portfolio-content/content', 
+                    url: hrefSite + window.translation.url_content_portfolio, 
                     method: 'GET',
                     success: function(data) {
                         var key = CryptoJS.enc.Base64.parse("#base64Key#");
@@ -407,30 +456,33 @@ function validate_code_portfolio_function(){
                             '<div class=" Portfolio-box printdesign">'+
                                 '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
                                     '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                                    '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                    '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class="Portfolio-box webdesign">'+
                                 '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class=" Portfolio-box branding">'+
                                 '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
                             '<div class=" Portfolio-box photography" >'+
                                 '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-                                '<p>Sistema Web</p></div>'+
+                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box branding">'+
                                 '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-                                '<p>Sistema Web</p></div>'+
+                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3>'+
+                                '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>Aplicación Móvil para iOS y Android</p>'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>'+
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
-                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Sistema Web</p>'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>'+
+                                '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                         '</div>';
     
@@ -448,7 +500,7 @@ function validate_code_portfolio_function(){
 
             //Get info of modals
             $.ajax({
-                url: hrefSite + '/js/portfolio-content/content', 
+                url: hrefSite + window.translation.url_content_portfolio, 
                 method: 'GET',
                 success: function(data) {
                     var key = CryptoJS.enc.Base64.parse("#base64Key#");
@@ -466,7 +518,7 @@ function validate_code_portfolio_function(){
     else{
         swal({
                 title: 'Oops...',
-                text: "El código que ingresaste no es válido. Contáctanos para obtener uno válido.",
+                text: window.translation.code_invalid,
                 confirmButtonColor: "#f48600",
             });
     }
@@ -508,4 +560,3 @@ function wow_init(){
     );
     wow.init();
 }
-
