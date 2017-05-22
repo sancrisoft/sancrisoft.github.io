@@ -351,6 +351,14 @@ function validate_code_portfolio(){
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
                                 '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Web System</p>'+
                             '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>App Mobile for IOS and Android</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Web System</p>'+
+                            '</div>'+
                         '</div>';
 
     $(document).on('click', '.access-portfolio.validate', validate_code_portfolio_function);
@@ -413,6 +421,14 @@ function validate_code_portfolio_function(){
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
                                 '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Web System</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>App Mobile for IOS and Android</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Web System</p>'+
                             '</div>'+
                         '</div>';
     
