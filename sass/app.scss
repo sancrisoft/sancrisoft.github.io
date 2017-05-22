@@ -149,6 +149,64 @@ html{
             border-left: none;
             position: relative;
             height: 690px;
+
+            .language-selector{
+                display: block;
+                top: 1%;
+                right: 1%;
+                position: absolute;
+                z-index: 100;
+
+                ul {
+                    margin: 0;
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 10px;
+
+                        a {
+                            display: inline-block;
+                            vertical-align: top;
+                            min-height: 20px;
+                            line-height: 20px;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &.active {
+                            a {
+                                font-weight: bold;
+                            }
+                        }
+                        &.english {
+                            a {
+                                background: url('../img/English.png');
+                                background-size: 20px;
+                                background-repeat: no-repeat;
+                                background-position: left center;
+                                padding-left: 30px;
+                            }
+                            
+                        }
+                        &.spanish {
+                            a {
+                                background: url('../img/Spanish.png');
+                                background-size: 20px;
+                                background-repeat: no-repeat;
+                                background-position: left center;
+                                padding-left: 30px;
+                            }
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
         .no-video{
             .video-container{
@@ -255,7 +313,6 @@ html{
                             margin-top: 35px;
                             padding: 0px 15px;
                             vertical-align: top;
-                            width: 50%;
                         }
 
                         div {
@@ -264,7 +321,6 @@ html{
                                 font-size: 17px;
                                 text-align: justify;
                                 vertical-align: top;
-                                width: 50%;
 
                                 p {
                                     line-height: 30px;
