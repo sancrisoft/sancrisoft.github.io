@@ -331,27 +331,35 @@ function show_menu_resize(){
 
 function validate_code_portfolio(){
     var divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
-        '<div class=" Portfolio-box printdesign">'+
-            '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
-                '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class="Portfolio-box webdesign">'+
-            '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-            '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class=" Portfolio-box branding">'+
-            '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-            '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class=" Portfolio-box photography" >'+
-            '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-            '<p>Sistema Web</p></div>'+
-        '<div class=" Portfolio-box branding">'+
-            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-            '<p>Sistema Web</p></div>'+
-        '<div class=" Portfolio-box photography">'+
-            '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
-        '</div>'+
-    '</div>';
+                            '<div class=" Portfolio-box printdesign">'+
+                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
+                                    '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
+                                    '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class="Portfolio-box webdesign">'+
+                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
+                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class=" Portfolio-box branding">'+
+                                '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
+                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class=" Portfolio-box photography" >'+
+                                '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
+                                '<p>Sistema Web</p></div>'+
+                            '<div class=" Portfolio-box branding">'+
+                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+                                '<p>Sistema Web</p></div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>Aplicación Móvil para iOS y Android</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Sistema Web</p>'+
+                            '</div>'+
+                        '</div>';
 
     $(document).on('click', '.access-portfolio.validate', validate_code_portfolio_function);
     $('input[name="code_portfolio"]').keyup(function(e){
@@ -396,27 +404,35 @@ function validate_code_portfolio(){
 function validate_code_portfolio_function(){
     var codeValidation = "400ce31e08fc6759c8db912258065cf8fbde41398b27413aeab9f8fcf9c6de04";
     var divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
-        '<div class=" Portfolio-box printdesign">'+
-            '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
-                '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class="Portfolio-box webdesign">'+
-            '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-            '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class=" Portfolio-box branding">'+
-            '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-            '<p>Aplicación Móvil para iOS y Android</p></div>'+
-        '<div class=" Portfolio-box photography" >'+
-            '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-            '<p>Sistema Web</p></div>'+
-        '<div class=" Portfolio-box branding">'+
-            '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-            '<p>Sistema Web</p></div>'+
-        '<div class=" Portfolio-box photography">'+
-            '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-            '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
-        '</div>'+
-    '</div>';
+                            '<div class=" Portfolio-box printdesign">'+
+                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
+                                    '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
+                                    '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class="Portfolio-box webdesign">'+
+                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
+                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class=" Portfolio-box branding">'+
+                                '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
+                                '<p>Aplicación Móvil para iOS y Android</p></div>'+
+                            '<div class=" Portfolio-box photography" >'+
+                                '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
+                                '<p>Sistema Web</p></div>'+
+                            '<div class=" Portfolio-box branding">'+
+                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+                                '<p>Sistema Web</p></div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3><p>Sistema Web</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3><p>Aplicación Móvil para iOS y Android</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
+                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3><p>Sistema Web</p>'+
+                            '</div>'+
+                        '</div>';
     
     var valueInput = $('input[name="code_portfolio"]').val();
     var encrypted = CryptoJS.SHA256(valueInput).toString();
