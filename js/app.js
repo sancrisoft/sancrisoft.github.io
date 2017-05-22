@@ -508,6 +508,21 @@ function validate_code_portfolio_function(){
             //Save in localStorage
             localStorage.setItem("portfolioValid", "isValid");
 
+            /*
+                Steps to encrypt content:
+                1 - Change in HTML all " by '
+                2 - Minify all HTML using 'http://www.willpeavy.com/minifier/'
+                3 - Assing all HTML content to variable 'data'
+                4 - Using following code to encrypt:
+
+                    var key = CryptoJS.enc.Base64.parse("#base64Key#");
+                    var iv  = CryptoJS.enc.Base64.parse("#base64IV#");
+                    var dataDecrypted = CryptoJS.AES.encrypt(data, key, {iv: iv});
+                    dataDecrypted.toString()
+
+                NOTE: After decrypt if you want change HTML use: https://dirtymarkup.com/ and remove body and html tags created by default
+            */
+
             //Get info of modals
             $.ajax({
                 url: window.translation.url_content_portfolio, 
