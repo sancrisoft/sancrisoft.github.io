@@ -1,6 +1,9 @@
 
 //jQuery is required to run this code
 $( document ).ready(function() {
+    //Detect language browser and redirect to correct index.html
+    detect_browser_language();
+
     //Method to load language of website (Text)
     load_language_page();
 
@@ -9,15 +12,60 @@ $( document ).ready(function() {
     request_access_portfolio();
     slick_gallery_technologies();
     show_menu_resize();
-    validate_contact_form();
     submit_contact_form_ajax();
     validate_code_portfolio();
+    validate_contact_form();
     video_in_header();
     wow_init();
     
     //Method scroll top events after load all the rest
     scroll_top_event();
 });
+
+function apply_carousel_info(){
+    $(".owl-carousel").each(function(){
+        var owl = $(this);
+        var items = 4;
+        var itemsDesktopSmall = 3;
+        var itemsTablet = 2;
+
+        if($(this).attr("id")== "owl-mangos" || $(this).attr("id")== "owl-arena" || $(this).attr("id")== "owl-handsonconnect" || $(this).attr("id")== "owl-live" || $(this).attr("id")== "owl-bralinmoca" || $(this).attr("id")== "owl-oneoc"){
+            items = 2;
+            itemsDesktopSmall = 2;
+            itemsTablet = 1;
+        }
+
+        owl.owlCarousel({
+          items : items, //10 items above 1000px browser width
+          itemsDesktop : [1000,items], //5 items between 1000px and 901px
+          itemsDesktopSmall : [900, itemsDesktopSmall], // betweem 900px and 601px
+          itemsTablet: [800,itemsTablet], //2 items between 600 and 0
+          itemsMobile : [500, 1] // itemsMobile disabled - inherit from itemsTablet option
+      });
+    });
+ 
+  
+ 
+  // Custom Navigation Events
+  $(".next").click(function(){
+    var carouselContainer = $(this).parent().parent();
+    var owl = carouselContainer.find(".owl-carousel").first();
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    var carouselContainer = $(this).parent().parent();
+    var owl = carouselContainer.find(".owl-carousel").first();
+    owl.trigger('owl.prev');
+  })
+}
+
+function detect_browser_language() {
+    var userLang = navigator.language || navigator.userLanguage; 
+    
+    if(userLang !== 'en-US') {
+        window.location = './index-es.html';
+    }
+}
 
 function load_language_page () {
     var language_page = $('input[name="language-page"]').val();
@@ -62,93 +110,6 @@ function load_language_page () {
 
         window.translation = languages;
     }
-}
-
-function validate_contact_form() {
-    $("#contact_form").validate({
-        rules: {
-            _name: {
-                required: true,
-            },
-            _replyto: {
-                required: true,
-                email: true,
-            },
-            _message: {
-                required: true,
-            },
-            "hiddenRecaptcha": {
-                required: function() {
-                    if(grecaptcha.getResponse() == '') {
-                    var spanError = '<div class="recaptcha-error-message">' + window.translation.your_not_robot + '</div>';
-
-                    if($(".recaptcha-error-message").length == 0){
-                        //Add error to recaptcha
-                        $(".g-recaptcha > div").addClass("recaptcha-error");
-                        $(".g-recaptcha > div").append(spanError);
-                    }           
-
-                        return true;
-                    } else {
-
-                        //Remove border and span
-                        if($(".recaptcha-error-message").length > 0){
-                            //Add error to recaptcha
-                            $(".g-recaptcha > div").removeClass("recaptcha-error");
-                            $(".g-recaptcha > div .recaptcha-error-message").remove();
-                        }
-
-                        return false;
-                    }
-                }
-            }
-        },
-        messages: {
-            _name: window.translation.please_enter_name,
-            _replyto: {
-                required: window.translation.please_enter_email,
-                email: window.translation.enter_email_valid,
-            },
-            _message: window.translation.please_enter_message,
-        }       
-    });
-}
-
-function apply_carousel_info(){
-    $(".owl-carousel").each(function(){
-        var owl = $(this);
-        var items = 4;
-        var itemsDesktopSmall = 3;
-        var itemsTablet = 2;
-
-        if($(this).attr("id")== "owl-mangos" || $(this).attr("id")== "owl-arena" || $(this).attr("id")== "owl-handsonconnect" || $(this).attr("id")== "owl-live" || $(this).attr("id")== "owl-bralinmoca" || $(this).attr("id")== "owl-oneoc"){
-            items = 2;
-            itemsDesktopSmall = 2;
-            itemsTablet = 1;
-        }
-
-        owl.owlCarousel({
-          items : items, //10 items above 1000px browser width
-          itemsDesktop : [1000,items], //5 items between 1000px and 901px
-          itemsDesktopSmall : [900, itemsDesktopSmall], // betweem 900px and 601px
-          itemsTablet: [800,itemsTablet], //2 items between 600 and 0
-          itemsMobile : [500, 1] // itemsMobile disabled - inherit from itemsTablet option
-      });
-    });
- 
-  
- 
-  // Custom Navigation Events
-  $(".next").click(function(){
-    var carouselContainer = $(this).parent().parent();
-    var owl = carouselContainer.find(".owl-carousel").first();
-    owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-    var carouselContainer = $(this).parent().parent();
-    var owl = carouselContainer.find(".owl-carousel").first();
-    owl.trigger('owl.prev');
-  })
 }
 
 function menu_bar_fixed(){
@@ -453,6 +414,56 @@ function validate_code_portfolio(){
             $('.request-access').hide();
         }
     }
+}
+
+function validate_contact_form() {
+    $("#contact_form").validate({
+        rules: {
+            _name: {
+                required: true,
+            },
+            _replyto: {
+                required: true,
+                email: true,
+            },
+            _message: {
+                required: true,
+            },
+            "hiddenRecaptcha": {
+                required: function() {
+                    if(grecaptcha.getResponse() == '') {
+                    var spanError = '<div class="recaptcha-error-message">' + window.translation.your_not_robot + '</div>';
+
+                    if($(".recaptcha-error-message").length == 0){
+                        //Add error to recaptcha
+                        $(".g-recaptcha > div").addClass("recaptcha-error");
+                        $(".g-recaptcha > div").append(spanError);
+                    }           
+
+                        return true;
+                    } else {
+
+                        //Remove border and span
+                        if($(".recaptcha-error-message").length > 0){
+                            //Add error to recaptcha
+                            $(".g-recaptcha > div").removeClass("recaptcha-error");
+                            $(".g-recaptcha > div .recaptcha-error-message").remove();
+                        }
+
+                        return false;
+                    }
+                }
+            }
+        },
+        messages: {
+            _name: window.translation.please_enter_name,
+            _replyto: {
+                required: window.translation.please_enter_email,
+                email: window.translation.enter_email_valid,
+            },
+            _message: window.translation.please_enter_message,
+        }       
+    });
 }
 
 function validate_code_portfolio_function(){
