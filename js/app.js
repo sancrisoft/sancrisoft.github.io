@@ -1,9 +1,8 @@
+//Detect language browser and redirect to correct index.html
+detect_browser_language();
 
 //jQuery is required to run this code
 $( document ).ready(function() {
-    //Detect language browser and redirect to correct index.html
-    detect_browser_language();
-
     //Method to load language of website (Text)
     load_language_page();
 
@@ -60,10 +59,10 @@ function apply_carousel_info(){
 }
 
 function detect_browser_language() {
-    var language_page = $('input[name="language-page"]').val();
+    var pathname = window.location.pathname;
     var userLang = navigator.language || navigator.userLanguage; 
     
-    if(userLang !== 'en-US' && language_page !== 'ES') {
+    if(userLang !== 'en-US' && pathname !== '/index-es.html') {
         window.location = './index-es.html';
     }
 }
