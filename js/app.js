@@ -73,7 +73,7 @@ function detect_browser_language() {
     var userLang = navigator.language || navigator.userLanguage;
     var force = getParameterByName('force');
 
-    if(userLang !== 'en-US' && pathname !== '/index-es.html' && !force) {
+    if(userLang.indexOf('es') !== -1 && pathname !== '/index-es.html' && !force) {
         window.location = './index-es.html';
     }
 }
