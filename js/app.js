@@ -1,8 +1,9 @@
-//Detect language browser and redirect to correct index.html
-detect_browser_language();
 
 //jQuery is required to run this code
 $( document ).ready(function() {
+    //Detect language browser and redirect to correct index.html
+    detect_browser_language();
+
     //Method to load language of website (Text)
     load_language_page();
 
