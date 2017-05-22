@@ -121,7 +121,7 @@ function apply_carousel_info(){
         var itemsDesktopSmall = 3;
         var itemsTablet = 2;
 
-        if($(this).attr("id")== "owl-mangos" || $(this).attr("id")== "owl-arena" || $(this).attr("id")== "owl-handsonconnect" || $(this).attr("id")== "owl-live" || $(this).attr("id")== "owl-bralinmoca"){
+        if($(this).attr("id")== "owl-mangos" || $(this).attr("id")== "owl-arena" || $(this).attr("id")== "owl-handsonconnect" || $(this).attr("id")== "owl-live" || $(this).attr("id")== "owl-bralinmoca" || $(this).attr("id")== "owl-oneoc"){
             items = 2;
             itemsDesktopSmall = 2;
             itemsTablet = 1;
@@ -408,6 +408,11 @@ function validate_code_portfolio(){
                                 '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>' +
                                 '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
+                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
+                                '<p>' + window.translation.web_system + '</p>'+
+                            '</div>'+
                         '</div>';
 
     $(document).on('click', '.access-portfolio.validate', validate_code_portfolio_function);
@@ -482,6 +487,11 @@ function validate_code_portfolio_function(){
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
                                 '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>'+
+                                '<p>' + window.translation.web_system + '</p>'+
+                            '</div>'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
+                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
                                 '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                         '</div>';
