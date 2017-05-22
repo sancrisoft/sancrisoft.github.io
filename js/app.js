@@ -58,11 +58,22 @@ function apply_carousel_info(){
   })
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function detect_browser_language() {
     var pathname = window.location.pathname;
-    var userLang = navigator.language || navigator.userLanguage; 
+    var userLang = navigator.language || navigator.userLanguage;
+    var force = getParameterByName('force');
 
-    if(userLang !== 'en-US' && pathname !== '/index-es.html') {
+    if(userLang !== 'en-US' && pathname !== '/index-es.html' && !force) {
         window.location = './index-es.html';
     }
 }
