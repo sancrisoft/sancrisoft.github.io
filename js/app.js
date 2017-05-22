@@ -430,7 +430,7 @@ function validate_code_portfolio(){
 
                 //Get info of modals
                 $.ajax({
-                    url: hrefSite + window.translation.url_content_portfolio, 
+                    url: window.translation.url_content_portfolio, 
                     method: 'GET',
                     success: function(data) {
                         var key = CryptoJS.enc.Base64.parse("#base64Key#");
@@ -500,7 +500,7 @@ function validate_code_portfolio_function(){
 
             //Get info of modals
             $.ajax({
-                url: hrefSite + window.translation.url_content_portfolio, 
+                url: window.translation.url_content_portfolio, 
                 method: 'GET',
                 success: function(data) {
                     var key = CryptoJS.enc.Base64.parse("#base64Key#");
