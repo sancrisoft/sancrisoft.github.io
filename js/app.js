@@ -349,6 +349,11 @@ function show_menu_resize(){
 
 function validate_code_portfolio(){
     var divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
+                            '<div class=" Portfolio-box photography">'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' +
+                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
+                            '</div>'+
                             '<div class=" Portfolio-box printdesign">'+
                                 '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
                                     '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
@@ -362,27 +367,22 @@ function validate_code_portfolio(){
                             '<div class=" Portfolio-box photography" >'+
                                 '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
                                 '<p>' + window.translation.web_system + '</p></div>'+
-                            '<div class=" Portfolio-box branding">'+
-                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
                                 '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3>' +
                                 '<p>' + window.translation.web_system + '</p>' +
                             '</div>'+
+                            '<div class=" Portfolio-box branding">'+
+                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
+                                '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' +
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
+                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
+                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
+                                '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
                                 '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>' +
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
-                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
                                 '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                         '</div>';
