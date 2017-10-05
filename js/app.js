@@ -16,7 +16,7 @@ $( document ).ready(function() {
     validate_contact_form();
     video_in_header();
     wow_init();
-    
+
     //Method scroll top events after load all the rest
     scroll_top_event();
 });
@@ -42,9 +42,9 @@ function apply_carousel_info(){
           itemsMobile : [500, 1] // itemsMobile disabled - inherit from itemsTablet option
       });
     });
- 
-  
- 
+
+
+
   // Custom Navigation Events
   $(".next").click(function(){
     var carouselContainer = $(this).parent().parent();
@@ -88,13 +88,13 @@ function load_language_page () {
             please_enter_email: 'Por favor ingresa un e-mail',
             enter_email_valid: 'Ingresa una dirección de correo válida',
             please_enter_message: 'Por favor ingresa tu mensaje.',
-            please_need_access_portfolio: 'Hola, por favor necesito acceso al portafolio de proyectos...',
+            please_need_access_portfolio: 'Hola, por favor enviarme un código de acceso para revisar sus proyectos.',
             thanks: '¡Gracias!',
-            we_have_received_your_message: '¡Hemos recibido tu mensaje y nos comunicaremos contigo tan pronto como sea posible!',
+            we_have_received_your_message: 'Hemos recibido tu mensaje y nos comunicaremos contigo a la brevedad posible.',
             something_happen: '¡Algo ocurrió!',
             something_happen_sending_message : '¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!',
             app_mobile_android_ios : 'Aplicación Móvil para iOS y Android',
-            web_system : 'Sistema Web',
+            web_system : 'Solución Web',
             code_invalid : 'El código que ingresaste no es válido. Contáctanos para obtener uno válido.',
             url_content_portfolio : '/js/portfolio-content/content'
         };
@@ -103,19 +103,19 @@ function load_language_page () {
     }
     else {
         var languages = {
-            your_not_robot : 'Please verify that you are not a robot.',
+            your_not_robot : 'Please verify you are not a robot.',
             please_enter_name : 'Please enter your name',
-            please_enter_email : 'Please enter an email',
+            please_enter_email : 'Please enter your email',
             enter_email_valid : 'Enter a valid email',
             please_enter_message : 'Please enter your message.',
-            please_need_access_portfolio : 'Hello, please need access to the portfolio projects...',
+            please_need_access_portfolio : 'Hi, please send me an access code to check your portfolio.',
             thanks : 'Thank you!',
-            we_have_received_your_message : 'We have receive your message and we will contact you as soon as possible!',
-            something_happen : 'Something happen!',
-            something_happen_sending_message : 'Something happen sending your message, please try again!',
-            app_mobile_android_ios : 'Mobile App for IOs and Android',
-            web_system : 'Web System',
-            code_invalid : 'The code you enter is not valid!. Contact us to get a valid code!.',
+            we_have_received_your_message : 'We have received your message and will back to you shortly!',
+            something_happen : 'Something happened!',
+            something_happen_sending_message : 'Something happened sending your message, please try again!',
+            app_mobile_android_ios : 'Mobile App for iOS and Android',
+            web_system : 'Web Solution',
+            code_invalid : 'The code you entered is not valid. Please contact us to get a good one.',
             url_content_portfolio : '/js/portfolio-content/content-en'
         };
 
@@ -191,12 +191,12 @@ function submit_contact_form_ajax(){
     var contactForm = $('#contact_form');
 
     $("#contact_form").attr('action', '//formspree.io/' + 'info' + '@' + 'sancrisoft' + '.' + 'com');
-    
+
         contactForm.submit(function(e) {
             e.preventDefault();
             if($("#contact_form").valid()){
                 $.ajax({
-                    url: "https://formspree.io/info@sancrisoft.com", 
+                    url: "https://formspree.io/info@sancrisoft.com",
                     method: 'POST',
                     data: $(this).serialize(),
                     dataType: 'json',
@@ -213,7 +213,7 @@ function submit_contact_form_ajax(){
                         $('#contact_form .wrapper_button input.input-btn').removeAttr("disabled");
                         $('#contact_form .wrapper_button input.input-btn').removeClass("disabled");
 
-                        swal(window.translation.thanks, window.translation.we_have_received_your_message, "success");  
+                        swal(window.translation.thanks, window.translation.we_have_received_your_message, "success");
                     },
                     error: function(err) {
                         $('#contact_form .wrapper_button img').css("display", "none");
@@ -225,7 +225,7 @@ function submit_contact_form_ajax(){
                 });
             }
             return false;
-        });    
+        });
 }
 
 function slick_gallery_technologies(){
@@ -303,7 +303,7 @@ function smart_resize(){
             columnWidth: colW
         }
     });
-  
+
     $(window).smartresize(function(){
         // check if columns has changed
         var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
@@ -319,10 +319,10 @@ function smart_resize(){
     $('.portfolioFilter a').click(function(){
         $('.portfolioFilter .current').removeClass('current');
         $(this).addClass('current');
- 
+
         var selector = $(this).attr('data-filter');
         $container.isotope({
-            
+
             filter: selector,
         });
         return false;
@@ -372,7 +372,7 @@ function validate_code_portfolio(){
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' + 
+                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' +
                                 '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
                             '</div>'+
                             '<div class=" Portfolio-box photography">'+
@@ -407,7 +407,7 @@ function validate_code_portfolio(){
 
                 //Get info of modals
                 $.ajax({
-                    url: window.translation.url_content_portfolio, 
+                    url: window.translation.url_content_portfolio,
                     method: 'GET',
                     success: function(data) {
                         var key = CryptoJS.enc.Base64.parse("#base64Key#");
@@ -449,7 +449,7 @@ function validate_contact_form() {
                         //Add error to recaptcha
                         $(".g-recaptcha > div").addClass("recaptcha-error");
                         $(".g-recaptcha > div").append(spanError);
-                    }           
+                    }
 
                         return true;
                     } else {
@@ -473,7 +473,7 @@ function validate_contact_form() {
                 email: window.translation.enter_email_valid,
             },
             _message: window.translation.please_enter_message,
-        }       
+        }
     });
 }
 
@@ -517,11 +517,11 @@ function validate_code_portfolio_function(){
                                 '<p>' + window.translation.web_system + '</p>'+
                             '</div>'+
                         '</div>';
-    
+
     var valueInput = $('input[name="code_portfolio"]').val();
     var encrypted = CryptoJS.SHA256(valueInput).toString();
     var hrefSite = window.location.origin + window.location.pathname;
-    
+
     if(codeValidation === encrypted){
         if($('.portfolioContainer').length === 0){
             $('#Portfolio').append(divPortfolio);
@@ -547,7 +547,7 @@ function validate_code_portfolio_function(){
 
             //Get info of modals
             $.ajax({
-                url: window.translation.url_content_portfolio, 
+                url: window.translation.url_content_portfolio,
                 method: 'GET',
                 success: function(data) {
                     var key = CryptoJS.enc.Base64.parse("#base64Key#");
