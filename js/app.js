@@ -369,7 +369,7 @@ function validate_code_portfolio(){
                                 '<p>' + window.translation.web_system + '</p></div>'+
                             '<div class=" Portfolio-box photography">'+
                                 '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3>' +
+                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservations System</h3>' +
                                 '<p>' + window.translation.web_system + '</p>' +
                             '</div>'+
                             '<div class=" Portfolio-box branding">'+
