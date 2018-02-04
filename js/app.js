@@ -1,5 +1,5 @@
 //Detect language browser and redirect to correct index.html
-detect_browser_language();
+//detect_browser_language();
 
 //jQuery is required to run this code
 $( document ).ready(function() {
