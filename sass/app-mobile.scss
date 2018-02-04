@@ -1,4 +1,4 @@
-@media only screen and (max-width: 40em) { 
+@media only screen and (max-width: 40em) {
 	html{
 		body{
 			.header{
@@ -78,10 +78,10 @@
 	                        -moz-border-radius: 20px;
 	                        border-radius: 20px;
 	                        background: #869791;
-	                    }   
+	                    }
 	                }
-	                
-	                
+
+
 	            }
 	            .prev{
 	                float: left;
@@ -236,9 +236,9 @@
 		                    margin-top: 10px;
 		                }
 		            }
-	        		
+
 	        	}
-                
+
 	            &.modal-fullscreen{
 	                .modal-content {
 	                	.modal-title{
@@ -261,6 +261,19 @@
 	            }
 	        }
 
+					.jobs {
+						.container {
+							.job-post {
+								img {
+									display: none;
+								}
+								.location {
+									float: none;
+									margin-left: 0px;
+								}
+							}
+						}
+					}
 		}
 	}
 

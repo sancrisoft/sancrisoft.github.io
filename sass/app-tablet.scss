@@ -1,4 +1,4 @@
-@media only screen and (min-width: 40.063em) and (max-width: 64em) 
+@media only screen and (min-width: 40.063em) and (max-width: 64em)
 {
 	html{
 		body{
@@ -19,7 +19,7 @@
 			}
 			.res-nav_click{
 				display: block;
-				
+
 				&.selected{
     				color: #cc7000 !important;
 
@@ -114,7 +114,7 @@
 	        		margin-bottom: 10px;
 	        		min-height: 36px;
 	        	}
-	        	
+
 	            .team-leader-shadow{
 	            	display: none;
 	            }
@@ -164,6 +164,17 @@
 	        		}
 	        	}
 	        }
+
+					.jobs {
+						.container {
+							.job-post {
+								.location {
+									float: none;
+									margin-left: 120px;
+								}
+							}
+						}
+					}
 		}
 	}
 }

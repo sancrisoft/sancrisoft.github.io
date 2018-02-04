@@ -594,37 +594,6 @@ html{
           background-color: #fafafa;
           padding: 0px 0px 50px 0px;
 
-          h2 {
-            margin: 30px 0px 40px 0px;
-            font-size: 60px;
-          }
-
-          h3 {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 40px;
-          }
-
-          h4 {
-            font-size: 25px;
-            margin-bottom: 20px;
-            color: #5a5a5a;
-          }
-
-          p {
-            margin-bottom: 20px;
-            line-height: 35px;
-          }
-
-          ul {
-            margin-bottom: 20px;
-            line-height: 35px;
-
-            li {
-              font-size: 17px;
-            }
-          }
-
           img {
             &.hero-image {
               height: 500px;
@@ -634,7 +603,89 @@ html{
           }
 
           .container {
-            width: 75%;
+            width: 90%;
+
+            h2 {
+              margin: 30px 0px 40px 0px;
+              font-size: 60px;
+            }
+
+            .job-post {
+              cursor: pointer;
+              padding: 20px;
+              border: 1px solid #fafafa;
+              border-left-width: 3px;
+              border-bottom: 1px solid #eee;
+
+              h3 {
+                font-size: 30px;
+              }
+
+              h4 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 20px;
+                color: #5a5a5a;
+              }
+
+              img {
+                display: inline-block;
+                height: 100px;
+                width: 100px;
+                vertical-align: top;
+              }
+
+              &:hover {
+                border-color: #F79A20;
+                border-left-width: 3px;
+                transition: border .1s linear;;
+              }
+
+              .title {
+                display: inline-block;
+                margin-left: 10px;
+              }
+
+              .location {
+                display: inline-block;
+                vertical-align: top;
+                float: right;
+                font-size: 16px;
+
+                &:before {
+                  color: #7B7B7B;
+                  content: '\f041';
+                  font-family: 'FontAwesome';
+                  margin-right: 4px;
+                }
+              }
+            }
+
+            .job-content {
+              display: none;
+              padding: 25px 20px;
+
+              h4 {
+                font-weight: bold;
+              }
+
+              p {
+                margin-bottom: 20px;
+                line-height: 35px;
+              }
+
+              ul {
+                margin-bottom: 20px;
+                line-height: 35px;
+
+                li {
+                  font-size: 17px;
+                }
+              }
+
+              .wrapper_button {
+                text-align: center;
+              }
+            }
           }
         }
 

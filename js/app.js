@@ -16,6 +16,7 @@ $( document ).ready(function() {
     validate_contact_form();
     video_in_header();
     wow_init();
+    jobs_events();
 
     //Method scroll top events after load all the rest
     scroll_top_event();
@@ -606,4 +607,17 @@ function wow_init(){
       }
     );
     wow.init();
+}
+
+function jobs_events() {
+  if($('.jobs').length > 0) {
+    $('.job-post').on('click', function() {
+      $(this).next('.job-content').toggle();
+    });
+
+    $('.apply').on('click', function() {
+      $('.contact_form').parent().show();
+      $('input[name="_name"]').focus();
+    });
+  }
 }
