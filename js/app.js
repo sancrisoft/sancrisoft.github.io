@@ -74,8 +74,11 @@ function detect_browser_language() {
     var userLang = navigator.language || navigator.userLanguage;
     var force = getParameterByName('force');
 
-    if(userLang.indexOf('es') !== -1 && pathname !== '/index-es.html' && !force) {
-        window.location = './index-es.html';
+    //Validate if path has '-es'
+    var isSpanish = pathname.indexOf('-es');
+
+    if(userLang.indexOf('es') !== -1 && isSpanish === -1 && !force) {
+        window.location = (pathname === '/jobs') ? '/jobs-es' : '/index-es.html';
     }
 }
 
