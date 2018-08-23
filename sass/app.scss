@@ -54,11 +54,12 @@ html{
                 margin-right: 10px;
                 color: #7b7b7b;
                 .description {
-                    width: 45%;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-right: 1%;
-                    margin-left: 4%;
+                  display: inline-block;
+                  font-size: 17px;
+                  margin-left: 4%;
+                  margin-right: 1%;
+                  vertical-align: top;
+                  width: 45%;
                 }
             }
         }
@@ -690,6 +691,12 @@ html{
             }
           }
         }
-
+        .modal-body {
+          .owl-item {
+            img {
+              max-height: 722px;
+            }
+          }
+        }
     }
 }
