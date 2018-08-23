@@ -391,7 +391,7 @@ function getDivPortfolio() {
                               '<p>' + window.translation.app_mobile_android_ios + '</p>'+
                           '</div>'+
                           '<div class=" Portfolio-box photography" >'+
-                              '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
+                              '<a href="#"><img src="img/handsonconnect/image1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
                               '<p>' + window.translation.web_system + '</p></div>'+
                           '<div class=" Portfolio-box photography">'+
                               '<a href="#" data-toggle="modal" data-target=".modal-durango" >'+
