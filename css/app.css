@@ -69,11 +69,12 @@ html body .modal .content {
 }
 
 html body .modal .content .description {
-  width: 45%;
   display: inline-block;
-  vertical-align: top;
-  margin-right: 1%;
+  font-size: 17px;
   margin-left: 4%;
+  margin-right: 1%;
+  vertical-align: top;
+  width: 45%;
 }
 
 html body .carousel {
@@ -648,5 +649,9 @@ html body .jobs .container .job-content ul li {
 
 html body .jobs .container .job-content .wrapper_button {
   text-align: center;
+}
+
+html body .modal-body .owl-item img {
+  max-height: 722px;
 }
 /*# sourceMappingURL=app.css.map */

@@ -29,7 +29,16 @@ function apply_carousel_info(){
         var itemsDesktopSmall = 3;
         var itemsTablet = 2;
 
-        if($(this).attr("id")== "owl-mangos" || $(this).attr("id")== "owl-arena" || $(this).attr("id")== "owl-handsonconnect" || $(this).attr("id")== "owl-live" || $(this).attr("id")== "owl-bralinmoca" || $(this).attr("id")== "owl-oneoc"){
+        if($(this).attr("id")== "owl-mangos" ||
+            $(this).attr("id")== "owl-arena" ||
+            $(this).attr("id")== "owl-handsonconnect" ||
+            $(this).attr("id")== "owl-live" ||
+            $(this).attr("id")== "owl-bralinmoca" ||
+            $(this).attr("id")== "owl-oneoc" ||
+            $(this).attr("id") == "owl-udr-web" ||
+            $(this).attr("id") == "owl-visor" ||
+            $(this).attr("id") == "owl-durango"
+          ){
             items = 2;
             itemsDesktopSmall = 2;
             itemsTablet = 1;
@@ -98,6 +107,7 @@ function load_language_page () {
             something_happen: '¡Algo ocurrió!',
             something_happen_sending_message : '¡Algo occurrió enviando tu mensaje, por favor intenta otra vez!',
             app_mobile_android_ios : 'Aplicación Móvil para iOS y Android',
+            web_system_app_mobile: 'Solución Web y Aplicación Móvil para iOS y Android',
             web_system : 'Solución Web',
             code_invalid : 'El código que ingresaste no es válido. Contáctanos para obtener uno válido.',
             url_content_portfolio : '/js/portfolio-content/content'
@@ -118,6 +128,7 @@ function load_language_page () {
             something_happen : 'Something happened!',
             something_happen_sending_message : 'Something happened sending your message, please try again!',
             app_mobile_android_ios : 'Mobile App for iOS and Android',
+            web_system_app_mobile: 'Web Solution and Mobile App for iOS and Android',
             web_system : 'Web Solution',
             code_invalid : 'The code you entered is not valid. Please contact us to get a good one.',
             url_content_portfolio : '/js/portfolio-content/content-en'
@@ -128,21 +139,23 @@ function load_language_page () {
 }
 
 function menu_bar_fixed(){
-    $('#test').scrollToFixed();
-    $('.res-nav_click').click(function(event){
-        $('.main-nav').slideToggle();
-        event.stopPropagation();
+    if($('#test').length > 0) {
+      $('#test').scrollToFixed();
+      $('.res-nav_click').click(function(event){
+          $('.main-nav').slideToggle();
+          event.stopPropagation();
 
-        //Add class selected
-        if($('.res-nav_click').hasClass('selected')){
-            $('.res-nav_click').removeClass('selected');
-        }
-        else{
-            $('.res-nav_click').addClass('selected');
-        }
+          //Add class selected
+          if($('.res-nav_click').hasClass('selected')){
+              $('.res-nav_click').removeClass('selected');
+          }
+          else{
+              $('.res-nav_click').addClass('selected');
+          }
 
-        return false;
-    });
+          return false;
+      });
+    }
 }
 
 function request_access_portfolio(){
@@ -351,45 +364,70 @@ function show_menu_resize(){
     });
 }
 
+function getDivPortfolio() {
+  const divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
+                              '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' +
+                              '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box printdesign">'+
+                              '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
+                                  '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
+                                  '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-udr-mobile" >'+
+                              '<img src="img/udr/image9.png" alt=""></a><h3>Universidad del Rosario</h3>' +
+                              '<p>' + window.translation.app_mobile_android_ios + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-pidealatiendacliente" >'+
+                              '<img src="img/pidealatiendacliente/image2.png" alt=""></a><h3>Pide a la Tienda - Cliente</h3>' +
+                              '<p>' + window.translation.app_mobile_android_ios + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-pidealatiendatendero" >'+
+                              '<img src="img/pidealatiendatendero/image2.png" alt=""></a><h3>Pide a la Tienda - Tendero</h3>' +
+                              '<p>' + window.translation.app_mobile_android_ios + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography" >'+
+                              '<a href="#"><img src="img/handsonconnect/image1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
+                              '<p>' + window.translation.web_system + '</p></div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-durango" >'+
+                              '<img src="img/durango/image1.png" alt=""></a><h3>Durango Digital</h3>' +
+                              '<p>' + window.translation.web_system + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
+                              '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservations System</h3>' +
+                              '<p>' + window.translation.web_system + '</p>' +
+                          '</div>'+
+                          '<div class=" Portfolio-box branding">'+
+                              '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.png" alt=""></a><h3>Arena Alfa</h3>'+
+                              '<p>' + window.translation.web_system + '</p></div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
+                              '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
+                              '<p>' + window.translation.web_system + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-udr-web" >'+
+                              '<img src="img/udr/image10.png" alt=""></a><h3>Universidad del Rosario</h3>' +
+                              '<p>' + window.translation.web_system + '</p>'+
+                          '</div>'+
+                          '<div class=" Portfolio-box photography">'+
+                              '<a href="#" data-toggle="modal" data-target=".modal-visor" >'+
+                              '<img src="img/visor/image2.png" alt=""></a><h3>Sinaloa Visor</h3>' +
+                              '<p>' + window.translation.web_system + '</p>'+
+                          '</div>'+
+                      '</div>';
+
+    return divPortfolio;
+}
+
 function validate_code_portfolio(){
-    var divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>' +
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box printdesign">'+
-                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
-                                    '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                                    '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class="Portfolio-box webdesign">'+
-                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class=" Portfolio-box branding">'+
-                                '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class=" Portfolio-box photography" >'+
-                                '<a href="#"><img src="img/handsonconnect/img1.png" alt="Hands on Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-                                '<p>' + window.translation.web_system + '</p></div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mangos Reservations System</h3>' +
-                                '<p>' + window.translation.web_system + '</p>' +
-                            '</div>'+
-                            '<div class=" Portfolio-box branding">'+
-                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-                                '<p>' + window.translation.web_system + '</p></div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
-                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
-                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>' +
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                        '</div>';
+    const divPortfolio = getDivPortfolio();
 
     $(document).on('click', '.access-portfolio.validate', validate_code_portfolio_function);
     $('input[name="code_portfolio"]').keyup(function(e){
@@ -409,7 +447,7 @@ function validate_code_portfolio(){
                $('#Portfolio').append(divPortfolio);
                 smart_resize();
 
-                //Get info of modals
+                // Get info of modals
                 $.ajax({
                     url: window.translation.url_content_portfolio,
                     method: 'GET',
@@ -424,6 +462,16 @@ function validate_code_portfolio(){
                         }
                     }
                 });
+
+                // TODO - TO DEBUG uncomment this and include in data encrypted string
+                // var data = '';
+                // var key = CryptoJS.enc.Base64.parse("#base64Key#");
+                // var iv  = CryptoJS.enc.Base64.parse("#base64IV#");
+                // var dataDecrypted = CryptoJS.AES.decrypt(data, key, {iv: iv});
+                // if($('.modal').length === 0){
+                //   $('body').append(dataDecrypted.toString(CryptoJS.enc.Utf8));
+                //   apply_carousel_info();
+                // }
             }
 
             $('.request-access').hide();
@@ -483,44 +531,7 @@ function validate_contact_form() {
 
 function validate_code_portfolio_function(){
     var codeValidation = "400ce31e08fc6759c8db912258065cf8fbde41398b27413aeab9f8fcf9c6de04";
-    var divPortfolio = '<div class="portfolioContainer wow fadeInUp delay-04s">'+
-                            '<div class=" Portfolio-box printdesign">'+
-                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-lives" href="#">'+
-                                    '<img src="img/lives/home-app.jpg" alt="I Save Lives"></a><h3>I Save Lives</h3>'+
-                                    '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class="Portfolio-box webdesign">'+
-                                '<a class="portfolio-item" data-toggle="modal" data-target=".modal-viajanet" href="#"><img src="img/viajanet/home.png"  alt="Viajanet Hotels App"></a><h3>Viajanet Hotels App</h3>'+
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class=" Portfolio-box branding">'+
-                                '<a href="#"><img src="img/tribe/img1.png" alt="Tribe App" data-toggle="modal" data-target=".modal-tribe"></a><h3>Tribe App</h3>'+
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p></div>'+
-                            '<div class=" Portfolio-box photography" >'+
-                                '<a href="#"><img src="img/handsonconnect/img1.png" alt="HandsOn Connect - Public Site" data-toggle="modal" data-target=".modal-handsonconnect"></a><h3>Hands on Connect - Public Site</h3>'+
-                                '<p>' + window.translation.web_system + '</p></div>'+
-                            '<div class=" Portfolio-box branding">'+
-                                '<a href="#"  data-toggle="modal" data-target=".modal-arena" ><img src="img/arena/img1.jpg" alt=""></a><h3>Arena Bursatil</h3>'+
-                                '<p>' + window.translation.web_system + '</p></div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-mangos" >'+
-                                '<img src="img/mangos/home-miami.jpg" alt=""></a><h3>Mango’s Reservations System</h3>'+
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-meattogo" >'+
-                                '<img src="img/MeatToGo/gallery.PNG" alt=""></a><h3>Meat To Go</h3>'+
-                                '<p>'+ window.translation.app_mobile_android_ios +'</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-bralinmoca" >'+
-                                '<img src="img/Bralinmoca/homepage-map.jpg" alt=""></a><h3>Bralinmoca</h3>'+
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                            '<div class=" Portfolio-box photography">'+
-                                '<a href="#" data-toggle="modal" data-target=".modal-oneoc" >'+
-                                '<img src="img/OneOC/homepage.jpg" alt=""></a><h3>OneOC</h3>' +
-                                '<p>' + window.translation.web_system + '</p>'+
-                            '</div>'+
-                        '</div>';
+    const divPortfolio = getDivPortfolio();
 
     var valueInput = $('input[name="code_portfolio"]').val();
     var encrypted = CryptoJS.SHA256(valueInput).toString();
@@ -621,6 +632,29 @@ function jobs_events() {
     $('.apply').on('click', function() {
       $('.contact_form').parent().show();
       $('input[name="_name"]').focus();
+    });
+  }
+}
+
+function encrypt_decrypt_content() {
+  if($('a.encrypt').length > 0) {
+    $(document).on('click', 'a.encrypt', function() {
+      const content = $('textarea[name="content"]').val();
+      const key = CryptoJS.enc.Base64.parse("#base64Key#");
+      const iv  = CryptoJS.enc.Base64.parse("#base64IV#");
+      const dataDecrypted = CryptoJS.AES.encrypt(content, key, {iv: iv});
+      const dataEncryptedText = dataDecrypted.toString();
+
+      $('p.result').html(dataEncryptedText);
+    });
+    $(document).on('click', 'a.decrypt', function() {
+      const content = $('textarea[name="content"]').val();
+      var key = CryptoJS.enc.Base64.parse("#base64Key#");
+      var iv  = CryptoJS.enc.Base64.parse("#base64IV#");
+      var dataDecrypted = CryptoJS.AES.decrypt(content, key, {iv: iv});
+      const dataDecryptedText = dataDecrypted.toString(CryptoJS.enc.Utf8);
+
+      $('p.result').html(dataDecryptedText);
     });
   }
 }
