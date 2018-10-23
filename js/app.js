@@ -632,6 +632,9 @@ function jobs_events() {
     $('.apply').on('click', function() {
       $('.contact_form').parent().show();
       $('input[name="_name"]').focus();
+      $([document.documentElement, document.body]).animate({
+          scrollTop: $('input[name="_name').offset().top - 120
+        }, 1000);
     });
   }
 }
