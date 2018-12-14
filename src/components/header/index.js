@@ -24,7 +24,7 @@ const Header = ({ siteTitle, data }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          CG
         </Link>
       </h1>
     </div>
