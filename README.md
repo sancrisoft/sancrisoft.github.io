@@ -1,2 +1,2 @@
 # sancrisoft.github.io
-Repository of site Sancrisoft
+Repository of site Sancrisoft (v2)
