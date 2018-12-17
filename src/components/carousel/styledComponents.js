@@ -16,11 +16,40 @@ export const CarouselContainer = styled.div`
     z-index: 1;
     top: 50%;
   }
-  .slick-prev { left: 1%; }
-  .slick-next { right: 1%; }
+  .slick-prev { 
+    left: 2%; 
+    &:before { 
+      display: none; 
+    } 
+  }
+  .slick-next { 
+    right: 2%;
+    &:before { 
+      display: none; 
+    }  
+  }
   .slick-dots {
     position: absolute;
-    top: 95%;
+    top: 90%;
+    li, button {
+      width: 30px;
+      height: 30px;
+    }
+    li {
+      &.slick-active {
+        button {
+          &:before {
+            color: #FFFFFF;
+          }
+        }
+      }
+      button {
+        &:before {
+          color: #cfcfcf;
+          font-size: 20px;
+        }
+      }
+    }
   }
 `;
 
@@ -60,7 +89,7 @@ export const CarouselItem = styled.div`
       justify-content: center;
       flex-direction: column;
       width: 40%;
-      z-index: 1;
+      z-index: 3;
       h3, span, a {
         color: white;
         text-align: center;

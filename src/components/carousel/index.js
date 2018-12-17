@@ -12,14 +12,42 @@ import {
 } from './styledComponents';
 
 import ImageItem from './ImageItem';
+import Icons from '../icons';
+
+const PrevArrow = ({ className, style, onClick }) => (
+  <div className={className} onClick={onClick}>
+    <Icons
+      backgroundColor={'#FFFFFF'}
+      iconName={'left-arrow'}
+      width={36}
+      height={36}
+    />
+  </div>
+);
+
+const NextArrow = ({ className, style, onClick }) => (
+  <div className={className} onClick={onClick}>
+    <Icons
+      backgroundColor={'#FFFFFF'}
+      iconName={'right-arrow'}
+      width={36}
+      height={36}
+    />
+  </div>
+);
 
 var settings = {
   dots: true,
-  speed: 500,
+  speed: 750,
   infinite: true,
   fade: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
 };
 
 export const query = graphql`
