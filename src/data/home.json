@@ -1,21 +1,72 @@
 {
-  "title": "Sancrisoft",
-  "slogan": "Developing Websites",
-  "testimonials": [
-    {
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.",
-      "name":"juan perez",
-      "date": "12/04/2017"
-    },
-    {
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.",
-      "name":"pedro pablo",
-      "date": "24/12/2016"
-    },
-    {
-      "description":"Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.",
-      "name":"camilo ortiz",
-      "date": "03/10/2018"
-    }
-  ]
+    "title": "Sancrisoft",
+    "slogan": "Developing Websites",
+    "testimonials": [
+      {
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.",
+        "name":"juan perez",
+        "date": "12/04/2017"
+      },
+      {
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.",
+        "name":"pedro pablo",
+        "date": "24/12/2016"
+      },
+      {
+        "description":"Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.",
+        "name":"camilo ortiz",
+        "date": "03/10/2018"
+      }
+    ],
+    "carousel": [
+        {
+            "id": 1,
+            "title": "Titulo genial 1",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
+            "type": "image",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        },
+        {
+            "id": 2,
+            "title": "Titulo genial 2",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
+            "type": "video",
+            "videoSrc": "http://techslides.com/demos/sample-videos/small.mp4",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        },
+        {
+            "id": 3,
+            "title": "Titulo genial 3",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
+            "type": "image",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        },
+        {
+            "id": 4,
+            "title": "Titulo genial 4",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
+            "type": "image",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        },
+        {
+            "id": 5,
+            "title": "Titulo genial 5",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
+            "type": "image",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        },
+        {
+            "id": 6,
+            "title": "Titulo genial 6",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
+            "type": "image",
+            "link": "/careers",
+            "linkText": "Link arrechisimo!"
+        }
+    ]
 }

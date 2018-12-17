@@ -10,7 +10,6 @@ export class Icons extends PureComponent {
       height,
     } = this.props;
     switch (iconName) {
-
       case 'facebook':
         return (
           <svg enableBackground={`new 0 0 ${width} ${height}`} height={height} viewBox="0 0 56.693 56.693" width={width}>
@@ -29,7 +28,22 @@ export class Icons extends PureComponent {
             />
           </svg>
         );
-
+      case 'right-arrow':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" width={width} height={height}>
+            <g>
+              <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" fill={backgroundColor}/>
+            </g>
+          </svg>
+        );
+      case 'left-arrow':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175" xmlSpace="preserve" width={width} height={height}>
+            <g>
+              <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225   c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z" fill={backgroundColor}/>
+            </g>
+          </svg>
+        );
       default:
         return null;
     }
