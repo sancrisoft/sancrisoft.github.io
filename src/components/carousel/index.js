@@ -32,6 +32,7 @@ var settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnHover: true,
+  lazyLoad: true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />
 };
