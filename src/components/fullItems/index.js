@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Carousel from '../carousel';
 import {
@@ -7,7 +7,7 @@ import {
 } from './styledComponents';
 import CarouselItemComponent from './CarouselItem';
 
-export class FullItem extends Component {
+export class FullItem extends PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
   }

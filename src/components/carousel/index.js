@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
@@ -36,7 +36,7 @@ var settings = {
   prevArrow: <PrevArrow />
 };
 
-class Carousel extends Component {
+class Carousel extends PureComponent {
   static propTypes = {
     full: PropTypes.bool,
     slidesToShow: PropTypes.number,
