@@ -1,0 +1,142 @@
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  html body {
+    /* Our Technologies Section */
+    /* Portfolio Section */
+  }
+  html body header {
+    padding: 150px 0 !important;
+  }
+  html body header h1 {
+    font-size: 38px !important;
+  }
+  html body .homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+    height: 660px;
+  }
+  html body .logo {
+    width: 450px;
+  }
+  html body .res-nav_click {
+    display: block;
+  }
+  html body .res-nav_click.selected {
+    color: #cc7000 !important;
+  }
+  html body .res-nav_click.selected:hover, html body .res-nav_click.selected:active, html body .res-nav_click.selected:focus, html body .res-nav_click.selected:visited {
+    color: #cc7000 !important;
+  }
+  html body .res-nav_click:hover, html body .res-nav_click:active, html body .res-nav_click:focus, html body .res-nav_click:visited {
+    color: #777777 !important;
+  }
+  html body ul.main-nav {
+    display: none;
+    z-index: 2;
+    top: 68px;
+    padding-top: 15px;
+  }
+  html body ul.main-nav li {
+    width: 100%;
+    height: 35px;
+  }
+  html body ul.main-nav li:first-child {
+    width: 100%;
+  }
+  html body ul.main-nav li a {
+    padding: 0px 6px;
+    vertical-align: top;
+    margin-top: 4px;
+    font-size: 16px;
+  }
+  html body ul.main-nav li.small-logo {
+    display: none;
+  }
+  html body .modal .content {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #7b7b7b;
+  }
+  html body .modal .content .description {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0px;
+    margin-left: 6px;
+  }
+  html body .modal .content ul.listing-features {
+    font-size: 16px;
+    list-style-type: none;
+    margin-left: 6px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  html body .video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #CCC;
+  }
+  html body .video-container video {
+    position: absolute;
+    z-index: 0;
+  }
+  html body .video-container video.fillWidth {
+    width: 1300px;
+    min-height: 698px;
+  }
+  html body .video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  html body .team-leader-box {
+    margin-bottom: 0px !important;
+  }
+  html body .team-leader-box span {
+    margin-bottom: 10px;
+    min-height: 36px;
+  }
+  html body .team-leader-box .team-leader-shadow {
+    display: none;
+  }
+  html body .team-leader-box ul.social-networks-desktop {
+    display: none;
+  }
+  html body .team-leader-box ul.social-networks-mobile {
+    display: block;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  html body .team-leader-box ul.social-networks-mobile li {
+    display: inline-block;
+    width: 40px;
+  }
+  html body .team-leader-box ul.social-networks-mobile li a {
+    font-size: 20px;
+    color: #888888;
+  }
+  html body .team-leader-box ul.social-networks-mobile li.write-us {
+    text-decoration: underline;
+    width: 100%;
+  }
+  html body .c-logo-part div.slick-list {
+    width: 80%;
+  }
+  html body .portfolio-public-content .code-portfolio-content input {
+    width: 50%;
+  }
+  html body .jobs .container .job-post .location {
+    float: none;
+    margin-left: 120px;
+  }
+}
+/*# sourceMappingURL=app-tablet.css.map */
