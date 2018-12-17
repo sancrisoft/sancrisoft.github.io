@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from '../header'
+// import Header from '../header' El header se debe posicionar absoluto, lo comente para que el carousel del home se vea bien #MIGUEL
 import './layout.css'
 
 // Los componentes se conectan a graphql con "Static Query" (OJO solo debe ser usado para componentes que deban consultar)

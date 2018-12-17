@@ -1,0 +1,52 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Carousel from '../carousel';
+import {
+  BackgroundItem,
+  CarouselItem
+} from './styledComponents';
+import CarouselItemComponent from './CarouselItem';
+
+export class FullItem extends Component {
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+  }
+
+  renderItems = () => {
+    const { 
+      data,
+      data: {
+        site: {
+          siteMetadata: { 
+            home: { carousel }
+          }
+        }
+      }
+    } = this.props;
+    return carousel.map((carouselItem) => (
+      <BackgroundItem key={carouselItem.id}>
+        <CarouselItem>
+          <CarouselItemComponent 
+            {...carouselItem} 
+            image={data[`office${carouselItem.id}`].childImageSharp.sizes} 
+          />
+        </CarouselItem>
+      </BackgroundItem>
+    ));
+  }
+
+  render() {
+    return (
+      <Carousel
+        dots
+        arrows
+        full
+        fade
+      >
+        { this.renderItems() }
+      </Carousel>
+    )
+  }
+}
+
+export default FullItem

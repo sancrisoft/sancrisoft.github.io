@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
@@ -40,7 +40,6 @@ CarouselItem.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   image: PropTypes.object,
