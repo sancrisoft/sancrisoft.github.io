@@ -28,7 +28,10 @@ export class FullItem extends Component {
         <CarouselItem>
           <CarouselItemComponent 
             {...carouselItem} 
-            image={data[`office${carouselItem.id}`].childImageSharp.sizes} 
+            image={ carouselItem.type === 'image'
+              ? data[`office${carouselItem.id}`].childImageSharp.sizes
+              : {}
+            } 
           />
         </CarouselItem>
       </BackgroundItem>
@@ -42,6 +45,8 @@ export class FullItem extends Component {
         arrows
         full
         fade
+        autoplay
+        autoplaySpeed={4000}
       >
         { this.renderItems() }
       </Carousel>

@@ -31,8 +31,6 @@ var settings = {
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
   pauseOnHover: true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />
@@ -45,6 +43,8 @@ class Carousel extends Component {
     dots: PropTypes.bool,
     arrows: PropTypes.bool,
     fade: PropTypes.bool,
+    autoplay: PropTypes.bool,
+    autoplaySpeed: PropTypes.number,
   }
 
   static default
@@ -55,6 +55,8 @@ class Carousel extends Component {
       arrows,
       dots,
       fade,
+      autoplay,
+      autoplaySpeed
     } = this.props;
     return (
       <CarouselContainer>
@@ -62,6 +64,8 @@ class Carousel extends Component {
           {...settings}
           dots={dots}
           fade={fade}
+          autoplay={autoplay}
+          autoplaySpeed={autoplaySpeed}
           arrows={arrows && children.length && children.length > 1}
         >
           { children }
@@ -77,6 +81,8 @@ Carousel.defaultProps = {
   dots: true,
   arrows: true,
   fade: false,
+  autoplay: false,
+  autoplaySpeed: 4000,
 };
 
 export default Carousel;
