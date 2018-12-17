@@ -1,0 +1,180 @@
+@media only screen and (min-width: 40.063em) and (max-width: 64em)
+{
+	html{
+		body{
+			header{
+				padding: 150px 0!important;
+				h1{
+					font-size: 38px!important;
+				}
+			}
+			.homepage-hero-module {
+	            border-right: none;
+	            border-left: none;
+	            position: relative;
+	            height: 660px;
+	        }
+	        .logo{
+				width: 450px;
+			}
+			.res-nav_click{
+				display: block;
+
+				&.selected{
+    				color: #cc7000 !important;
+
+    				&:hover, &:active, &:focus, &:visited{
+        				color: #cc7000 !important;
+        			}
+    			}
+				&:hover, &:active, &:focus, &:visited{
+    				color: #777777 !important;
+    			}
+			}
+			ul.main-nav{
+				display: none;
+				z-index: 2;
+				top: 68px;
+				padding-top: 15px;
+				li{
+					width: 100%;
+					height: 35px;
+					&:first-child{
+						width: 100%;
+					}
+					a{
+						padding: 0px 6px;
+					    vertical-align: top;
+					    margin-top: 4px;
+					    font-size: 16px;
+					}
+					&.small-logo{
+						display: none;
+					}
+				}
+			}
+			 .modal{
+	            .content{
+	                margin-left: 10px;
+	                margin-right: 10px;
+	                color: #7b7b7b;
+	                .description {
+	                    width: 100%;
+	                    display: inline-block;
+	                    vertical-align: top;
+	                    margin-right: 0px;
+	                    margin-left: 6px;
+	                }
+	                ul{
+	                	&.listing-features{
+		                    font-size: 16px;
+		                    list-style-type: none;
+		                    margin-left: 6px;
+		                    padding: 5px;
+		                    display: inline-block;
+		                    width: 100%;
+		                    vertical-align: top;
+		                    margin-top: 10px;
+		                }
+		            }
+	            }
+	        }
+			.video-container {
+	            position: relative;
+	            bottom: 0%;
+	            left: 0%;
+	            height: 100%;
+	            width: 100%;
+	            overflow: hidden;
+	            background: #CCC;
+
+	            video{
+	                position: absolute;
+	                z-index: 0;
+
+	                &.fillWidth{
+	                    width: 1300px;
+	                    min-height: 698px;
+	                }
+	            }
+
+	            .poster{
+	                img{
+	                    width: 100%;
+	                    bottom: 0;
+	                    position: absolute;
+	                }
+	            }
+	        }
+
+	        .team-leader-box{
+	        	margin-bottom: 0px !important;
+
+	        	span{
+	        		margin-bottom: 10px;
+	        		min-height: 36px;
+	        	}
+
+	            .team-leader-shadow{
+	            	display: none;
+	            }
+
+	            ul.social-networks-desktop{
+	            	display: none;
+	            }
+
+	            ul.social-networks-mobile{
+	            	display: block;
+        			text-align: center;
+    			    list-style: none;
+    			    margin-bottom: 20px;
+    			    padding: 0;
+
+    			    li{
+    			    	display: inline-block;
+    			    	width: 40px;
+
+    			    	a{
+    			    		font-size: 20px;
+    			    		color: #888888;
+    			    	}
+
+    			    	&.write-us{
+    			    		text-decoration: underline;
+    			    		width: 100%;
+    			    	}
+    			    }
+	        	}
+	        }
+
+	        /* Our Technologies Section */
+	        .c-logo-part{
+				div{
+					&.slick-list{
+						width: 80%;
+					}
+				}
+	        }
+
+	        /* Portfolio Section */
+	        .portfolio-public-content{
+	        	.code-portfolio-content{
+	        		input{
+	        			width: 50%;
+	        		}
+	        	}
+	        }
+
+					.jobs {
+						.container {
+							.job-post {
+								.location {
+									float: none;
+									margin-left: 120px;
+								}
+							}
+						}
+					}
+		}
+	}
+}

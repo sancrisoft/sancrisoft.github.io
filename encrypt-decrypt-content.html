@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="js/clibraries/core-min.js"></script>
+    <script type="text/javascript" src="js/rollups/aes.js"></script>
+    <script type="text/javascript" src="js/rollups/sha256.js"></script>
+    <script type="text/javascript" src="js/rollups/sha512.js"></script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/appEncryptDecrypt.js"></script>
+    <title>Encrypt Decrypt Content</title>
+  </head>
+  <body>
+    <p>
+      Steps to encrypt content:
+      1 - Change in HTML all " by '
+      2 - Minify all HTML using <a href="http://www.willpeavy.com/minifier/" target="_blank">http://www.willpeavy.com/minifier/</a>
+    </p>
+    <p>
+      Steps to decrypt content:
+      1 - Copy in textarea all content
+      2 - After decrypt use <a href="https://www.freeformatter.com/html-formatter.html" target="_blank">https://www.freeformatter.com/html-formatter.html</a> to parse HTML in readable
+    </p>
+    <textarea name="content" rows="8" cols="80"></textarea>
+    <a href="#" class="decrypt">Decrypt</a>
+    <a href="#" class="encrypt">Encrypt</a>
+    <p class="result" style="margin-top: 30px;word-break: break-all;padding: 10px 5%;"></p>
+  </body>
+</html>
