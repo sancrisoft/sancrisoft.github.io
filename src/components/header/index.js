@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Title from '../title'
 
 const Header = ({ siteTitle, data }) => (
   <div
@@ -16,6 +17,7 @@ const Header = ({ siteTitle, data }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
+      <Title  text={'Hello World'}/>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
