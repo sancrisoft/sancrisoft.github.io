@@ -1,33 +1,12 @@
-import React from 'react';
-// import PropTypes from 'prop-types'
-import Slider from "./slider";
-import Title from '../title';
-import {
-  Container
-} from './styledComponents';
+import React from 'react'
 
-class Testimonials extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Title
-          type={2}
-          text="Title Testimonial"
-        />
+import { Box } from './styledComponents'
 
-        <Slider />
+const BoxTestimonial = ({ data }) => (
+  <Box>
+    box testimonial
+  </Box>
+)
 
-      </Container>
-    );
-  }
-}
 
-Testimonials.propTypes = {
-
-}
-
-Testimonials.defaultProps = {
-
-}
-
-export default Testimonials
+export default BoxTestimonial

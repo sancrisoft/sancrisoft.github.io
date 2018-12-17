@@ -8,4 +8,7 @@ export const Item = styled.div`
   display: flex !important;
   align-items: center;
   justify-content: center;
+  a {
+    width: 100%;
+  }
 `;
