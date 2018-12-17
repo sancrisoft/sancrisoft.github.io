@@ -5,37 +5,37 @@
         {
             "id": 1,
             "title": "Titulo genial 1",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
             "type": "image"
         },
         {
             "id": 2,
             "title": "Titulo genial 2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
             "type": "video"
         },
         {
             "id": 3,
             "title": "Titulo genial 3",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
             "type": "image"
         },
         {
             "id": 4,
             "title": "Titulo genial 4",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
             "type": "image"
         },
         {
             "id": 5,
             "title": "Titulo genial 5",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
             "type": "image"
         },
         {
             "id": 6,
             "title": "Titulo genial 6",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
             "type": "image"
         }
     ]

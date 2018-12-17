@@ -11,7 +11,7 @@ import {
   CarouselItem,
 } from './styledComponents';
 
-import ImageItem from './ImageItem';
+import CarouselItemComponent from './CarouselItem';
 import Icons from '../icons';
 
 const PrevArrow = ({ className, style, onClick }) => (
@@ -92,7 +92,7 @@ class Carousel extends Component {
     return carousel.map((carouselItem) => (
       <BackgroundItem key={carouselItem.id}>
         <CarouselItem>
-          <ImageItem 
+          <CarouselItemComponent 
             {...carouselItem} 
             image={data[`office${carouselItem.id}`].childImageSharp.sizes} 
           />

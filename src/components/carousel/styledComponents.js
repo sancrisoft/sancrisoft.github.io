@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 export const BackgroundItem = styled.div`
   color: white;
@@ -23,7 +24,10 @@ export const CarouselContainer = styled.div`
     } 
   }
   .slick-next { 
-    right: 2%;
+    right: 5%;
+    ${breakpoint('desktop')`
+      right: 2%;
+    `}
     &:before { 
       display: none; 
     }  
@@ -46,7 +50,10 @@ export const CarouselContainer = styled.div`
       button {
         &:before {
           color: #cfcfcf;
-          font-size: 20px;
+          font-size: 14px;
+          ${breakpoint('desktop')`
+            font-size: 20px;
+          `}
         }
       }
     }
@@ -88,7 +95,10 @@ export const CarouselItem = styled.div`
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      width: 40%;
+      width: 50%;
+      ${breakpoint('desktop')`
+        width: 30%;
+      `}
       z-index: 3;
       h3, span, a {
         color: white;
@@ -102,7 +112,7 @@ export const CarouselItem = styled.div`
         background-color: #F28724;
         border-radius: 50px;
         text-decoration: none;
-        padding: 1em;
+        padding: 0.5em 1em;
         
       }
     }

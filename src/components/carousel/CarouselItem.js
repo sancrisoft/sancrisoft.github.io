@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 
-const ImageItem = ({ id, title, description, image, type }) => {
+const CarouselItem = ({ id, title, description, image, type }) => {
 
   const renderContent = () => {
     switch(type) {
@@ -38,4 +38,4 @@ const ImageItem = ({ id, title, description, image, type }) => {
 
 
 
-export default ImageItem
+export default CarouselItem
