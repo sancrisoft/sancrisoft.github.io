@@ -1,42 +1,33 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
+import React from 'react';
+// import PropTypes from 'prop-types'
+import Slider from "./slider";
+import Title from '../title';
+import {
+  Container
+} from './styledComponents';
 
-const Header = ({ siteTitle, data }) => (
-  <div
-    style={{
-      background: 'blue',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+class Testimonials extends React.Component {
+  render() {
+    return (
+      <Container>
+        <Title
+          type={2}
+          text="Title Testimonial"
+        />
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+        <Slider />
+
+      </Container>
+    );
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: '',
+Testimonials.propTypes = {
+
 }
 
-export default Header
+Testimonials.defaultProps = {
+
+}
+
+export default Testimonials
