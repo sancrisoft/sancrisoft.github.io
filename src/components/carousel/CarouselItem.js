@@ -36,6 +36,8 @@ const CarouselItem = ({ id, title, description, image, type }) => {
   );
 };
 
-
+CarouselItem.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default CarouselItem

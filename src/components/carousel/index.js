@@ -19,8 +19,6 @@ const PrevArrow = ({ className, style, onClick }) => (
     <Icons
       backgroundColor={'#FFFFFF'}
       iconName={'left-arrow'}
-      width={36}
-      height={36}
     />
   </div>
 );
@@ -30,8 +28,6 @@ const NextArrow = ({ className, style, onClick }) => (
     <Icons
       backgroundColor={'#FFFFFF'}
       iconName={'right-arrow'}
-      width={36}
-      height={36}
     />
   </div>
 );

@@ -16,6 +16,14 @@ export const CarouselContainer = styled.div`
     position: absolute;
     z-index: 1;
     top: 50%;
+    svg {
+      width: 36px;
+      height: 36px;
+      ${breakpoint('desktop')`
+        width: 48px;
+        height: 48px;
+      `}
+    }
   }
   .slick-prev { 
     left: 2%; 
