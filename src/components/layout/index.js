@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-
 import Header from '../header'
 import './layout.css'
+import { GlobalFonts } from '../styledComponents'
 
 // Los componentes se conectan a graphql con "Static Query" (OJO solo debe ser usado para componentes que deban consultar)
 // De resto los que deben conectarse son los contenedores y enviarlo a los componentes
@@ -22,6 +22,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <GlobalFonts />
         <div
           style={{
             margin: '0 auto',
