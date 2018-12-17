@@ -74,6 +74,9 @@ export const query = graphql`
             title
             description
             type
+            videoSrc
+            link
+            linkText
           }
         }
       }
