@@ -77,6 +77,7 @@ export const query = graphql`
             id
             title
             description
+            type
           }
         }
       }
@@ -91,7 +92,10 @@ class Carousel extends Component {
     return carousel.map((carouselItem) => (
       <BackgroundItem key={carouselItem.id}>
         <CarouselItem>
-          <ImageItem {...carouselItem} image={data[`office${carouselItem.id}`].childImageSharp.sizes} />
+          <ImageItem 
+            {...carouselItem} 
+            image={data[`office${carouselItem.id}`].childImageSharp.sizes} 
+          />
         </CarouselItem>
       </BackgroundItem>
     ));

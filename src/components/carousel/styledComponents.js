@@ -56,7 +56,7 @@ export const CarouselContainer = styled.div`
 export const CarouselItem = styled.div`
   height: 100vh;
   width: 100vw;
-  img {
+  img, video {
     width: 100%;
     height: 100%;
     object-fit: cover;
