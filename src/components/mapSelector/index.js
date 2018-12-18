@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Map from './map';
-
+import logo from "../../images/small-logo.png";
 import {
   ButtonSelector,
   SectionContainer,
@@ -12,13 +12,28 @@ import { PageSizer, H4 } from '../styledComponents';
 export class MapSelector extends Component {
   static propTypes = {
     offices: PropTypes.arrayOf(PropTypes.object).isRequired,
+    markerIcon: PropTypes.object,
+  }
+
+  state = {
+    selectedOffice: 'none'
+  };
+
+  componentDidMount = () => {
+    const { offices } = this.props;
+    this.setState({ selectedOffice: offices[0].id });
   }
 
   renderSelectors = () => {
     const { offices } = this.props;
+    const { selectedOffice } = this.state;
     return offices.map((office) => {
       return (
-        <ButtonSelector key={office.id}>
+        <ButtonSelector 
+          key={office.id} 
+          className={selectedOffice === office.id ? 'active' : null}
+          onClick={() => this.setState({ selectedOffice: office.id })}
+        >
           <H4>{office.title}</H4>
           <Column>
             <span>{office.address1}</span>
@@ -32,13 +47,21 @@ export class MapSelector extends Component {
   };
 
   render() {
+    const { selectedOffice } = this.state;
+    console.log(logo);
+    const office = this.props.offices.find((office) => office.id === selectedOffice);
     return (
       <SectionContainer>
         <PageSizer className={'buttons-container'}>
           { this.renderSelectors() }
         </PageSizer>
         <div className="map-container">
-          <Map />
+          <Map 
+            latitude={office && parseFloat(office.latitude)}
+            longitude={office && parseFloat(office.longitude)}
+            zoom={15}
+            markerIcon={logo}
+          />
         </div>
       </SectionContainer>
     )

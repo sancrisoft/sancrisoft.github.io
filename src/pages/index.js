@@ -70,7 +70,7 @@ const IndexPage = ( props ) => {
 
 // Queries for images (One query by image)
 export const query = graphql`
-query imageQuery {
+query homeQuery {
   office1:file(relativePath: { eq: "home/carousel/office-1.jpg" }) {
     ...imageFragment
   }
