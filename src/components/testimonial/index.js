@@ -1,21 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image'
 
-import { Box } from './styledComponents'
+import Title from '../title';
+import { Box, ContImg } from './styledComponents'
 
-const BoxTestimonial = ({ name, description, date }) => (
-  <Box>
-    <p>{description}</p>
-    <h3>{name}</h3>
-    <span>{date}</span>
-  </Box>
-)
+// import imgTest from '../../images/small-logo.png'
+
+
+const BoxTestimonial = ({ name, description, image, date }) =>  {
+  return(
+    <Box>
+      <ContImg>
+        <Img sizes={image} style={{maxWidth: "40px"}} />
+      </ContImg>
+      <p>{description}</p>
+      <Title
+        type={4}
+        text={name}
+      />
+      <span>{date}</span>
+    </Box>
+  )
+}
 
 BoxTestimonial.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   date: PropTypes.string,
+  image: PropTypes.object,
 };
+
 
 
 export default BoxTestimonial

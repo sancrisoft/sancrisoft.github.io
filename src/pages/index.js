@@ -9,61 +9,104 @@ import SEO from '../components/seo'
 import Title from '../components/title';
 import Testimonial from '../components/testimonial';
 import FullItems from '../components/fullItems'
+import Carousel from '../components/carousel'
+import ViewPort from '../components/HOC/withViewportHandler'
+
+import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 
 import {
-  ContTestimonial,
-  Container
+  ContTestimonial
 } from './styledComponents'
 
-const IndexPage = ( props ) => {
+const IndexPage = (props) => {
+
+  const renderItems = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              testimonials,
+            }
+          }
+        }
+      },
+      data
+    } = props;
+
+    const newArray = testimonials.map((item) => {
+      const {
+        id,
+        name,
+        description,
+        date,
+      } = item;
+
+      return (
+        <Testimonial
+          key={id}
+          name={name}
+          description={description}
+          date={date}
+          image={data[`Testimonial${id}`].childImageSharp.sizes}
+        />
+
+      )
+    });
+    return newArray;
+
+  }
+
   const {
+    data,
     data: {
       site: {
         siteMetadata: {
           home: {
-            testimonials,
             offices
           }
         }
       }
     },
-    data
+    viewport: {
+      isMobileView,
+      isTabletView
+    }
   } = props;
 
-  testimonials.map((data) => {
-    const {
-      name,
-      description,
-      date,
-    } = data;
-    return(
-      <Testimonial
-        name={name}
-        description={description}
-        date={date}
-      />
-    )
-  })
+  let slidesToShow = (isMobileView) ? 1 : 3;
+  slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
   return(
     <div>
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-        <MapSelector offices={offices} />
+
         <Link to="/careers">Careers</Link>
       </Layout>
 
       <ContTestimonial>
-        <Container>
+        <PageSizer>
           <Title
             type={2}
             text="Title Testimonial"
           />
 
-        </Container>
+          <Carousel
+            dots
+            slidesToShow={slidesToShow}
+            arrowColor="#F28724"
+            arrows={false}
+            autoplay
+          >
+            { renderItems() }
+          </Carousel>
+
+        </PageSizer>
       </ContTestimonial>
+      <MapSelector offices={offices} />
     </div>
   )
 }
@@ -89,6 +132,24 @@ query homeQuery {
   office6:file(relativePath: { eq: "home/carousel/office-6.jpg" }) {
     ...imageFragment
   }
+  Testimonial1:file(relativePath: { eq: "home/small-logo.png" }) {
+    ...imageFragment
+  }
+  Testimonial2:file(relativePath: { eq: "home/logo-google.png" }) {
+    ...imageFragment
+  }
+  Testimonial3:file(relativePath: { eq: "home/logo-face.png" }) {
+    ...imageFragment
+  }
+  Testimonial4:file(relativePath: { eq: "home/logo-youtube.png" }) {
+    ...imageFragment
+  }
+  Testimonial5:file(relativePath: { eq: "home/logo-ibm.png" }) {
+    ...imageFragment
+  }
+  Testimonial6:file(relativePath: { eq: "home/logo-git.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -102,6 +163,7 @@ query homeQuery {
           linkText
         },
         testimonials {
+          id
           description
           name
           date
@@ -122,4 +184,4 @@ query homeQuery {
 }
 `;
 
-export default IndexPage
+export default ViewPort(IndexPage)
