@@ -18,8 +18,6 @@ import {
 
 const IndexPage = (props) => {
 
-  console.log(props);
-
   const renderItems = () => {
     const {
       data: {
@@ -72,9 +70,10 @@ const IndexPage = (props) => {
           />
 
           <Carousel
-            dots={false}
-            arrows
-            fade
+            dots
+            slidesToShow={3}
+            arrowColor="#F28724"
+            arrows={false}
             autoplay
           >
             { renderItems() }
