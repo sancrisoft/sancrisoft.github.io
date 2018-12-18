@@ -29,6 +29,9 @@ export const ButtonSelector = styled.button`
     opacity: 1;
     border-bottom: 10px solid #F28724;
   }
+  &:focus {
+    outline: 0;
+  }
 `;
 
 export const SectionContainer = styled.section`
