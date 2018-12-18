@@ -7,7 +7,7 @@ import {
   SectionContainer,
   Column,
 } from './styledComponents';
-import { PageSizer, H4 } from '../styledComponents';
+import { PageSizer, H4, H3 } from '../styledComponents';
 
 export class MapSelector extends Component {
   static propTypes = {
@@ -48,10 +48,10 @@ export class MapSelector extends Component {
 
   render() {
     const { selectedOffice } = this.state;
-    console.log(logo);
     const office = this.props.offices.find((office) => office.id === selectedOffice);
     return (
       <SectionContainer>
+        <H3 className="section-heading">O pasa por nuestras oficinas</H3>
         <PageSizer className={'buttons-container'}>
           { this.renderSelectors() }
         </PageSizer>

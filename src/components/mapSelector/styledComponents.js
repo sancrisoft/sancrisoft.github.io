@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { PageSizer } from '../styledComponents';
-// Breakpoint import if needed
+import { PageSizer, H3 } from '../styledComponents';
+import breakpoint from 'styled-components-breakpoint';
 
 export const ButtonSelector = styled.button`
   background-color: #f5f7fa;
@@ -13,6 +13,14 @@ export const ButtonSelector = styled.button`
   height: 15em;
   display: flex;
   flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  ${breakpoint('desktop')`
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  `}
   &:active, &:visited {
     border: none;
   }
@@ -30,6 +38,7 @@ export const SectionContainer = styled.section`
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  align-items: center;
   flex-direction: column;
   background-color: #f5f7fa;
   ${PageSizer}.buttons-container {
@@ -42,12 +51,19 @@ export const SectionContainer = styled.section`
     width: 100%;
     height: 65vh;
   }
+  ${H3}.section-heading {
+    margin-bottom: 3em;
+  }
 `;
 
 export const Column = styled.div`
   margin-top: 3em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+    align-items: center;
+  ${breakpoint('desktop')`
+    justify-content: flex-start;
+    align-items: flex-start;
+  `}
 `;
