@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const ContTestimonial = styled.section`
   display: block;
+  min-height: 300px;
 `;
 export const Container = styled.div`
   margin: 0 auto;

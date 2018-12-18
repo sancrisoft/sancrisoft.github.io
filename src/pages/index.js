@@ -9,40 +9,52 @@ import SEO from '../components/seo'
 import Title from '../components/title';
 import Testimonial from '../components/testimonial';
 import FullItems from '../components/fullItems'
+import Carousel from '../components/carousel'
 
 import {
   ContTestimonial,
   Container
 } from './styledComponents'
 
-const IndexPage = ( props ) => {
-  const {
-    data: {
-      site: {
-        siteMetadata: {
-          home: {
-            testimonials
+const IndexPage = (props) => {
+
+  console.log(props);
+
+  const renderItems = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              testimonials
+            }
           }
         }
-      }
-    },
+      },
+    } = props;
+    const newArray = testimonials.map((data) => {
+      const {
+        id,
+        name,
+        description,
+        date,
+      } = data;
+
+      return (
+        <Testimonial
+          key={id}
+          name={name}
+          description={description}
+          date={date}
+        />
+      )
+    });
+    return newArray;
+  }
+
+  const {
     data
   } = props;
-
-  testimonials.map((data) => {
-    const {
-      name,
-      description,
-      date,
-    } = data;
-    return(
-      <Testimonial
-        name={name}
-        description={description}
-        date={date}
-      />
-    )
-  })
 
   return(
     <div>
@@ -58,6 +70,15 @@ const IndexPage = ( props ) => {
             type={2}
             text="Title Testimonial"
           />
+
+          <Carousel
+            dots={false}
+            arrows
+            fade
+            autoplay
+          >
+            { renderItems() }
+          </Carousel>
 
         </Container>
       </ContTestimonial>
@@ -99,6 +120,7 @@ query imageQuery {
           linkText
         },
         testimonials {
+          id
           description
           name
           date
