@@ -8,19 +8,19 @@ import {
 } from './styledComponents';
 import Icons from '../icons';
 
-const PrevArrow = ({ className, style, onClick }) => (
+const PrevArrow = ({ className, style, onClick, backgroundColor }) => (
   <div className={className} onClick={onClick}>
     <Icons
-      backgroundColor={'#FFFFFF'}
+      backgroundColor={backgroundColor}
       iconName={'left-arrow'}
     />
   </div>
 );
 
-const NextArrow = ({ className, style, onClick }) => (
+const NextArrow = ({ className, style, onClick, backgroundColor }) => (
   <div className={className} onClick={onClick}>
     <Icons
-      backgroundColor={'#FFFFFF'}
+      backgroundColor={backgroundColor}
       iconName={'right-arrow'}
     />
   </div>
@@ -33,8 +33,6 @@ var settings = {
   slidesToScroll: 1,
   pauseOnHover: true,
   lazyLoad: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />
 };
 
 class Carousel extends PureComponent {
@@ -46,9 +44,8 @@ class Carousel extends PureComponent {
     fade: PropTypes.bool,
     autoplay: PropTypes.bool,
     autoplaySpeed: PropTypes.number,
+    arrowColor: PropTypes.string,
   }
-
-  static default
 
   render() {
     const { 
@@ -57,7 +54,9 @@ class Carousel extends PureComponent {
       dots,
       fade,
       autoplay,
-      autoplaySpeed
+      autoplaySpeed,
+      slidesToShow,
+      arrowColor,
     } = this.props;
     return (
       <CarouselContainer>
@@ -67,7 +66,10 @@ class Carousel extends PureComponent {
           fade={fade}
           autoplay={autoplay}
           autoplaySpeed={autoplaySpeed}
+          slidesToShow={slidesToShow}
           arrows={arrows && children.length && children.length > 1}
+          nextArrow={<NextArrow backgroundColor={arrowColor} />}
+          prevArrow={<PrevArrow backgroundColor={arrowColor} />}
         >
           { children }
         </Slider>
@@ -84,6 +86,7 @@ Carousel.defaultProps = {
   fade: false,
   autoplay: false,
   autoplaySpeed: 4000,
+  arrowColor: '#FFFFFF',
 };
 
 export default Carousel;
