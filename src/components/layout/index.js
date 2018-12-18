@@ -34,7 +34,8 @@ class Layout extends Component {
   render() {
     const { children, viewport: { isDesktopView} } = this.props;
     const { isWhiteTheme } = this.state;
-    const hamburStyles = (isWhiteTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
+    const isWTheme = (window.location.pathname === '/') ? isWhiteTheme : true;
+    const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
     return (<StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -60,11 +61,11 @@ class Layout extends Component {
             (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={hamburStyles} width={ 240 }>
               <Link to="/" > About Us </Link>
               <Link to="/" > Case Studies </Link>
-              <Link to="/" > Careers </Link>
+              <Link to="/careers">Careers</Link>
               <Link to="/" > Get a Quote </Link>
             </MenuMobile>
           }
-          <Header logo={data.logo} logoWhite={data.logoWhite} isWhiteTheme={isWhiteTheme} />
+          <Header logo={data.logo} logoWhite={data.logoWhite} isWhiteTheme={isWTheme} />
           <div id={'page-wrap'}>
             {children}
           </div>
@@ -74,46 +75,6 @@ class Layout extends Component {
   />)
   }
 }
-// const Layout = ({ children, viewport: { isDesktopView} }) => (
-//   <StaticQuery
-//     query={graphql`
-//       query SiteTitleQuery {
-//         site {
-//           siteMetadata {
-//             title
-//           }
-//         }
-//         logo:file(relativePath: { eq: "logo-ss.png" }) {
-//           ...imageFragment
-//         }
-//         logoWhite:file(relativePath: { eq: "logo-ssw.png" }) {
-//           ...imageFragment
-//         }
-//       }
-//     `}
-//     render={data => {
-//       console.log(window.scrollY)
-//       return (
-//         <>
-//           { /*<Header siteTitle={data.site.siteMetadata.title} />*/}
-//           <GlobalFonts />
-//           {
-//             (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={ HamburguerStyles } width={ 240 }>
-//               <Link to="/" > About Us </Link>
-//               <Link to="/" > Case Studies </Link>
-//               <Link to="/" > Careers </Link>
-//               <Link to="/" > Get a Quote </Link>
-//             </MenuMobile>
-//           }
-//           <Header logo={data.logo} logoWhite={data.logoWhite}/>
-//           <div id={'page-wrap'}>
-//             {children}
-//           </div>
-//         </>
-//       )
-//     }}
-//   />
-// )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

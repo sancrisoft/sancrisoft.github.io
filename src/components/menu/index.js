@@ -11,9 +11,7 @@ const Menu = ({ isBlack }) => {
         <Link to="/" >
             Case Studies
         </Link>
-        <Link to="/" >
-            Careers
-        </Link>
+        <Link to="/careers">Careers</Link>
         <Link to="/"  className={'special'}>
             Get a Quote
         </Link>

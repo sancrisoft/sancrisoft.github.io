@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Link,
   graphql
 } from 'gatsby'
 
@@ -83,8 +82,6 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-
-        <Link to="/careers">Careers</Link>
       </Layout>
 
       <ContTestimonial>
