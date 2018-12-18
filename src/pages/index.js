@@ -7,13 +7,15 @@ import {
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Title from '../components/title';
-import Testimonial from '../components/testimonial';
+import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import MapSelector from '../components/mapSelector'
-
+import Process from '../components/process'
+import { H3 } from '../components/styledComponents';
 import {
   ContTestimonial,
-  Container
+  Container,
+  WhatWeDo,
 } from './styledComponents'
 
 const IndexPage = ( props ) => {
@@ -52,6 +54,13 @@ const IndexPage = ( props ) => {
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
         <MapSelector offices={offices} />
+        <WhatWeDo>
+          <H3>Que hacemos</H3>
+          <div className="processes">
+            <Process />
+            <Process />
+          </div>
+        </WhatWeDo>
         <Link to="/careers">Careers</Link>
       </Layout>
 
