@@ -68,5 +68,27 @@
             "link": "/careers",
             "linkText": "Link arrechisimo!"
         }
+    ],
+    "offices": [
+        {
+            "id": "venezuela/tachira/san-cristobal",
+            "title": "San Cristóbal",
+            "address1": "Santa Teresa",
+            "address2": "Casa al fondo",
+            "state": "Táchira, Venezuela",
+            "postalCode": "5001",
+            "latitude": "6.1629538",
+            "longitude": "-75.6042868"
+        },
+        {
+            "id": "colombia/antioquia/envigado",
+            "title": "Envigado - Antioquia",
+            "address1": "Calle. 49 Sur",
+            "address2": "#45 A 300 Oficina 1813",
+            "state": "Antioquia",
+            "postalCode": "055422",
+            "latitude": "6.1629538",
+            "longitude": "-75.6042868"
+        }
     ]
 }

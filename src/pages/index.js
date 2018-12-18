@@ -9,6 +9,7 @@ import SEO from '../components/seo'
 import Title from '../components/title';
 import Testimonial from '../components/testimonial';
 import FullItems from '../components/fullItems'
+import MapSelector from '../components/mapSelector'
 
 import {
   ContTestimonial,
@@ -21,7 +22,8 @@ const IndexPage = ( props ) => {
       site: {
         siteMetadata: {
           home: {
-            testimonials
+            testimonials,
+            offices
           }
         }
       }
@@ -49,6 +51,7 @@ const IndexPage = ( props ) => {
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+        <MapSelector offices={offices} />
         <Link to="/careers">Careers</Link>
       </Layout>
 
@@ -102,6 +105,16 @@ query imageQuery {
           description
           name
           date
+        },
+        offices {
+          id
+          title
+          address1
+          address2
+          state
+          postalCode
+          latitude
+          longitude
         }
       }
     }
