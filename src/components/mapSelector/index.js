@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Map from './map';
+import Map from '../map';
 import logo from "../../images/small-logo.png";
 import {
   ButtonSelector,
@@ -57,8 +57,8 @@ export class MapSelector extends Component {
         </PageSizer>
         <div className="map-container">
           <Map 
-            latitude={office && parseFloat(office.latitude)}
-            longitude={office && parseFloat(office.longitude)}
+            latitude={office ? parseFloat(office.latitude) : 0}
+            longitude={office ? parseFloat(office.longitude) : 0}
             zoom={15}
             markerIcon={logo}
           />
