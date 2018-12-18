@@ -21,13 +21,16 @@ const Layout = ({ children }) => (
         logo:file(relativePath: { eq: "logo-ss.png" }) {
           ...imageFragment
         }
+        logoWhite:file(relativePath: { eq: "logo-ssw.png" }) {
+          ...imageFragment
+        }
       }
     `}
     render={data => (
       <>
         { /*<Header siteTitle={data.site.siteMetadata.title} />*/}
         <GlobalFonts />
-        <Header logo={data.logo}/>
+        <Header logo={data.logoWhite}/>
         <div>
           {children}
         </div>

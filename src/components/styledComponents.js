@@ -28,6 +28,12 @@ export const GlobalFonts = createGlobalStyle `
     font-weight: normal;
     src: local("LatoMedium"), local("LatoMedium"), url(${fonts.LatoMediumTTF}) format("ttf"), url(${fonts.LatoMediumWOFF}) format("woff"), url(${fonts.MediumEOT}) format("eot"), url(${fonts.LatoMediumWOFF2}) format("woff2");
   }
+  @font-face {
+    font-family: "Averta";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Averta"), local("Averta"), url(${fonts.AvertaTTF}) format("ttf"), url(${fonts.AvertaWOFF}) format("woff"), url(${fonts.AvertaEOT}) format("eot"), url(${fonts.AvertaWOFF2}) format("woff2");
+  }
 `
 export const H1 = styled.h1`
     font-family: Lato;
