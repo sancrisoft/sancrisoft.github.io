@@ -28,7 +28,6 @@ const IndexPage = (props) => {
           siteMetadata: {
             home: {
               testimonials,
-              offices
             }
           }
         }
@@ -61,6 +60,15 @@ const IndexPage = (props) => {
 
   const {
     data,
+    data: {
+      site: {
+        siteMetadata: {
+          home: {
+            offices
+          }
+        }
+      }
+    },
     viewport: {
       isMobileView,
       isTabletView
@@ -75,7 +83,7 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-        <MapSelector offices={offices} />
+
         <Link to="/careers">Careers</Link>
       </Layout>
 
@@ -98,6 +106,7 @@ const IndexPage = (props) => {
 
         </PageSizer>
       </ContTestimonial>
+      <MapSelector offices={offices} />
     </div>
   )
 }
