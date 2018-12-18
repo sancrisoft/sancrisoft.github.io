@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { Spring } from 'react-spring'
+import {
+  H3,
+} from '../styledComponents'; 
 
 const CarouselItem = ({ id, title, description, image, type, videoSrc, link, linkText }) => {
 
@@ -30,7 +33,7 @@ const CarouselItem = ({ id, title, description, image, type, videoSrc, link, lin
           { renderContent() }
           <div className={'detail-container'}>
             <div className={'detail'} style={props}>
-              <h3>{title}</h3>
+              <H3>{title}</H3>
               <span>{description}</span>
               <Link to={link}>{linkText}</Link>
             </div>
