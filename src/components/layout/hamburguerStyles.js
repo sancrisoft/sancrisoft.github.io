@@ -1,8 +1,8 @@
 const styles = {
     bmBurgerButton: {
       position: 'fixed',
-      width: '35px',
-      height: '30px',
+      width: '32px',
+      height: '28px',
       right: '5%',
       top: '32px'
     },
@@ -46,4 +46,17 @@ const styles = {
       background: 'rgba(0, 0, 0, 0.3)'
     }
   };
+
+  export const stylesBlack = {
+    bmBurgerButton: {
+      position: 'fixed',
+      width: '32px',
+      height: '28px',
+      right: '5%',
+      top: '20px'
+    },
+    bmBurgerBars: {
+      background: '#000000',
+    },
+  }
   export default styles;
