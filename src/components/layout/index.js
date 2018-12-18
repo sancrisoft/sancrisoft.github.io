@@ -35,7 +35,7 @@ const Layout = ({ children, viewport: { isDesktopView} }) => (
         { /*<Header siteTitle={data.site.siteMetadata.title} />*/}
         <GlobalFonts />
         {
-          (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={ HamburguerStyles } width={ 200 }>
+          (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={ HamburguerStyles } width={ 240 }>
             <Link to="/" > About Us </Link>
             <Link to="/" > Case Studies </Link>
             <Link to="/" > Careers </Link>

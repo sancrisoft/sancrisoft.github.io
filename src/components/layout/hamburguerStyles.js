@@ -3,7 +3,7 @@ const styles = {
       position: 'fixed',
       width: '35px',
       height: '30px',
-      right: '35px',
+      right: '5%',
       top: '32px'
     },
     bmBurgerBars: {
@@ -18,12 +18,12 @@ const styles = {
     },
     bmMenu: {
       background: 'white',
-      padding: '2.5em 1.5em 0',
+      padding: '2.5em 1em 0',
       fontSize: '1.15em',
-      width: '100%',
+      width: '70%',
     },
     bmMorphShape: {
-      fill: 'transparent'
+      fill: 'white'
     },
     bmItemList: {
       color: '#b8b7ad',
