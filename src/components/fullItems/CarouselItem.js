@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
+import { Spring } from 'react-spring'
 
 const CarouselItem = ({ id, title, description, image, type, videoSrc, link, linkText }) => {
 
@@ -22,17 +23,21 @@ const CarouselItem = ({ id, title, description, image, type, videoSrc, link, lin
   }
 
   return (
-    <>
-      <div className={'grey-filter'} />
-      { renderContent() }
-      <div className={'detail-container'}>
-        <div className={'detail'}>
-          <h3>{title}</h3>
-          <span>{description}</span>
-          <Link to={link}>{linkText}</Link>
-        </div>
-      </div>
-    </>
+    <Spring from={{ opacity: 0, marginRight: -1000 }} to={{ opacity: 1, marginRight: 0 }}>
+      { props => (
+        <>
+          <div className={'grey-filter'} />
+          { renderContent() }
+          <div className={'detail-container'}>
+            <div className={'detail'} style={props}>
+              <h3>{title}</h3>
+              <span>{description}</span>
+              <Link to={link}>{linkText}</Link>
+            </div>
+          </div>
+        </>
+      )}
+    </Spring>
   );
 };
 

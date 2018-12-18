@@ -1,44 +1,37 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Title from '../title'
+import Img from 'gatsby-image'
+import { HeaderContainer, HeaderPageSizer, Head1 } from './styledComponent'
 
-const Header = ({ siteTitle, data }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <Title  text={'Hello World'}/>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          CG
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+const Header = ({ siteTitle, logo }) => { 
+  console.log('logo', logo);
+  return (
+    <HeaderContainer>
+      <HeaderPageSizer>
+        <Head1>
+          <Link
+            to="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+            }}
+          >
+            <Img sizes={logo.childImageSharp.sizes} style={{ width: "250px" }} />
+          </Link>
+        </Head1>
+      </HeaderPageSizer>
+    </HeaderContainer>
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  logoUrl: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: '',
+  logo: '',
 }
 
 export default Header

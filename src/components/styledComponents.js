@@ -65,3 +65,8 @@ export const H6 = styled.h6`
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 `;
+
+export const PageSizer = styled.div`
+    margin: 0 auto;
+    max-width: 1024px;
+`;
