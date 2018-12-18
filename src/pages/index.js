@@ -10,6 +10,8 @@ import Title from '../components/title';
 import Testimonial from '../components/testimonial';
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
+import ViewPort from '../components/HOC/withViewportHandler'
+
 import { PageSizer } from '../components/styledComponents'
 
 import {
@@ -29,14 +31,16 @@ const IndexPage = (props) => {
           }
         }
       },
+      data
     } = props;
-    const newArray = testimonials.map((data) => {
+
+    const newArray = testimonials.map((item) => {
       const {
         id,
         name,
         description,
         date,
-      } = data;
+      } = item;
 
       return (
         <Testimonial
@@ -44,15 +48,25 @@ const IndexPage = (props) => {
           name={name}
           description={description}
           date={date}
+          image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
+
       )
     });
     return newArray;
+
   }
 
   const {
-    data
+    data,
+    viewport: {
+      isMobileView,
+      isTabletView
+    }
   } = props;
+
+  let slidesToShow = (isMobileView) ? 1 : 3;
+  slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
   return(
     <div>
@@ -71,7 +85,7 @@ const IndexPage = (props) => {
 
           <Carousel
             dots
-            slidesToShow={1}
+            slidesToShow={slidesToShow}
             arrowColor="#F28724"
             arrows={false}
             autoplay
@@ -106,6 +120,24 @@ query imageQuery {
   office6:file(relativePath: { eq: "home/carousel/office-6.jpg" }) {
     ...imageFragment
   }
+  Testimonial1:file(relativePath: { eq: "home/small-logo.png" }) {
+    ...imageFragment
+  }
+  Testimonial2:file(relativePath: { eq: "home/logo-google.png" }) {
+    ...imageFragment
+  }
+  Testimonial3:file(relativePath: { eq: "home/logo-face.png" }) {
+    ...imageFragment
+  }
+  Testimonial4:file(relativePath: { eq: "home/logo-youtube.png" }) {
+    ...imageFragment
+  }
+  Testimonial5:file(relativePath: { eq: "home/logo-ibm.png" }) {
+    ...imageFragment
+  }
+  Testimonial6:file(relativePath: { eq: "home/logo-git.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -130,4 +162,4 @@ query imageQuery {
 }
 `;
 
-export default IndexPage
+export default ViewPort(IndexPage)

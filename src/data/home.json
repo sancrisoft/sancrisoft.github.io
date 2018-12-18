@@ -6,36 +6,42 @@
         "id": 1,
         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.",
         "name":"juan perez",
+        "image":"/images/small-logo.png",
         "date": "12/04/2017"
       },
       {
         "id": 2,
         "description":"Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.",
         "name":"pedro pablo",
+        "image":"../../images/small-logo.png",
         "date": "24/12/2016"
       },
       {
         "id": 3,
         "description":"Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.",
         "name":"camilo ortiz",
+        "image":"../../images/small-logo.png",
         "date": "03/10/2018"
       },
       {
-        "id": 1,
+        "id": 4,
         "description":"Lorem ipsum dolor sit amet, iaukgs bdsd.",
         "name":"gonza gonza",
+        "image":"../../images/small-logo.png",
         "date": "18/01/2015"
       },
       {
-        "id": 2,
+        "id": 5,
         "description":"asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.",
         "name":"alfonso jaramillo",
+        "image":"../../images/small-logo.png",
         "date": "30/10/2017"
       },
       {
-        "id": 3,
+        "id": 6,
         "description":"Lorem ipsum doweeua.Ut enim ad minimo cborum.",
         "name":"cristian puerto",
+        "image":"../../images/small-logo.png",
         "date": "13/07/2018"
       }
     ],
