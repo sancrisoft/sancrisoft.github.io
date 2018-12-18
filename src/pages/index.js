@@ -91,6 +91,7 @@ const IndexPage = (props) => {
         <PageSizer>
           <Title
             type={2}
+            color="#fff"
             text="Title Testimonial"
           />
 
