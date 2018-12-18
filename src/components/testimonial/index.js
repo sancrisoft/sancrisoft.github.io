@@ -18,6 +18,7 @@ const BoxTestimonial = ({ name, description, image, date }) =>  {
       <Title
         type={4}
         text={name}
+        color="#F28724"
       />
       <span>{date}</span>
     </Box>
