@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const MenuContainer = styled.div`
   position: relative;
@@ -7,8 +7,13 @@ export const MenuContainer = styled.div`
     color: white;
     font-family: Averta;
     text-decoration: none;
-    margin: 0pc 15px;
-    font-size: 1rem;
+    margin: 0px 15px;
+    font-size: 0.9rem;
     font-weight: normal;
   }
+  ${(props) => props.isBlack && css`
+    a{
+      color: #000000;
+    }
+  `}
 `;

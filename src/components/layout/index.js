@@ -43,7 +43,7 @@ const Layout = ({ children, viewport: { isDesktopView} }) => (
           </MenuMobile>
         }
         <div id={'page-wrap'}>
-          <Header logo={data.logoWhite}/>
+          <Header logo={data.logo} logoWhite={data.logoWhite}/>
           {children}
         </div>
       </>

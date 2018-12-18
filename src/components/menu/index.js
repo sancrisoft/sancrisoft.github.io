@@ -2,9 +2,9 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { MenuContainer } from './styledComponents'
 
-const Menu = () => {
+const Menu = ({ isBlack }) => {
   return (
-    <MenuContainer>
+    <MenuContainer isBlack={isBlack}>
         <Link to="/" >
             About Us
         </Link>
