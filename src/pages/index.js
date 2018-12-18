@@ -10,10 +10,10 @@ import Title from '../components/title';
 import Testimonial from '../components/testimonial';
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
+import { PageSizer } from '../components/styledComponents'
 
 import {
-  ContTestimonial,
-  Container
+  ContTestimonial
 } from './styledComponents'
 
 const IndexPage = (props) => {
@@ -63,7 +63,7 @@ const IndexPage = (props) => {
       </Layout>
 
       <ContTestimonial>
-        <Container>
+        <PageSizer>
           <Title
             type={2}
             text="Title Testimonial"
@@ -71,7 +71,7 @@ const IndexPage = (props) => {
 
           <Carousel
             dots
-            slidesToShow={3}
+            slidesToShow={1}
             arrowColor="#F28724"
             arrows={false}
             autoplay
@@ -79,7 +79,7 @@ const IndexPage = (props) => {
             { renderItems() }
           </Carousel>
 
-        </Container>
+        </PageSizer>
       </ContTestimonial>
     </div>
   )
