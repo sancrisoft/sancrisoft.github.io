@@ -9,8 +9,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
-  height: 70px;
+  height: 100px;
 `;
 
 export const HeaderPageSizer = styled.div`
@@ -18,6 +17,8 @@ export const HeaderPageSizer = styled.div`
     max-width: 90%;
     display: flex;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
 `;
 export const Head1 = styled.h1`
   margin: 0px;

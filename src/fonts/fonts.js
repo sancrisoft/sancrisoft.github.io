@@ -18,6 +18,11 @@ import LatoMediumEOT from './lato/lato-medium-font.eot';
 import LatoMediumWOFF from './lato/lato-medium-font.woff';
 import LatoMediumWOFF2 from './lato/lato-medium-font.woff2';
 
+import AvertaTTF from './averta/avertastandard-regular-webfont.ttf';
+import AvertaEOT from './averta/avertastandard-regular-webfont.eot';
+import AvertaWOFF from './averta/avertastandard-regular-webfont.woff';
+import AvertaWOFF2 from './averta/avertastandard-regular-webfont.woff2';
+
 export default {
     LatoRegularTTF,
     LatoRegularEOT,
@@ -35,4 +40,8 @@ export default {
     LatoMediumEOT,
     LatoMediumWOFF,
     LatoMediumWOFF2,
+    AvertaTTF,
+    AvertaEOT,
+    AvertaWOFF,
+    AvertaWOFF2,
 };
