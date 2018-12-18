@@ -13,6 +13,7 @@ import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
 
 import { PageSizer } from '../components/styledComponents'
+import MapSelector from '../components/mapSelector'
 
 import {
   ContTestimonial
@@ -26,7 +27,8 @@ const IndexPage = (props) => {
         site: {
           siteMetadata: {
             home: {
-              testimonials
+              testimonials,
+              offices
             }
           }
         }
@@ -73,6 +75,7 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+        <MapSelector offices={offices} />
         <Link to="/careers">Careers</Link>
       </Layout>
 
@@ -101,7 +104,7 @@ const IndexPage = (props) => {
 
 // Queries for images (One query by image)
 export const query = graphql`
-query imageQuery {
+query homeQuery {
   office1:file(relativePath: { eq: "home/carousel/office-1.jpg" }) {
     ...imageFragment
   }
@@ -155,6 +158,16 @@ query imageQuery {
           description
           name
           date
+        },
+        offices {
+          id
+          title
+          address1
+          address2
+          state
+          postalCode
+          latitude
+          longitude
         }
       }
     }
