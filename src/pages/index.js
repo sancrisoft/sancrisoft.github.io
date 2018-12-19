@@ -10,6 +10,8 @@ import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
+import { I18nextProvider } from "react-i18next";
+import i18n from '../data/home.js';
 
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
@@ -95,8 +97,11 @@ const IndexPage = (props) => {
   let slidesToShow = (isMobileView) ? 1 : 3;
   slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
+  console.log('I18');
+    console.log(i18n)
+
   return(
-    <div>
+    <I18nextProvider i18n={i18n}>
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
@@ -114,7 +119,6 @@ const IndexPage = (props) => {
             color="#fff"
             text="Trusted by our customers"
           />
-
           <Carousel
             dots
             slidesToShow={slidesToShow}
@@ -128,7 +132,7 @@ const IndexPage = (props) => {
         </PageSizer>
       </ContTestimonial>
       <MapSelector offices={offices} />
-    </div>
+    </I18nextProvider>
   )
 }
 

@@ -43,8 +43,8 @@ export const ChipContainer = styled.div`
     }
   }
   div.technology-item {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     margin: 0 1em;
     position: relative;
     span.tooltip {
@@ -78,17 +78,25 @@ export const ChipContainer = styled.div`
     &:hover .technology img {
       animation: none;
     }
-    .technology {
+    div.technology-icon-container {
       width: 100%;
       height: 100%;
-      overflow: visible !important;
-      img {
-        border-radius: 50%;
-        object-fit: cover !important;
-        transition: all ${({ duration }) => duration}s ease-in-out;
-        animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
-        &:hover {
-          animation: none;
+      overflow: hidden;
+      transition: all ${({ duration }) => duration}s ease-in-out;
+      animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
+      border-radius: 50%;
+      padding: 0.1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        animation: none;
+      }
+      .technology {
+        flex: 1;
+        img {
+          flex: 1;
+          object-fit: contain !important;
         }
       }
     }
@@ -130,7 +138,9 @@ export class FloatingChip extends PureComponent {
     return (
       <ChipContainer duration={duration}>
         <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
-          <Img className="technology" sizes={sizes} />
+          <div className="technology-icon-container">
+            <Img className="technology" sizes={sizes} />
+          </div>
           <span className="tooltip">{tooltip}</span>
         </div>
       </ChipContainer>
