@@ -58,10 +58,11 @@ class Carousel extends PureComponent {
       autoplaySpeed,
       slidesToShow,
       arrowColor,
-      swipeToSlide
+      swipeToSlide,
+      full,
     } = this.props;
     return (
-      <CarouselContainer>
+      <CarouselContainer full={full}>
         <Slider
           {...settings}
           dots={dots}
