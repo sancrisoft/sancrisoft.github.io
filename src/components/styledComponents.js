@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-// import breakpoint from 'styled-components-breakpoint';
+import breakpoint from 'styled-components-breakpoint';
 // import { APP_COLORS } from '../utils/constants';
 import fonts from '../fonts/fonts';
 
@@ -74,5 +74,8 @@ export const H6 = styled.h6`
 
 export const PageSizer = styled.div`
     margin: 0 auto;
-    max-width: 1024px;
+    max-width: 100%;
+    ${breakpoint('desktop')`
+      max-width: 1024px;
+    `}
 `;
