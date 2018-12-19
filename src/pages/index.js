@@ -97,6 +97,7 @@ const IndexPage = (props) => {
             slidesToShow={slidesToShow}
             arrowColor="#F28724"
             arrows={false}
+            swipeToSlide={true}
             autoplay
           >
             { renderItems() }
