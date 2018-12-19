@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-import mojs from 'mo-js';
+// import mojs from 'mo-js';
 import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
 // import breakpoint from 'styled-components-breakpoint';
@@ -111,6 +111,7 @@ export class FloatingChip extends PureComponent {
     duration: PropTypes.number.isRequired,
   }
 
+  /*
   handleEmotion = () => {
     const { color } = this.props;
     if (this.moAnimation) this.moAnimation.replay();
@@ -132,6 +133,7 @@ export class FloatingChip extends PureComponent {
       this.moAnimation.play();
     }
   }
+  */
 
   render() {
     const { sizes, duration, tooltip } = this.props;

@@ -4,96 +4,66 @@
   "testimonials": [
     {
       "id": 1,
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.",
       "name":"juan perez",
-      "image":"/images/small-logo.png",
-      "title": "Founder, Google"
+      "image":"/images/small-logo.png"
     },
     {
       "id": 2,
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.",
       "name":"pedro pablo",
-      "image":"../../images/small-logo.png",
-      "title": "Head of sales"
+      "image":"../../images/small-logo.png"
     },
     {
       "id": 3,
-      "description":"Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.",
       "name":"camilo ortiz",
-      "image":"../../images/small-logo.png",
-      "title": "Designer"
+      "image":"../../images/small-logo.png"
     },
     {
       "id": 4,
-      "description":"Lorem ipsum dolor sit amet, iaukgs bdsd.",
       "name":"gonza gonza",
-      "image":"../../images/small-logo.png",
-      "title": "Co-founder"
+      "image":"../../images/small-logo.png"
     },
     {
       "id": 5,
-      "description":"asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.",
       "name":"alfonso jaramillo",
-      "image":"../../images/small-logo.png",
-      "title": "Founder"
+      "image":"../../images/small-logo.png"
     },
     {
       "id": 6,
-      "description":"Lorem ipsum doweeua.Ut enim ad minimo cborum.",
       "name":"cristian puerto",
-      "image":"../../images/small-logo.png",
-      "title": "Co-founder"
+      "image":"../../images/small-logo.png"
     }
   ],
   "carousel": [
       {
           "id": 1,
-          "title": "Titulo genial 1",
-          "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
           "type": "image",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       },
       {
           "id": 2,
-          "title": "Titulo genial 2",
-          "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
           "type": "video",
           "videoSrc": "http://techslides.com/demos/sample-videos/small.mp4",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       },
       {
           "id": 3,
-          "title": "Titulo genial 3",
-          "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
           "type": "image",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       },
       {
           "id": 4,
-          "title": "Titulo genial 4",
-          "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
           "type": "image",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       },
       {
           "id": 5,
-          "title": "Titulo genial 5",
-          "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
           "type": "image",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       },
       {
           "id": 6,
-          "title": "Titulo genial 6",
-          "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
           "type": "image",
-          "link": "/careers",
-          "linkText": "Link arrechisimo!"
+          "link": "/careers"
       }
   ],
   "offices": [
@@ -121,8 +91,6 @@
   "processes": [
       {
           "id": "web",
-          "title": "Web Development",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           "technologies": [
               {
                   "id": "react",
@@ -153,8 +121,6 @@
       },
       {
           "id": "mobile",
-          "title": "Mobile Development",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           "technologies": [
               {
                   "id": "react",
