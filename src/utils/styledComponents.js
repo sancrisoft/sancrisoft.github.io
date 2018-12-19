@@ -9,6 +9,7 @@ export const ContTestimonial = styled.section`
   position: relative;
   background: rgba(0,0,0, .5);
   overflow: hidden;
+  padding-top: 40px;
   &:after {
     content: '';
     display: block;
@@ -22,16 +23,27 @@ export const ContTestimonial = styled.section`
     right: 0;
     opacity: .5;
   }
+  h2 {
+    width: 90%;
+    margin: 0 auto;
+    ${breakpoint('tablet')`
+      width: 100%;
+    `}
+  }
   .slick-slider {
     padding-top: 20px;
     .slick-list {
-      height: 350px;
+      height: 420px;
       .slick-track {
         height: 85%;
         .slick-slide {
           height: 100%;
           display: flex;
           align-items: center;
+          justify-content: center;
+          &:focus {
+            outline: none;
+          }
         }
       }
     }

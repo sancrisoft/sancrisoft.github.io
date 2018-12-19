@@ -41,7 +41,7 @@ const IndexPage = (props) => {
         id,
         name,
         description,
-        date,
+        title,
       } = item;
 
       return (
@@ -49,7 +49,7 @@ const IndexPage = (props) => {
           key={id}
           name={name}
           description={description}
-          date={date}
+          title={title}
           image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
 
@@ -98,28 +98,8 @@ const IndexPage = (props) => {
   return(
     <div>
       <Layout>
-        <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
+        <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-        <ContTestimonial>
-          <PageSizer>
-            <Title
-              type={2}
-              color="#fff"
-              text="Title Testimonial"
-            />
-
-            <Carousel
-              dots
-              slidesToShow={slidesToShow}
-              arrowColor="#F28724"
-              arrows={false}
-              autoplay
-            >
-              { renderItems() }
-            </Carousel>
-
-          </PageSizer>
-        </ContTestimonial>
         <WhatWeDo>
           <H3>Que hacemos</H3>
           <div className="processes">
@@ -127,6 +107,26 @@ const IndexPage = (props) => {
           </div>
         </WhatWeDo>
       </Layout>
+      <ContTestimonial>
+        <PageSizer>
+          <Title
+            type={2}
+            color="#fff"
+            text="Trusted by our customers"
+          />
+
+          <Carousel
+            dots
+            slidesToShow={slidesToShow}
+            arrowColor="#F28724"
+            arrows={false}
+            autoplay
+          >
+            { renderItems() }
+          </Carousel>
+
+        </PageSizer>
+      </ContTestimonial>
       <MapSelector offices={offices} />
     </div>
   )
@@ -153,22 +153,22 @@ query homeQuery {
   office6:file(relativePath: { eq: "home/carousel/office-6.jpg" }) {
     ...imageFragment
   }
-  Testimonial1:file(relativePath: { eq: "home/small-logo.png" }) {
+  Testimonial1:file(relativePath: { eq: "home/foto1.jpg" }) {
     ...imageFragment
   }
-  Testimonial2:file(relativePath: { eq: "home/logo-google.png" }) {
+  Testimonial2:file(relativePath: { eq: "home/foto3.jpg" }) {
     ...imageFragment
   }
-  Testimonial3:file(relativePath: { eq: "home/logo-face.png" }) {
+  Testimonial3:file(relativePath: { eq: "home/foto5.jpg" }) {
     ...imageFragment
   }
-  Testimonial4:file(relativePath: { eq: "home/logo-youtube.png" }) {
+  Testimonial4:file(relativePath: { eq: "home/foto4.jpg" }) {
     ...imageFragment
   }
-  Testimonial5:file(relativePath: { eq: "home/logo-ibm.png" }) {
+  Testimonial5:file(relativePath: { eq: "home/foto2.jpg" }) {
     ...imageFragment
   }
-  Testimonial6:file(relativePath: { eq: "home/logo-git.png" }) {
+  Testimonial6:file(relativePath: { eq: "home/foto6.jpg" }) {
     ...imageFragment
   }
   react:file(relativePath: { eq: "home/react.png" }) {
@@ -214,7 +214,7 @@ query homeQuery {
           id
           description
           name
-          date
+          title
         },
         offices {
           id
