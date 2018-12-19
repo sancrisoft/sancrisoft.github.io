@@ -33,3 +33,10 @@ export const HeaderPageSizer = styled.div`
 export const Head1 = styled.h1`
   margin: 0px;
 `;
+
+
+export const RighSection = styled.div`
+  display: flex;
+  color: white;
+  align-items: center;
+`;
