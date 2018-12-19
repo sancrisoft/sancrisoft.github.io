@@ -28,39 +28,45 @@ export const GlobalFonts = createGlobalStyle `
     font-weight: normal;
     src: local("LatoMedium"), local("LatoMedium"), url(${fonts.LatoMediumTTF}) format("ttf"), url(${fonts.LatoMediumWOFF}) format("woff"), url(${fonts.MediumEOT}) format("eot"), url(${fonts.LatoMediumWOFF2}) format("woff2");
   }
+  @font-face {
+    font-family: "Averta";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Averta"), local("Averta"), url(${fonts.AvertaTTF}) format("ttf"), url(${fonts.AvertaWOFF}) format("woff"), url(${fonts.AvertaEOT}) format("eot"), url(${fonts.AvertaWOFF2}) format("woff2");
+  }
 `
 export const H1 = styled.h1`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 `;
 export const H2 = styled.h2`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 1.8rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 `;
 export const H3 = styled.h3`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 1.6rem;
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 `;
 export const H4 = styled.h4`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 1.4rem;
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 `;
 export const H5 = styled.h5`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 1.2rem;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 `;
 export const H6 = styled.h6`
-    font-family: Lato;
+    font-family: Averta;
     font-size: 1rem;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;

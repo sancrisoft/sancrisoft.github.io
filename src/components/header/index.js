@@ -1,37 +1,39 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
-import { HeaderContainer, HeaderPageSizer, Head1 } from './styledComponent'
+import { HeaderContainer, HeaderPageSizer, Head1 } from './styledComponents'
+import Viewport from '../HOC/withViewportHandler'
+import Menu from '../menu';
 
-const Header = ({ siteTitle, logo }) => { 
-  console.log('logo', logo);
-  return (
-    <HeaderContainer>
-      <HeaderPageSizer>
-        <Head1>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            <Img sizes={logo.childImageSharp.sizes} style={{ width: "250px" }} />
-          </Link>
-        </Head1>
-      </HeaderPageSizer>
-    </HeaderContainer>
-)}
+class Header extends PureComponent {
+  render() {
+    const { logo, logoWhite, viewport: { isDesktopView }, isWhiteTheme } = this.props;
+    return (
+      <HeaderContainer isWhite={isWhiteTheme}>
+        <HeaderPageSizer>
+          <Head1>
+            <Link to="/" >
+              <Img sizes={(isWhiteTheme) ? logo.childImageSharp.sizes : logoWhite.childImageSharp.sizes} style={{ width: "220px" }} />
+            </Link>
+          </Head1>
+          {
+            (isDesktopView) && <Menu isBlack={isWhiteTheme}/>
+          }
+        </HeaderPageSizer>
+      </HeaderContainer>
+    );
+  }
+}
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
   logoUrl: PropTypes.string,
+  viewport: PropTypes.object,
+  isWhiteTheme: PropTypes.bool,
 }
 
 Header.defaultProps = {
-  siteTitle: '',
   logo: '',
 }
 
-export default Header
+export default Viewport(Header)
