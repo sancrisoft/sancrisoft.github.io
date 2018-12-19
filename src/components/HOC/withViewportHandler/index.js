@@ -33,13 +33,14 @@ import { getViewPortState } from './handlers';
 export const ViewPortController = (WrappedComponent) =>
   class ViewPortControllerInner extends Component {
     //eslint-disable-line
-    // static displayName = `ViewPortController(${getDisplayName(WrappedComponent)})`;
+    //static displayName = `ViewPortController(${getDisplayName(WrappedComponent)})`;
     state = {
-      windowWidth: window.innerWidth,
-      viewportType: getViewPortState(),
-    };
+      windowWidth: 0,
+      viewportType: '',
+    }
     // react methods
     componentDidMount() {
+      this.handleResizeWindow();
       window.addEventListener('resize', this.handleResizeWindow);
     }
     componentWillUnmount() {
@@ -57,8 +58,6 @@ export const ViewPortController = (WrappedComponent) =>
         });
       }
     };
-    /* eslint-enable */
-    setWindowWidth = () => this.setState({ windowWidth: window.innerWidth });
     render() {
       const props = Object.assign({}, this.props, {
         viewport: {

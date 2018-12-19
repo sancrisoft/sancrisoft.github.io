@@ -14,11 +14,11 @@ import ViewPort from '../components/HOC/withViewportHandler'
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
-import { H3 } from '../components/styledComponents';
+import { H3 } from '../components/styledComponents'
 import {
   ContTestimonial,
   WhatWeDo,
-} from './styledComponents'
+} from '../utils/styledComponents'
 
 const IndexPage = (props) => {
 

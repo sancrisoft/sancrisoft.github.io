@@ -14,7 +14,7 @@ class Header extends PureComponent {
         <HeaderPageSizer>
           <Head1>
             <Link to="/" >
-              <Img sizes={(isWhiteTheme) ? logo.childImageSharp.sizes : logoWhite.childImageSharp.sizes} style={{ width: "220px" }} />
+              <Img sizes={(isWhiteTheme) ? logo.childImageSharp.sizes : logoWhite.childImageSharp.sizes} style={{ width: "200px" }} />
             </Link>
           </Head1>
           {
