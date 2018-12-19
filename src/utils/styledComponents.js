@@ -40,6 +40,9 @@ export const ContTestimonial = styled.section`
           display: flex;
           align-items: center;
           justify-content: center;
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
