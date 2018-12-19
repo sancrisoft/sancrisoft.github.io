@@ -32,16 +32,17 @@ export const Box = styled.div`
 
 export const ContDescripcion = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px 10px 3px;
+  padding: 8px 10px 40px;
   height: 60%;
   background: #fff;
   p {
     text-align: center;
     font-size: 16px;
     font-style: italic;
-    min-height: 100px;
+    ${'' /* min-height: 100px; */}
     margin: 0;
     opacity: .9;
   }

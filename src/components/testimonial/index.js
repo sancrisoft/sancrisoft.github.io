@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image'
 
 import Title from '../title';
+import Icon from '../icons';
 import {
   Box,
   ContDescripcion,
@@ -16,7 +17,13 @@ const BoxTestimonial = ({ name, description, image, title }) =>  {
   return(
     <Box>
       <ContDescripcion>
+        <Icon
+          iconName="quote-left"
+        />
         <p>{description}</p>
+        <Icon
+          iconName="quote-left"
+        />
       </ContDescripcion>
       <ContBox>
         <ContImg>
