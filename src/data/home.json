@@ -117,5 +117,71 @@
             "latitude": "6.1629538",
             "longitude": "-75.6042868"
         }
+    ],
+    "processes": [
+        {
+            "id": "web",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "technologies": [
+                {
+                    "id": "react",
+                    "tooltip": "React",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "webpack",
+                    "tooltip": "Webpack",
+                    "color": "#2177BE"
+                },
+                {
+                    "id": "redux",
+                    "tooltip": "Redux",
+                    "color": "#7649BA"
+                },
+                {
+                    "id": "styled",
+                    "tooltip": "Styled components",
+                    "color": "#F0B4EB"
+                },
+                {
+                    "id": "material",
+                    "tooltip": "Material UI",
+                    "color": "#8B8B8B"
+                }
+            ]
+        },
+        {
+            "id": "mobile",
+            "title": "Mobile Development",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "technologies": [
+                {
+                    "id": "react",
+                    "tooltip": "React Native",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "webpack",
+                    "tooltip": "Webpack",
+                    "color": "#2177BE"
+                },
+                {
+                    "id": "android",
+                    "tooltip": "Android",
+                    "color": "#8FC321"
+                },
+                {
+                    "id": "styled",
+                    "tooltip": "Styled components",
+                    "color": "#F0B4EB"
+                },
+                {
+                    "id": "ios",
+                    "tooltip": "iOs",
+                    "color": "#F3B338"
+                }
+            ]
+        }
     ]
 }

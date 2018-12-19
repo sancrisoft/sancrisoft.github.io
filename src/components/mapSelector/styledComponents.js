@@ -17,17 +17,18 @@ export const ButtonSelector = styled.button`
   justify-content: center;
   align-items: center;
   ${breakpoint('desktop')`
-    width: auto;
-    justify-content: flex-start;
-    align-items: flex-start;
-  `}
+    h4 {
+      width: 100%;
+      text-align: start;
+    }
+  `}  
   &:active, &:visited {
     border: none;
   }
   &:hover, &.active {
     transform: scale(1.05);
     opacity: 1;
-    border-bottom: 10px solid #F28724;
+    border-bottom: 4px solid #F28724;
   }
   &:focus {
     outline: 0;
@@ -48,6 +49,9 @@ export const SectionContainer = styled.section`
     width: 100%;
     display: flex;
     justify-content: space-around;
+    ${breakpoint('desktop')`
+      padding: 0 8em;
+    `}
   }
   .map-container {
     margin-top: 8px;
@@ -64,7 +68,7 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-    align-items: center;
+  align-items: center;
   ${breakpoint('desktop')`
     justify-content: flex-start;
     align-items: flex-start;
