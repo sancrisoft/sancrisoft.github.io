@@ -8,6 +8,7 @@ export const ContTestimonial = styled.section`
   min-height: 500px;
   position: relative;
   background: rgba(0,0,0, .5);
+  overflow: hidden;
   &:after {
     content: '';
     display: block;

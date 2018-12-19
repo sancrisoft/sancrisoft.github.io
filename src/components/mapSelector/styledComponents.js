@@ -16,10 +16,12 @@ export const ButtonSelector = styled.button`
   width: 50%;
   justify-content: center;
   align-items: center;
-  h4 {
-    width: 100%;
-    text-align: start;
-  }
+  ${breakpoint('desktop')`
+    h4 {
+      width: 100%;
+      text-align: start;
+    }
+  `}  
   &:active, &:visited {
     border: none;
   }
@@ -45,9 +47,11 @@ export const SectionContainer = styled.section`
   background-color: #f5f7fa;
   ${PageSizer}.buttons-container {
     width: 100%;
-    padding: 0 8em;
     display: flex;
     justify-content: space-around;
+    ${breakpoint('desktop')`
+      padding: 0 8em;
+    `}
   }
   .map-container {
     margin-top: 8px;
