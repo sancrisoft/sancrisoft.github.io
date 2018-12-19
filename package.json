@@ -14,6 +14,7 @@
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-source-filesystem": "2.0.8",
     "gatsby-transformer-sharp": "2.1.8",
+    "mo-js": "^0.288.2",
     "prop-types": "15.6.2",
     "react": "16.6.3",
     "react-burger-menu": "^2.5.4",

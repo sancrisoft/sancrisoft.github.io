@@ -1,22 +1,24 @@
 import React from 'react'
 import {
-  graphql
+  graphql,
 } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Title from '../components/title';
-import Testimonial from '../components/testimonial';
+import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
 
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
-
+import Process from '../components/process'
+import { H3 } from '../components/styledComponents'
 import {
-  ContTestimonial
-} from '../Utils/styledComponents'
+  ContTestimonial,
+  WhatWeDo,
+} from '../utils/styledComponents'
 
 const IndexPage = (props) => {
 
@@ -57,13 +59,29 @@ const IndexPage = (props) => {
 
   }
 
+  const renderProcesses = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              processes,
+            }
+          }
+        }
+      },
+      data
+    } = props;
+    return processes.map((process) => <Process key={process.id} data={data} process={process} />);
+  }
+
   const {
     data,
     data: {
       site: {
         siteMetadata: {
           home: {
-            offices
+            offices,
           }
         }
       }
@@ -82,8 +100,13 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+        <WhatWeDo>
+          <H3>Que hacemos</H3>
+          <div className="processes">
+            { renderProcesses() }
+          </div>
+        </WhatWeDo>
       </Layout>
-
       <ContTestimonial>
         <PageSizer>
           <Title
@@ -149,6 +172,33 @@ query homeQuery {
   Testimonial6:file(relativePath: { eq: "home/foto6.jpg" }) {
     ...imageFragment
   }
+  react:file(relativePath: { eq: "home/react.png" }) {
+    ...imageFragment
+  }
+  redux:file(relativePath: { eq: "home/redux.png" }) {
+    ...imageFragment
+  }
+  material:file(relativePath: { eq: "home/material.png" }) {
+    ...imageFragment
+  }
+  styled:file(relativePath: { eq: "home/styled.png" }) {
+    ...imageFragment
+  }
+  webpack:file(relativePath: { eq: "home/webpack.png" }) {
+    ...imageFragment
+  }
+  android:file(relativePath: { eq: "home/android.png" }) {
+    ...imageFragment
+  }
+  ios:file(relativePath: { eq: "home/ios.png" }) {
+    ...imageFragment
+  }
+  web:file(relativePath: { eq: "home/web.png" }) {
+    ...imageFragment
+  }
+  mobile:file(relativePath: { eq: "home/mobile.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -176,6 +226,16 @@ query homeQuery {
           postalCode
           latitude
           longitude
+        }
+        processes {
+          id
+          title
+          description
+          technologies {
+            id
+            tooltip
+            color
+          }
         }
       }
     }

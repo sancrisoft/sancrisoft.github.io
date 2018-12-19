@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import BgTestimonials from '../images/home/desktop.jpg';
+import BgTestimonials from '../images/home/desktop.jpg'
 
 export const ContTestimonial = styled.section`
   display: flex;
@@ -8,6 +8,7 @@ export const ContTestimonial = styled.section`
   min-height: 500px;
   position: relative;
   background: rgba(0,0,0, .5);
+  overflow: hidden;
   padding-top: 40px;
   &:after {
     content: '';
@@ -58,5 +59,32 @@ export const ContTestimonial = styled.section`
         color: #F28724;
       }
     }
+  }
+`;
+
+export const PageSizer = styled.div`
+    margin: 0 auto;
+    max-width: 1024px;
+`;
+
+export const WhatWeDo = styled(PageSizer)`
+  padding-top: 5em;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  div.processes {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+    ${breakpoint('desktop')`
+      flex-direction: row;
+      margin-top: 5em;
+      justify-content: space-between;
+    `}
   }
 `;
