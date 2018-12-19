@@ -20,7 +20,7 @@ export const Box = styled.div`
     width: 320px;
   `}
   ${breakpoint('desktop')`
-    width: 85%;
+    width: 300px;
   `}
   &:hover {
     transform: scale(1.1);
@@ -36,24 +36,37 @@ export const ContDescripcion = styled.div`
   justify-content: center;
   align-items: center;
   padding: 8px 10px 40px;
-  height: 60%;
+  height: 65%;
   background: #fff;
+  position: relative;
+  .quote-left {
+    position: absolute;
+    left: 8%;
+    top: 8%;
+  }
   p {
     text-align: center;
     font-size: 16px;
     font-style: italic;
-    ${'' /* min-height: 100px; */}
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    text-align: center;
     margin: 0;
     opacity: .9;
+    height: 100%;
+    padding-top: 30px;
+    width: 90%;
+    margin: 0 auto;
   }
 
 `;
 export const ContBox = styled.div`
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 35%;
   padding: 3px 10px 8px;
-  background: #383938;
+  background: #f1f1f1;
   position: relative;
   h4 {
     font-size: 18px;
@@ -61,7 +74,7 @@ export const ContBox = styled.div`
     margin: 0;
   }
   span {
-    color: #F28724;
+    color: #383938;
     font-size: 15px;
     text-align: center;
     display: flex;

@@ -17,13 +17,15 @@ const BoxTestimonial = ({ name, description, image, title }) =>  {
   return(
     <Box>
       <ContDescripcion>
-        <Icon
-          iconName="quote-left"
-        />
+        <div className="quote-left">
+          <Icon
+            iconName="quote-left"
+            backgroundColor="#383938"
+            width="35"
+            height="35"
+          />
+        </div>
         <p>{description}</p>
-        <Icon
-          iconName="quote-left"
-        />
       </ContDescripcion>
       <ContBox>
         <ContImg>
@@ -35,7 +37,7 @@ const BoxTestimonial = ({ name, description, image, title }) =>  {
         <Title
           type={4}
           text={name}
-          color="#fff"
+          color="#383938"
         />
         <span>{title}</span>
       </ContBox>

@@ -89,7 +89,7 @@ const IndexPage = (props) => {
           <Title
             type={2}
             color="#fff"
-            text="Title Testimonial"
+            text="Trusted by our customers"
           />
 
           <Carousel
