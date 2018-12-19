@@ -52,7 +52,7 @@ export const ChipContainer = styled.div`
       opacity: 0;
       visibility: none;
       transition: all 0.5s ease-in-out;
-      &::after {
+      /*&::after {
         content: "";
         position: absolute;
         bottom: -56%;
@@ -60,10 +60,10 @@ export const ChipContainer = styled.div`
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 20px solid rgba(0,0,0,0.85);
-      }
+      }*/
     }
     &:hover span.tooltip {
-      top: -4em;
+      top: -3em;
       opacity: 1;
       visibility: visible;
       margin: auto;
