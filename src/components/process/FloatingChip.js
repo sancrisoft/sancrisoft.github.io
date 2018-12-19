@@ -22,6 +22,12 @@ const float = keyframes`
 `;
 
 export const ChipContainer = styled.div`
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
   &:first-child {
     div.technology-item {
       span.tooltip {
@@ -52,6 +58,7 @@ export const ChipContainer = styled.div`
       opacity: 0;
       visibility: none;
       transition: all 0.5s ease-in-out;
+      white-space: nowrap;
       /*&::after {
         content: "";
         position: absolute;
