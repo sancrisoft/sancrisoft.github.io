@@ -6,6 +6,7 @@ import { elastic as MenuMobile } from 'react-burger-menu'
 import HamburguerStyles, { stylesBlack } from './hamburguerStyles'
 import { Link } from 'gatsby'
 import Viewport from '../HOC/withViewportHandler'
+import LanguageButtons from '../languageButtons'
 // import Header from '../header' El header se debe posicionar absoluto, lo comente para que el carousel del home se vea bien #MIGUEL
 import './layout.css'
 import { GlobalFonts } from '../styledComponents'
@@ -16,6 +17,7 @@ class Layout extends Component {
   state = {
     isWhiteTheme: false,
     pathname: '',
+    language: 'EN',
   }
   componentDidMount() {
     this.setPathname();
@@ -39,9 +41,15 @@ class Layout extends Component {
       pathname,
     });
   }
+  setLanguage = (lang) => {
+    this.setState({ language: lang });
+  }
+  eventChangeLang = (event) => {
+    this.setLanguage(event.target.value);
+  }
   render() {
     const { children, viewport: { isDesktopView} } = this.props;
-    const { isWhiteTheme, pathname } = this.state;
+    const { isWhiteTheme, pathname, language } = this.state;
     const isWTheme = (pathname === '/') ? isWhiteTheme : true;
     const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
     return (<StaticQuery
@@ -71,9 +79,18 @@ class Layout extends Component {
               <Link to="/" > Case Studies </Link>
               <Link to="/careers">Careers</Link>
               <Link to="/" > Get a Quote </Link>
+              <div style={{ marginTop:  5}}>
+                <LanguageButtons isBlack changeLanguage={this.eventChangeLang} language={language} />
+              </div>
             </MenuMobile>
           }
-          <Header logo={data.logo} logoWhite={data.logoWhite} isWhiteTheme={isWTheme} />
+          <Header
+            logo={data.logo}
+            logoWhite={data.logoWhite}
+            isWhiteTheme={isWTheme}
+            language={language}
+            changeLanguage={this.setLanguage}
+          />
           <div id={'page-wrap'}>
             {children}
           </div>
