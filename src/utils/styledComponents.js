@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import breakpoint from 'styled-components-breakpoint';
-import BgTestimonials from '../images/home/desktop.jpg'
+import BgTestimonials from '../images/home/desktop.jpg';
 
 export const ContTestimonial = styled.section`
   display: flex;
