@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import mojs from 'mo-js';
 import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
-import breakpoint from 'styled-components-breakpoint';
+// import breakpoint from 'styled-components-breakpoint';
 
 const float = keyframes`
   0% {
