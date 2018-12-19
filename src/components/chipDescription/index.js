@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -44,5 +44,12 @@ const ChipDescription = ({ title, description, image, children }) => (
     </div>
   </ProcessContainer>
 );
+
+ChipDescription.propTypes = {
+  image: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  children: PropTypes.object,
+};
 
 export default ChipDescription

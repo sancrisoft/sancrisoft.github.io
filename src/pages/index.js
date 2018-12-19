@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   graphql,
-  Link
 } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -18,7 +17,6 @@ import Process from '../components/process'
 import { H3 } from '../components/styledComponents';
 import {
   ContTestimonial,
-  Container,
   WhatWeDo,
 } from './styledComponents'
 
@@ -84,7 +82,6 @@ const IndexPage = (props) => {
         siteMetadata: {
           home: {
             offices,
-            processes,
           }
         }
       }
@@ -129,7 +126,6 @@ const IndexPage = (props) => {
             { renderProcesses() }
           </div>
         </WhatWeDo>
-        <Link to="/careers">Careers</Link>
       </Layout>
       <MapSelector offices={offices} />
     </div>

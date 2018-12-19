@@ -66,9 +66,12 @@ export const WhatWeDo = styled(PageSizer)`
     margin-top: 5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 2em;
     ${breakpoint('desktop')`
       flex-direction: row;
+      margin-top: 5em;
+      justify-content: space-between;
     `}
   }
 `;
