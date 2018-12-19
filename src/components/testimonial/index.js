@@ -3,24 +3,35 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image'
 
 import Title from '../title';
-import { Box, ContImg } from './styledComponents'
+import {
+  Box,
+  ContDescripcion,
+  ContImg,
+  ContBox,
+} from './styledComponents'
 
-// import imgTest from '../../images/small-logo.png'
 
 
-const BoxTestimonial = ({ name, description, image, date }) =>  {
+const BoxTestimonial = ({ name, description, image, title }) =>  {
   return(
     <Box>
-      <ContImg>
-        <Img sizes={image} style={{maxWidth: "40px"}} />
-      </ContImg>
-      <p>{description}</p>
-      <Title
-        type={4}
-        text={name}
-        color="#F28724"
-      />
-      <span>{date}</span>
+      <ContDescripcion>
+        <p>{description}</p>
+      </ContDescripcion>
+      <ContBox>
+        <ContImg>
+          <Img
+            sizes={image}
+            style={{maxWidth: "70px"}}
+          />
+        </ContImg>
+        <Title
+          type={4}
+          text={name}
+          color="#fff"
+        />
+        <span>{title}</span>
+      </ContBox>
     </Box>
   )
 }
@@ -28,7 +39,7 @@ const BoxTestimonial = ({ name, description, image, date }) =>  {
 BoxTestimonial.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
-  date: PropTypes.string,
+  title: PropTypes.string,
   image: PropTypes.object,
 };
 

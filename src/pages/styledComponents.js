@@ -24,13 +24,14 @@ export const ContTestimonial = styled.section`
   .slick-slider {
     padding-top: 20px;
     .slick-list {
-      height: 350px;
+      height: 420px;
       .slick-track {
         height: 85%;
         .slick-slide {
           height: 100%;
           display: flex;
           align-items: center;
+          justify-content: center;
         }
       }
     }
