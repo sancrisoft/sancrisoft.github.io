@@ -190,7 +190,16 @@ query homeQuery {
   webpack:file(relativePath: { eq: "home/webpack.png" }) {
     ...imageFragment
   }
+  android:file(relativePath: { eq: "home/android.png" }) {
+    ...imageFragment
+  }
+  ios:file(relativePath: { eq: "home/ios.png" }) {
+    ...imageFragment
+  }
   web:file(relativePath: { eq: "home/web.png" }) {
+    ...imageFragment
+  }
+  mobile:file(relativePath: { eq: "home/mobile.png" }) {
     ...imageFragment
   }
   site {
