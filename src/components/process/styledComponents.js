@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { ProcessContainer } from '../chipDescription';
 
 const float = keyframes`
   0% {
@@ -16,29 +17,8 @@ const float = keyframes`
 	}
 `;
 
-export const ProcessContainer = styled.div`
+export const EnhancedProcessContainer = styled(ProcessContainer)`
   width: 40%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  img.avatar {
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
-    object-fit: cover;
-    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.25);
-  }
-  div.detail {
-    margin-top: 1em;
-    h4, p {
-      text-align: center;
-    }
-    p {
-      margin-top: 1em;
-    }
-  }
   div.technologies {
     div.technology-item {
       width: 3em;

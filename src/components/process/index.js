@@ -4,14 +4,16 @@ import {
   H4,
 } from '../styledComponents';
 import {
-  ProcessContainer,
+  EnhancedProcessContainer,
 } from './styledComponents';
+import ChipDescription from '../chipDescription';
 import mojs from 'mo-js';
 import ReactDOM from 'react-dom'
 
-export class index extends PureComponent {
+export class Process extends PureComponent {
   static propTypes = {
-    image: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
+    process: PropTypes.object.isRequired,
   }
 
   handleEmotion = () => {
@@ -33,21 +35,22 @@ export class index extends PureComponent {
   }
 
   render() {
+    const { process, data } = this.props;
     return (
-      <ProcessContainer>
-        <img className="avatar" src="https://content-static.upwork.com/blog/uploads/sites/3/2017/02/24172515/Frontend-vs-backend-940x400-940x400.jpg" />
-        <div className="detail">
-          <H4>Cool title</H4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-          <div className="technologies">
-            <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2000px-React-icon.svg.png" />
-            </div>
+      <EnhancedProcessContainer>
+        <ChipDescription 
+          { ...process }
+          image={data[process.id].childImageSharp.sizes}
+        >
+        <div className="technologies">
+          <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2000px-React-icon.svg.png" />
           </div>
         </div>
-      </ProcessContainer>
+        </ChipDescription>
+      </EnhancedProcessContainer>
     )
   }
 }
 
-export default index
+export default Process

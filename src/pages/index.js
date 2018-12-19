@@ -61,13 +61,30 @@ const IndexPage = (props) => {
 
   }
 
+  const renderProcesses = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              processes,
+            }
+          }
+        }
+      },
+      data
+    } = props;
+    return processes.map((process) => <Process key={process.id} data={data} process={process} />);
+  }
+
   const {
     data,
     data: {
       site: {
         siteMetadata: {
           home: {
-            offices
+            offices,
+            processes,
           }
         }
       }
@@ -86,36 +103,34 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+        <ContTestimonial>
+          <PageSizer>
+            <Title
+              type={2}
+              color="#fff"
+              text="Title Testimonial"
+            />
+
+            <Carousel
+              dots
+              slidesToShow={slidesToShow}
+              arrowColor="#F28724"
+              arrows={false}
+              autoplay
+            >
+              { renderItems() }
+            </Carousel>
+
+          </PageSizer>
+        </ContTestimonial>
         <WhatWeDo>
           <H3>Que hacemos</H3>
           <div className="processes">
-            <Process />
-            <Process />
+            { renderProcesses() }
           </div>
         </WhatWeDo>
         <Link to="/careers">Careers</Link>
       </Layout>
-
-      <ContTestimonial>
-        <PageSizer>
-          <Title
-            type={2}
-            color="#fff"
-            text="Title Testimonial"
-          />
-
-          <Carousel
-            dots
-            slidesToShow={slidesToShow}
-            arrowColor="#F28724"
-            arrows={false}
-            autoplay
-          >
-            { renderItems() }
-          </Carousel>
-
-        </PageSizer>
-      </ContTestimonial>
       <MapSelector offices={offices} />
     </div>
   )
@@ -160,6 +175,24 @@ query homeQuery {
   Testimonial6:file(relativePath: { eq: "home/logo-git.png" }) {
     ...imageFragment
   }
+  react:file(relativePath: { eq: "home/react.png" }) {
+    ...imageFragment
+  }
+  redux:file(relativePath: { eq: "home/redux.png" }) {
+    ...imageFragment
+  }
+  material:file(relativePath: { eq: "home/material.png" }) {
+    ...imageFragment
+  }
+  styled:file(relativePath: { eq: "home/styled.png" }) {
+    ...imageFragment
+  }
+  webpack:file(relativePath: { eq: "home/webpack.png" }) {
+    ...imageFragment
+  }
+  web:file(relativePath: { eq: "home/web.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -187,6 +220,16 @@ query homeQuery {
           postalCode
           latitude
           longitude
+        }
+        processes {
+          id
+          title
+          description
+          technologies {
+            id
+            tooltip
+            color
+          }
         }
       }
     }

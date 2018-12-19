@@ -117,5 +117,39 @@
             "latitude": "6.1629538",
             "longitude": "-75.6042868"
         }
+    ],
+    "processes": [
+        {
+            "id": "web",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "technologies": [
+                {
+                    "id": "react",
+                    "tooltip": "React",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "webpack",
+                    "tooltip": "Webpack",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "redux",
+                    "tooltip": "Redux",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "styled",
+                    "tooltip": "Styled components",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "material",
+                    "tooltip": "Material UI",
+                    "color": "#65DAF9"
+                }
+            ]
+        }
     ]
 }
