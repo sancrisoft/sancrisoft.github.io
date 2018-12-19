@@ -1,113 +1,96 @@
-import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from "i18next"
+import Backend from "i18next-xhr-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { reactI18nextModule } from "react-i18next"
 
-i18n.use(LanguageDetector).init({
+i18n
+.use(Backend)
+.use(LanguageDetector)
+.use(reactI18nextModule)
+.init({
   resources: {
     en: {
       translations: {
         title: 'Sancrisoft',
-        slogan: 'Developing Websites',
+        slogan: 'Web development',
         nav: {
           about: "About Us",
           cases: "Case Studies",
           careers: "Careers",
           quote: "Get a Quote"
         },
-        testimonials: [
-          {
+        testimonials: {
+          1: {
             id: 1,
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            name: 'juan perez',
-            image: '/images/small-logo.png',
             title: 'Founder, Google'
           },
-          {
+          2: {
             id: 2,
             description: 'Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-            name: 'pedro pablo',
-            image: '../../images/small-logo.png',
             title: 'Head of sales'
           },
-          {
+          3: {
             id: 3,
             description: 'Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            name: 'camilo ortiz',
-            image: '../../images/small-logo.png',
             title: 'Designer'
           },
-          {
+          4: {
             id: 4,
             description: 'Lorem ipsum dolor sit amet, iaukgs bdsd.',
-            name: 'gonza gonza',
-            image: '../../images/small-logo.png',
             title: 'Co-founder'
           },
-          {
+          5: {
             id: 5,
             description: 'asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.',
-            name: 'alfonso jaramillo',
-            image: '../../images/small-logo.png',
             title: 'Founder'
           },
-          {
+          6: {
             id: 6,
             description: 'Lorem ipsum doweeua.Ut enim ad minimo cborum.',
             name: 'cristian puerto',
             image: '../../images/small-logo.png',
             title: 'Co-founder'
           }
-        ],
-        carousel: [
-          {
+        },
+        carousel: {
+          1: {
             id: 1,
-            title: 'Titulo genial 1',
+            title: 'Awesome title 1',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          2: {
             id: 2,
-            title: 'Titulo genial 2',
+            title: 'Awesome title 2',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'video',
-            videoSrc: 'http://techslides.com/demos/sample-videos/small.mp4',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          3: {
             id: 3,
-            title: 'Titulo genial 3',
+            title: 'Awesome title 3',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          4: {
             id: 4,
-            title: 'Titulo genial 4',
+            title: 'Awesome title 4',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          5: {
             id: 5,
-            title: 'Titulo genial 5',
+            title: 'Awesome title 5',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          6: {
             id: 6,
-            title: 'Titulo genial 6',
+            title: 'Awesome title 6',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           }
-        ],
+        },
         offices: [
           {
             id: 'venezuela/tachira/san-cristobal',
@@ -130,8 +113,8 @@ i18n.use(LanguageDetector).init({
             longitude: '-75.6042868'
           }
         ],
-        processes: [
-          {
+        processes: {
+          web: {
             id: 'web',
             title: 'Web Development',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -163,7 +146,7 @@ i18n.use(LanguageDetector).init({
               }
             ]
           },
-          {
+          mobile: {
             id: 'mobile',
             title: 'Mobile Development',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -195,7 +178,7 @@ i18n.use(LanguageDetector).init({
               }
             ]
           }
-        ]
+        }
       }
     },
     es: {
@@ -208,101 +191,78 @@ i18n.use(LanguageDetector).init({
           careers: "Carreras",
           quote: "Cotizaciones"
         },
-        testimonials: [
-          {
+        testimonials: {
+          1: {
             id: 1,
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            name: 'juan perez',
-            image: '/images/small-logo.png',
             title: 'Founder, Google'
           },
-          {
+          2: {
             id: 2,
             description: 'Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-            name: 'pedro pablo',
-            image: '../../images/small-logo.png',
             title: 'Head of sales'
           },
-          {
+          3: {
             id: 3,
             description: 'Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            name: 'camilo ortiz',
-            image: '../../images/small-logo.png',
             title: 'Designer'
           },
-          {
+          4: {
             id: 4,
             description: 'Lorem ipsum dolor sit amet, iaukgs bdsd.',
-            name: 'gonza gonza',
-            image: '../../images/small-logo.png',
             title: 'Co-founder'
           },
-          {
+          5: {
             id: 5,
             description: 'asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.',
-            name: 'alfonso jaramillo',
-            image: '../../images/small-logo.png',
             title: 'Founder'
           },
-          {
+          6: {
             id: 6,
             description: 'Lorem ipsum doweeua.Ut enim ad minimo cborum.',
             name: 'cristian puerto',
             image: '../../images/small-logo.png',
             title: 'Co-founder'
           }
-        ],
-        carousel: [
-          {
+        },
+        carousel: {
+          1: {
             id: 1,
             title: 'Titulo genial 1',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          2: {
             id: 2,
             title: 'Titulo genial 2',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'video',
-            videoSrc: 'http://techslides.com/demos/sample-videos/small.mp4',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          3: {
             id: 3,
             title: 'Titulo genial 3',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          4: {
             id: 4,
             title: 'Titulo genial 4',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          5: {
             id: 5,
             title: 'Titulo genial 5',
             description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           },
-          {
+          6: {
             id: 6,
             title: 'Titulo genial 6',
             description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-            type: 'image',
-            link: '/careers',
             linkText: 'Link arrechisimo!'
           }
-        ],
+        },
         offices: [
           {
             id: 'venezuela/tachira/san-cristobal',
@@ -325,8 +285,8 @@ i18n.use(LanguageDetector).init({
             longitude: '-75.6042868'
           }
         ],
-        processes: [
-          {
+        processes: {
+          web: {
             id: 'web',
             title: 'Web Development',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -358,7 +318,7 @@ i18n.use(LanguageDetector).init({
               }
             ]
           },
-          {
+          mobile: {
             id: 'mobile',
             title: 'Mobile Development',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -390,7 +350,7 @@ i18n.use(LanguageDetector).init({
               }
             ]
           }
-        ]
+        }
       }
     }
   },

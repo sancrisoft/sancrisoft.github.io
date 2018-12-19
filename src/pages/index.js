@@ -105,14 +105,20 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-        <WhatWeDo>
+        {
+          /*
+          <WhatWeDo>
           <H3>Que hacemos</H3>
           <div className="processes">
             { renderProcesses() }
           </div>
         </WhatWeDo>
+          */
+        }
       </Layout>
-      <ContTestimonial>
+      {
+        /*
+        <ContTestimonial>
         <PageSizer>
           <Title
             type={2}
@@ -132,6 +138,9 @@ const IndexPage = (props) => {
         </PageSizer>
       </ContTestimonial>
       <MapSelector offices={offices} />
+        */
+      }
+      
     </I18nextProvider>
   )
 }
@@ -207,18 +216,13 @@ query homeQuery {
       home {
         carousel {
           id
-          title
-          description
           type
           videoSrc
           link
-          linkText
         },
         testimonials {
           id
-          description
           name
-          title
         },
         offices {
           id
@@ -232,8 +236,6 @@ query homeQuery {
         }
         processes {
           id
-          title
-          description
           technologies {
             id
             tooltip
