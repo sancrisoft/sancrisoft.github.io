@@ -29,6 +29,14 @@ export const MenuContainer = styled.div`
   ${(props) => props.isBlack && css`
     a{
       color: #000000;
+      &.special {
+        color: white;
+        background: #F28724;
+        text-decoration: none;
+        &:hover {
+          background-color: #ffa44f;
+        }
+      }
     }
   `}
 `;
