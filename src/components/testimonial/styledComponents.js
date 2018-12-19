@@ -7,7 +7,7 @@ export const Box = styled.div`
   justify-content: space-between;
   overflow: hidden;
   background: transparent;
-  width: 85%;
+  width: 310px;
   margin: 0 auto;
   border-radius: 10px;
   padding: 0;
@@ -18,13 +18,13 @@ export const Box = styled.div`
   box-shadow: 0px 2px 8px #333;
   ${breakpoint('tablet')`
     width: 320px;
+    &:hover {
+      transform: scale(1.1);
+    }
   `}
   ${breakpoint('desktop')`
     width: 300px;
   `}
-  &:hover {
-    transform: scale(1.1);
-  }
   &:focus {
     outline: none;
   }

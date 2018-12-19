@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import breakpoint from 'styled-components-breakpoint';
+import breakpoint from 'styled-components-breakpoint';
 import BgTestimonials from '../images/home/desktop.jpg';
 
 export const ContTestimonial = styled.section`
@@ -21,6 +21,13 @@ export const ContTestimonial = styled.section`
     left: 0;
     right: 0;
     opacity: .5;
+  }
+  h2 {
+    width: 90%;
+    margin: 0 auto;
+    ${breakpoint('tablet')`
+      width: 100%;
+    `}
   }
   .slick-slider {
     padding-top: 20px;
