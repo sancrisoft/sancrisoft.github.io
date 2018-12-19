@@ -80,7 +80,7 @@ const IndexPage = (props) => {
   return(
     <div>
       <Layout>
-        <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
+        <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
       </Layout>
 
