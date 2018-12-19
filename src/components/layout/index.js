@@ -15,8 +15,10 @@ import { GlobalFonts } from '../styledComponents'
 class Layout extends Component {
   state = {
     isWhiteTheme: false,
+    pathname: '',
   }
   componentDidMount() {
+    this.setPathname();
     window.addEventListener('scroll', this.handleScroll, { passive: true })
   }
 
@@ -31,10 +33,16 @@ class Layout extends Component {
       this.setState({ isWhiteTheme: false });
     }
   }
+  setPathname = () => {
+    const pathname = window.location.pathname;
+    this.setState({
+      pathname,
+    });
+  }
   render() {
     const { children, viewport: { isDesktopView} } = this.props;
-    const { isWhiteTheme } = this.state;
-    const isWTheme = (window.location.pathname === '/') ? isWhiteTheme : true;
+    const { isWhiteTheme, pathname } = this.state;
+    const isWTheme = (pathname === '/') ? isWhiteTheme : true;
     const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
     return (<StaticQuery
     query={graphql`
