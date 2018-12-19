@@ -47,10 +47,10 @@ const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
 
 CarouselItem.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
   link: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
+  linkText: PropTypes.string,
   image: PropTypes.object,
   videoSrc: PropTypes.string,
 };
