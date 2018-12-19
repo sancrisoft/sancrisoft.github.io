@@ -16,7 +16,7 @@ import MapSelector from '../components/mapSelector'
 
 import {
   ContTestimonial
-} from './styledComponents'
+} from '../Utils/styledComponents'
 
 const IndexPage = (props) => {
 
