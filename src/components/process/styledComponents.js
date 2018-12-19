@@ -16,10 +16,5 @@ export const EnhancedProcessContainer = styled(ProcessContainer)`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    div.technology-item {
-      width: 3em;
-      height: 3em;
-      position: relative;
-    }
   }
 `;

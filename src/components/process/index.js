@@ -21,6 +21,7 @@ export class Process extends PureComponent {
         sizes={data[tech.id].childImageSharp.sizes} 
         color={tech.color}
         duration={Math.floor(Math.random() * 4) + 2 }
+        tooltip={tech.tooltip}
       />
     ));
   }

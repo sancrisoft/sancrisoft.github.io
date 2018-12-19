@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import mojs from 'mo-js';
 import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
 
 const float = keyframes`
   0% {
@@ -21,17 +22,67 @@ const float = keyframes`
 `;
 
 export const ChipContainer = styled.div`
-  .technology {
-    width: 100%;
-    height: 100%;
-    overflow: visible !important;
-    img {
-      border-radius: 50%;
-      object-fit: cover !important;
-      transition: all ${({ duration }) => duration}s ease-in-out;
-      animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
-      &:hover {
-        animation: none;
+  &:first-child {
+    div.technology-item {
+      span.tooltip {
+        right: -50%;
+      }
+    }
+  }
+  &:last-child {
+    div.technology-item {
+      span.tooltip {
+        right: -50%;
+      }
+    }
+  }
+  div.technology-item {
+    width: 3em;
+    height: 3em;
+    margin: 0 1em;
+    position: relative;
+    span.tooltip {
+      position: absolute;
+      background-color: rgba(0,0,0,0.85);
+      color: white;
+      border-radius: 15px;
+      top: 0;
+      right: -50%;
+      padding: 5px 1em;
+      opacity: 0;
+      visibility: none;
+      transition: all 0.5s ease-in-out;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -56%;
+        right: 30%;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid rgba(0,0,0,0.85);
+      }
+    }
+    &:hover span.tooltip {
+      top: -4em;
+      opacity: 1;
+      visibility: visible;
+      margin: auto;
+    }
+    &:hover .technology img {
+      animation: none;
+    }
+    .technology {
+      width: 100%;
+      height: 100%;
+      overflow: visible !important;
+      img {
+        border-radius: 50%;
+        object-fit: cover !important;
+        transition: all ${({ duration }) => duration}s ease-in-out;
+        animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
+        &:hover {
+          animation: none;
+        }
       }
     }
   }
@@ -41,6 +92,7 @@ export class FloatingChip extends PureComponent {
   static propTypes = {
     sizes: PropTypes.object.isRequired,
     color: PropTypes.string.isRequired,
+    tooltip: PropTypes.string.isRequired,
     duration: PropTypes.number.isRequired,
   }
 
@@ -67,11 +119,12 @@ export class FloatingChip extends PureComponent {
   }
 
   render() {
-    const { sizes, duration } = this.props;
+    const { sizes, duration, tooltip } = this.props;
     return (
       <ChipContainer duration={duration}>
         <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
           <Img className="technology" sizes={sizes} />
+          <span className="tooltip">{tooltip}</span>
         </div>
       </ChipContainer>
     )
