@@ -27,7 +27,7 @@ export const ChipContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   &:first-child {
     div.technology-item {
       span.tooltip {

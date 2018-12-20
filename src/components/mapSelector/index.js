@@ -22,7 +22,7 @@ export class MapSelector extends Component {
 
   componentDidMount = () => {
     const { offices } = this.props;
-    this.setState({ selectedOffice: offices[0].id });
+    this.setState({ selectedOffice: offices[1].id });
   }
 
   renderSelectors = () => {
