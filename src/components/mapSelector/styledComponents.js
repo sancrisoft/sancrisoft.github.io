@@ -36,7 +36,7 @@ export const ButtonSelector = styled.button`
 `;
 
 export const SectionContainer = styled.section`
-  padding-top: 5em;
+  padding-top: 3em;
   width: 100%;
   height: auto;
   display: flex;
@@ -59,7 +59,7 @@ export const SectionContainer = styled.section`
     height: 65vh;
   }
   ${H3}.section-heading {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
   }
 `;
 

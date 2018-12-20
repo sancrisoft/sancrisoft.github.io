@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 export const HeaderContainer = styled.div`
   position: fixed;
@@ -15,7 +16,10 @@ export const HeaderContainer = styled.div`
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   ${(props) => props.isWhite && css`
     background: white;
-    height: 70px;
+    height: 100px;
+    ${breakpoint('desktop')`
+      height: 70px;
+    `}
     -webkit-box-shadow: 0px 6px 8px -6px rgba(0,0,0,0.07);
     -moz-box-shadow: 0px 6px 8px -6px rgba(0,0,0,0.07);
     box-shadow: 0px 6px 8px -6px rgba(0,0,0,0.07);
