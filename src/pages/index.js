@@ -14,7 +14,6 @@ import ViewPort from '../components/HOC/withViewportHandler'
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
-import { H3 } from '../components/styledComponents'
 import {
   ContTestimonial,
   WhatWeDo,
@@ -101,7 +100,10 @@ const IndexPage = (props) => {
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
         <WhatWeDo>
-          <H3>Que hacemos</H3>
+            <Title
+              type={2}
+              text="What We Do"
+            />
           <div className="processes">
             { renderProcesses() }
           </div>
