@@ -14,8 +14,10 @@ import ViewPort from '../components/HOC/withViewportHandler'
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
+import WeLove from '../components/weLove'
 import {
   ContTestimonial,
+  ContWeLove,
   WhatWeDo,
 } from '../utils/styledComponents'
 
@@ -99,6 +101,18 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+
+        <ContWeLove>
+          <PageSizer>
+            <Title
+              type={2}
+              text="We Love To See Our Clients Success"
+            />
+
+            <WeLove />
+          </PageSizer>
+        </ContWeLove>
+
         <WhatWeDo>
             <Title
               type={2}

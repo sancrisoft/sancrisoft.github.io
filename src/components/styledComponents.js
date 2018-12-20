@@ -76,6 +76,7 @@ export const PageSizer = styled.div`
     margin: 0 auto;
     max-width: 100%;
     ${breakpoint('desktop')`
+      width: 100%;
       max-width: 1024px;
     `}
 `;
