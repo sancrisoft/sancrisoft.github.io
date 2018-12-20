@@ -75,7 +75,7 @@ export const PageSizer = styled.div`
 `;
 
 export const WhatWeDo = styled(PageSizer)`
-  padding-top: 5em;
+  padding-top: 3em;
   width: 100%;
   height: auto;
   display: flex;
@@ -83,14 +83,13 @@ export const WhatWeDo = styled(PageSizer)`
   justify-content: space-around;
   align-items: center;
   div.processes {
-    margin-top: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 2em;
     ${breakpoint('desktop')`
       flex-direction: row;
-      margin-top: 5em;
+      margin-top: 2em;
       justify-content: space-between;
     `}
   }
