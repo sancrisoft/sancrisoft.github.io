@@ -36,23 +36,22 @@ const IndexPage = (props) => {
           }
         }
       },
-      data
+      data,
+      t,
     } = props;
 
     const newArray = testimonials.map((item) => {
       const {
         id,
         name,
-        description,
-        title,
       } = item;
 
       return (
         <Testimonial
           key={id}
           name={name}
-          description={description}
-          title={title}
+          description={t(`testimonials.${id}.description`)}
+          title={t(`testimonials.${id}.title`)}
           image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
 
@@ -111,14 +110,12 @@ const IndexPage = (props) => {
           </div>
         </WhatWeDo>
       </Layout>
-      {
-        /*
-        <ContTestimonial>
+      <ContTestimonial>
         <PageSizer>
           <Title
             type={2}
             color="#fff"
-            text="Trusted By Our Customers"
+            text={t('testimonialsTitle')}
           />
           <Carousel
             dots
@@ -133,10 +130,7 @@ const IndexPage = (props) => {
 
         </PageSizer>
       </ContTestimonial>
-      <MapSelector offices={offices} />
-        */
-      }
-      
+      <MapSelector title={t('mapTitle')} offices={offices} />
     </I18nextProvider>
   )
 }

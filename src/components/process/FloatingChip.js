@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 // import mojs from 'mo-js';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
 // import breakpoint from 'styled-components-breakpoint';
 

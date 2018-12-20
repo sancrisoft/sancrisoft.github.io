@@ -13,6 +13,7 @@ export class MapSelector extends Component {
   static propTypes = {
     offices: PropTypes.arrayOf(PropTypes.object).isRequired,
     markerIcon: PropTypes.object,
+    title: PropTypes.string.isRequired,
   }
 
   state = {
@@ -48,10 +49,11 @@ export class MapSelector extends Component {
 
   render() {
     const { selectedOffice } = this.state;
+    const { title } = this.props;
     const office = this.props.offices.find((office) => office.id === selectedOffice);
     return (
       <SectionContainer>
-        <H3 className="section-heading">O pasa por nuestras oficinas</H3>
+        <H3 className="section-heading">{title}</H3>
         <PageSizer className={'buttons-container'}>
           { this.renderSelectors() }
         </PageSizer>

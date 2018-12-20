@@ -13,6 +13,8 @@ i18n
       translations: {
         title: 'Sancrisoft',
         slogan: 'Web development',
+        testimonialsTitle: 'Trusted By Our Customers',
+        mapTitle: 'Or stop by our offices',
         nav: {
           about: "About Us",
           cases: "Case Studies",
@@ -188,6 +190,8 @@ i18n
       translations: {
         title: 'Sancrisoft',
         slogan: 'Desarrollamos sitios web',
+        testimonialsTitle: 'Confiado por nuestros clientes',
+        mapTitle: 'O pasa por nuestras oficinas',
         nav: {
           about: "Nosotros",
           cases: "Casos de Estudio",
@@ -198,27 +202,27 @@ i18n
           1: {
             id: 1,
             description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            title: 'Founder, Google'
+            title: 'Fundador, Google'
           },
           2: {
             id: 2,
             description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-            title: 'Head of sales'
+            title: 'Encargado de Ventas'
           },
           3: {
             id: 3,
             description: 'Lorem spanish ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-            title: 'Designer'
+            title: 'Diseñador'
           },
           4: {
             id: 4,
             description: 'Lorem spanish ipsum dolor sit amet, iaukgs bdsd.',
-            title: 'Co-founder'
+            title: 'Co-fundador'
           },
           5: {
             id: 5,
             description: 'Spanish asdhasjdhasdjashasjas asdhdasjhdasas ashdadsjhdas asdjadshashd',
-            title: 'Founder'
+            title: 'Fundador'
           },
           6: {
             id: 6,
