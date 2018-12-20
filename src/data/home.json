@@ -1,6 +1,9 @@
 {
   "title": "Sancrisoft",
   "slogan": "Developing Websites",
+  "weLove": {
+    "image": "../../images/home/meattogo.png"
+  },
   "testimonials": [
     {
       "id": 1,

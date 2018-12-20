@@ -112,7 +112,12 @@ const IndexPage = (props) => {
               text="We Love To See Our Clients Success"
             />
 
-            <WeLove />
+            <WeLove
+              description={t(`weLove.description`)}
+              title={t(`weLove.title`)}
+              image={data[`meattogo`].childImageSharp.sizes}
+            />
+
           </PageSizer>
         </ContWeLove>
 
@@ -217,6 +222,9 @@ query homeQuery {
   mobile:file(relativePath: { eq: "home/mobile.png" }) {
     ...imageFragment
   }
+  meattogo:file(relativePath: { eq: "home/meattogo.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -225,6 +233,9 @@ query homeQuery {
           type
           videoSrc
           link
+        },
+        weLove {
+          image
         },
         testimonials {
           id

@@ -9,6 +9,7 @@ export const BoxContent = styled.div`
   padding-top: 3em;
   ${breakpoint('tablet')`
     flex-direction: row;
+    padding-top: 5em;
   `}
 `;
 
@@ -47,7 +48,7 @@ export const ContLeft = styled.div`
     `}
   }
   ${breakpoint('tablet')`
-    width: 50%;
+    width: 55%;
   `}
   ${breakpoint('desktop')`
     height: 640px;
@@ -106,8 +107,32 @@ export const ContLeft = styled.div`
 
 export const ContRight = styled.div`
   display: flex;
-  width: 50%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   ${breakpoint('tablet')`
-    width: 50%;
+    width: 45%;
   `}
+`;
+
+export const RightTop = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .gatsby-image-wrapper {
+    width: 100%;
+    max-width: 120px;
+  }
+`;
+export const RightBottom = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 1em;
+  p {
+    text-align: right;
+    width: 95%;
+  }
 `;
