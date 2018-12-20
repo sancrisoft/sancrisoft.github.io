@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -7,6 +7,7 @@ import {
 } from '../styledComponents';
 import { translate } from "react-i18next"
 import { Spring } from 'react-spring'
+import Fade from 'react-reveal/Fade';
 
 export const ProcessContainer = styled.div`
   width: 100%;
@@ -55,12 +56,17 @@ export const Bubble = styled.div`
   background-image: linear-gradient(225deg, rgb(246, 156, 52), rgb(255, 255, 255));
 `;
 
-const ChipDescription = ({ id, title, description, image, children, t }) => (
-  <ProcessContainer>
-    <Img className="avatar" sizes={image} />
+class ChipDescription extends PureComponent {
+
+  state = {
+    onScreen: false,
+  }
+
+  renderBubbles = () => (
     <Spring
       from={{ opacity: 0, width: 0, height: 0 }}
-      to={{ opacity: 1, width: 20, height: 20 }}>
+      to={{ opacity: 1, width: 20, height: 20 }}
+    >
       {props => 
         <>
           <Bubble 
@@ -87,15 +93,28 @@ const ChipDescription = ({ id, title, description, image, children, t }) => (
         </>
       }
     </Spring>
-    <div className="detail">
-      <H4>{t(`processes.items.${id}.title`)}</H4>
-      <p>{t(`processes.items.${id}.description`)}</p>
-      <div className="children">
-        { children }
-      </div>
-    </div>
-  </ProcessContainer>
-);
+  )
+
+  render() {
+    const { id, image, children, t } = this.props;
+    const { onScreen } = this.state;
+    return (
+      <Fade wait={1000} left onReveal={() => this.setState({ onScreen: true })}>
+        <ProcessContainer>
+          <Img className="avatar" sizes={image} />
+          { onScreen && this.renderBubbles() }
+          <div className="detail">
+            <H4>{t(`processes.items.${id}.title`)}</H4>
+            <p>{t(`processes.items.${id}.description`)}</p>
+            <div className="children">
+              { children }
+            </div>
+          </div>
+        </ProcessContainer>
+      </Fade>
+    );
+  }
+};
 
 ChipDescription.propTypes = {
   image: PropTypes.object.isRequired,
