@@ -18,7 +18,6 @@ export const ButtonSelector = styled.button`
   align-items: center;
   ${breakpoint('desktop')`
     h4 {
-      width: 100%;
       text-align: start;
     }
   `}  
@@ -36,7 +35,7 @@ export const ButtonSelector = styled.button`
 `;
 
 export const SectionContainer = styled.section`
-  padding-top: 3em;
+  padding-top: 1em;
   width: 100%;
   height: auto;
   display: flex;
@@ -59,7 +58,8 @@ export const SectionContainer = styled.section`
     height: 65vh;
   }
   ${H3}.section-heading {
-    margin-bottom: 1em;
+    margin: 1em;
+    text-align: center;
   }
 `;
 
