@@ -14,7 +14,7 @@ export const EnhancedProcessContainer = styled(ProcessContainer)`
   `}
   div.technologies {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }

@@ -1,187 +1,153 @@
 {
-    "title": "Sancrisoft",
-    "slogan": "Developing Websites",
-    "testimonials": [
+  "title": "Sancrisoft",
+  "slogan": "Developing Websites",
+  "testimonials": [
+    {
+      "id": 1,
+      "name":"juan perez",
+      "image":"/images/small-logo.png"
+    },
+    {
+      "id": 2,
+      "name":"pedro pablo",
+      "image":"../../images/small-logo.png"
+    },
+    {
+      "id": 3,
+      "name":"camilo ortiz",
+      "image":"../../images/small-logo.png"
+    },
+    {
+      "id": 4,
+      "name":"gonza gonza",
+      "image":"../../images/small-logo.png"
+    },
+    {
+      "id": 5,
+      "name":"alfonso jaramillo",
+      "image":"../../images/small-logo.png"
+    },
+    {
+      "id": 6,
+      "name":"cristian puerto",
+      "image":"../../images/small-logo.png"
+    }
+  ],
+  "carousel": [
       {
-        "id": 1,
-        "description":"It`s a super product with profesionnal support team. I can't wait to see the futur features.",
-        "name":"juan perez",
-        "image":"/images/small-logo.png",
-        "title": "Founder, Google"
+          "id": 1,
+          "type": "image",
+          "link": "/careers"
       },
       {
-        "id": 2,
-        "description":"I am really happy that Sancrisoft has created our online store. page powerful and easy to use. super recommended!",
-        "name":"pedro pablo",
-        "image":"../../images/small-logo.png",
-        "title": "Head of sales"
+          "id": 2,
+          "type": "video",
+          "videoSrc": "http://techslides.com/demos/sample-videos/small.mp4",
+          "link": "/careers"
       },
       {
-        "id": 3,
-        "description":"Sancrisoft has helped me grow my business amazingly. it's been a pleasure because everything has been easier than i ever imagined.",
-        "name":"camilo ortiz",
-        "image":"../../images/small-logo.png",
-        "title": "Designer"
+          "id": 3,
+          "type": "image",
+          "link": "/careers"
       },
       {
-        "id": 4,
-        "description":"The best thing about Sancrisoft is that it's made me not have to worry about anything that has to do with ecommerce.",
-        "name":"gonza gonza",
-        "image":"../../images/small-logo.png",
-        "title": "Co-founder"
+          "id": 4,
+          "type": "image",
+          "link": "/careers"
       },
       {
-        "id": 5,
-        "description":"Desing isn't necessarily about the space on the page, but a user's walk through time with that product, and that's where amazing product helps.",
-        "name":"alfonso jaramillo",
-        "image":"../../images/small-logo.png",
-        "title": "Founder"
+          "id": 5,
+          "type": "image",
+          "link": "/careers"
       },
       {
-        "id": 6,
-        "description":"Our customer service is regarded as one of the biggest perks about being a Wistia customer, and Help Scout is a big piece of that.",
-        "name":"cristian puerto",
-        "image":"../../images/small-logo.png",
-        "title": "Co-founder"
+          "id": 6,
+          "type": "image",
+          "link": "/careers"
       }
-    ],
-    "carousel": [
-        {
-            "id": 1,
-            "title": "Titulo genial 1",
-            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
-            "type": "image",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        },
-        {
-            "id": 2,
-            "title": "Titulo genial 2",
-            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
-            "type": "video",
-            "videoSrc": "http://techslides.com/demos/sample-videos/small.mp4",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        },
-        {
-            "id": 3,
-            "title": "Titulo genial 3",
-            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
-            "type": "image",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        },
-        {
-            "id": 4,
-            "title": "Titulo genial 4",
-            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
-            "type": "image",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        },
-        {
-            "id": 5,
-            "title": "Titulo genial 5",
-            "description": "Automate inefficient processes and solve advanced problems with Machine Learning.",
-            "type": "image",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        },
-        {
-            "id": 6,
-            "title": "Titulo genial 6",
-            "description": "From a small software shop to a global agency in 10 years. Here's a story of Netguru as told by our Head of Growth.",
-            "type": "image",
-            "link": "/careers",
-            "linkText": "Link arrechisimo!"
-        }
-    ],
-    "offices": [
-        {
-            "id": "venezuela/tachira/san-cristobal",
-            "title": "Venezuela",
-            "address1": "Santa Teresa",
-            "address2": "Casa al fondo",
-            "state": "San Cristóbal. Táchira",
-            "postalCode": "5001",
-            "latitude": "7.798563",
-            "longitude": "-72.222281"
-        },
-        {
-            "id": "colombia/antioquia/envigado",
-            "title": "Colombia",
-            "address1": "Calle. 49 Sur",
-            "address2": "#45 A 300 Oficina 1813",
-            "state": "Envigado. Antioquia",
-            "postalCode": "055422",
-            "latitude": "6.1629538",
-            "longitude": "-75.6042868"
-        }
-    ],
-    "processes": [
-        {
-            "id": "web",
-            "title": "Web Development",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-            "technologies": [
-                {
-                    "id": "react",
-                    "tooltip": "React",
-                    "color": "#65DAF9"
-                },
-                {
-                    "id": "webpack",
-                    "tooltip": "Webpack",
-                    "color": "#2177BE"
-                },
-                {
-                    "id": "redux",
-                    "tooltip": "Redux",
-                    "color": "#7649BA"
-                },
-                {
-                    "id": "styled",
-                    "tooltip": "Styled components",
-                    "color": "#F0B4EB"
-                },
-                {
-                    "id": "material",
-                    "tooltip": "Material UI",
-                    "color": "#8B8B8B"
-                }
-            ]
-        },
-        {
-            "id": "mobile",
-            "title": "Mobile Development",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-            "technologies": [
-                {
-                    "id": "react",
-                    "tooltip": "React Native",
-                    "color": "#65DAF9"
-                },
-                {
-                    "id": "webpack",
-                    "tooltip": "Webpack",
-                    "color": "#2177BE"
-                },
-                {
-                    "id": "android",
-                    "tooltip": "Android",
-                    "color": "#8FC321"
-                },
-                {
-                    "id": "styled",
-                    "tooltip": "Styled components",
-                    "color": "#F0B4EB"
-                },
-                {
-                    "id": "ios",
-                    "tooltip": "iOs",
-                    "color": "#F3B338"
-                }
-            ]
-        }
-    ]
+  ],
+  "offices": [
+      {
+          "id": "venezuela/tachira/san-cristobal",
+          "title": "Venezuela",
+          "address1": "Santa Teresa",
+          "address2": "Casa al fondo",
+          "state": "San Cristóbal. Táchira",
+          "postalCode": "5001",
+          "latitude": "7.798563",
+          "longitude": "-72.222281"
+      },
+      {
+          "id": "colombia/antioquia/envigado",
+          "title": "Colombia",
+          "address1": "Calle. 49 Sur",
+          "address2": "#45 A 300 Oficina 1813",
+          "state": "Envigado. Antioquia",
+          "postalCode": "055422",
+          "latitude": "6.162996",
+          "longitude": "-75.602191"
+      }
+  ],
+  "processes": [
+      {
+          "id": "web",
+          "technologies": [
+              {
+                  "id": "react",
+                  "tooltip": "React",
+                  "color": "#65DAF9"
+              },
+              {
+                  "id": "webpack",
+                  "tooltip": "Webpack",
+                  "color": "#2177BE"
+              },
+              {
+                  "id": "redux",
+                  "tooltip": "Redux",
+                  "color": "#7649BA"
+              },
+              {
+                  "id": "styled",
+                  "tooltip": "Styled components",
+                  "color": "#F0B4EB"
+              },
+              {
+                  "id": "material",
+                  "tooltip": "Material UI",
+                  "color": "#8B8B8B"
+              }
+          ]
+      },
+      {
+          "id": "mobile",
+          "technologies": [
+              {
+                  "id": "react",
+                  "tooltip": "React Native",
+                  "color": "#65DAF9"
+              },
+              {
+                  "id": "webpack",
+                  "tooltip": "Webpack",
+                  "color": "#2177BE"
+              },
+              {
+                  "id": "android",
+                  "tooltip": "Android",
+                  "color": "#8FC321"
+              },
+              {
+                  "id": "styled",
+                  "tooltip": "Styled components",
+                  "color": "#F0B4EB"
+              },
+              {
+                  "id": "ios",
+                  "tooltip": "iOs",
+                  "color": "#F3B338"
+              }
+          ]
+      }
+  ]
 }

@@ -6,8 +6,9 @@ import { Spring } from 'react-spring'
 import {
   H3,
 } from '../styledComponents'; 
+import { translate } from "react-i18next"
 
-const CarouselItem = ({ id, title, description, image, type, videoSrc, link, linkText }) => {
+const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
 
   const renderContent = () => {
     switch(type) {
@@ -33,9 +34,9 @@ const CarouselItem = ({ id, title, description, image, type, videoSrc, link, lin
           { renderContent() }
           <div className={'detail-container'}>
             <div className={'detail'} style={props}>
-              <H3>{title}</H3>
-              <span>{description}</span>
-              <Link to={link}>{linkText}</Link>
+              <H3>{t(`carousel.${id}.title`)}</H3>
+              <span>{t(`carousel.${id}.description`)}</span>
+              <Link to={link}>{t(`carousel.${id}.linkText`)}</Link>
             </div>
           </div>
         </>
@@ -46,12 +47,12 @@ const CarouselItem = ({ id, title, description, image, type, videoSrc, link, lin
 
 CarouselItem.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
   link: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
+  linkText: PropTypes.string,
   image: PropTypes.object,
   videoSrc: PropTypes.string,
 };
 
-export default CarouselItem
+export default translate('translations')(CarouselItem)

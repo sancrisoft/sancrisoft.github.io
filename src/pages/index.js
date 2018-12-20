@@ -10,6 +10,9 @@ import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
+import { I18nextProvider } from "react-i18next"
+import i18n from '../data/home.js'
+import { translate } from "react-i18next"
 
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
@@ -33,23 +36,22 @@ const IndexPage = (props) => {
           }
         }
       },
-      data
+      data,
+      t,
     } = props;
 
     const newArray = testimonials.map((item) => {
       const {
         id,
         name,
-        description,
-        title,
       } = item;
 
       return (
         <Testimonial
           key={id}
           name={name}
-          description={description}
-          title={title}
+          description={t(`testimonials.${id}.description`)}
+          title={t(`testimonials.${id}.title`)}
           image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
 
@@ -76,6 +78,7 @@ const IndexPage = (props) => {
   }
 
   const {
+    t,
     data,
     data: {
       site: {
@@ -96,12 +99,12 @@ const IndexPage = (props) => {
   slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
   return(
-    <div>
+    <I18nextProvider i18n={i18n}>
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
         <WhatWeDo>
-          <H3>Que hacemos</H3>
+          <H3>{t('processes.title')}</H3>
           <div className="processes">
             { renderProcesses() }
           </div>
@@ -112,9 +115,8 @@ const IndexPage = (props) => {
           <Title
             type={2}
             color="#fff"
-            text="Trusted By Our Customers"
+            text={t('testimonialsTitle')}
           />
-
           <Carousel
             dots
             slidesToShow={slidesToShow}
@@ -128,8 +130,8 @@ const IndexPage = (props) => {
 
         </PageSizer>
       </ContTestimonial>
-      <MapSelector offices={offices} />
-    </div>
+      <MapSelector title={t('mapTitle')} offices={offices} />
+    </I18nextProvider>
   )
 }
 
@@ -204,18 +206,13 @@ query homeQuery {
       home {
         carousel {
           id
-          title
-          description
           type
           videoSrc
           link
-          linkText
         },
         testimonials {
           id
-          description
           name
-          title
         },
         offices {
           id
@@ -229,8 +226,6 @@ query homeQuery {
         }
         processes {
           id
-          title
-          description
           technologies {
             id
             tooltip
@@ -243,4 +238,4 @@ query homeQuery {
 }
 `;
 
-export default ViewPort(IndexPage)
+export default translate('translations')(ViewPort(IndexPage))
