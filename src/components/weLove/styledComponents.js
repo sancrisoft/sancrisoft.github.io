@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
+import Bublle from '../../images/home/bublle.png'
+
 export const BoxContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +27,14 @@ export const ContLeft = styled.div`
     height: auto;
     width: 100%;
     display: flex;
+    &:after {
+      content: '';
+      display: flex;
+      background-image: url(${Bublle});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
     ${breakpoint('desktop')`
       width: initial;
     `}
