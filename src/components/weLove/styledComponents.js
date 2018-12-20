@@ -107,23 +107,39 @@ export const ContLeft = styled.div`
 
 export const ContRight = styled.div`
   display: flex;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1.5em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   ${breakpoint('tablet')`
     width: 45%;
+    padding-top: 0;
   `}
 `;
 
 export const RightTop = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
+  ${breakpoint('tablet')`
+    justify-content: space-between;
+    padding-right: 20px;
+  `}
+  ${breakpoint('desktop')`
+    padding-right: 0;
+  `}
   .gatsby-image-wrapper {
     width: 100%;
-    max-width: 120px;
+    max-width: 80px;
+    ${breakpoint('tablet')`
+      max-width: 100px;
+    `}
+    ${breakpoint('desktop')`
+      max-width: 120px;
+    `}
   }
 `;
 export const RightBottom = styled.div`
@@ -131,8 +147,19 @@ export const RightBottom = styled.div`
   width: 100%;
   justify-content: flex-end;
   padding-top: 1em;
+  ${breakpoint('tablet')`
+    padding-right: 20px;
+  `}
+  ${breakpoint('desktop')`
+    padding-right: 0;
+  `}
   p {
-    text-align: right;
-    width: 95%;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    ${breakpoint('tablet')`
+      text-align: right;
+      width: 95%;
+    `}
   }
 `;
