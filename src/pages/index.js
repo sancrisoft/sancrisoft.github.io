@@ -112,7 +112,7 @@ const IndexPage = (props) => {
           <Title
             type={2}
             color="#fff"
-            text="Trusted by our customers"
+            text="Trusted By Our Customers"
           />
 
           <Carousel
@@ -120,6 +120,7 @@ const IndexPage = (props) => {
             slidesToShow={slidesToShow}
             arrowColor="#F28724"
             arrows={false}
+            swipeToSlide={true}
             autoplay
           >
             { renderItems() }
