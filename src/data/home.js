@@ -21,6 +21,10 @@ i18n
           careers: "Careers",
           quote: "Get a Quote"
         },
+        "weLove": {
+          title: "App Meattogo",
+          description: "kjasg kaushjd akdsg asldk asdja bkasg dbasd jasd"
+        },
         testimonials: {
           1: {
             id: 1,
@@ -197,6 +201,10 @@ i18n
           cases: "Casos de Estudio",
           careers: "Carreras",
           quote: "Cotizaciones"
+        },
+        "weLove": {
+          title: "App Meattogo",
+          description: "Lorem spanish ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum kjasg kaushjd akdsg asldk asdja bkasg dbasd jasd"
         },
         testimonials: {
           1: {
