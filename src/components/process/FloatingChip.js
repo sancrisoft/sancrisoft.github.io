@@ -85,10 +85,12 @@ export const ChipContainer = styled.div`
       transition: all ${({ duration }) => duration}s ease-in-out;
       animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
       border-radius: 50%;
+      background-color: white;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 2;
       &:hover {
         animation: none;
       }

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   EnhancedProcessContainer,
@@ -7,7 +7,7 @@ import ChipDescription from '../chipDescription';
 import FloatingChip from './FloatingChip';
 
 
-export class Process extends PureComponent {
+export class Process extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     process: PropTypes.object.isRequired,
