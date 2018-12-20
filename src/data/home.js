@@ -329,7 +329,7 @@ i18n
             },
             mobile: {
               id: 'mobile',
-              title: 'Desarrollo web',
+              title: 'Desarrollo movil',
               description: 'Lorem spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               technologies: [
                 {

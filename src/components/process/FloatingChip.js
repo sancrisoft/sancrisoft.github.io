@@ -90,12 +90,13 @@ export const ChipContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 2;
       &:hover {
         animation: none;
       }
       .technology {
         flex: 1;
+        width: 4em;
+        height: 4em;
         img {
           flex: 1;
           object-fit: contain !important;
