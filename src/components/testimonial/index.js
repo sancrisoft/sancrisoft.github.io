@@ -21,8 +21,8 @@ const BoxTestimonial = ({ name, description, image, title }) =>  {
           <Icon
             iconName="quote-left"
             backgroundColor="#383938"
-            width="35"
-            height="35"
+            width={35}
+            height={35}
           />
         </div>
         <p>{description}</p>

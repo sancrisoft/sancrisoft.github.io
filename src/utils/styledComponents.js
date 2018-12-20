@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import BgTestimonials from '../images/home/desktop.jpg'
 
+export const ContWeLove = styled.section`
+  display: flex;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+  border-bottom: 3px solid #F28724;
+`;
+
 export const ContTestimonial = styled.section`
   display: flex;
   align-items: center;

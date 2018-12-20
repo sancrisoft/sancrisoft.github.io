@@ -17,9 +17,10 @@ import { translate } from "react-i18next"
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
-import { H3 } from '../components/styledComponents'
+import WeLove from '../components/weLove'
 import {
   ContTestimonial,
+  ContWeLove,
   WhatWeDo,
 } from '../utils/styledComponents'
 
@@ -103,8 +104,23 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
+
+        <ContWeLove>
+          <PageSizer>
+            <Title
+              type={2}
+              text="We Love To See Our Clients Success"
+            />
+
+            <WeLove />
+          </PageSizer>
+        </ContWeLove>
+
         <WhatWeDo>
-          <H3>{t('processes.title')}</H3>
+            <Title
+              type={2}
+              text={t('processes.title')}
+            />
           <div className="processes">
             { renderProcesses() }
           </div>
