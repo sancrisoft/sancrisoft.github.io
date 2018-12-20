@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-import mojs from 'mo-js';
-import ReactDOM from 'react-dom'
+// import mojs from 'mo-js';
+// import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
 // import breakpoint from 'styled-components-breakpoint';
 
@@ -27,7 +27,7 @@ export const ChipContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em 0;
+  margin: 0.5em 0;
   &:first-child {
     div.technology-item {
       span.tooltip {
@@ -43,8 +43,8 @@ export const ChipContainer = styled.div`
     }
   }
   div.technology-item {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     margin: 0 1em;
     position: relative;
     span.tooltip {
@@ -78,17 +78,25 @@ export const ChipContainer = styled.div`
     &:hover .technology img {
       animation: none;
     }
-    .technology {
+    div.technology-icon-container {
       width: 100%;
       height: 100%;
-      overflow: visible !important;
-      img {
-        border-radius: 50%;
-        object-fit: cover !important;
-        transition: all ${({ duration }) => duration}s ease-in-out;
-        animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
-        &:hover {
-          animation: none;
+      overflow: hidden;
+      transition: all ${({ duration }) => duration}s ease-in-out;
+      animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
+      border-radius: 50%;
+      padding: 0.1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        animation: none;
+      }
+      .technology {
+        flex: 1;
+        img {
+          flex: 1;
+          object-fit: contain !important;
         }
       }
     }
@@ -103,6 +111,7 @@ export class FloatingChip extends PureComponent {
     duration: PropTypes.number.isRequired,
   }
 
+  /*
   handleEmotion = () => {
     const { color } = this.props;
     if (this.moAnimation) this.moAnimation.replay();
@@ -124,13 +133,16 @@ export class FloatingChip extends PureComponent {
       this.moAnimation.play();
     }
   }
+  */
 
   render() {
     const { sizes, duration, tooltip } = this.props;
     return (
       <ChipContainer duration={duration}>
         <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
-          <Img className="technology" sizes={sizes} />
+          <div className="technology-icon-container">
+            <Img className="technology" sizes={sizes} />
+          </div>
           <span className="tooltip">{tooltip}</span>
         </div>
       </ChipContainer>
