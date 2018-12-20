@@ -31,7 +31,6 @@ export const ChipContainer = styled.div`
   &:first-child {
     div.technology-item {
       span.tooltip {
-        z-index: 3;
         right: -50%;
       }
     }
@@ -91,7 +90,6 @@ export const ChipContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 2;
       &:hover {
         animation: none;
       }

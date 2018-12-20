@@ -19,7 +19,6 @@ export const ProcessContainer = styled.div`
     width: 10em;
     height: 10em;
     overflow: visible !important;
-    z-index: 2;
     img{
       border-radius: 50%;
       object-fit: cover !important;
@@ -34,10 +33,6 @@ export const ProcessContainer = styled.div`
     p {
       margin-top: 1em;
     }
-    z-index: 2;
-  }
-  div.children {
-    z-index: 2;
   }
 `;
 
@@ -47,9 +42,7 @@ const ChipDescription = ({ id, image, children, t }) => (
     <div className="detail">
       <H4>{t(`processes.items.${id}.title`)}</H4>
       <p>{t(`processes.items.${id}.description`)}</p>
-      <div className="children">
-        { children }
-      </div>
+      { children }
     </div>
   </ProcessContainer>
 );
