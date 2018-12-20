@@ -72,6 +72,7 @@ export const ContBox = styled.div`
     font-size: 18px;
     text-align: center;
     margin: 0;
+    text-transform: capitalize;
   }
   span {
     color: #383938;

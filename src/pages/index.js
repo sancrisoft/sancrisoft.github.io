@@ -10,8 +10,9 @@ import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
-import { I18nextProvider } from "react-i18next";
-import i18n from '../data/home.js';
+import { I18nextProvider } from "react-i18next"
+import i18n from '../data/home.js'
+import { translate } from "react-i18next"
 
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
@@ -78,6 +79,7 @@ const IndexPage = (props) => {
   }
 
   const {
+    t,
     data,
     data: {
       site: {
@@ -97,24 +99,17 @@ const IndexPage = (props) => {
   let slidesToShow = (isMobileView) ? 1 : 3;
   slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
-  console.log('I18');
-    console.log(i18n)
-
   return(
     <I18nextProvider i18n={i18n}>
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-        {
-          /*
-          <WhatWeDo>
-          <H3>Que hacemos</H3>
+        <WhatWeDo>
+          <H3>{t('processes.title')}</H3>
           <div className="processes">
             { renderProcesses() }
           </div>
         </WhatWeDo>
-          */
-        }
       </Layout>
       {
         /*
@@ -123,13 +118,14 @@ const IndexPage = (props) => {
           <Title
             type={2}
             color="#fff"
-            text="Trusted by our customers"
+            text="Trusted By Our Customers"
           />
           <Carousel
             dots
             slidesToShow={slidesToShow}
             arrowColor="#F28724"
             arrows={false}
+            swipeToSlide={true}
             autoplay
           >
             { renderItems() }
@@ -248,4 +244,4 @@ query homeQuery {
 }
 `;
 
-export default ViewPort(IndexPage)
+export default translate('translations')(ViewPort(IndexPage))

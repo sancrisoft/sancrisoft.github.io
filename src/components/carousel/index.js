@@ -43,13 +43,14 @@ class Carousel extends PureComponent {
     arrows: PropTypes.bool,
     fade: PropTypes.bool,
     autoplay: PropTypes.bool,
+    swipeToSlide: PropTypes.bool,
     autoplaySpeed: PropTypes.number,
     arrowColor: PropTypes.string,
   }
 
   render() {
-    const { 
-      children, 
+    const {
+      children,
       arrows,
       dots,
       fade,
@@ -57,6 +58,7 @@ class Carousel extends PureComponent {
       autoplaySpeed,
       slidesToShow,
       arrowColor,
+      swipeToSlide,
       full,
     } = this.props;
     return (
@@ -71,6 +73,7 @@ class Carousel extends PureComponent {
           arrows={arrows && children.length && children.length > 1}
           nextArrow={<NextArrow backgroundColor={arrowColor} />}
           prevArrow={<PrevArrow backgroundColor={arrowColor} />}
+          swipeToSlide={swipeToSlide}
         >
           { children }
         </Slider>
@@ -86,6 +89,7 @@ Carousel.defaultProps = {
   arrows: true,
   fade: false,
   autoplay: false,
+  swipeToSlide: false,
   autoplaySpeed: 4000,
   arrowColor: '#FFFFFF',
 };
