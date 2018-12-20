@@ -31,6 +31,7 @@ export const ChipContainer = styled.div`
   &:first-child {
     div.technology-item {
       span.tooltip {
+        z-index: 3;
         right: -50%;
       }
     }
@@ -96,6 +97,8 @@ export const ChipContainer = styled.div`
       }
       .technology {
         flex: 1;
+        width: 4em;
+        height: 4em;
         img {
           flex: 1;
           object-fit: contain !important;
