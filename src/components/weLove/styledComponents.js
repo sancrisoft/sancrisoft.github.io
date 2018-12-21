@@ -111,7 +111,7 @@ export const ContRight = styled.div`
   margin: 0 auto;
   padding-top: 1.5em;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   ${breakpoint('tablet')`
     width: 45%;
@@ -125,7 +125,7 @@ export const RightTop = styled.div`
   align-items: center;
   width: 100%;
   ${breakpoint('tablet')`
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-right: 20px;
   `}
   ${breakpoint('desktop')`
@@ -158,7 +158,7 @@ export const RightBottom = styled.div`
     width: 100%;
     margin: 0;
     ${breakpoint('tablet')`
-      text-align: right;
+      text-align: left;
       width: 95%;
     `}
   }

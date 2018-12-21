@@ -22,8 +22,8 @@ i18n
           quote: "Get a Quote"
         },
         "weLove": {
-          title: "App Meattogo",
-          description: "kjasg kaushjd akdsg asldk asdja bkasg dbasd jasd"
+          title: "Meattogo",
+          description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."
         },
         testimonials: {
           1: {
@@ -203,8 +203,8 @@ i18n
           quote: "Cotizaciones"
         },
         "weLove": {
-          title: "App Meattogo",
-          description: "Lorem spanish ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum kjasg kaushjd akdsg asldk asdja bkasg dbasd jasd"
+          title: "Meattogo",
+          description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."
         },
         testimonials: {
           1: {
