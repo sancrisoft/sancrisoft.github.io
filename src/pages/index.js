@@ -104,18 +104,38 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-
         <ContWeLove>
           <PageSizer>
             <Title
               type={2}
               text="We Love To See Our Clients Success"
             />
-
-            <WeLove />
+            <WeLove
+              description={t('home.weLove.description')}
+              title={t('home.weLove.title')}
+              image={data[`meattogo`].childImageSharp.sizes}
+            />
           </PageSizer>
         </ContWeLove>
-
+        <ContTestimonial>
+          <PageSizer>
+            <Title
+              type={2}
+              color="#fff"
+              text={t('home.testimonialsTitle')}
+            />
+            <Carousel
+              dots
+              slidesToShow={slidesToShow}
+              arrowColor="#F28724"
+              arrows={false}
+              swipeToSlide={true}
+              autoplay
+            >
+              { renderItems() }
+            </Carousel>
+          </PageSizer>
+        </ContTestimonial>
         <WhatWeDo>
             <Title
               type={2}
@@ -125,28 +145,8 @@ const IndexPage = (props) => {
             { renderProcesses() }
           </div>
         </WhatWeDo>
+        <MapSelector title={t('home.mapTitle')} offices={offices} />
       </Layout>
-      <ContTestimonial>
-        <PageSizer>
-          <Title
-            type={2}
-            color="#fff"
-            text={t('home.testimonialsTitle')}
-          />
-          <Carousel
-            dots
-            slidesToShow={slidesToShow}
-            arrowColor="#F28724"
-            arrows={false}
-            swipeToSlide={true}
-            autoplay
-          >
-            { renderItems() }
-          </Carousel>
-
-        </PageSizer>
-      </ContTestimonial>
-      <MapSelector title={t('home.mapTitle')} offices={offices} />
     </I18nextProvider>
   )
 }
@@ -217,6 +217,9 @@ query homeQuery {
   mobile:file(relativePath: { eq: "home/mobile.png" }) {
     ...imageFragment
   }
+  meattogo:file(relativePath: { eq: "home/meattogo.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       home {
@@ -225,6 +228,9 @@ query homeQuery {
           type
           videoSrc
           link
+        },
+        weLove {
+          image
         },
         testimonials {
           id

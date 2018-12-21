@@ -6,7 +6,14 @@ export const ContWeLove = styled.section`
   display: flex;
   padding-top: 3.5em;
   padding-bottom: 3.5em;
-  border-bottom: 3px solid #F28724;
+  border-bottom: 4px solid #F28724;
+  h2 {
+    width: 90%;
+    margin: 0 auto;
+    ${breakpoint('tablet')`
+      width: 100%;
+    `}
+  }
 `;
 
 export const ContTestimonial = styled.section`

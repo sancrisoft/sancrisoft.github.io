@@ -16,6 +16,8 @@ export const MainContainer = styled.div`
     height: 100%;
     h2, p {
       color: white;
+      text-align: center;
+      padding: 0 1em;
     }
   }
   .image-container {

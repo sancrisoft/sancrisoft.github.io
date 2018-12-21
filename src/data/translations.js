@@ -16,6 +16,10 @@ i18n
           slogan: 'Web development',
           testimonialsTitle: 'Trusted By Our Customers',
           mapTitle: 'Or stop by our offices',
+          weLove: {
+            title: "Meattogo",
+            description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."
+          },
           nav: {
             about: "About Us",
             cases: "Case Studies",
