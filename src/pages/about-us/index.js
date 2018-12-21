@@ -9,7 +9,7 @@ import i18n from '../../data/translations'
 import {
   SectionContainer,
   MembersContainer,
-} from './styledComponents'
+} from '../../utils/about-us/styledComponents';
 import {
   H3,
   PageSizer,
