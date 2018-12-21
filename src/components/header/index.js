@@ -14,9 +14,9 @@ class Header extends PureComponent {
     if(changeLanguage) changeLanguage(event.target.value);
   }
   render() {
-    const { logo, logoWhite, viewport: { isDesktopView }, isWhiteTheme, language } = this.props;
+    const { logo, logoWhite, viewport: { isDesktopView }, isWhiteTheme, language, isSticky } = this.props;
     return (
-      <HeaderContainer isWhite={isWhiteTheme}>
+      <HeaderContainer isWhite={isWhiteTheme} isSticky={isSticky}>
         <HeaderPageSizer>
           <Head1>
             <Link to="/" >
@@ -46,6 +46,7 @@ Header.propTypes = {
   isWhiteTheme: PropTypes.bool,
   language: PropTypes.string,
   changeLanguage: PropTypes.func,
+  isSticky: PropTypes.bool,
 }
 
 Header.defaultProps = {

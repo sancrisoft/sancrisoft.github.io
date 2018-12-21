@@ -1,3 +1,148 @@
 {
-    "title": "About Us"
+    "team": [
+        {
+            "id": "jhony",
+            "fullName": "Jhony Moncada",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "juan",
+            "fullName": "Juan Gonzales",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "carlos",
+            "fullName": "Carlos Gonzales",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "alejo",
+            "fullName": "Alejandro Marín",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "johan",
+            "fullName": "Johan Moncada",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "samuel",
+            "fullName": "Samuel Granja",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "bryan",
+            "fullName": "Bryan Villamil",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        },
+        {
+            "id": "miguel",
+            "fullName": "Miguel Bolivar",
+            "socialMedia": [
+                {
+                    "type": "facebook",
+                    "value": "https://"
+                },
+                {
+                    "type": "twitter",
+                    "value": "https://"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://"
+                }
+            ]
+        }
+    ]
 }

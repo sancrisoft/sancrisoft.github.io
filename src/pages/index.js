@@ -11,7 +11,7 @@ import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
 import { I18nextProvider } from "react-i18next"
-import i18n from '../data/home.js'
+import i18n from '../data/translations'
 import { translate } from "react-i18next"
 
 import { PageSizer } from '../components/styledComponents'
@@ -51,8 +51,8 @@ const IndexPage = (props) => {
         <Testimonial
           key={id}
           name={name}
-          description={t(`testimonials.${id}.description`)}
-          title={t(`testimonials.${id}.title`)}
+          description={t(`home.testimonials.${id}.description`)}
+          title={t(`home.testimonials.${id}.title`)}
           image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
 
@@ -104,51 +104,49 @@ const IndexPage = (props) => {
       <Layout>
         <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
         <FullItems data={data} />
-      </Layout>
-      <ContWeLove>
-        <PageSizer>
-          <Title
-            type={2}
-            text="We Love To See Our Clients Success"
-          />
-          <WeLove
-            description={t(`weLove.description`)}
-            title={t(`weLove.title`)}
-            image={data[`meattogo`].childImageSharp.sizes}
-          />
-        </PageSizer>
-      </ContWeLove>
-      <ContTestimonial>
-        <PageSizer>
-          <Title
-            type={2}
-            color="#fff"
-            text={t('testimonialsTitle')}
-          />
-          <Carousel
-            dots
-            slidesToShow={slidesToShow}
-            arrowColor="#F28724"
-            arrows={false}
-            swipeToSlide={true}
-            autoplay
-          >
-            { renderItems() }
-          </Carousel>
-        </PageSizer>
-      </ContTestimonial>
-      <Layout>
+        <ContWeLove>
+          <PageSizer>
+            <Title
+              type={2}
+              text="We Love To See Our Clients Success"
+            />
+            <WeLove
+              description={t('home.weLove.description')}
+              title={t('home.weLove.title')}
+              image={data[`meattogo`].childImageSharp.sizes}
+            />
+          </PageSizer>
+        </ContWeLove>
+        <ContTestimonial>
+          <PageSizer>
+            <Title
+              type={2}
+              color="#fff"
+              text={t('home.testimonialsTitle')}
+            />
+            <Carousel
+              dots
+              slidesToShow={slidesToShow}
+              arrowColor="#F28724"
+              arrows={false}
+              swipeToSlide={true}
+              autoplay
+            >
+              { renderItems() }
+            </Carousel>
+          </PageSizer>
+        </ContTestimonial>
         <WhatWeDo>
             <Title
               type={2}
-              text={t('processes.title')}
+              text={t('home.processes.title')}
             />
           <div className="processes">
             { renderProcesses() }
           </div>
         </WhatWeDo>
+        <MapSelector title={t('home.mapTitle')} offices={offices} />
       </Layout>
-      <MapSelector title={t('mapTitle')} offices={offices} />
     </I18nextProvider>
   )
 }

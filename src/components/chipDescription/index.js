@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import {
   H4,
 } from '../styledComponents';
-import { translate } from "react-i18next"
 
 export const ProcessContainer = styled.div`
   width: 100%;
@@ -36,12 +35,12 @@ export const ProcessContainer = styled.div`
   }
 `;
 
-const ChipDescription = ({ id, image, children, t }) => (
+const ChipDescription = ({ title, description, image, children, t }) => (
   <ProcessContainer>
     <Img className="avatar" sizes={image} />
     <div className="detail">
-      <H4>{t(`processes.items.${id}.title`)}</H4>
-      <p>{t(`processes.items.${id}.description`)}</p>
+      <H4>{title}</H4>
+      <p>{description}</p>
       { children }
     </div>
   </ProcessContainer>
@@ -49,9 +48,9 @@ const ChipDescription = ({ id, image, children, t }) => (
 
 ChipDescription.propTypes = {
   image: PropTypes.object.isRequired,
-  title: PropTypes.string,
-  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   children: PropTypes.object,
 };
 
-export default translate('translations')(ChipDescription)
+export default ChipDescription

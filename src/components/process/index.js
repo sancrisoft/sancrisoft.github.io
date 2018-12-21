@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   EnhancedProcessContainer,
-} from './styledComponents';
-import ChipDescription from '../chipDescription';
-import FloatingChip from './FloatingChip';
+} from './styledComponents'
+import ChipDescription from '../chipDescription'
+import FloatingChip from './FloatingChip'
+import { translate } from 'react-i18next'
 
 
 export class Process extends Component {
@@ -27,11 +28,13 @@ export class Process extends Component {
   }
 
   render() {
-    const { process, data } = this.props;
+    const { process, data, t } = this.props;
     return (
       <EnhancedProcessContainer>
         <ChipDescription 
           { ...process }
+          title={t(`home.processes.items.${process.id}.title`)}
+          description={t(`home.processes.items.${process.id}.description`)}
           image={data[process.id].childImageSharp.sizes}
         >
         <div className="technologies">
@@ -43,4 +46,4 @@ export class Process extends Component {
   }
 }
 
-export default Process
+export default translate("translations")(Process)
