@@ -193,9 +193,49 @@ i18n
             description: 'A group of talented people who enjoy and have fun doing their work'
           },
           team: {
-            jhony: {
-              position: "Manager",
-            },
+            title: 'Meet the Team',
+            members: {
+              jhony: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              juan: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              samuel: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              carlos: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              alejo: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              johan: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              bryan: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+              miguel: {
+                position: "Manager",
+                message1: "The best",
+                message2: "Of the fucking bests"
+              },
+            }
           },
         },
       },
@@ -384,9 +424,49 @@ i18n
             description: 'Un grupo de personas con talento que disfrutan y se divierten haciendo su trabajo'
           },
           team: {
-            jhony: {
-              position: "Manager",
-            },
+            title: 'Conoce al Equipo',
+            members: {
+              jhony: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              juan: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              samuel: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              carlos: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              alejo: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              johan: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              bryan: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+              miguel: {
+                position: "Jefe encargado",
+                message1: "El mejor",
+                message2: "De todos forever ever after"
+              },
+            }
           }
         }
       }
