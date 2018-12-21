@@ -27,7 +27,7 @@ export const GreyOverlay = styled.div`
   opacity: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   transition: all .3s ease-in-out;
   transform: scale(0);
@@ -59,6 +59,7 @@ export const CardContainer = styled.div`
     height: 13em;
     h6, span {
       font-size: 1em;
+      text-align: center;
     }
   `}
   div.first-details {

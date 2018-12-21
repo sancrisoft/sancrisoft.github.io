@@ -5,7 +5,7 @@ import {
   GreyOverlay,
   IconLink,
 } from './styledComponents'
-import { H3, H4, H6 } from '../styledComponents'
+import { H6 } from '../styledComponents'
 import Img from 'gatsby-image'
 import Icon from '../icons'
 
@@ -26,16 +26,26 @@ const MemberCard = ({ image, name, position, message1, message2, socialMedia }) 
   <CardContainer>
     <Img sizes={image} />
     <div className="first-details">
-      <H6>Carlos Gonzalez</H6>
-      <span>The fucking best</span>
+      <H6>{name}</H6>
+      <span>{position}</span>
     </div>
     <GreyOverlay>
-      <H6>The best of the fucking best</H6>
-      <span>Yet just the only best</span>
+      <H6>{message1}</H6>
+      <span>{message2}</span>
       <div className="social-media">
         { renderSocialMedia(socialMedia) }
       </div>
     </GreyOverlay>
   </CardContainer>
 );
+
+MemberCard.propTypes = {
+  image: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  message1: PropTypes.string.isRequired,
+  message2: PropTypes.string.isRequired,
+  socialMedia: PropTypes.array.isRequired,
+};
+
 export default MemberCard
