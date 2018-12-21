@@ -2,19 +2,25 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   position: relative;
   div.detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
     h4, p {
       color: white;
     }
   }
   .image-container {
-    flex: 1;
+    width: 100%;
+    height: 100%;
     img {
       flex: 1;
       object-fit: cover;

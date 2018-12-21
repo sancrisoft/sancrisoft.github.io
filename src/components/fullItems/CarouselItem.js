@@ -34,9 +34,9 @@ const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
           { renderContent() }
           <div className={'detail-container'}>
             <div className={'detail'} style={props}>
-              <H3>{t(`carousel.${id}.title`)}</H3>
-              <span>{t(`carousel.${id}.description`)}</span>
-              <Link to={link}>{t(`carousel.${id}.linkText`)}</Link>
+              <H3>{t(`home.carousel.${id}.title`)}</H3>
+              <span>{t(`home.carousel.${id}.description`)}</span>
+              <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
             </div>
           </div>
         </>

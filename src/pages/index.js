@@ -11,7 +11,7 @@ import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
 import { I18nextProvider } from "react-i18next"
-import i18n from '../data/home.js'
+import i18n from '../data/translations'
 import { translate } from "react-i18next"
 
 import { PageSizer } from '../components/styledComponents'
@@ -51,8 +51,8 @@ const IndexPage = (props) => {
         <Testimonial
           key={id}
           name={name}
-          description={t(`testimonials.${id}.description`)}
-          title={t(`testimonials.${id}.title`)}
+          description={t(`home.testimonials.${id}.description`)}
+          title={t(`home.testimonials.${id}.title`)}
           image={data[`Testimonial${id}`].childImageSharp.sizes}
         />
 
@@ -119,7 +119,7 @@ const IndexPage = (props) => {
         <WhatWeDo>
             <Title
               type={2}
-              text={t('processes.title')}
+              text={t('home.processes.title')}
             />
           <div className="processes">
             { renderProcesses() }
@@ -131,7 +131,7 @@ const IndexPage = (props) => {
           <Title
             type={2}
             color="#fff"
-            text={t('testimonialsTitle')}
+            text={t('home.testimonialsTitle')}
           />
           <Carousel
             dots
@@ -146,7 +146,7 @@ const IndexPage = (props) => {
 
         </PageSizer>
       </ContTestimonial>
-      <MapSelector title={t('mapTitle')} offices={offices} />
+      <MapSelector title={t('home.mapTitle')} offices={offices} />
     </I18nextProvider>
   )
 }

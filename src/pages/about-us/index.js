@@ -13,7 +13,11 @@ const IndexPage = ({ data, t }) => {
       <Layout>
         <SEO title={`Sancrisoft | ${t('title')}`} keywords={['sancrisoft', 'digital-solutions']} />
         <section>
-          <BigGreyImage image={data.aboutUsMainImage.childImageSharp.sizes} />
+          <BigGreyImage 
+            image={data.aboutUsMainImage.childImageSharp.sizes}
+            title={t('bigImage.title')}
+            description={t('bigImage.description')}
+          />
         </section>
       </Layout>
     </I18nextProvider>
