@@ -58,6 +58,7 @@ class Layout extends Component {
     const { children, viewport: { isDesktopView} } = this.props;
     const { isWhiteTheme, pathname, language } = this.state;
     const isWTheme = (pathname === '/') ? isWhiteTheme : true;
+    const isSticky = isWhiteTheme;
     const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
     const { t } = this.props;
     return (<StaticQuery
@@ -91,6 +92,7 @@ class Layout extends Component {
             logo={data.logo}
             logoWhite={data.logoWhite}
             isWhiteTheme={isWTheme}
+            isSticky={isSticky}
             language={language}
             changeLanguage={this.setLanguage}
           />

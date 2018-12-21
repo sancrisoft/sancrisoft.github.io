@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  position: fixed;
+  position: ${(props) => props.isSticky ? 'fixed' : (props.isWhite ? 'initial' : 'fixed')};
   top: 0px;
   left: 0px;
   width: 100%;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
