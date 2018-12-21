@@ -14,7 +14,7 @@ export const MainContainer = styled.div`
     z-index: 3;
     width: 100%;
     height: 100%;
-    h4, p {
+    h2, p {
       color: white;
     }
   }
