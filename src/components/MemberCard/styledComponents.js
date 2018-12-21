@@ -1,4 +1,23 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
+
+export const IconLink = styled.a`
+  width: 30px;
+  height: 30px;
+  ${breakpoint('desktop')`
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+  `}
+  box-sizing: border-box;
+  box-shadow: 0 15px 15px 0px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const GreyOverlay = styled.div`
   position: absolute;
@@ -8,8 +27,8 @@ export const GreyOverlay = styled.div`
   opacity: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   transition: all .3s ease-in-out;
   transform: scale(0);
   z-index: -10;
@@ -17,14 +36,31 @@ export const GreyOverlay = styled.div`
   h6, span {
     text-align: center;
   }
+  div.social-media {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
 
 export const CardContainer = styled.div`
-  width: 13em;
-  height: 13em;
+  width: 8em;
+  height: 8em;
   background-color: white;
   position: relative;
   margin: 0.5em;
+  h6, span {
+    font-size: 0.8em;
+  }
+  ${breakpoint('desktop')`
+    width: 13em;
+    height: 13em;
+    h6, span {
+      font-size: 1em;
+    }
+  `}
   div.first-details {
     position: absolute;
     bottom: 0;
@@ -42,12 +78,6 @@ export const CardContainer = styled.div`
   }
   &:hover {
     ${GreyOverlay} {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       opacity: 1;
       background-color: rgba(0,0,0,0.55);
       transform: scale(1);
