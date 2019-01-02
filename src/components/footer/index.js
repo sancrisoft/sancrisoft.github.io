@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import LanguageButtons from '../languageButtons'
 import Menu from '../menu';
+import Icons from '../icons';
 
 import {
   FooterContainer,
   FooterTop,
   FooterBottom,
   Networks,
+  ContentIcon,
+  A,
 } from './styledComponents'
 
 class Footer extends PureComponent {
@@ -29,10 +32,38 @@ class Footer extends PureComponent {
     return (
       <FooterContainer>
         <FooterTop>
-          <Menu isBlack />
-          <LanguageButtons isBlack changeLanguage={this.changeLanguage} />
+          <div className="menu">
+            <Menu isBlack />
+            <LanguageButtons isBlack changeLanguage={this.changeLanguage} />
+          </div>
           <Networks>
-
+            <ContentIcon>
+              <A href={facebook} target="_blank" className="facebook">
+                <Icons
+                  iconName="facebook"
+                  height={45}
+                  width={45}
+                />
+              </A>
+            </ContentIcon>
+            <ContentIcon>
+              <A href={instagram} target="_blank" className="instagram">
+                <Icons
+                  iconName="instagram"
+                  height={45}
+                  width={45}
+                />
+              </A>
+            </ContentIcon>
+            <ContentIcon>
+              <A href={twitter} target="_blank" className="twitter">
+                <Icons
+                  iconName="twitter"
+                  height={45}
+                  width={45}
+                />
+              </A>
+            </ContentIcon>
           </Networks>
         </FooterTop>
 
