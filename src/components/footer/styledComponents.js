@@ -5,6 +5,12 @@ export const FooterContainer = styled.div`
   background: #fff;
 `;
 
+export const FooterPageSizer = styled.div`
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+`;
+
 export const A = styled.a`
   display: flex;
 `;
@@ -14,10 +20,10 @@ export const FooterTop = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5em 1em 2em;
+  padding: 2.5em 0 2em;
   ${breakpoint('tablet')`
     flex-direction: row;
-    padding: 2.5em 2em 2em;
+    padding: 2.5em 0 2em;
   `}
   .menu {
     display: flex;
@@ -59,7 +65,7 @@ export const ContentIcon = styled.div`
 
 export const FooterBottom = styled.div`
   display: flex;
-  padding: .5em 1em 2em;
+  padding: .5em 0em 2em;
   .gatsby-image-wrapper {
     margin: 0 auto;
   }
