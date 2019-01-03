@@ -9,7 +9,6 @@ import {
 import { translate } from "react-i18next"
 
 const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
-
   const renderContent = () => {
     switch(type) {
       case 'image':
@@ -36,7 +35,9 @@ const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
             <div className={'detail'} style={props}>
               <H3>{t(`home.carousel.${id}.title`)}</H3>
               <span>{t(`home.carousel.${id}.description`)}</span>
-              <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
+              {
+                (link) && <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
+              }
             </div>
           </div>
         </>
@@ -49,7 +50,7 @@ CarouselItem.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   linkText: PropTypes.string,
   image: PropTypes.object,
   videoSrc: PropTypes.string,
