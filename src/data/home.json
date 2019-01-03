@@ -1,159 +1,149 @@
 {
-  "weLove": {
-    "title": "Meattogo",
-    "image": "../../images/home/meattogo.png"
-  },
-  "testimonials": [
-    {
-      "id": 1,
-      "name":"juan perez",
-      "image":"/images/small-logo.png"
+    "weLove": {
+        "title": "Meattogo",
+        "image": "../../images/home/meattogo.png"
     },
-    {
-      "id": 2,
-      "name":"pedro pablo",
-      "image":"../../images/small-logo.png"
-    },
-    {
-      "id": 3,
-      "name":"camilo ortiz",
-      "image":"../../images/small-logo.png"
-    },
-    {
-      "id": 4,
-      "name":"gonza gonza",
-      "image":"../../images/small-logo.png"
-    },
-    {
-      "id": 5,
-      "name":"alfonso jaramillo",
-      "image":"../../images/small-logo.png"
-    },
-    {
-      "id": 6,
-      "name":"cristian puerto",
-      "image":"../../images/small-logo.png"
+    "testimonials": [
+        {
+            "id": 1,
+            "name": "juan perez",
+            "image": "/images/small-logo.png"
+        },
+        {
+            "id": 2,
+            "name": "pedro pablo",
+            "image": "../../images/small-logo.png"
+        },
+        {
+            "id": 3,
+            "name": "camilo ortiz",
+            "image": "../../images/small-logo.png"
+        },
+        {
+            "id": 4,
+            "name": "gonza gonza",
+            "image": "../../images/small-logo.png"
+        },
+        {
+            "id": 5,
+            "name": "alfonso jaramillo",
+            "image": "../../images/small-logo.png"
+        },
+        {
+            "id": 6,
+            "name": "cristian puerto",
+            "image": "../../images/small-logo.png"
+        }
+    ],
+    "carousel": [
+        {
+            "id": 1,
+            "type": "image",
+            "link": "/careers"
+        },
+        {
+            "id": 2,
+            "type": "image",
+            "link": "/careers"
+        },
+        {
+            "id": 3,
+            "type": "image",
+            "link": "/careers"
+        },
+        {
+            "id": 4,
+            "type": "image",
+            "link": null
+        }
+    ],
+    "offices": [
+        {
+            "id": "venezuela/tachira/san-cristobal",
+            "title": "Venezuela",
+            "address1": "Santa Teresa",
+            "address2": "Casa al fondo",
+            "state": "San Cristóbal. Táchira",
+            "postalCode": "5001",
+            "latitude": "7.798563",
+            "longitude": "-72.222281"
+        },
+        {
+            "id": "colombia/antioquia/envigado",
+            "title": "Colombia",
+            "address1": "Calle. 49 Sur",
+            "address2": "#45 A 300 Oficina 1813",
+            "state": "Envigado. Antioquia",
+            "postalCode": "055422",
+            "latitude": "6.162996",
+            "longitude": "-75.602191"
+        }
+    ],
+    "processes": [
+        {
+            "id": "web",
+            "technologies": [
+                {
+                    "id": "react",
+                    "tooltip": "React",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "webpack",
+                    "tooltip": "Webpack",
+                    "color": "#2177BE"
+                },
+                {
+                    "id": "redux",
+                    "tooltip": "Redux",
+                    "color": "#7649BA"
+                },
+                {
+                    "id": "styled",
+                    "tooltip": "Styled components",
+                    "color": "#F0B4EB"
+                },
+                {
+                    "id": "material",
+                    "tooltip": "Material UI",
+                    "color": "#8B8B8B"
+                }
+            ]
+        },
+        {
+            "id": "mobile",
+            "technologies": [
+                {
+                    "id": "react",
+                    "tooltip": "React Native",
+                    "color": "#65DAF9"
+                },
+                {
+                    "id": "webpack",
+                    "tooltip": "Webpack",
+                    "color": "#2177BE"
+                },
+                {
+                    "id": "android",
+                    "tooltip": "Android",
+                    "color": "#8FC321"
+                },
+                {
+                    "id": "styled",
+                    "tooltip": "Styled components",
+                    "color": "#F0B4EB"
+                },
+                {
+                    "id": "ios",
+                    "tooltip": "iOs",
+                    "color": "#F3B338"
+                }
+            ]
+        }
+    ],
+    "networks": {
+        "facebook": "https://www.facebook.com/sancrisoft",
+        "instagram": "https://www.instagram.com/sancrisoft/",
+        "twitter": "https://twitter.com/sancrisoft"
     }
-  ],
-  "carousel": [
-      {
-          "id": 1,
-          "type": "image",
-          "link": "/careers"
-      },
-      {
-          "id": 2,
-          "type": "image",
-          "link": "/careers"
-      },
-      {
-          "id": 3,
-          "type": "image",
-          "link": "/careers"
-      },
-      {
-          "id": 4,
-          "type": "image",
-          "link": null
-      },
-      {
-          "id": 5,
-          "type": "image",
-          "link": "/careers"
-      },
-      {
-          "id": 6,
-          "type": "image",
-          "link": "/careers"
-      }
-  ],
-  "offices": [
-      {
-          "id": "colombia/antioquia/envigado",
-          "title": "Colombia",
-          "address1": "Calle. 49 Sur",
-          "address2": "#45 A 300 Oficina 1813",
-          "state": "Envigado. Antioquia",
-          "postalCode": "055422",
-          "latitude": "6.162996",
-          "longitude": "-75.602191"
-      },
-      {
-          "id": "venezuela/tachira/san-cristobal",
-          "title": "Venezuela",
-          "address1": "Santa Teresa",
-          "address2": "Casa al fondo",
-          "state": "San Cristóbal. Táchira",
-          "postalCode": "5001",
-          "latitude": "7.798563",
-          "longitude": "-72.222281"
-      }
-  ],
-  "processes": [
-      {
-          "id": "web",
-          "technologies": [
-              {
-                  "id": "react",
-                  "tooltip": "React",
-                  "color": "#65DAF9"
-              },
-              {
-                  "id": "webpack",
-                  "tooltip": "Webpack",
-                  "color": "#2177BE"
-              },
-              {
-                  "id": "redux",
-                  "tooltip": "Redux",
-                  "color": "#7649BA"
-              },
-              {
-                  "id": "styled",
-                  "tooltip": "Styled components",
-                  "color": "#F0B4EB"
-              },
-              {
-                  "id": "material",
-                  "tooltip": "Material UI",
-                  "color": "#8B8B8B"
-              }
-          ]
-      },
-      {
-          "id": "mobile",
-          "technologies": [
-              {
-                  "id": "react",
-                  "tooltip": "React Native",
-                  "color": "#65DAF9"
-              },
-              {
-                  "id": "webpack",
-                  "tooltip": "Webpack",
-                  "color": "#2177BE"
-              },
-              {
-                  "id": "android",
-                  "tooltip": "Android",
-                  "color": "#8FC321"
-              },
-              {
-                  "id": "styled",
-                  "tooltip": "Styled components",
-                  "color": "#F0B4EB"
-              },
-              {
-                  "id": "ios",
-                  "tooltip": "iOs",
-                  "color": "#F3B338"
-              }
-          ]
-      }
-  ],
-  "networks": {
-    "facebook": "https://www.facebook.com/sancrisoft",
-    "instagram": "https://www.instagram.com/sancrisoft/",
-    "twitter": "https://twitter.com/sancrisoft"
-  }
 }
