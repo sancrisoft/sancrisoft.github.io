@@ -44,12 +44,19 @@ export const CarouselItem = styled.div`
       flex-direction: column;
       width: 50%;
       ${breakpoint('desktop')`
-        width: 30%;
+        width: 45%;
       `}
       z-index: 3;
       h3, span, a {
         color: white;
         text-align: center;
+      }
+      h3 {
+        font-size: 1.6rem;
+        letter-spacing: 0.03rem;
+        ${breakpoint('tablet')`
+          font-size: 2rem;
+        `}
       }
       span {
         margin-top: 2em;

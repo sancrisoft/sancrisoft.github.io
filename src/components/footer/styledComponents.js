@@ -39,7 +39,7 @@ export const FooterTop = styled.div`
       padding-bottom: 1em;
       ${breakpoint('tablet')`
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         padding-bottom: 0;
       `}
       a {
