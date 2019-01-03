@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import LanguageButtons from '../languageButtons'
@@ -14,7 +14,7 @@ import {
   A,
 } from './styledComponents'
 
-class Footer extends PureComponent {
+class Footer extends Component {
   changeLanguage = (event) => {
     const { changeLanguage } = this.props;
     if(changeLanguage) changeLanguage(event.target.value);
@@ -26,7 +26,8 @@ class Footer extends PureComponent {
         twitter,
         instagram
       },
-      logo
+      logo,
+      language
     } = this.props;
 
     return (
@@ -34,13 +35,14 @@ class Footer extends PureComponent {
         <FooterTop>
           <div className="menu">
             <Menu isBlack />
-            <LanguageButtons isBlack changeLanguage={this.changeLanguage} />
+            <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
           </div>
           <Networks>
             <ContentIcon>
               <A href={facebook} target="_blank" className="facebook">
                 <Icons
                   iconName="facebook"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />
@@ -50,6 +52,7 @@ class Footer extends PureComponent {
               <A href={instagram} target="_blank" className="instagram">
                 <Icons
                   iconName="instagram"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />
@@ -59,6 +62,7 @@ class Footer extends PureComponent {
               <A href={twitter} target="_blank" className="twitter">
                 <Icons
                   iconName="twitter"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />

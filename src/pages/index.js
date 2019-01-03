@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   graphql,
 } from 'gatsby'
@@ -19,15 +19,22 @@ import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
 import WeLove from '../components/weLove'
+import GetAQuote from '../components/getAQuote'
+import Button from '../components/button'
 import {
   ContTestimonial,
   ContWeLove,
   WhatWeDo,
 } from '../utils/styledComponents'
 
-const IndexPage = (props) => {
+// const IndexPage = (props) => {
+class IndexPage extends Component {
 
-  const renderItems = () => {
+  state = {
+    language: 'en',
+  }
+
+  renderItems = () => {
     const {
       data: {
         site: {
@@ -40,7 +47,7 @@ const IndexPage = (props) => {
       },
       data,
       t,
-    } = props;
+    } = this.props;
 
     const newArray = testimonials.map((item) => {
       const {
@@ -63,7 +70,7 @@ const IndexPage = (props) => {
 
   }
 
-  const renderProcesses = () => {
+  renderProcesses = () => {
     const {
       data: {
         site: {
@@ -75,87 +82,108 @@ const IndexPage = (props) => {
         }
       },
       data
-    } = props;
+    } = this.props;
     return processes.map((process) => <Process key={process.id} data={data} process={process} />);
   }
 
-  const {
-    t,
-    data,
-    data: {
-      site: {
-        siteMetadata: {
-          home: {
-            offices,
-            networks
+  changeLanguage = (lng) => {
+    const { i18n } = this.props;
+    i18n.changeLanguage(lng);
+  };
+  setLanguage = (lang) => {
+    this.setState({ language: lang }, () => this.changeLanguage(lang));
+  }
+  eventChangeLang = (event) => {
+    this.setLanguage(event.target.value);
+  }
+
+  render() {
+    const { language } = this.state;
+    const {
+      t,
+      data,
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              offices,
+              networks,
+            }
           }
         }
+      },
+      viewport: {
+        isMobileView,
+        isTabletView
       }
-    },
-    viewport: {
-      isMobileView,
-      isTabletView
-    }
-  } = props;
+    } = this.props;
 
-  let slidesToShow = (isMobileView) ? 1 : 3;
-  slidesToShow = (isTabletView) ? 2 : slidesToShow;
+    let slidesToShow = (isMobileView) ? 1 : 3;
+    slidesToShow = (isTabletView) ? 2 : slidesToShow;
 
-  return(
-    <I18nextProvider i18n={i18n}>
-      <Layout>
-        <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
-        <FullItems data={data} />
-        <ContWeLove>
-          <PageSizer>
-            <Title
-              type={2}
-              text={t('home.weLove.titleSection')}
-            />
-            <WeLove
-              description={t('home.weLove.description')}
-              title={t('home.weLove.title')}
-              image={data[`meattogo`].childImageSharp.sizes}
-            />
-          </PageSizer>
-        </ContWeLove>
-        <ContTestimonial>
-          <PageSizer>
-            <Title
-              type={2}
-              color="#fff"
-              text={t('home.testimonialsTitle')}
-            />
-            <Carousel
-              dots
-              slidesToShow={slidesToShow}
-              arrowColor="#F28724"
-              arrows={false}
-              swipeToSlide={true}
-              autoplay
-            >
-              { renderItems() }
-            </Carousel>
-          </PageSizer>
-        </ContTestimonial>
-        <WhatWeDo>
+    return(
+      <I18nextProvider i18n={i18n}>
+        <Layout>
+          <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
+          <FullItems data={data} />
+          <ContWeLove>
+            <PageSizer>
+              <Title
+                type={2}
+                text="We Love To See Our Clients Success"
+              />
+              <WeLove
+                description={t('home.weLove.description')}
+                title={t('home.weLove.title')}
+                image={data[`meattogo`].childImageSharp.sizes}
+              />
+            </PageSizer>
+          </ContWeLove>
+          <ContTestimonial>
+            <PageSizer>
+              <Title
+                type={2}
+                color="#fff"
+                text={t('home.testimonialsTitle')}
+              />
+              <Carousel
+                dots
+                slidesToShow={slidesToShow}
+                arrowColor="#F28724"
+                arrows={false}
+                swipeToSlide={true}
+                autoplay
+                >
+                  { this.renderItems() }
+                </Carousel>
+              </PageSizer>
+            </ContTestimonial>
+          <WhatWeDo>
             <Title
               type={2}
               text={t('home.processes.title')}
             />
-          <div className="processes">
-            { renderProcesses() }
-          </div>
-        </WhatWeDo>
-        <MapSelector title={t('home.mapTitle')} offices={offices} />
-      </Layout>
+            <div className="processes">
+              { this.renderProcesses() }
+            </div>
+          </WhatWeDo>
+          <GetAQuote
+            desc={t('home.getAQuote.description')}
+          >
+            <Button />
+          </GetAQuote>
+          <MapSelector title={t('home.mapTitle')} offices={offices} />
+          <Footer
+            networks={networks}
+            logo={data.logoSmall}
+            language={language}
+            changeLanguage={this.setLanguage}
+            />
+        </Layout>
+      </I18nextProvider>
+    )
+  }
 
-      <Footer
-        networks={networks}
-        logo={data.logoSmall}
-      />
-    </I18nextProvider>
-  )
 }
 
 // Queries for images (One query by image)
