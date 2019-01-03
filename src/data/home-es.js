@@ -86,6 +86,9 @@ const homeES = {
       linkText: 'Link arrechisimo!'
     }
   },
+  getAQuote: {
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore saepe tempore hic. Corporis dolor amet beatae eligendi totam hic ad, tenetur sequi nostrum veniam officia. 🚀  ESPAÑOL"
+  },
   offices: [
     {
       id: 'venezuela/tachira/san-cristobal',
