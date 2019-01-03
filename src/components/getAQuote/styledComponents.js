@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 import offices from '../../images/home/offices.jpg'
 
 export const ContentGetaQuote = styled.div`
-  padding: 3em 1em;
+  padding: 3em 1em 2.5em;
   position: relative;
   &::after {
     content: '';
@@ -25,7 +25,7 @@ export const ContentGetaQuote = styled.div`
   &::before {
     content: '';
     display: flex;
-    background: rgba(0,0,0, .5);
+    background: rgba(0,0,0, .7);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -45,7 +45,7 @@ export const Container = styled.div`
   `}
 `;
 export const QuoteTop = styled.div`
-  padding: 1.5em .5em 0;
+  padding: 1em .5em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +53,14 @@ export const QuoteTop = styled.div`
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
+    font-size: 18px;
+    line-height: 1.7;
+    ${breakpoint('tablet')`
+      font-size: 22px;
+    `}
+    ${breakpoint('desktop')`
+      font-size: 25px;
+    `}
   }
 `;
 
@@ -60,5 +68,5 @@ export const QuoteBottom = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 1.2em;
 `;

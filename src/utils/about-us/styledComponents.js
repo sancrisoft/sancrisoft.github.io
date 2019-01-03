@@ -7,9 +7,19 @@ export const SectionContainer = styled.section`
   align-items: center;
 `;
 
-export const MembersContainer = styled.div`
+export const MembersContainer = styled.section`
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const OurValuesContainer = styled.section`
+  width: 100%;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
