@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import LanguageButtons from '../languageButtons'
@@ -14,7 +14,7 @@ import {
   A,
 } from './styledComponents'
 
-class Footer extends PureComponent {
+class Footer extends Component {
   changeLanguage = (event) => {
     const { changeLanguage } = this.props;
     if(changeLanguage) changeLanguage(event.target.value);

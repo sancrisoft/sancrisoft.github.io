@@ -19,6 +19,8 @@ import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
 import Process from '../components/process'
 import WeLove from '../components/weLove'
+import GetAQuote from '../components/getAQuote'
+import Button from '../components/button'
 import {
   ContTestimonial,
   ContWeLove,
@@ -165,6 +167,13 @@ class IndexPage extends Component {
               { this.renderProcesses() }
             </div>
           </WhatWeDo>
+          <GetAQuote
+            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Labore saepe tempore hic. Corporis dolor amet beatae eligendi
+            totam hic ad, tenetur sequi nostrum veniam officia. 🚀 "
+          >
+            <Button />
+          </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
           <Footer
             networks={networks}
