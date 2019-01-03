@@ -6,10 +6,10 @@ import Bublle from '../../images/home/bublle.png'
 export const BoxContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 3em;
+  padding-top: 2em;
   ${breakpoint('tablet')`
     flex-direction: row;
-    padding-top: 5em;
+    padding-top: 3em;
   `}
 `;
 

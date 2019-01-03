@@ -110,7 +110,7 @@ const IndexPage = (props) => {
           <PageSizer>
             <Title
               type={2}
-              text="We Love To See Our Clients Success"
+              text={t('home.weLove.titleSection')}
             />
             <WeLove
               description={t('home.weLove.description')}
