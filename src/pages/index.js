@@ -170,7 +170,9 @@ class IndexPage extends Component {
           <GetAQuote
             desc={t('home.getAQuote.description')}
           >
-            <Button />
+            <Button
+              size="25px"
+            />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
           <Footer

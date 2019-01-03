@@ -73,7 +73,7 @@ export const H6 = styled.h6`
 `;
 export const Button = styled.button`
   border: none;
-  padding: 6px 12px;
+  padding: 10px 12px;
   cursor: pointer;
   border-radius: 4px;
 `;

@@ -22,7 +22,7 @@ export class MapSelector extends Component {
 
   componentDidMount = () => {
     const { offices } = this.props;
-    this.setState({ selectedOffice: offices[1].id });
+    this.setState({ selectedOffice: offices[0].id });
   }
 
   renderSelectors = () => {
@@ -30,8 +30,8 @@ export class MapSelector extends Component {
     const { selectedOffice } = this.state;
     return offices.map((office) => {
       return (
-        <ButtonSelector 
-          key={office.id} 
+        <ButtonSelector
+          key={office.id}
           className={selectedOffice === office.id ? 'active' : null}
           onClick={() => this.setState({ selectedOffice: office.id })}
         >
@@ -58,7 +58,7 @@ export class MapSelector extends Component {
           { this.renderSelectors() }
         </PageSizer>
         <div className="map-container">
-          <Map 
+          <Map
             latitude={office ? parseFloat(office.latitude) : 0}
             longitude={office ? parseFloat(office.longitude) : 0}
             zoom={15}

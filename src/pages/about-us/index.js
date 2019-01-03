@@ -1,14 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import BigGreyImage from '../../components/bigGreyImage'
+import Title from '../../components/title'
 import MemberCard from '../../components/MemberCard'
 import Layout from '../../components/layout'
+import OurValues from '../../components/ourValues'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
 import {
   SectionContainer,
   MembersContainer,
+  OurValuesContainer,
 } from '../../utils/about-us/styledComponents';
 import {
   H3,
@@ -27,7 +30,7 @@ const IndexPage = ({ data, t }) => {
       },
     } = data;
     return team.map((member) => (
-      <MemberCard 
+      <MemberCard
         key={member.id}
         image={data[member.id].childImageSharp.sizes}
         name={member.fullName}
@@ -44,7 +47,7 @@ const IndexPage = ({ data, t }) => {
       <Layout>
         <SEO title={`Sancrisoft | ${t('aboutUs.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
         <section>
-          <BigGreyImage 
+          <BigGreyImage
             image={data.aboutUsMainImage.childImageSharp.sizes}
             title={t('aboutUs.bigImage.title')}
             description={t('aboutUs.bigImage.description')}
@@ -56,6 +59,13 @@ const IndexPage = ({ data, t }) => {
             <MembersContainer>
               { renderTeamMembers() }
             </MembersContainer>
+            <OurValuesContainer>
+              <Title
+                type={2}
+                text="Our Values"
+              />
+              <OurValues />
+            </OurValuesContainer>
           </SectionContainer>
         </PageSizer>
       </Layout>
