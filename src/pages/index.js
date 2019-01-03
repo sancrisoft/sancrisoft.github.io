@@ -107,7 +107,7 @@ class IndexPage extends Component {
           siteMetadata: {
             home: {
               offices,
-              networks
+              networks,
             }
           }
         }
@@ -168,9 +168,7 @@ class IndexPage extends Component {
             </div>
           </WhatWeDo>
           <GetAQuote
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Labore saepe tempore hic. Corporis dolor amet beatae eligendi
-            totam hic ad, tenetur sequi nostrum veniam officia. 🚀 "
+            desc={t('home.getAQuote.description')}
           >
             <Button />
           </GetAQuote>
