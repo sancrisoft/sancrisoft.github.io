@@ -41,6 +41,7 @@ class Footer extends PureComponent {
               <A href={facebook} target="_blank" className="facebook">
                 <Icons
                   iconName="facebook"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />
@@ -50,6 +51,7 @@ class Footer extends PureComponent {
               <A href={instagram} target="_blank" className="instagram">
                 <Icons
                   iconName="instagram"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />
@@ -59,6 +61,7 @@ class Footer extends PureComponent {
               <A href={twitter} target="_blank" className="twitter">
                 <Icons
                   iconName="twitter"
+                  backgroundColor="#333"
                   height={45}
                   width={45}
                 />
