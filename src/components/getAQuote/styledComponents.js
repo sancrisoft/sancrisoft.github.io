@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 import offices from '../../images/home/offices.jpg'
 
 export const ContentGetaQuote = styled.div`
-  padding: 4em 1em 3.5em;
+  padding: 3em 1em 2.5em;
   position: relative;
   &::after {
     content: '';
@@ -45,7 +45,7 @@ export const Container = styled.div`
   `}
 `;
 export const QuoteTop = styled.div`
-  padding: 1.5em .5em 0;
+  padding: 1em .5em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,5 +68,5 @@ export const QuoteBottom = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 1.5em 1.5em;
+  padding: 1.5em 1.5em 1.2em;
 `;
