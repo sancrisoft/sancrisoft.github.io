@@ -30,9 +30,11 @@ export const FooterTop = styled.div`
     & > div:first-child {
       flex-direction: column;
       align-items: center;
+      padding-bottom: 1em;
       ${breakpoint('tablet')`
         flex-direction: row;
         align-items: flex-start;
+        padding-bottom: 0;
       `}
       a {
         margin: 3px 0;
