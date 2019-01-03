@@ -82,13 +82,14 @@ export const PageSizer = styled.div`
 `;
 
 export const WhatWeDo = styled(PageSizer)`
-  padding-top: 3em;
+  padding-top: 2em;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 1rem;
   div.processes {
     display: flex;
     flex-direction: column;

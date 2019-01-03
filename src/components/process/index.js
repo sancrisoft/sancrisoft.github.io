@@ -29,6 +29,7 @@ export class Process extends Component {
 
   render() {
     const { process, data, t } = this.props;
+    console.log('data', data);
     return (
       <EnhancedProcessContainer>
         <ChipDescription 
