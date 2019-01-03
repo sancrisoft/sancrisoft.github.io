@@ -95,8 +95,8 @@ export const ChipContainer = styled.div`
       }
       .technology {
         flex: 1;
-        width: 4em;
-        height: 4em;
+        width: 3.6em;
+        height: 3.6em;
         img {
           flex: 1;
           object-fit: contain !important;

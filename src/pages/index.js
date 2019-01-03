@@ -153,6 +153,7 @@ class IndexPage extends Component {
                 arrows={false}
                 swipeToSlide={true}
                 autoplay
+                autoplaySpeed={6000}
                 >
                   { this.renderItems() }
                 </Carousel>
@@ -204,12 +205,6 @@ query homeQuery {
     ...imageFragment
   }
   office4:file(relativePath: { eq: "home/carousel/office-4.jpg" }) {
-    ...imageFragment
-  }
-  office5:file(relativePath: { eq: "home/carousel/office-5.jpg" }) {
-    ...imageFragment
-  }
-  office6:file(relativePath: { eq: "home/carousel/office-6.jpg" }) {
     ...imageFragment
   }
   Testimonial1:file(relativePath: { eq: "home/foto1.jpg" }) {

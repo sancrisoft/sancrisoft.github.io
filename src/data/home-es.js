@@ -68,7 +68,6 @@ const homeES = {
       linkText: 'Link'
     },
     4: {
-      
       id: 4,
       title: 'Contáctanos, es fácil!',
       description: 'Te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas.',
