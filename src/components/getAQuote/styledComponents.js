@@ -53,8 +53,14 @@ export const QuoteTop = styled.div`
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1.7;
+    ${breakpoint('tablet')`
+      font-size: 22px;
+    `}
+    ${breakpoint('desktop')`
+      font-size: 25px;
+    `}
   }
 `;
 
