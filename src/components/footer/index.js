@@ -7,6 +7,7 @@ import Icons from '../icons';
 
 import {
   FooterContainer,
+  FooterPageSizer,
   FooterTop,
   FooterBottom,
   Networks,
@@ -32,48 +33,50 @@ class Footer extends Component {
 
     return (
       <FooterContainer>
-        <FooterTop>
-          <div className="menu">
-            <Menu isBlack />
-            <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
-          </div>
-          <Networks>
-            <ContentIcon>
-              <A href={facebook} target="_blank" className="facebook">
-                <Icons
-                  iconName="facebook"
-                  backgroundColor="#333"
-                  height={45}
-                  width={45}
-                />
-              </A>
-            </ContentIcon>
-            <ContentIcon>
-              <A href={instagram} target="_blank" className="instagram">
-                <Icons
-                  iconName="instagram"
-                  backgroundColor="#333"
-                  height={45}
-                  width={45}
-                />
-              </A>
-            </ContentIcon>
-            <ContentIcon>
-              <A href={twitter} target="_blank" className="twitter">
-                <Icons
-                  iconName="twitter"
-                  backgroundColor="#333"
-                  height={45}
-                  width={45}
-                />
-              </A>
-            </ContentIcon>
-          </Networks>
-        </FooterTop>
+        <FooterPageSizer>
+          <FooterTop>
+            <div className="menu">
+              <Menu isBlack />
+              <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
+            </div>
+            <Networks>
+              <ContentIcon>
+                <A href={facebook} target="_blank" className="facebook">
+                  <Icons
+                    iconName="facebook"
+                    backgroundColor="#333"
+                    height={45}
+                    width={45}
+                  />
+                </A>
+              </ContentIcon>
+              <ContentIcon>
+                <A href={instagram} target="_blank" className="instagram">
+                  <Icons
+                    iconName="instagram"
+                    backgroundColor="#333"
+                    height={45}
+                    width={45}
+                  />
+                </A>
+              </ContentIcon>
+              <ContentIcon>
+                <A href={twitter} target="_blank" className="twitter">
+                  <Icons
+                    iconName="twitter"
+                    backgroundColor="#333"
+                    height={45}
+                    width={45}
+                  />
+                </A>
+              </ContentIcon>
+            </Networks>
+          </FooterTop>
 
-        <FooterBottom>
-          <Img sizes={logo.childImageSharp.sizes} style={{ width: "55px" }} />
-        </FooterBottom>
+          <FooterBottom>
+            <Img sizes={logo.childImageSharp.sizes} style={{ width: "55px" }} />
+          </FooterBottom>
+        </FooterPageSizer>
       </FooterContainer>
     );
   }

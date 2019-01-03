@@ -13,14 +13,21 @@ export const ButtonSelector = styled.button`
   height: 15em;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 46%;
+  padding: 0;
   justify-content: center;
   align-items: center;
+  &:first-child {
+    margin-right: 5px;
+  }
+  &:last-child {
+    margin-left: 5px;
+  }
   ${breakpoint('desktop')`
     h4 {
       text-align: start;
     }
-  `}  
+  `}
   &:active, &:visited {
     border: none;
   }
