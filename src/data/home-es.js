@@ -57,33 +57,22 @@ const homeES = {
     },
     2: {
       id: 2,
-      title: 'Contáctanos, es fácil!',
-      description: 'Te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas.',
-      linkText: 'Contactar'
-    },
-    3: {
-      id: 3,
       title: 'Desarrollo a la medida',
       description: 'Soluciones a medida diseñadas para su negocio, Sancrisoft se encarga de esto. Tenemos experiencia técnica en múltiples lenguajes de programación y marcos para construir grandes productos.',
       linkText: 'Solicita cotización'
     },
-    4: {
-      id: 4,
+    3: {
+      id: 3,
       title: 'Aplicaciones Móviles',
       description: 'Creamos aplicaciones móviles nativas para iOS y Android. También desarrollamos software web dirigido a dispositivos móviles.',
       linkText: 'Link'
     },
-    5: {
-      id: 5,
-      title: 'Titulo genial 5',
-      description: 'Automatice procesos ineficientes y resuelva problemas avanzados con Aprendizaje Automático.',
-      linkText: 'Link arrechisimo!'
-    },
-    6: {
-      id: 6,
-      title: 'Titulo genial 6',
-      description: 'Desde una pequeña tienda de software a una agencia global en 10 años. Aquí hay una historia de Netguru contada por nuestro Jefe de Crecimiento.',
-      linkText: 'Link arrechisimo!'
+    4: {
+      
+      id: 4,
+      title: 'Contáctanos, es fácil!',
+      description: 'Te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas.',
+      linkText: 'Contactar'
     }
   },
   getAQuote: {
