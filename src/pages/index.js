@@ -236,7 +236,6 @@ query homeQuery {
         carousel {
           id
           type
-          videoSrc
           link
         },
         weLove {

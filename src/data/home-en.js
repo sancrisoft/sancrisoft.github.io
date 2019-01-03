@@ -57,20 +57,20 @@ const home = {
     },
     2: {
       id: 2,
-      title: 'Awesome title 2',
-      description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
-      linkText: 'Awesome link!'
+      title: "Contact us, It's easy!",
+      description: "We'll get back to you with a proposal or with a few questions to make things clear.",
+      linkText: 'Contact'
     },
     3: {
       id: 3,
-      title: 'Awesome title 3',
-      description: 'Automate inefficient processes and solve advanced problems with Machine Learning.',
-      linkText: 'Awesome link!'
+      title: 'Custom Development',
+      description: 'Custom made solutions designed for your business, Sancrisoft take care of this. We have technical expertise in multiple programming languages and frameworks to build great products.',
+      linkText: 'Get a Quote'
     },
     4: {
       id: 4,
-      title: 'Awesome title 4',
-      description: 'From a small software shop to a global agency in 10 years. Here\'s a story of Netguru as told by our Head of Growth.',
+      title: 'MOBILE APPS',
+      description: 'We create mobile native apps for iOS and Android. We also develop web software targeted for mobile devices.',
       linkText: 'Awesome link!'
     },
     5: {

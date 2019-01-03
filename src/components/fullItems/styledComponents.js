@@ -51,6 +51,10 @@ export const CarouselItem = styled.div`
         color: white;
         text-align: center;
       }
+      h3 {
+        font-size: 1.8rem;
+        letter-spacing: 0.03rem;
+      }
       span {
         margin-top: 2em;
       }

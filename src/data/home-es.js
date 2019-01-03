@@ -2,7 +2,7 @@ const homeES = {
   title: 'Sancrisoft',
   slogan: 'Desarrollamos sitios web',
   testimonialsTitle: 'Confiado por nuestros clientes',
-  mapTitle: 'O pasa por nuestras oficinas',
+  mapTitle: 'Pasa por nuestras oficinas',
   weLove: {
     titleSection: "Nos encanta ver el éxito de nuestros clientes.",
     title: "Meattogo",
@@ -57,21 +57,21 @@ const homeES = {
     },
     2: {
       id: 2,
-      title: 'Titulo genial 2',
-      description: 'Desde una pequeña tienda de software a una agencia global en 10 años. Aquí hay una historia de Netguru contada por nuestro Jefe de Crecimiento.',
-      linkText: 'Link arrechisimo!'
+      title: 'Contáctanos, es fácil!',
+      description: 'Te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas.',
+      linkText: 'Contactar'
     },
     3: {
       id: 3,
-      title: 'Titulo genial 3',
-      description: 'Automatice procesos ineficientes y resuelva problemas avanzados con Aprendizaje Automático.',
-      linkText: 'Link arrechisimo!'
+      title: 'Desarrollo a la medida',
+      description: 'Soluciones a medida diseñadas para su negocio, Sancrisoft se encarga de esto. Tenemos experiencia técnica en múltiples lenguajes de programación y marcos para construir grandes productos.',
+      linkText: 'Solicita cotización'
     },
     4: {
       id: 4,
-      title: 'Titulo genial 4',
-      description: 'Desde una pequeña tienda de software a una agencia global en 10 años. Aquí hay una historia de Netguru contada por nuestro Jefe de Crecimiento.',
-      linkText: 'Link arrechisimo!'
+      title: 'Aplicaciones Móviles',
+      description: 'Creamos aplicaciones móviles nativas para iOS y Android. También desarrollamos software web dirigido a dispositivos móviles.',
+      linkText: 'Link'
     },
     5: {
       id: 5,
@@ -113,7 +113,7 @@ const homeES = {
     items: {
       web: {
         id: 'web',
-        title: 'Desarrollo web',
+        title: 'Desarrollo Web',
         description: 'Lorem spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         technologies: [
           {
@@ -145,7 +145,7 @@ const homeES = {
       },
       mobile: {
         id: 'mobile',
-        title: 'Desarrollo movil',
+        title: 'Desarrollo Móvil',
         description: 'Lorem spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         technologies: [
           {
