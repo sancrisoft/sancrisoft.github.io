@@ -58,13 +58,13 @@ const homeES = {
     2: {
       id: 2,
       title: 'Desarrollo a la medida',
-      description: 'Soluciones a medida diseñadas para su negocio, Sancrisoft se encarga de esto. Tenemos experiencia técnica en múltiples lenguajes de programación y marcos para construir grandes productos.',
+      description: 'Soluciones a medida diseñadas para tu negocio. Tenemos experiencia técnica en múltiples lenguajes de programación y marcos para construir grandes productos.',
       linkText: 'Solicita cotización'
     },
     3: {
       id: 3,
       title: 'Aplicaciones Móviles',
-      description: 'Creamos aplicaciones móviles nativas para iOS y Android. También desarrollamos software web dirigido a dispositivos móviles.',
+      description: 'Creamos aplicaciones móviles para iOS y Android. También desarrollamos sitios web para dispositivos móviles.',
       linkText: 'Link'
     },
     4: {
@@ -79,16 +79,6 @@ const homeES = {
   },
   offices: [
     {
-      id: 'venezuela/tachira/san-cristobal',
-      title: 'Venezuela',
-      address1: 'Santa Teresa',
-      address2: 'Casa al fondo',
-      state: 'San Cristóbal. Táchira',
-      postalCode: '5001',
-      latitude: '7.798563',
-      longitude: '-72.222281'
-    },
-    {
       id: 'colombia/antioquia/envigado',
       title: 'Colombia',
       address1: 'Calle. 49 Sur',
@@ -97,6 +87,16 @@ const homeES = {
       postalCode: '055422',
       latitude: '6.1629538',
       longitude: '-75.6042868'
+    },
+    {
+      id: 'venezuela/tachira/san-cristobal',
+      title: 'Venezuela',
+      address1: 'Santa Teresa',
+      address2: 'Casa al fondo',
+      state: 'San Cristóbal. Táchira',
+      postalCode: '5001',
+      latitude: '7.798563',
+      longitude: '-72.222281'
     }
   ],
   processes: {
