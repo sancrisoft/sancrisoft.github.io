@@ -25,7 +25,7 @@ export const FooterTop = styled.div`
     align-items: center;
     ${breakpoint('tablet')`
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
     `}
     & > div:first-child {
       flex-direction: column;

@@ -26,7 +26,8 @@ class Footer extends PureComponent {
         twitter,
         instagram
       },
-      logo
+      logo,
+      language
     } = this.props;
 
     return (
@@ -34,7 +35,7 @@ class Footer extends PureComponent {
         <FooterTop>
           <div className="menu">
             <Menu isBlack />
-            <LanguageButtons isBlack changeLanguage={this.changeLanguage} />
+            <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
           </div>
           <Networks>
             <ContentIcon>
