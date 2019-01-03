@@ -152,5 +152,10 @@
               }
           ]
       }
-  ]
+  ],
+  "networks": {
+    "facebook": "https://www.facebook.com/sancrisoft",
+    "instagram": "https://www.instagram.com/sancrisoft/",
+    "twitter": "https://twitter.com/sancrisoft"
+  }
 }

@@ -9,6 +9,7 @@ import Title from '../components/title';
 import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
+import Footer from '../components/footer'
 import ViewPort from '../components/HOC/withViewportHandler'
 import { I18nextProvider } from "react-i18next"
 import i18n from '../data/translations'
@@ -86,6 +87,7 @@ const IndexPage = (props) => {
         siteMetadata: {
           home: {
             offices,
+            networks
           }
         }
       }
@@ -147,6 +149,11 @@ const IndexPage = (props) => {
         </WhatWeDo>
         <MapSelector title={t('home.mapTitle')} offices={offices} />
       </Layout>
+
+      <Footer
+        networks={networks}
+        logo={data.logoSmall}
+      />
     </I18nextProvider>
   )
 }
@@ -154,6 +161,9 @@ const IndexPage = (props) => {
 // Queries for images (One query by image)
 export const query = graphql`
 query homeQuery {
+  logoSmall:file(relativePath: { eq: "small-logo.png" }) {
+    ...imageFragment
+  }
   office1:file(relativePath: { eq: "home/carousel/office-1.jpg" }) {
     ...imageFragment
   }
@@ -253,6 +263,11 @@ query homeQuery {
             tooltip
             color
           }
+        }
+        networks {
+          facebook
+          instagram
+          twitter
         }
       }
     }
