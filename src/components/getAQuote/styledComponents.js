@@ -53,7 +53,8 @@ export const QuoteTop = styled.div`
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 1.7;
   }
 `;
 
@@ -61,5 +62,5 @@ export const QuoteBottom = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5em;
+  padding: 2em 1.5em 1.5em;
 `;
