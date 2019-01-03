@@ -7,7 +7,7 @@ import {
   QuoteBottom
 } from './styledComponents.js'
 
-const getAQuote = ({ children, desc }) => {
+const GetAQuote = ({ children, desc }) => {
   return (
     <ContentGetaQuote>
       <Container>
@@ -27,4 +27,4 @@ const getAQuote = ({ children, desc }) => {
   )
 }
 
-export default getAQuote
+export default GetAQuote
