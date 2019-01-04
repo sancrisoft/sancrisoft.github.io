@@ -88,7 +88,6 @@ class Layout extends Component {
       }
     `}
     render={data => {
-      console.log(data);
       const {
         logo,
         logoWhite,

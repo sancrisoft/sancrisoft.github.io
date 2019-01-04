@@ -62,7 +62,6 @@ class IndexPage extends Component {
       )
     });
     return newArray;
-
   }
 
   renderProcesses = () => {
