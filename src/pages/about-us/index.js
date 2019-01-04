@@ -16,7 +16,6 @@ import {
   ContentValues,
 } from '../../utils/about-us/styledComponents';
 import {
-  H3,
   PageSizer,
 } from '../../components/styledComponents'
 
