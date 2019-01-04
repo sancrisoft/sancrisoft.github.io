@@ -38,7 +38,7 @@ export const ContLeft = styled.div`
     height: auto;
     width: 90%;
     z-index: -2;
-    opacity: .2;
+    opacity: .8;
     ${breakpoint('tablet')`
       width: 100%;
     `}
@@ -110,12 +110,17 @@ export const ContRight = styled.div`
   width: 90%;
   margin: 0 auto;
   padding-top: 1.5em;
+  padding-bottom: 3em;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   ${breakpoint('tablet')`
     width: 45%;
     padding-top: 0;
+  `}
+  ${breakpoint('desktop')`
+    padding-bottom: 8em;
+    padding-left: 2.5em;
   `}
 `;
 
@@ -124,7 +129,9 @@ export const RightTop = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  flex-direction: column;
   ${breakpoint('tablet')`
+    align-items: flex-start;
     justify-content: flex-start;
     padding-right: 20px;
   `}
@@ -136,9 +143,11 @@ export const RightTop = styled.div`
     max-width: 80px;
     ${breakpoint('tablet')`
       max-width: 100px;
+      right: 8px;
     `}
     ${breakpoint('desktop')`
       max-width: 120px;
+      right: 10px;
     `}
   }
 `;
@@ -147,6 +156,7 @@ export const RightBottom = styled.div`
   width: 100%;
   justify-content: flex-end;
   padding-top: 1em;
+  flex-direction: column;
   ${breakpoint('tablet')`
     padding-right: 20px;
   `}
@@ -159,7 +169,35 @@ export const RightBottom = styled.div`
     margin: 0;
     ${breakpoint('tablet')`
       text-align: left;
-      width: 95%;
     `}
+  }
+`;
+
+export const Link = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  ${breakpoint('tablet')`
+    padding-top: .5em;
+    justify-content: flex-start;
+  `}
+`;
+export const A = styled.a`
+  text-decoration: none;
+  font-weight: 800;
+  transition: all .5s;
+  color: #383938;
+  &:hover {
+    color: #F28724;
+    span {
+      margin-left: 8px;
+    }
+  }
+  span {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    transition: all .5s;
   }
 `;

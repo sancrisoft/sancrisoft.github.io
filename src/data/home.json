@@ -1,7 +1,8 @@
 {
     "weLove": {
         "title": "Meattogo",
-        "image": "../../images/home/meattogo.png"
+        "image": "../../images/home/meattogo.png",
+        "link": "/linkwelove"
     },
     "testimonials": [
         {

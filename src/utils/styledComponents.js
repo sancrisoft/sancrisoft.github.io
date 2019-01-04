@@ -6,7 +6,6 @@ export const ContWeLove = styled.section`
   display: flex;
   padding-top: 2.5em;
   padding-bottom: 1em;
-  border-bottom: 4px solid #F28724;
   h2 {
     width: 90%;
     margin: 0 auto;
