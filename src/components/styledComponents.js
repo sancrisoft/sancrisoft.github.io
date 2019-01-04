@@ -77,6 +77,9 @@ export const Button = styled.button`
   padding: 10px 20px;
   border-radius: 4px;
   transition: all .5s;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const PageSizer = styled.div`
