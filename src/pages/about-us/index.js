@@ -63,9 +63,8 @@ const IndexPage = ({ data, t }) => {
           key={id}
           description={t(`aboutUs.ourValues.${id}.description`)}
           title={t(`aboutUs.ourValues.${id}.title`)}
-          // image={data[`Testimonial${id}`].childImageSharp.sizes}
+          image={data[`value${id}`].childImageSharp.sizes}
         />
-
       )
     });
     return newArray;
@@ -132,6 +131,24 @@ query aboutUs {
     ...imageFragment
   }
   miguel:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  valueintegrity:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuecommitment:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuecheerfulness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuekindness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valueexcellence:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuegratitude:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
     ...imageFragment
   }
   site {
