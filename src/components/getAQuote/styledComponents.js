@@ -69,4 +69,9 @@ export const QuoteBottom = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1.5em 1.5em 1.2em;
+  button {
+    &:hover {
+      background: #ffa44f !important;
+    }
+  }
 `;
