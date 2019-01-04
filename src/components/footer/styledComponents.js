@@ -20,10 +20,9 @@ export const FooterTop = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5em 0 2em;
+  padding: 1em;
   ${breakpoint('tablet')`
     flex-direction: row;
-    padding: 2.5em 0 2em;
   `}
   .menu {
     display: flex;
@@ -65,7 +64,7 @@ export const ContentIcon = styled.div`
 
 export const FooterBottom = styled.div`
   display: flex;
-  padding: .5em 0em 2em;
+  padding: 1em 0em;
   .gatsby-image-wrapper {
     margin: 0 auto;
   }

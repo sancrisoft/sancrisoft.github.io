@@ -144,5 +144,11 @@
                 }
             ]
         }
+    ],
+    "ourValue": [
+      {
+        "id": 1,
+        "image": "/images/small-logo.png"
+      }
     ]
 }
