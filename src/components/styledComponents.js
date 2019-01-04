@@ -73,9 +73,10 @@ export const H6 = styled.h6`
 `;
 export const Button = styled.button`
   border: none;
-  padding: 10px 12px;
   cursor: pointer;
+  padding: 10px 20px;
   border-radius: 4px;
+  transition: all .5s;
 `;
 
 export const PageSizer = styled.div`

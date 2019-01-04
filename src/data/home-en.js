@@ -6,7 +6,8 @@ const home = {
   weLove: {
     titleSection: "We love to see our clients success",
     title: "Meattogo",
-    description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."
+    description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood.",
+    textLink: "link love"
   },
   nav: {
     about: "About Us",

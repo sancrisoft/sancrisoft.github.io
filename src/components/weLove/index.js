@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player'
 import Img from 'gatsby-image'
 import Title from '../title'
+import Icons from '../icons'
 
 import imgMobile from '../../images/home/iphonePrueba.png'
 import videoMobile from '../../images/home/videoSancri.mp4'
@@ -13,9 +14,11 @@ import {
   ContRight,
   RightTop,
   RightBottom,
+  Link,
+  A,
 } from './styledComponents'
 
-const WeLove = ({ description, image, title }) => {
+const WeLove = ({ description, image, title, textLink, link }) => {
   return(
     <BoxContent>
       <ContLeft>
@@ -46,6 +49,19 @@ const WeLove = ({ description, image, title }) => {
         </RightTop>
         <RightBottom>
           <p>{description}</p>
+          <Link>
+            <A href={link} target="_blank" className="love">
+              {textLink}
+              <span className="contentIcon">
+                <Icons
+                  iconName="right"
+                  height={15}
+                  width={15}
+                  backgroundColor="#333"
+                />
+              </span>
+            </A>
+          </Link>
         </RightBottom>
       </ContRight>
     </BoxContent>
@@ -55,6 +71,8 @@ const WeLove = ({ description, image, title }) => {
 WeLove.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
+  textLink: PropTypes.string,
+  link: PropTypes.string,
   image: PropTypes.object,
 };
 

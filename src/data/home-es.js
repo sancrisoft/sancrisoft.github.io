@@ -6,7 +6,8 @@ const homeES = {
   weLove: {
     titleSection: "Nos encanta ver el éxito de nuestros clientes.",
     title: "Meattogo",
-    description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos."
+    description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
+    textLink: "enlace love"
   },
   nav: {
     about: "Nosotros",

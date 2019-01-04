@@ -108,6 +108,9 @@ class IndexPage extends Component {
             home: {
               offices,
               networks,
+              weLove: {
+                link
+              }
             }
           }
         }
@@ -136,6 +139,8 @@ class IndexPage extends Component {
                 description={t('home.weLove.description')}
                 title={t('home.weLove.title')}
                 image={data[`meattogo`].childImageSharp.sizes}
+                textLink={t('home.weLove.textLink')}
+                link={link}
               />
             </PageSizer>
           </ContWeLove>
@@ -172,7 +177,7 @@ class IndexPage extends Component {
             desc={t('home.getAQuote.description')}
           >
             <Button
-              size="25px"
+              size="20px"
             />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
@@ -265,6 +270,7 @@ query homeQuery {
         },
         weLove {
           image
+          link
         },
         testimonials {
           id
