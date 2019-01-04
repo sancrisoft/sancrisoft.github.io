@@ -71,7 +71,7 @@ const homeES = {
       id: 4,
       title: 'Contáctanos, ¡Es Fácil!',
       description: 'Comparte con nosotros lo que tienes en mente y te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas',
-      linkText: 'Escribenos'
+      linkText: 'Escríbenos'
     }
   },
   getAQuote: {
