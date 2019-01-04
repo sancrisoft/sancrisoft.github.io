@@ -39,22 +39,22 @@
         {
             "id": 1,
             "type": "image",
-            "link": "/careers"
+            "link": "#"
         },
         {
             "id": 2,
             "type": "image",
-            "link": "/careers"
+            "link": "#"
         },
         {
             "id": 3,
             "type": "image",
-            "link": "/careers"
+            "link": "#"
         },
         {
             "id": 4,
             "type": "image",
-            "link": null
+            "link": "#"
         }
     ],
     "offices": [

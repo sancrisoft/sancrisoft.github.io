@@ -2,7 +2,7 @@ const home = {
   title: 'Sancrisoft',
   slogan: 'Web development',
   testimonialsTitle: 'Trusted By Our Customers',
-  mapTitle: 'Or stop by our offices',
+  mapTitle: 'Or Stop By Our Offices',
   weLove: {
     titleSection: "We love to see our clients success",
     title: "Meattogo",
@@ -51,27 +51,27 @@ const home = {
   carousel: {
     1: {
       id: 1,
-      title: 'Crafting digital solutions for your businesses',
+      title: 'Crafting Digital Solutions For Your Businesses',
       description: 'We build top notch apps to take your business to the next level',
-      linkText: 'Get a Quote'
+      linkText: 'See Our Work'
     },
     2: {
       id: 2,
       title: 'Custom Development',
-      description: 'Custom made solutions designed for your business. We have technical expertise in multiple programming languages and frameworks to build great products.',
-      linkText: 'Get a Quote'
+      description: 'Custom made solutions designed for your business. We have technical expertise in multiple programming languages and frameworks to build great products',
+      linkText: 'Get a Proposal'
     },
     3: {
       id: 3,
-      title: 'MOBILE APPS',
-      description: 'We create mobile apps for iOS and Android. We also develop websites targeted for mobile devices.',
-      linkText: 'Awesome link!'
+      title: 'Mobile Apps',
+      description: 'Getting your dream app on the market will not be hard. We create mobile apps for iOS and Android, also responsive websites for all mobile devices',
+      linkText: 'Get a Quote'
     },
     4: {
       id: 4,
-      title: "Contact us, It's easy!",
-      description: "We'll get back to you with a proposal or with a few questions to make things clear.",
-      linkText: 'Contact'
+      title: "Contact Us, It's Easy!",
+      description: "Share with us what you have in mind and we'll get back to you with a proposal or with a few questions to make things clear",
+      linkText: 'Contact Us'
     }
   },
   getAQuote: {
@@ -100,7 +100,7 @@ const home = {
     }
   ],
   processes: {
-    title: "What we do",
+    title: "What We Do",
     items: {
       web: {
         id: 'web',

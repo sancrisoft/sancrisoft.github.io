@@ -1,10 +1,10 @@
 const homeES = {
   title: 'Sancrisoft',
   slogan: 'Desarrollamos sitios web',
-  testimonialsTitle: 'Confiado por nuestros clientes',
-  mapTitle: 'Pasa por nuestras oficinas',
+  testimonialsTitle: 'Nuestros Clientes Confían En Nosotros',
+  mapTitle: 'Pasa Por Nuestras Oficinas',
   weLove: {
-    titleSection: "Nos encanta ver el éxito de nuestros clientes.",
+    titleSection: "Nos Encanta Ver El Éxito De Nuestros Clientes.",
     title: "Meattogo",
     description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos."
   },
@@ -12,7 +12,7 @@ const homeES = {
     about: "Nosotros",
     cases: "Casos de Estudio",
     careers: "Carreras",
-    quote: "Cotizaciones"
+    quote: "Quiero una Cotización"
   },
   testimonials: {
     1: {
@@ -51,27 +51,27 @@ const homeES = {
   carousel: {
     1: {
       id: 1,
-      title: 'Elaboramos soluciones digitales para sus negocios.',
-      description: 'Creamos aplicaciones de primer nivel para llevar su negocio al siguiente nivel',
-      linkText: 'Solicita cotización'
+      title: 'Elaboramos Soluciones Digitales Para Sus Negocios',
+      description: 'Creamos aplicaciones de alta calidad para llevar su negocio al siguiente nivel',
+      linkText: 'Ver Nuestro Trabajo'
     },
     2: {
       id: 2,
-      title: 'Desarrollo a la medida',
-      description: 'Soluciones a medida diseñadas para tu negocio. Tenemos experiencia técnica en múltiples lenguajes de programación y marcos para construir grandes productos.',
-      linkText: 'Solicita cotización'
+      title: 'Desarrollo a la Medida',
+      description: 'Soluciones a la medida diseñadas para tu negocio. Tenemos experiencia técnica en múltiples lenguajes de programación y frameworks para construir grandes productos',
+      linkText: 'Quiero una Propuesta'
     },
     3: {
       id: 3,
       title: 'Aplicaciones Móviles',
-      description: 'Creamos aplicaciones móviles para iOS y Android. También desarrollamos sitios web para dispositivos móviles.',
-      linkText: 'Link'
+      description: 'Tener la aplicación de tus sueños en el mercado no será difícil. Creamos aplicaciones móviles para iOS y Android, también sitios web responsivos para todos los dispositivos móviles',
+      linkText: 'Quiero una Cotización'
     },
     4: {
       id: 4,
-      title: 'Contáctanos, es fácil!',
-      description: 'Te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas.',
-      linkText: 'Contactar'
+      title: 'Contáctanos, ¡Es Fácil!',
+      description: 'Comparte con nosotros lo que tienes en mente y te contestaremos con una propuesta o con algunas preguntas para aclarar las dudas',
+      linkText: 'Escribenos'
     }
   },
   getAQuote: {
@@ -100,7 +100,7 @@ const homeES = {
     }
   ],
   processes: {
-    title: "Qué hacemos",
+    title: "¿Qué Hacemos?",
     items: {
       web: {
         id: 'web',
