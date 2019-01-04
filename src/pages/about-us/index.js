@@ -12,6 +12,7 @@ import {
   SectionContainer,
   MembersContainer,
   OurValuesContainer,
+  ContentValues,
 } from '../../utils/about-us/styledComponents';
 import {
   H3,
@@ -42,6 +43,34 @@ const IndexPage = ({ data, t }) => {
     ));
   }
 
+  const renderOurValues = () => {
+    const {
+      site: {
+        siteMetadata: {
+          aboutUs: {
+            ourValues,
+          }
+        }
+      }
+    } = data;
+    const newArray = ourValues.map((item) => {
+      const {
+        id,
+      } = item;
+
+      return (
+        <OurValues
+          key={id}
+          description={t(`aboutUs.ourValues.${id}.description`)}
+          title={t(`aboutUs.ourValues.${id}.title`)}
+          // image={data[`Testimonial${id}`].childImageSharp.sizes}
+        />
+
+      )
+    });
+    return newArray;
+  }
+
   return (
     <I18nextProvider i18n={i18n}>
       <Layout>
@@ -62,9 +91,11 @@ const IndexPage = ({ data, t }) => {
             <OurValuesContainer>
               <Title
                 type={2}
-                text="Our Values"
+                text={t('aboutUs.ourValueTitle')}
               />
-              <OurValues />
+              <ContentValues>
+                { renderOurValues() }
+              </ContentValues>
             </OurValuesContainer>
           </SectionContainer>
         </PageSizer>
@@ -113,6 +144,9 @@ query aboutUs {
             type
             value
           }
+        }
+        ourValues {
+          id
         }
       }
     }
