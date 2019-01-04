@@ -24,3 +24,12 @@ export const OurValuesContainer = styled.section`
   align-items: center;
   flex-wrap: wrap;
 `;
+
+export const ContentValues = styled.div`
+  width: 100%;
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;

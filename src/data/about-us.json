@@ -145,9 +145,29 @@
             ]
         }
     ],
-    "ourValue": [
+    "ourValues": [
       {
         "id": 1,
+        "image": "/images/small-logo.png"
+      },
+      {
+        "id": 2,
+        "image": "/images/small-logo.png"
+      },
+      {
+        "id": 3,
+        "image": "/images/small-logo.png"
+      },
+      {
+        "id": 4,
+        "image": "/images/small-logo.png"
+      },
+      {
+        "id": 5,
+        "image": "/images/small-logo.png"
+      },
+      {
+        "id": 6,
         "image": "/images/small-logo.png"
       }
     ]
