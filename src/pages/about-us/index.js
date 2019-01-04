@@ -14,6 +14,7 @@ import Img from 'gatsby-image'
 import {
   SectionContainer,
   MembersContainer,
+  BoxMembers,
   OurValuesContainer,
   ContentValues,
   MissionContainer,
@@ -57,7 +58,7 @@ const IndexPage = ({ data, t }) => {
         siteMetadata: {
           aboutUs: {
             ourValues,
-          }
+          },
         }
       }
     } = data;
@@ -71,9 +72,8 @@ const IndexPage = ({ data, t }) => {
           key={id}
           description={t(`aboutUs.ourValues.${id}.description`)}
           title={t(`aboutUs.ourValues.${id}.title`)}
-          // image={data[`Testimonial${id}`].childImageSharp.sizes}
+          image={data[`value${id}`].childImageSharp.sizes}
         />
-
       )
     });
     return newArray;
@@ -92,9 +92,14 @@ const IndexPage = ({ data, t }) => {
         </section>
         <PageSizer>
           <SectionContainer>
-            <H3>{t('aboutUs.team.title')}</H3>
             <MembersContainer>
+              <Title
+                type={2}
+                text={t('aboutUs.team.title')}
+              />
+              <BoxMembers>
               { renderTeamMembers() }
+              </BoxMembers>
             </MembersContainer>
             <OurValuesContainer>
               <Title
@@ -165,6 +170,24 @@ query aboutUs {
     ...imageFragment
   }
   vision:file(relativePath: { eq: "aboutUs/vision.png" }) {
+        ...imageFragment
+  }
+  valueintegrity:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuecommitment:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuecheerfulness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuekindness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valueexcellence:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+    ...imageFragment
+  }
+  valuegratitude:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
     ...imageFragment
   }
   site {

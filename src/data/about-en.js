@@ -51,33 +51,27 @@ const about = {
     }
   },
   ourValues: {
-    1: {
-      id: 1,
+    integrity: {
       title: 'Integrity',
       description: 'Lorem spanish ipsum dolor sit amet, ingles.'
     },
-    2: {
-      id: 2,
+    commitment: {
       title: 'Commitment',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    3: {
-      id: 3,
+    cheerfulness: {
       title: 'Cheerfulness',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    4: {
-      id: 4,
+    kindness: {
       title: 'Kindness',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    5: {
-      id: 5,
+    excellence: {
       title: 'Excellence',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    6: {
-      id: 6,
+    gratitude: {
       title: 'Gratitude',
       description: 'Lorem spanish ipsum dolor , ingles'
     }

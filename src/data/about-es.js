@@ -51,33 +51,27 @@ const aboutES = {
     }
   },
   ourValues: {
-    1: {
-      id: 1,
+    integrity : {
       title: 'Integridad',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    2: {
-      id: 2,
+    commitment: {
       title: 'Compromiso',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    3: {
-      id: 3,
+    cheerfulness: {
       title: 'Alegría',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    4: {
-      id: 4,
+    kindness: {
       title: 'Amabilidad',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    5: {
-      id: 5,
+    excellence: {
       title: 'Excelencia',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    6: {
-      id: 6,
+    gratitude: {
       title: 'Gratitud',
       description: 'Lorem spanish ipsum dolor , espanol'
     }
