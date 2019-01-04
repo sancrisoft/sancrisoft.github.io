@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../header'
+import Footer from '../footer'
 import { elastic as MenuMobile } from 'react-burger-menu'
 import HamburguerStyles, { stylesBlack } from './hamburguerStyles'
 import { Link } from 'gatsby'
@@ -53,13 +54,13 @@ class Layout extends Component {
   eventChangeLang = (event) => {
     this.setLanguage(event.target.value);
   }
-  
+
   render() {
     const { children, viewport: { isDesktopView} } = this.props;
     const { isWhiteTheme, pathname, language } = this.state;
     const isWTheme = (pathname === '/') ? isWhiteTheme : true;
     const isSticky = isWhiteTheme;
-    const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles; 
+    const hamburStyles = (isWTheme) ? { ...HamburguerStyles, ...stylesBlack } : HamburguerStyles;
     const { t } = this.props;
     return (<StaticQuery
     query={graphql`
@@ -70,9 +71,37 @@ class Layout extends Component {
         logoWhite:file(relativePath: { eq: "logo-ssw.png" }) {
           ...imageFragment
         }
+        logoSmall:file(relativePath: { eq: "small-logo.png" }) {
+          ...imageFragment
+        }
+        site {
+          siteMetadata {
+            home {
+              networks {
+                facebook
+                instagram
+                twitter
+              }
+            }
+          }
+        }
       }
     `}
     render={data => {
+      console.log(data);
+      const {
+        logo,
+        logoWhite,
+        logoSmall,
+        site: {
+          siteMetadata: {
+            home: {
+              networks
+            }
+          }
+        }
+      } = data;
+
       return (
         <>
           { /*<Header siteTitle={data.site.siteMetadata.title} />*/}
@@ -89,8 +118,8 @@ class Layout extends Component {
             </MenuMobile>
           }
           <Header
-            logo={data.logo}
-            logoWhite={data.logoWhite}
+            logo={logo}
+            logoWhite={logoWhite}
             isWhiteTheme={isWTheme}
             isSticky={isSticky}
             language={language}
@@ -99,6 +128,12 @@ class Layout extends Component {
           <div id={'page-wrap'}>
             {children}
           </div>
+          <Footer
+            networks={networks}
+            logo={logoSmall}
+            language={language}
+            changeLanguage={this.setLanguage}
+            />
         </>
       )
     }}

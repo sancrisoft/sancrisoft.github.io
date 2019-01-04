@@ -9,7 +9,6 @@ import Title from '../components/title';
 import Testimonial from '../components/testimonial'
 import FullItems from '../components/fullItems'
 import Carousel from '../components/carousel'
-import Footer from '../components/footer'
 import ViewPort from '../components/HOC/withViewportHandler'
 import { I18nextProvider } from "react-i18next"
 import i18n from '../data/translations'
@@ -29,10 +28,6 @@ import {
 
 // const IndexPage = (props) => {
 class IndexPage extends Component {
-
-  state = {
-    language: 'en',
-  }
 
   renderItems = () => {
     const {
@@ -86,19 +81,7 @@ class IndexPage extends Component {
     return processes.map((process) => <Process key={process.id} data={data} process={process} />);
   }
 
-  changeLanguage = (lng) => {
-    const { i18n } = this.props;
-    i18n.changeLanguage(lng);
-  };
-  setLanguage = (lang) => {
-    this.setState({ language: lang }, () => this.changeLanguage(lang));
-  }
-  eventChangeLang = (event) => {
-    this.setLanguage(event.target.value);
-  }
-
   render() {
-    const { language } = this.state;
     const {
       t,
       data,
@@ -107,7 +90,6 @@ class IndexPage extends Component {
           siteMetadata: {
             home: {
               offices,
-              networks,
               weLove: {
                 link
               }
@@ -181,12 +163,6 @@ class IndexPage extends Component {
             />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
-          <Footer
-            networks={networks}
-            logo={data.logoSmall}
-            language={language}
-            changeLanguage={this.setLanguage}
-            />
         </Layout>
       </I18nextProvider>
     )
@@ -197,9 +173,6 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query homeQuery {
-  logoSmall:file(relativePath: { eq: "small-logo.png" }) {
-    ...imageFragment
-  }
   office1:file(relativePath: { eq: "home/carousel/office-1.jpg" }) {
     ...imageFragment
   }
@@ -293,11 +266,6 @@ query homeQuery {
             tooltip
             color
           }
-        }
-        networks {
-          facebook
-          instagram
-          twitter
         }
       }
     }
