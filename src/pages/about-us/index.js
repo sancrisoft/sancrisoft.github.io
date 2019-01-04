@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import ReactHtmlParser from 'react-html-parser';
 import BigGreyImage from '../../components/bigGreyImage'
 import Title from '../../components/title'
 import MemberCard from '../../components/MemberCard'
@@ -8,11 +9,18 @@ import OurValues from '../../components/ourValues'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
+import Img from 'gatsby-image'
+
 import {
   SectionContainer,
   MembersContainer,
   OurValuesContainer,
   ContentValues,
+  MissionContainer,
+  Mission,
+  Content,
+  ImgContent,
+  Vision,
 } from '../../utils/about-us/styledComponents';
 import {
   H3,
@@ -97,6 +105,25 @@ const IndexPage = ({ data, t }) => {
                 { renderOurValues() }
               </ContentValues>
             </OurValuesContainer>
+            <MissionContainer>
+              <H3>{t('aboutUs.visionMissionTitle')}</H3>
+              <Mission>
+                <Content>
+                  {t('aboutUs.mission')}
+                </Content>
+                <ImgContent>
+                  <Img sizes={data.mission.childImageSharp.sizes} style={{ width: '50%'}}/>
+                </ImgContent>
+              </Mission>
+              <Vision>
+                <ImgContent>
+                  <Img sizes={data.vision.childImageSharp.sizes} style={{ width: '50%'}}/>
+                </ImgContent>
+                <Content>
+                  {ReactHtmlParser(t('aboutUs.vision'))}
+                </Content>
+              </Vision>
+            </MissionContainer>
           </SectionContainer>
         </PageSizer>
       </Layout>
@@ -132,6 +159,12 @@ query aboutUs {
     ...imageFragment
   }
   miguel:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  mission:file(relativePath: { eq: "aboutUs/mission.png" }) {
+    ...imageFragment
+  }
+  vision:file(relativePath: { eq: "aboutUs/vision.png" }) {
     ...imageFragment
   }
   site {
