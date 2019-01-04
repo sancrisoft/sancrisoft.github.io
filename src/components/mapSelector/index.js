@@ -40,7 +40,7 @@ export class MapSelector extends Component {
             <span>{office.address1}</span>
             <span>{office.address2}</span>
             <span>{office.state}</span>
-            <span>{office.postalCode}</span>
+            <span>{office.phone}</span>
           </Column>
         </ButtonSelector>
       );

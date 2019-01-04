@@ -10,7 +10,7 @@ export const ButtonSelector = styled.button`
   transition: all .25s ease-in-out;
   opacity: 0.45;
   border-bottom: 0px solid #f5f7fa;
-  height: 15em;
+  height: 12em;
   display: flex;
   flex-direction: column;
   width: 46%;
@@ -56,7 +56,7 @@ export const SectionContainer = styled.section`
     display: flex;
     justify-content: space-around;
     ${breakpoint('desktop')`
-      padding: 0 8em;
+      padding: 0em;
     `}
   }
   .map-container {
@@ -71,7 +71,7 @@ export const SectionContainer = styled.section`
 `;
 
 export const Column = styled.div`
-  margin-top: 3em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
