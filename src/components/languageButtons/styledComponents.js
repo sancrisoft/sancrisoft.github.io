@@ -23,9 +23,16 @@ export const Button = styled.button`
   justify-content: center;
   background: transparent;
   cursor: pointer;
+  &:hover{
+    color: black;
+    background: rgba(183, 182, 182, 0.32);
+  }
   ${(props) => props.active && css`
-    background: rgba(242, 135, 36, 0.56);
+    background: rgba(242, 135, 36, 0.85);
     color: white;
     margin: 0px 4px;
+    &:hover{
+      background: rgba(242, 135, 36, 0.85);
+    }
   `}
 `;

@@ -60,20 +60,22 @@
     "offices": [
         {
             "id": "colombia/antioquia/envigado",
-            "title": "Colombia",
-            "address1": "Calle. 49 Sur",
-            "address2": "#45 A 300 Oficina 1813",
-            "state": "Envigado. Antioquia",
+            "title": "Medellin",
+            "address1": "Calle 49 Sur #45 A 300",
+            "address2": "Envigado, Antioquia",
+            "state": "Colombia",
+            "phone": "+57 (4) 4797416",
             "postalCode": "055422",
             "latitude": "6.162996",
             "longitude": "-75.602191"
         },
         {
             "id": "venezuela/tachira/san-cristobal",
-            "title": "Venezuela",
+            "title": "San Cristóbal",
             "address1": "Santa Teresa",
-            "address2": "Casa al fondo",
-            "state": "San Cristóbal. Táchira",
+            "address2": "San Cristóbal, Táchira",
+            "phone": "+58 (276) 3412769",
+            "state": "Venezuela",
             "postalCode": "5001",
             "latitude": "7.798563",
             "longitude": "-72.222281"

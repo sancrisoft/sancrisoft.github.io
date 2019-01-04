@@ -130,7 +130,7 @@ class IndexPage extends Component {
             <PageSizer>
               <Title
                 type={2}
-                text="We Love To See Our Clients Success"
+                text={t('home.weLove.titleSection')}
               />
               <WeLove
                 description={t('home.weLove.description')}
@@ -275,6 +275,7 @@ query homeQuery {
           title
           address1
           address2
+          phone
           state
           postalCode
           latitude

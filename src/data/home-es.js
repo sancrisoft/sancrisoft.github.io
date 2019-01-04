@@ -1,10 +1,10 @@
 const homeES = {
   title: 'Sancrisoft',
   slogan: 'Desarrollamos sitios web',
-  testimonialsTitle: 'Nuestros Clientes Confían En Nosotros',
-  mapTitle: 'Pasa Por Nuestras Oficinas',
+  testimonialsTitle: 'Nuestros clientes confían en nosotros',
+  mapTitle: 'Pasa por nuestras oficinas',
   weLove: {
-    titleSection: "Nos Encanta Ver El Éxito De Nuestros Clientes.",
+    titleSection: "Nos encanta ver el éxito de nuestros clientes.",
     title: "Meattogo",
     description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos."
   },
