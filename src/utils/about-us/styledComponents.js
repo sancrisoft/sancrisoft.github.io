@@ -7,8 +7,18 @@ export const SectionContainer = styled.section`
   align-items: center;
 `;
 
-export const MembersContainer = styled.section`
+export const MembersContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2em;
+`;
+export const BoxMembers = styled.div`
+  width: 100%;
+  padding-top: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;

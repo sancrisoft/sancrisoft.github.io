@@ -11,6 +11,7 @@ import i18n from '../../data/translations'
 import {
   SectionContainer,
   MembersContainer,
+  BoxMembers,
   OurValuesContainer,
   ContentValues,
 } from '../../utils/about-us/styledComponents';
@@ -83,9 +84,14 @@ const IndexPage = ({ data, t }) => {
         </section>
         <PageSizer>
           <SectionContainer>
-            <H3>{t('aboutUs.team.title')}</H3>
             <MembersContainer>
+              <Title
+                type={2}
+                text={t('aboutUs.team.title')}
+              />
+              <BoxMembers>
               { renderTeamMembers() }
+              </BoxMembers>
             </MembersContainer>
             <OurValuesContainer>
               <Title

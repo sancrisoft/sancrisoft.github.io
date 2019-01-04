@@ -33,8 +33,11 @@ export const GreyOverlay = styled.div`
   transform: scale(0);
   z-index: -10;
   padding: 1em;
-  h6, span {
+  h4, span {
     text-align: center;
+  }
+  span {
+    padding-bottom: 1em;
   }
   div.social-media {
     margin-top: 10px;
@@ -46,21 +49,15 @@ export const GreyOverlay = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  width: 8em;
-  height: 8em;
+  width: 9em;
+  height: 9em;
   background-color: white;
   position: relative;
   margin: 0.5em;
-  h6, span {
-    font-size: 0.8em;
-  }
+  cursor: pointer;
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;
-    h6, span {
-      font-size: 1em;
-      text-align: center;
-    }
   `}
   div.first-details {
     position: absolute;
@@ -76,6 +73,26 @@ export const CardContainer = styled.div`
     opacity: 1;
     transition: all .3s ease-in-out;
     transform: scale(1);
+    h4 {
+      font-size: 15px;
+      margin-bottom: 0;
+      text-shadow: 1px 1px 2px #333;
+      ${breakpoint('tablet')`
+        font-size: 18px;
+      `}
+      ${breakpoint('desktop')`
+        font-size: 20px;
+      `}
+    }
+    span {
+      font-size: 13px;
+      ${breakpoint('tablet')`
+        font-size: 14px;
+      `}
+      ${breakpoint('desktop')`
+        font-size: 15px;
+      `}
+    }
   }
   &:hover {
     ${GreyOverlay} {
@@ -100,6 +117,3 @@ export const CardContainer = styled.div`
     }
   }
 `;
-
-
-
