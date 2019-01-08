@@ -111,16 +111,16 @@ query portfolioQuery {
   icon:file(relativePath: { eq: "gatsby-icon.png" }) {
     ...imageFragment
   }
-  applicationIcon:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  applicationIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
-  assigmentIcon:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  assigmentIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
-  interviewIcon:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  interviewIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
-  offerIcon:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  offerIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
   site {
