@@ -12,9 +12,9 @@ import {
   BoxDesc
 } from './styledComponents.js'
 
-const OurValue = ({ description, title, image }) => {
+const OurValue = ({ description, title, image, contentCustomStyles }) => {
   return (
-    <ContentOurValue>
+    <ContentOurValue style={contentCustomStyles}>
       <Box>
         <BoxImage>
           <Img
@@ -35,10 +35,15 @@ const OurValue = ({ description, title, image }) => {
   )
 }
 
+OurValue.defaultProps = {
+  contentCustomStyles: {},
+};
+
 OurValue.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.object,
+  contentCustomStyles: PropTypes.string,
 };
 
 export default OurValue

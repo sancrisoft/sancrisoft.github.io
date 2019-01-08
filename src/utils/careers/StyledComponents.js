@@ -1,10 +1,21 @@
 import styled from 'styled-components'
 
 export const SectionContainer = styled.section`
+  padding-top: 2em;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const RecruitmentProcessContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2em 0 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const PositonsContainer = styled.div`

@@ -1,3 +1,9 @@
 {
-    "title": "Careers"
+    "title": "Careers",
+    "recruitmentProcess": [
+      "application",
+      "assigment",
+      "interview",
+      "offer"
+    ]
 }
