@@ -62,7 +62,7 @@ export const SectionContainer = styled.section`
   .map-container {
     margin-top: 8px;
     width: 100%;
-    height: 65vh;
+    height: 40vh;
   }
   ${H3}.section-heading {
     margin: 1em;

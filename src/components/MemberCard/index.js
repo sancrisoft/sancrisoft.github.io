@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Title from '../title'
 import {
   CardContainer,
   GreyOverlay,
@@ -26,7 +27,11 @@ const MemberCard = ({ image, name, position, message1, message2, socialMedia }) 
   <CardContainer>
     <Img sizes={image} />
     <div className="first-details">
-      <H6>{name}</H6>
+      <Title
+        type={4}
+        text={name}
+        color="#fff"
+      />
       <span>{position}</span>
     </div>
     <GreyOverlay>

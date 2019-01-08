@@ -24,6 +24,15 @@ export const Box = styled.div`
     width: 80%;
   `}
 `;
+export const BoxImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  .gatsby-image-wrapper {
+    width: 100px;
+  }
+`;
 export const Boxtitle = styled.div`
   display: flex;
   justify-content: center;

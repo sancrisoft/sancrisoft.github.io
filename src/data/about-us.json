@@ -147,28 +147,22 @@
     ],
     "ourValues": [
       {
-        "id": 1,
-        "image": "/images/small-logo.png"
+        "id": "integrity"
       },
       {
-        "id": 2,
-        "image": "/images/small-logo.png"
+        "id": "commitment"
       },
       {
-        "id": 3,
-        "image": "/images/small-logo.png"
+        "id": "cheerfulness"
       },
       {
-        "id": 4,
-        "image": "/images/small-logo.png"
+        "id": "kindness"
       },
       {
-        "id": 5,
-        "image": "/images/small-logo.png"
+        "id": "excellence"
       },
       {
-        "id": 6,
-        "image": "/images/small-logo.png"
+        "id": "gratitude"
       }
     ]
 }
