@@ -45,6 +45,13 @@ export const GreyOverlay = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    a {
+      cursor: pointer;
+      transition: all .5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 `;
 
@@ -54,7 +61,6 @@ export const CardContainer = styled.div`
   background-color: white;
   position: relative;
   margin: 0.5em;
-  cursor: pointer;
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;
