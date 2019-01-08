@@ -43,7 +43,7 @@ OurValue.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.object,
-  contentCustomStyles: PropTypes.string,
+  contentCustomStyles: PropTypes.object,
 };
 
 export default OurValue
