@@ -28,7 +28,8 @@ class Footer extends Component {
         instagram
       },
       logo,
-      language
+      language,
+      showLogo
     } = this.props;
 
     return (
@@ -72,10 +73,11 @@ class Footer extends Component {
               </ContentIcon>
             </Networks>
           </FooterTop>
-
-          <FooterBottom>
-            <Img sizes={logo.childImageSharp.sizes} style={{ width: "55px" }} />
-          </FooterBottom>
+          {
+            showLogo && <FooterBottom>
+              <Img sizes={logo.childImageSharp.sizes} style={{ width: "55px" }} />
+            </FooterBottom>
+          }
         </FooterPageSizer>
       </FooterContainer>
     );
@@ -85,10 +87,11 @@ class Footer extends Component {
 Footer.propTypes = {
   networks: PropTypes.object,
   changeLanguage: PropTypes.func,
+  showLogo: PropTypes.bool,
 }
 
 Footer.defaultProps = {
-
+  showLogo: false
 }
 
 export default Footer
