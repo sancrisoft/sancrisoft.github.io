@@ -184,10 +184,10 @@ query aboutUs {
   valuecheerfulness:file(relativePath: { eq: "aboutUs/values/cheerfulness.png" }) {
     ...imageFragment
   }
-  valuekindness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valueexcellence:file(relativePath: { eq: "aboutUs/values/excellence.png" }) {
     ...imageFragment
   }
-  valueexcellence:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valuekindness:file(relativePath: { eq: "aboutUs/values/kindness.png" }) {
     ...imageFragment
   }
   valuegratitude:file(relativePath: { eq: "aboutUs/values/gratitude.png" }) {

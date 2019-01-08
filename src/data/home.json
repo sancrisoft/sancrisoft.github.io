@@ -1,39 +1,32 @@
 {
     "weLove": {
         "title": "Meattogo",
-        "image": "../../images/home/meattogo.png",
-        "link": "/linkwelove"
+        "link": "/case-studies"
     },
     "testimonials": [
         {
             "id": 1,
-            "name": "juan perez",
-            "image": "/images/small-logo.png"
+            "name": "juan perez"
         },
         {
             "id": 2,
-            "name": "pedro pablo",
-            "image": "../../images/small-logo.png"
+            "name": "pedro pablo"
         },
         {
             "id": 3,
-            "name": "camilo ortiz",
-            "image": "../../images/small-logo.png"
+            "name": "camilo ortiz"
         },
         {
             "id": 4,
-            "name": "gonza gonza",
-            "image": "../../images/small-logo.png"
+            "name": "gonza gonza"
         },
         {
             "id": 5,
-            "name": "alfonso jaramillo",
-            "image": "../../images/small-logo.png"
+            "name": "alfonso jaramillo"
         },
         {
             "id": 6,
-            "name": "cristian puerto",
-            "image": "../../images/small-logo.png"
+            "name": "cristian puerto"
         }
     ],
     "carousel": [
