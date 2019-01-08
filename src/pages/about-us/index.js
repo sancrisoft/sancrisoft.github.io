@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { graphql } from 'gatsby'
+import ReactHtmlParser from 'react-html-parser';
+import Img from 'gatsby-image'
 import BigGreyImage from '../../components/bigGreyImage'
 import Title from '../../components/title'
 import MemberCard from '../../components/MemberCard'
@@ -11,14 +13,21 @@ import MapSelector from '../../components/mapSelector'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
+
 import {
   SectionContainer,
   MembersContainer,
   BoxMembers,
   OurValuesContainer,
   ContentValues,
-} from './styledComponents';
+  MissionContainer,
+  Mission,
+  Content,
+  ImgContent,
+  Vision,
+} from '../../utils/about-us/styledComponents';
 import {
+  H3,
   PageSizer,
 } from '../../components/styledComponents'
 
@@ -129,6 +138,25 @@ class IndexPage extends Component {
                 { this.renderOurValues() }
               </ContentValues>
             </OurValuesContainer>
+            <MissionContainer>
+              <H3>{t('aboutUs.visionMissionTitle')}</H3>
+              <Mission>
+                <Content>
+                  {t('aboutUs.mission')}
+                </Content>
+                <ImgContent>
+                  <Img sizes={data.mission.childImageSharp.sizes} style={{ width: '50%'}}/>
+                </ImgContent>
+              </Mission>
+              <Vision>
+                <ImgContent>
+                  <Img sizes={data.vision.childImageSharp.sizes} style={{ width: '50%'}}/>
+                </ImgContent>
+                <Content>
+                  {ReactHtmlParser(t('aboutUs.vision'))}
+                </Content>
+              </Vision>
+            </MissionContainer>
           </SectionContainer>
         </PageSizer>
         <GetAQuote
@@ -191,6 +219,12 @@ query aboutUs {
     ...imageFragment
   }
   valuegratitude:file(relativePath: { eq: "aboutUs/values/gratitude.png" }) {
+    ...imageFragment
+  }
+  vision:file(relativePath: { eq: "aboutUs/vision.png" }) {
+    ...imageFragment
+  }
+  mission:file(relativePath: { eq: "aboutUs/mission.png" }) {
     ...imageFragment
   }
   site {
