@@ -8,6 +8,8 @@ import about from "./about-en"
 import aboutES from "./about-es"
 import careers from "./careers-en"
 import careersES from "./careers-es"
+import caseStudies from "./case-studies-en"
+import caseStudiesES from "./case-studies-es"
 i18n
 .use(Backend)
 .use(LanguageDetector)
@@ -19,6 +21,7 @@ i18n
         home: home,
         aboutUs: about,
         careers: careers,
+        caseStudies: caseStudies,
       },
     },
     es: {
@@ -26,6 +29,7 @@ i18n
         home: homeEs,
         aboutUs: aboutES,
         careers: careersES,
+        caseStudies: caseStudiesES,
       }
     }
   },

@@ -63,12 +63,12 @@ const about = {
       title: 'Cheerfulness',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    kindness: {
-      title: 'Kindness',
-      description: 'Lorem spanish ipsum dolor , ingles'
-    },
     excellence: {
       title: 'Excellence',
+      description: 'Lorem spanish ipsum dolor , ingles'
+    },
+    kindness: {
+      title: 'Kindness',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
     gratitude: {
