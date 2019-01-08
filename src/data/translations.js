@@ -6,6 +6,8 @@ import home from "./home-en"
 import homeEs from "./home-es"
 import about from "./about-en"
 import aboutES from "./about-es"
+import careers from "./careers-en"
+import careersES from "./careers-es"
 import caseStudies from "./case-studies-en"
 import caseStudiesES from "./case-studies-es"
 i18n
@@ -18,6 +20,7 @@ i18n
       translations: {
         home: home,
         aboutUs: about,
+        careers: careers,
         caseStudies: caseStudies,
       },
     },
@@ -25,6 +28,7 @@ i18n
       translations: {
         home: homeEs,
         aboutUs: aboutES,
+        careers: careersES,
         caseStudies: caseStudiesES,
       }
     }

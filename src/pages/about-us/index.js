@@ -25,7 +25,7 @@ import {
   Content,
   ImgContent,
   Vision,
-} from '../../utils/about-us/styledComponents';
+} from './styledComponents';
 import {
   H3,
   PageSizer,
