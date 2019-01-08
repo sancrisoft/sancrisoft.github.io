@@ -3,6 +3,12 @@ import breakpoint from 'styled-components-breakpoint';
 
 export const FooterContainer = styled.div`
   background: #fff;
+  -webkit-box-shadow: 0px 0px 7px -3px rgba(0,0,0,0.46);
+  -moz-box-shadow: 0px 0px 7px -3px rgba(0,0,0,0.46);
+  box-shadow: 0px 0px 7px -3px rgba(0,0,0,0.46);
+  padding-top: 1.2rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1px;
 `;
 
 export const FooterPageSizer = styled.div`
