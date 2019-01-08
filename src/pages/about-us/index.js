@@ -17,7 +17,7 @@ import {
   BoxMembers,
   OurValuesContainer,
   ContentValues,
-} from '../../utils/about-us/styledComponents';
+} from './styledComponents';
 import {
   PageSizer,
 } from '../../components/styledComponents'
