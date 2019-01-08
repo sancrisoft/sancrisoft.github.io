@@ -50,6 +50,16 @@ export const GreyOverlay = styled.div`
       transition: all .5s;
       &:hover {
         transform: scale(1.1);
+        svg {
+          path {
+            fill: #F28724;
+          }
+        }
+      }
+      svg {
+        path {
+          transition: all .5s;
+        }
       }
     }
   }

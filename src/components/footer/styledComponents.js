@@ -71,6 +71,34 @@ export const Networks = styled.div`
   ${breakpoint('tablet')`
     padding-top: 0;
   `}
+  a {
+    &.facebook:hover {
+      svg {
+        path {
+          fill: #3b5998;
+        }
+      }
+    }
+    &.instagram:hover {
+      svg {
+        path, polygon {
+          fill: #bc2a8d;
+        }
+      }
+    }
+    &.twitter:hover {
+      svg {
+        path {
+          fill: #00acee;
+        }
+      }
+    }
+    svg {
+      path, polygon {
+        transition: all .5s;
+      }
+    }
+  }
 `;
 export const ContentIcon = styled.div`
   display: flex;
