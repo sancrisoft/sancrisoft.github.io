@@ -47,7 +47,8 @@ export const ContentValues = styled.div`
 export const MissionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
   h3{
     text-align: center;
   }
