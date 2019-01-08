@@ -45,6 +45,39 @@ export const GreyOverlay = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    a {
+      cursor: pointer;
+      transition: all .5s;
+      &:nth-child(1):hover {
+        svg {
+          path {
+            fill: #3b5998;
+          }
+        }
+      }
+      &:nth-child(2):hover {
+        svg {
+          path {
+            fill: #00acee;
+          }
+        }
+      }
+      &:nth-child(3):hover {
+        svg {
+          path {
+            fill: #0077b5;
+          }
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      svg {
+        path {
+          transition: all .5s;
+        }
+      }
+    }
   }
 `;
 
@@ -54,7 +87,6 @@ export const CardContainer = styled.div`
   background-color: white;
   position: relative;
   margin: 0.5em;
-  cursor: pointer;
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;
