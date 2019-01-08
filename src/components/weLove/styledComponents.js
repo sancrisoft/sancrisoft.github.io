@@ -187,9 +187,8 @@ export const A = styled.a`
   text-decoration: none;
   font-weight: 800;
   transition: all .5s;
-  color: #383938;
+  color: #F28724;
   &:hover {
-    color: #F28724;
     span {
       margin-left: 8px;
     }
