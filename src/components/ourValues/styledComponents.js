@@ -30,7 +30,13 @@ export const BoxImage = styled.div`
   align-items: center;
   padding-bottom: 15px;
   .gatsby-image-wrapper {
-    width: 100px;
+    width: 150px;
+    ${breakpoint('tablet')`
+      width: 130px;
+    `}
+    ${breakpoint('desktop')`
+      width: 150px;
+    `}
   }
 `;
 export const Boxtitle = styled.div`

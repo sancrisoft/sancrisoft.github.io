@@ -6,6 +6,8 @@ import home from "./home-en"
 import homeEs from "./home-es"
 import about from "./about-en"
 import aboutES from "./about-es"
+import caseStudies from "./case-studies-en"
+import caseStudiesES from "./case-studies-es"
 i18n
 .use(Backend)
 .use(LanguageDetector)
@@ -16,12 +18,14 @@ i18n
       translations: {
         home: home,
         aboutUs: about,
+        caseStudies: caseStudies,
       },
     },
     es: {
       translations: {
         home: homeEs,
         aboutUs: aboutES,
+        caseStudies: caseStudiesES,
       }
     }
   },

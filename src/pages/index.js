@@ -241,7 +241,6 @@ query homeQuery {
           link
         },
         weLove {
-          image
           link
         },
         testimonials {

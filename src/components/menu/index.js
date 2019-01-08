@@ -7,7 +7,7 @@ const Menu = ({ isBlack, t }) => {
   return (
     <MenuContainer isBlack={isBlack}>
         <Link to="/about-us" > {t('home.nav.about')} </Link>
-        <Link to="/" > {t('home.nav.cases')} </Link>
+        <Link to="/case-studies" > {t('home.nav.cases')} </Link>
         <Link to="/careers"> {t('home.nav.careers')} </Link>
         <Link to="/" className={'special'}> {t('home.nav.quote')} </Link>
     </MenuContainer>

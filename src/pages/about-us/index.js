@@ -203,22 +203,22 @@ query aboutUs {
   miguel:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
-  valueintegrity:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valueintegrity:file(relativePath: { eq: "aboutUs/values/integrity.png" }) {
     ...imageFragment
   }
-  valuecommitment:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valuecommitment:file(relativePath: { eq: "aboutUs/values/commitment.png" }) {
     ...imageFragment
   }
-  valuecheerfulness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valuecheerfulness:file(relativePath: { eq: "aboutUs/values/cheerfulness.png" }) {
     ...imageFragment
   }
-  valuekindness:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valueexcellence:file(relativePath: { eq: "aboutUs/values/excellence.png" }) {
     ...imageFragment
   }
-  valueexcellence:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valuekindness:file(relativePath: { eq: "aboutUs/values/kindness.png" }) {
     ...imageFragment
   }
-  valuegratitude:file(relativePath: { eq: "aboutUs/values/small-logo.png" }) {
+  valuegratitude:file(relativePath: { eq: "aboutUs/values/gratitude.png" }) {
     ...imageFragment
   }
   vision:file(relativePath: { eq: "aboutUs/vision.png" }) {
