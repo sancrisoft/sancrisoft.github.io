@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { graphql } from 'gatsby'
 import BigGreyImage from '../../components/bigGreyImage'
 import Title from '../../components/title'
 import MemberCard from '../../components/MemberCard'
 import Layout from '../../components/layout'
 import OurValues from '../../components/ourValues'
+import GetAQuote from '../../components/getAQuote'
+import Button from '../../components/button'
+import MapSelector from '../../components/mapSelector'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
@@ -19,17 +22,23 @@ import {
   PageSizer,
 } from '../../components/styledComponents'
 
-const IndexPage = ({ data, t }) => {
-  const renderTeamMembers = () => {
+class IndexPage extends Component {
+
+  renderTeamMembers = () => {
     const {
-      site: {
-        siteMetadata: {
-          aboutUs: {
-            team,
-          },
-        },
+      data: {
+        site: {
+          siteMetadata: {
+            aboutUs: {
+              team,
+            }
+          }
+        }
       },
-    } = data;
+      data,
+      t
+    } = this.props;
+
     return team.map((member) => (
       <MemberCard
         key={member.id}
@@ -43,16 +52,20 @@ const IndexPage = ({ data, t }) => {
     ));
   }
 
-  const renderOurValues = () => {
+  renderOurValues = () => {
     const {
-      site: {
-        siteMetadata: {
-          aboutUs: {
-            ourValues,
+      data: {
+        site: {
+          siteMetadata: {
+            aboutUs: {
+              ourValues,
+            }
           }
         }
-      }
-    } = data;
+      },
+      data,
+      t
+    } = this.props;
     const newArray = ourValues.map((item) => {
       const {
         id,
@@ -70,10 +83,25 @@ const IndexPage = ({ data, t }) => {
     return newArray;
   }
 
-  return (
-    <I18nextProvider i18n={i18n}>
-      <Layout>
-        <SEO title={`Sancrisoft | ${t('aboutUs.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
+  render() {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            home: {
+              offices,
+            },
+          },
+        },
+      },
+      data,
+      t
+    } = this.props;
+
+    return (
+      <I18nextProvider i18n={i18n}>
+        <Layout>
+          <SEO title={`Sancrisoft | ${t('aboutUs.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
         <section>
           <BigGreyImage
             image={data.aboutUsMainImage.childImageSharp.sizes}
@@ -89,7 +117,7 @@ const IndexPage = ({ data, t }) => {
                 text={t('aboutUs.team.title')}
               />
               <BoxMembers>
-              { renderTeamMembers() }
+                { this.renderTeamMembers() }
               </BoxMembers>
             </MembersContainer>
             <OurValuesContainer>
@@ -98,14 +126,23 @@ const IndexPage = ({ data, t }) => {
                 text={t('aboutUs.ourValueTitle')}
               />
               <ContentValues>
-                { renderOurValues() }
+                { this.renderOurValues() }
               </ContentValues>
             </OurValuesContainer>
           </SectionContainer>
         </PageSizer>
+        <GetAQuote
+          desc={t('home.getAQuote.description')}
+        >
+          <Button
+            size="20px"
+          />
+        </GetAQuote>
+        <MapSelector title={t('home.mapTitle')} offices={offices} />
       </Layout>
     </I18nextProvider>
-  );
+    );
+  }
 }
 
 // Queries for images (One query by image)
@@ -169,6 +206,19 @@ query aboutUs {
         }
         ourValues {
           id
+        }
+      }
+      home {
+        offices {
+          id
+          title
+          address1
+          address2
+          phone
+          state
+          postalCode
+          latitude
+          longitude
         }
       }
     }

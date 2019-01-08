@@ -19,7 +19,7 @@ export const ContentGetaQuote = styled.div`
   	background-size: cover;
   	background-attachment: fixed;
     background-image: url(${offices});
-  	height: 100vh;
+  	height: 100%;
     z-index: -2;
   }
   &::before {
