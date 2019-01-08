@@ -29,6 +29,10 @@ export const FooterTop = styled.div`
   padding: 1em;
   ${breakpoint('tablet')`
     flex-direction: row;
+    padding: 1em 0;
+  `}
+  ${breakpoint('desktop')`
+    padding: 1em;
   `}
   .menu {
     display: flex;
@@ -50,6 +54,11 @@ export const FooterTop = styled.div`
       a {
         margin: 3px 0;
         ${breakpoint('tablet')`
+          margin: 0px 8px;
+          font-size: .8em;
+        `}
+        ${breakpoint('desktop')`
+          font-size: .9em;
           margin: 0px 15px;
         `}
       }
