@@ -13,18 +13,7 @@ import {
 
 class IndexPage extends Component {
   render() {
-    const {
-      data:{
-        site: {
-          siteMetadata: {
-            caseStudies: {
-              cases,
-            },
-          },
-        },
-      },
-      t
-    } = this.props;
+    const { t } = this.props;
     console.log(this.props);
 
     return (

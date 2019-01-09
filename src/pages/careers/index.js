@@ -8,6 +8,7 @@ import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
 import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
+import OurValues from '../../components/ourValues'
 import {
   H3,
   PageSizer,
@@ -44,6 +45,30 @@ class IndexPage extends Component {
         description={t(`careers.recruitmentProcess.${item}.description`)}
         image={data[`${item}Icon`].childImageSharp.sizes}
         contentCustomStyles={{ paddingBottom: 0 }}
+      />
+    ));
+  }
+
+  renderBenefits = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              benefits,
+            },
+          },
+        },
+      },
+      data,
+      t,
+    } = this.props;
+    return benefits.map((benefit) => (
+      <OurValues
+        key={benefit}
+        description={t(`careers.benefits.${benefit}.description`)}
+        title={t(`careers.benefits.${benefit}.title`)}
+        image={data[`${benefit}`].childImageSharp.sizes}
       />
     ));
   }
@@ -92,6 +117,12 @@ class IndexPage extends Component {
               </PositionCard>
             </PositonsContainer>
           </SectionContainer>
+          <SectionContainer>
+            <H3>{t('careers.benefits.title')}</H3>
+            <RecruitmentProcessContainer>
+              {this.renderBenefits()}
+            </RecruitmentProcessContainer>
+          </SectionContainer>
         </PageSizer>
       </Layout>
       </I18nextProvider>
@@ -123,11 +154,33 @@ query portfolioQuery {
   offerIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
+  salary:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  vacations:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  remote:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  environment:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  bonus:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  snack:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  happy:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       title
       careers {
         recruitmentProcess
+        benefits
       }
     }
   }

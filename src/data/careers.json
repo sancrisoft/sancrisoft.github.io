@@ -5,5 +5,14 @@
       "assigment",
       "interview",
       "offer"
+    ],
+    "benefits": [
+      "salary",
+      "vacations",
+      "remote",
+      "environment",
+      "bonus",
+      "snack",
+      "happy"
     ]
 }
