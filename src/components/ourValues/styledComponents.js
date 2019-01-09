@@ -6,12 +6,19 @@ export const ContentOurValue = styled.div`
   align-items: center;
   width: 100%;
   padding-bottom: 2em;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+  ${breakpoint('mobile')`
+    width: 50%;
+  `}
   ${breakpoint('tablet')`
-    width: 32%;
+    width: 24%;
   `}
   ${breakpoint('desktop')`
     width: 24%;
   `}
+  
 `;
 export const Box = styled.div`
   display: flex;
