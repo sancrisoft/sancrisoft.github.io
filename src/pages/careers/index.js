@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
@@ -16,13 +16,60 @@ import {
   H4,
   SectionContainer,
   PositonsContainer,
-  ViewMoreBtn,
   PositionCard,
   SubTitle,
   RecruitmentProcessContainer,
-} from '../../utils/careers/styledComponents';
+} from './styledComponents';
+
+const WrapperButton = ({ id, onClick }) => {
+  const handleClick = () => {
+    onClick(id);
+  }
+  return (
+    <Button
+      text="View More"
+      padding="5px 10px"
+      size="12px"
+      onClick={handleClick}
+    />
+  );
+}
+
+WrapperButton.propTypes = {
+  id: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+}
+
+
+const PositionCardItems = ({ openPositions, t, onClickPosition }) => {
+  const positionCard = [];
+  for (var i = 0; i < openPositions; i++) {
+    positionCard.push(
+      <PositionCard key={`position-card-${i}`}>
+        <H4>{t(`careers.openPositions.positions.${i}.title`)}</H4>
+        <SubTitle>Full Time</SubTitle>
+        <WrapperButton id={i} onClick={onClickPosition}/>
+      </PositionCard>
+    );
+  }
+  return (
+    <PositonsContainer>
+      {positionCard}
+    </PositonsContainer>
+  );
+};
+
+PositionCardItems.defaultProps = {
+  openPositions: PropTypes.number.isRequired,
+  t: PropTypes.object.isRequired,
+  onClickPosition: PropTypes.func.isRequired,
+}
 
 class IndexPage extends Component {
+  state = {
+    openPositionSelected: null,
+  };
+
   renderOurRecruitment = () => {
     const {
       data: {
@@ -48,11 +95,29 @@ class IndexPage extends Component {
     ));
   }
 
-  render() {
-    const { data, t } = this.props;
+  onClickPosition = ( positionId ) => {
     console.log('****');
-    console.log(data);
-    console.log(t);
+    console.log(positionId);
+    this.setState({
+      openPositionSelected: positionId,
+    })
+  }
+
+  render() {
+    const { openPositionSelected } = this.state;
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              openPositions,
+            },
+          },
+        },
+      },
+      data,
+      t,
+    } = this.props;
     return (
       <I18nextProvider i18n={i18n}>
       <Layout>
@@ -71,27 +136,15 @@ class IndexPage extends Component {
               {this.renderOurRecruitment()}
             </RecruitmentProcessContainer>
             <H3>{t('careers.openPositions.title')}</H3>
-            <PositonsContainer>
-              <PositionCard>
-                <H4>React Native Mobile Developer</H4>
-                <SubTitle>Full Time</SubTitle>
-                <Button
-                  text="View More"
-                  padding="5px 10px"
-                  size="12px"
-                />
-              </PositionCard>
-              <PositionCard>
-                <H4>React Native Mobile Developer</H4>
-                <SubTitle>Full Time</SubTitle>
-                <Button
-                  text="View More"
-                  padding="5px 10px"
-                  size="12px"
-                />
-              </PositionCard>
-            </PositonsContainer>
+            <PositionCardItems
+              openPositions={openPositions}
+              t={t}
+              onClickPosition={this.onClickPosition}
+            />
           </SectionContainer>
+          {openPositionSelected !== null && <div>
+            {t(`careers.openPositions.positions.${openPositionSelected}.description`)}
+          </div>}
         </PageSizer>
       </Layout>
       </I18nextProvider>
@@ -128,6 +181,7 @@ query portfolioQuery {
       title
       careers {
         recruitmentProcess
+        openPositions
       }
     }
   }

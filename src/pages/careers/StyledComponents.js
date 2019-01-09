@@ -39,6 +39,7 @@ export const PositionCard = styled.div`
 export const H4 = styled.h4`
   font-size: 1em;
   margin-bottom: 1em;
+  height: 2em;
 `;
 
 export const SubTitle = styled.h5`
