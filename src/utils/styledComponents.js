@@ -61,18 +61,6 @@ export const ContTestimonial = styled.section`
       }
     }
   }
-  .slick-dots {
-    li {
-      &.slick-active {
-        button:before {
-          color: #F28724;
-        }
-      }
-      button:before {
-        color: #F28724;
-      }
-    }
-  }
 `;
 
 export const PageSizer = styled.div`
