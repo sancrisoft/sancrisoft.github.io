@@ -31,12 +31,12 @@ export const BoxImage = styled.div`
   align-items: center;
   padding-bottom: 15px;
   .gatsby-image-wrapper {
-    width: ${({ round }) => round ? '70px' : '150px'};
+    width: ${({ little }) => little ? '70px' : '150px'};
     ${breakpoint('tablet')`
-      width: ${({ round }) => round ? '60px' : '130px'};
+      width: ${({ little }) => little ? '60px' : '130px'};
     `}
     ${breakpoint('desktop')`
-      width: ${({ round }) => round ? '50px' : '150px'};
+      width: ${({ little }) => little ? '50px' : '150px'};
     `}
   }
 `;

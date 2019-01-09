@@ -14,11 +14,11 @@ import {
 } from './styledComponents.js'
 
 const OurValue = ({ description, title, image, contentCustomStyles, descDirection }) => {
-  const round = descDirection === 'row';
+  const little = descDirection === 'row';
   return (
     <ContentOurValue style={contentCustomStyles}>
       <Box direction={descDirection}>
-        <BoxImage round={round}>
+        <BoxImage little={little}>
           <Img
             sizes={image}
           />
@@ -26,7 +26,7 @@ const OurValue = ({ description, title, image, contentCustomStyles, descDirectio
         <DescContainer direction={descDirection}>
           <Boxtitle>
             <Title
-              type={round ? 6 : 3}
+              type={little ? 6 : 3}
               text={title}
             />
           </Boxtitle>
