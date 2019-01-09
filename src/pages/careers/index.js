@@ -8,6 +8,7 @@ import i18n from '../../data/translations'
 import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
 import OurValues from '../../components/ourValues'
+import GalleryGrid from '../../components/galleryGrid'
 import {
   H3,
   PageSizer,
@@ -73,6 +74,26 @@ class IndexPage extends Component {
     ));
   }
 
+  renderGalleryGrid = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              teamPhotos,
+            },
+          },
+        },
+      },
+      data,
+    } = this.props;
+    return(
+      <GalleryGrid 
+        images={teamPhotos.map((tp) => ({ ...tp, sizes: data[tp.id].childImageSharp.sizes }))}
+      />
+    );
+  }
+
   render() {
     const { data, t } = this.props;
     console.log('****');
@@ -124,6 +145,7 @@ class IndexPage extends Component {
             </RecruitmentProcessContainer>
           </SectionContainer>
         </PageSizer>
+        { this.renderGalleryGrid() }
       </Layout>
       </I18nextProvider>
     );
@@ -175,12 +197,35 @@ query portfolioQuery {
   happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
+  careersPhoto1:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  careersPhoto2:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  careersPhoto3:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  careersPhoto4:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  careersPhoto5:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
+  careersPhoto6:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       title
       careers {
         recruitmentProcess
         benefits
+        teamPhotos {
+          id
+          colSpan
+          rowSpan
+        }
       }
     }
   }
