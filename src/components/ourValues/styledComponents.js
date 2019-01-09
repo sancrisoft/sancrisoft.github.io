@@ -13,7 +13,7 @@ export const ContentOurValue = styled.div`
     width: 50%;
   `}
   ${breakpoint('tablet')`
-    width: 24%;
+    width: 32%;
   `}
   ${breakpoint('desktop')`
     width: 24%;
@@ -28,7 +28,7 @@ export const Box = styled.div`
   width: 90%;
   margin: 0 auto;
   ${breakpoint('tablet')`
-    width: 80%;
+    width: 85%;
     flex-direction: ${({ direction }) => direction};
   `}
 `;
