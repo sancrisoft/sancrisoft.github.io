@@ -13,8 +13,6 @@ import {
 } from './styledComponents'
 
 class IndexPage extends Component {
-<<<<<<< HEAD
-
   renderCases = () => {
     const {
       data: {
@@ -43,12 +41,6 @@ class IndexPage extends Component {
       />
     );
   }
-=======
-  render() {
-    const { t } = this.props;
-    console.log(this.props);
->>>>>>> 2019
-
   render() {
     const {
       t
