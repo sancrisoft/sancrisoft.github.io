@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
@@ -17,7 +16,6 @@ import {
   H4,
   SectionContainer,
   PositonsContainer,
-  ViewMoreBtn,
   PositionCard,
   SubTitle,
   RecruitmentProcessContainer,
@@ -69,6 +67,8 @@ class IndexPage extends Component {
         description={t(`careers.benefits.${benefit}.description`)}
         title={t(`careers.benefits.${benefit}.title`)}
         image={data[`${benefit}`].childImageSharp.sizes}
+        descDirection={'row'}
+        chipOn
       />
     ));
   }

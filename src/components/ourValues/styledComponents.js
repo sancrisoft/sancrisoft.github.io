@@ -22,6 +22,7 @@ export const Box = styled.div`
   margin: 0 auto;
   ${breakpoint('tablet')`
     width: 80%;
+    flex-direction: ${({ direction }) => direction};
   `}
 `;
 export const BoxImage = styled.div`
@@ -30,12 +31,15 @@ export const BoxImage = styled.div`
   align-items: center;
   padding-bottom: 15px;
   .gatsby-image-wrapper {
-    width: 150px;
+    width: ${({ round }) => round ? '150px' : '150px'};
+    border-radius: ${({ round }) => round ? '50%' : 0};
     ${breakpoint('tablet')`
-      width: 130px;
+      width: ${({ round }) => round ? '110px' : '130px'};
+      border-radius: ${({ round }) => round ? '50%' : 0};
     `}
     ${breakpoint('desktop')`
-      width: 150px;
+      width: ${({ round }) => round ? '90px' : '150px'};
+      border-radius: ${({ round }) => round ? '50%' : 0};
     `}
   }
 `;
@@ -56,4 +60,12 @@ export const BoxDesc = styled.div`
     font-size: 16px;
     line-height: 1.2;
   }
+`;
+
+export const DescContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: ${({ direction }) => direction === 'row' ? '1em' : 0 };
 `;

@@ -6,31 +6,31 @@ const careersES = {
     title: "Beneficios",
     salary: {
       title: "Salario competitivo",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     },
     vacations: {
-      title: "15 días de vacaciones pagas",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      title: "Vacaciones",
+      description: "15 días de vacaciones pagas",
     },
     remote: {
       title: "Trabajo remoto",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     },
     environment: {
       title: "Ambiente de trabajo",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     },
     bonus: {
       title: "Bonos",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     },
     snack: {
       title: "Meriendas y Cervezas",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     },
     happy: {
       title: "Happy Hours",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+      description: "Lorem ipsum dolor sit amet",
     }
   },
   recruitmentProcess: {
