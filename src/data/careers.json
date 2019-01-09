@@ -18,33 +18,28 @@
     "teamPhotos": [
       {
         "id": "careersPhoto1",
-        "colSpan": 1,
+        "colSpan": 2,
         "rowSpan": 2
       },
       {
         "id": "careersPhoto2",
         "colSpan": 1,
-        "rowSpan": 2
+        "rowSpan": 1
       },
       {
         "id": "careersPhoto3",
         "colSpan": 1,
-        "rowSpan": 2
+        "rowSpan": 1
       },
       {
         "id": "careersPhoto4",
         "colSpan": 1,
-        "rowSpan": 2
+        "rowSpan": 1
       },
       {
         "id": "careersPhoto5",
-        "colSpan": 2,
-        "rowSpan": 2
-      },
-      {
-        "id": "careersPhoto6",
-        "colSpan": 2,
-        "rowSpan": 2
+        "colSpan": 1,
+        "rowSpan": 1
       }
     ]
 }
