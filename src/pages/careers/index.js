@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import ReactHtmlParser from 'react-html-parser';
+import Img from 'gatsby-image'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -97,6 +99,7 @@ class IndexPage extends Component {
 
   onClickPosition = ( positionId ) => {
     console.log('****');
+    console.log(i18n.getResource);
     console.log(positionId);
     this.setState({
       openPositionSelected: positionId,
@@ -143,7 +146,35 @@ class IndexPage extends Component {
             />
           </SectionContainer>
           {openPositionSelected !== null && <div>
-            {t(`careers.openPositions.positions.${openPositionSelected}.description`)}
+            <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
+            <Img sizes={data.aboutUsMainImage.childImageSharp.sizes} />
+            {(t([`careers.openPositions.positions.${openPositionSelected}.positionDescription`, ''])) && (
+              <div>
+                <H4>{t(`careers.openPositions.positionDescriptionTitle`)}</H4>
+                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.positionDescription`))}
+              </div>
+
+            )}
+            {(t([`careers.openPositions.positions.${openPositionSelected}.technicalSkills`, ''])) && (
+              <div>
+                <H4>{t(`careers.openPositions.technicalSkillsTitle`)}</H4>
+                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.technicalSkills`))}
+              </div>
+
+            )}
+            {(t([`careers.openPositions.positions.${openPositionSelected}.responsabilities`, ''])) && (
+              <div>
+                <H4>{t(`careers.openPositions.responsabilitiesTitle`)}</H4>
+                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.responsabilities`))}
+              </div>
+
+            )}
+            {(t([`careers.openPositions.positions.${openPositionSelected}.extraContent`, ''])) && (
+              <div>
+                <H4>{t(`careers.openPositions.positions.${openPositionSelected}.extraTitle`)}</H4>
+                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.extraContent`))}
+              </div>
+            )}
           </div>}
         </PageSizer>
       </Layout>
