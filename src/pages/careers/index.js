@@ -75,18 +75,15 @@ class IndexPage extends Component {
 
   render() {
     const { data, t } = this.props;
-    console.log('****');
-    console.log(data);
-    console.log(t);
     return (
       <I18nextProvider i18n={i18n}>
       <Layout>
         <SEO title="Sancrisoft | Homepage" keywords={['sancrisoft', 'digital-solutions']} />
         <section>
           <BigGreyImage
-            image={data.aboutUsMainImage.childImageSharp.sizes}
-            title={t('aboutUs.bigImage.title')}
-            description={t('aboutUs.bigImage.description')}
+            image={data.careersMainImage.childImageSharp.sizes}
+            title={t('careers.bigImage.title')}
+            description={t('careers.bigImage.description')}
           />
         </section>
         <PageSizer>
@@ -133,7 +130,7 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query portfolioQuery {
-  aboutUsMainImage:file(relativePath: { eq: "aboutUs/team.png" }) {
+  careersMainImage:file(relativePath: { eq: "careers/work.jpg" }) {
     ...imageFragment
   }
   astronaut:file(relativePath: { eq: "home/gatsby-astronaut.png" }) {
@@ -142,16 +139,16 @@ query portfolioQuery {
   icon:file(relativePath: { eq: "gatsby-icon.png" }) {
     ...imageFragment
   }
-  applicationIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  applicationIcon:file(relativePath: { eq: "careers/recruitment/application.png" }) {
     ...imageFragment
   }
-  assigmentIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  assigmentIcon:file(relativePath: { eq: "careers/recruitment/assignment.png" }) {
     ...imageFragment
   }
-  interviewIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  interviewIcon:file(relativePath: { eq: "careers/recruitment/interview.png" }) {
     ...imageFragment
   }
-  offerIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  offerIcon:file(relativePath: { eq: "careers/recruitment/offer.png" }) {
     ...imageFragment
   }
   salary:file(relativePath: { eq: "careers/benefits/salary.png" }) {

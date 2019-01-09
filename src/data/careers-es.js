@@ -1,4 +1,8 @@
 const careersES = {
+  bigImage: {
+    title: 'Convienterte en uno de nosotros!',
+    description: 'Un equipo de personas con talento que disfrutan y se divierten haciendo su trabajo'
+  },
   recruitment: {
     title: "Nuestro proceso de reclutamiento",
   },
