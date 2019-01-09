@@ -66,13 +66,21 @@ export const DescContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: ${({ direction }) => direction === 'row' ? '1em' : 0 };
+  ${breakpoint('tablet')`
+    margin-left: ${({ direction }) => direction === 'row' ? '1em' : 0 };
+  `}
   ${Boxtitle} {
     h6, h3 {
-      text-align: start !important;
+      text-align: center;
+      ${breakpoint('tablet')`
+        text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
+      `}
     }
   }
   p {
-    text-align: start;
+    text-align: center;
+    ${breakpoint('tablet')`
+      text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
+    `}
   }
 `;
