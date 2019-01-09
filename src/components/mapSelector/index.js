@@ -38,8 +38,7 @@ export class MapSelector extends Component {
           <H4>{office.title}</H4>
           <Column>
             <span>{office.address1}</span>
-            <span>{office.address2}</span>
-            <span>{office.state}</span>
+            <span>{office.address2}. {office.state}</span>
             <span>{office.phone}</span>
           </Column>
         </ButtonSelector>
@@ -53,7 +52,7 @@ export class MapSelector extends Component {
     const office = this.props.offices.find((office) => office.id === selectedOffice);
     return (
       <SectionContainer>
-        <H3 className="section-heading">{title}</H3>
+        {title && <H3 className="section-heading">{title}</H3>}
         <PageSizer className={'buttons-container'}>
           { this.renderSelectors() }
         </PageSizer>

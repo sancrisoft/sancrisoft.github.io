@@ -1,11 +1,11 @@
 {
-    "title": "Case Studies",
-    "cases": [
-      {
-        "id": "meattogo",
-        "name": "Meattogo",
-        "appStore": "",
-        "playStore": ""
-      }
-    ]
+  "title": "Case Studies",
+  "cases": [
+    {
+      "id": "meattogo",
+      "name": "Meattogo",
+      "appStore": "https://itunes.apple.com/pa/app/meattogo/id1215006192",
+      "playStore": "https://play.google.com/store/apps/details?id=com.meattogoapp"
+    }
+  ]
 }
