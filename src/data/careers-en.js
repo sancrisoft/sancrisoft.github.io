@@ -2,6 +2,37 @@ const careers = {
   recruitment: {
     title: "Our Recruitment Process",
   },
+  benefits: {
+    title: "Benefits",
+    salary: {
+      title: "Competitive Salary",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    vacations: {
+      title: "Vacations",
+      description: "15 days of paid vacations",
+    },
+    remote: {
+      title: "Work remotely",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    environment: {
+      title: "Work environment",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    bonus: {
+      title: "Bonuses",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    snack: {
+      title: "Snacks & Beers",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    happy: {
+      title: "Happy Hours",
+      description: "Lorem ipsum dolor sit amet",
+    }
+  },
   recruitmentProcess: {
     application: {
       title: "Application",

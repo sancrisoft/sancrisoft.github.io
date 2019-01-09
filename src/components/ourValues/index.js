@@ -9,27 +9,31 @@ import {
   Box,
   BoxImage,
   Boxtitle,
-  BoxDesc
+  BoxDesc,
+  DescContainer,
 } from './styledComponents.js'
 
-const OurValue = ({ description, title, image, contentCustomStyles }) => {
+const OurValue = ({ description, title, image, contentCustomStyles, descDirection }) => {
+  const little = descDirection === 'row';
   return (
     <ContentOurValue style={contentCustomStyles}>
-      <Box>
-        <BoxImage>
+      <Box direction={descDirection}>
+        <BoxImage little={little}>
           <Img
             sizes={image}
           />
         </BoxImage>
-        <Boxtitle>
-          <Title
-            type={3}
-            text={title}
-          />
-        </Boxtitle>
-        <BoxDesc>
-          <p>{description}</p>
-        </BoxDesc>
+        <DescContainer direction={descDirection}>
+          <Boxtitle>
+            <Title
+              type={little ? 6 : 3}
+              text={title}
+            />
+          </Boxtitle>
+          <BoxDesc>
+            <p>{description}</p>
+          </BoxDesc>
+        </DescContainer> 
       </Box>
     </ContentOurValue>
   )
@@ -37,6 +41,7 @@ const OurValue = ({ description, title, image, contentCustomStyles }) => {
 
 OurValue.defaultProps = {
   contentCustomStyles: {},
+  descDirection: 'column',
 };
 
 OurValue.propTypes = {
@@ -44,6 +49,7 @@ OurValue.propTypes = {
   title: PropTypes.string,
   image: PropTypes.object,
   contentCustomStyles: PropTypes.object,
+  descDirection: PropTypes.string,
 };
 
 export default OurValue

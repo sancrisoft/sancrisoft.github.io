@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
@@ -8,6 +7,7 @@ import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
 import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
+import OurValues from '../../components/ourValues'
 import {
   H3,
   PageSizer,
@@ -16,7 +16,6 @@ import {
   H4,
   SectionContainer,
   PositonsContainer,
-  ViewMoreBtn,
   PositionCard,
   SubTitle,
   RecruitmentProcessContainer,
@@ -44,6 +43,32 @@ class IndexPage extends Component {
         description={t(`careers.recruitmentProcess.${item}.description`)}
         image={data[`${item}Icon`].childImageSharp.sizes}
         contentCustomStyles={{ paddingBottom: 0 }}
+      />
+    ));
+  }
+
+  renderBenefits = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              benefits,
+            },
+          },
+        },
+      },
+      data,
+      t,
+    } = this.props;
+    return benefits.map((benefit) => (
+      <OurValues
+        key={benefit}
+        description={t(`careers.benefits.${benefit}.description`)}
+        title={t(`careers.benefits.${benefit}.title`)}
+        image={data[`${benefit}`].childImageSharp.sizes}
+        descDirection={'row'}
+        chipOn
       />
     ));
   }
@@ -92,6 +117,12 @@ class IndexPage extends Component {
               </PositionCard>
             </PositonsContainer>
           </SectionContainer>
+          <SectionContainer>
+            <H3>{t('careers.benefits.title')}</H3>
+            <RecruitmentProcessContainer>
+              {this.renderBenefits()}
+            </RecruitmentProcessContainer>
+          </SectionContainer>
         </PageSizer>
       </Layout>
       </I18nextProvider>
@@ -123,11 +154,33 @@ query portfolioQuery {
   offerIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
+  salary:file(relativePath: { eq: "careers/benefits/salary.png" }) {
+    ...imageFragment
+  }
+  vacations:file(relativePath: { eq: "careers/benefits/vacations.png" }) {
+    ...imageFragment
+  }
+  remote:file(relativePath: { eq: "careers/benefits/remote.png" }) {
+    ...imageFragment
+  }
+  environment:file(relativePath: { eq: "careers/benefits/environment.png" }) {
+    ...imageFragment
+  }
+  bonus:file(relativePath: { eq: "careers/benefits/bonus.png" }) {
+    ...imageFragment
+  }
+  snack:file(relativePath: { eq: "careers/benefits/snack.png" }) {
+    ...imageFragment
+  }
+  happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       title
       careers {
         recruitmentProcess
+        benefits
       }
     }
   }
