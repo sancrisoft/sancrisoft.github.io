@@ -16,14 +16,16 @@ export const MenuContainer = styled.div`
       padding: 4px 16px;
       color: #F28724;
       border-radius: 4px;
+      transition: all 0.3s ease;
       &:hover{
         color: white;
         background: #F28724;
         text-decoration: none;
+        border-color: #F28724;
       }
     }
     &:hover{
-      text-decoration: underline;
+      border-bottom: 1px solid;
     }
   }
   ${(props) => props.isBlack && css`

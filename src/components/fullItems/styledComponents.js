@@ -67,7 +67,12 @@ export const CarouselItem = styled.div`
         border-radius: 4px;
         text-decoration: none;
         padding: 0.5em 1em;
-        
+        font-family: 'Averta';
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #ffa44f !important;
+        }
       }
     }
   }
