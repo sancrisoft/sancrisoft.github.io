@@ -154,25 +154,25 @@ query portfolioQuery {
   offerIcon:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
     ...imageFragment
   }
-  salary:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  salary:file(relativePath: { eq: "careers/benefits/salary.png" }) {
     ...imageFragment
   }
-  vacations:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  vacations:file(relativePath: { eq: "careers/benefits/vacations.png" }) {
     ...imageFragment
   }
-  remote:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  remote:file(relativePath: { eq: "careers/benefits/remote.png" }) {
     ...imageFragment
   }
-  environment:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  environment:file(relativePath: { eq: "careers/benefits/environment.png" }) {
     ...imageFragment
   }
-  bonus:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  bonus:file(relativePath: { eq: "careers/benefits/bonus.png" }) {
     ...imageFragment
   }
-  snack:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  snack:file(relativePath: { eq: "careers/benefits/snack.png" }) {
     ...imageFragment
   }
-  happy:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
   site {

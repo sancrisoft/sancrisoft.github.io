@@ -13,11 +13,12 @@ import {
   DescContainer,
 } from './styledComponents.js'
 
-const OurValue = ({ description, title, image, contentCustomStyles, descDirection, chipOn }) => {
+const OurValue = ({ description, title, image, contentCustomStyles, descDirection }) => {
+  const round = descDirection === 'row';
   return (
     <ContentOurValue style={contentCustomStyles}>
       <Box direction={descDirection}>
-        <BoxImage round={chipOn}>
+        <BoxImage round={round}>
           <Img
             sizes={image}
           />
@@ -25,7 +26,7 @@ const OurValue = ({ description, title, image, contentCustomStyles, descDirectio
         <DescContainer direction={descDirection}>
           <Boxtitle>
             <Title
-              type={chipOn ? 6 : 3}
+              type={round ? 6 : 3}
               text={title}
             />
           </Boxtitle>
@@ -41,7 +42,6 @@ const OurValue = ({ description, title, image, contentCustomStyles, descDirectio
 OurValue.defaultProps = {
   contentCustomStyles: {},
   descDirection: 'column',
-  chipOn: false,
 };
 
 OurValue.propTypes = {
@@ -50,7 +50,6 @@ OurValue.propTypes = {
   image: PropTypes.object,
   contentCustomStyles: PropTypes.object,
   descDirection: PropTypes.string,
-  chipOn: PropTypes.bool,
 };
 
 export default OurValue
