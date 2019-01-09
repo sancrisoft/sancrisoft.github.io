@@ -4,10 +4,10 @@ const home = {
   testimonialsTitle: 'Trusted By Our Customers',
   mapTitle: 'Or Stop By Our Offices',
   weLove: {
-    titleSection: "We love to see our clients success",
+    titleSection: "We Love to See Our Clients Success",
     title: "Meattogo",
     description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood.",
-    textLink: "link love"
+    textLink: "View Case Study"
   },
   nav: {
     about: "About Us",

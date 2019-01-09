@@ -69,6 +69,8 @@ export const QuoteBottom = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1.5em 1.5em 1.2em;
+  font-family: 'Averta';
+  transition: all 0.3s ease;
   button {
     &:hover {
       background: #ffa44f !important;

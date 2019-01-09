@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from './styledComponents'
 
-const PressButton = ({ text, color, background, size }) => {
+const PressButton = ({ text, color, background, size, padding }) => {
   return(
     <Button
       style={{
         color: `${color}`,
         background: `${background}`,
-        fontSize: `${size}`
+        fontSize: `${size}`,
+        padding: `${padding}`,
       }}
     >
       {text}
@@ -27,7 +28,8 @@ PressButton.defaultProps = {
   color: "#fff",
   background: "#F28724",
   text: "Get a Quote",
-  size: "14px"
+  size: "14px",
+  padding: "10px 20px"
 }
 
 export default PressButton
