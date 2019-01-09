@@ -6,10 +6,13 @@ export const ContentOurValue = styled.div`
   align-items: center;
   width: 100%;
   padding-bottom: 2em;
-  ${breakpoint('tablet')`
+  ${breakpoint('sm')`
+    width: 48%;
+  `}
+  ${breakpoint('md')`
     width: 32%;
   `}
-  ${breakpoint('desktop')`
+  ${breakpoint('lg')`
     width: 24%;
   `}
 `;
@@ -20,7 +23,7 @@ export const Box = styled.div`
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  ${breakpoint('tablet')`
+  ${breakpoint('md')`
     width: 80%;
   `}
 `;
@@ -31,10 +34,10 @@ export const BoxImage = styled.div`
   padding-bottom: 15px;
   .gatsby-image-wrapper {
     width: 150px;
-    ${breakpoint('tablet')`
+    ${breakpoint('md')`
       width: 130px;
     `}
-    ${breakpoint('desktop')`
+    ${breakpoint('lg')`
       width: 150px;
     `}
   }

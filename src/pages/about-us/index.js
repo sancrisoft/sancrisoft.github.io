@@ -25,7 +25,7 @@ import {
   Content,
   ImgContent,
   Vision,
-} from '../../utils/about-us/styledComponents';
+} from './styledComponents';
 import {
   H3,
   PageSizer,
@@ -134,7 +134,7 @@ class IndexPage extends Component {
                 type={2}
                 text={t('aboutUs.ourValueTitle')}
               />
-              <ContentValues>
+            <ContentValues>
                 { this.renderOurValues() }
               </ContentValues>
             </OurValuesContainer>
