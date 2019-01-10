@@ -2,7 +2,7 @@ const homeES = {
   title: 'Sancrisoft',
   slogan: 'Desarrollamos sitios web',
   testimonialsTitle: 'Nuestros Clientes Confían En Nosotros',
-  mapTitle: 'Pasa por nuestras oficinas',
+  mapTitle: '',
   weLove: {
     titleSection: "Nos Encanta Ver el Éxito de Nuestros Clientes",
     title: "Meattogo",

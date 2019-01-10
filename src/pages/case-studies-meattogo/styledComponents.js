@@ -15,3 +15,10 @@ export const CasePageSizer = styled.div`
     justify-content: space-between;
     align-items: center;
 `;
+
+export const ContentBack = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
