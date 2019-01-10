@@ -14,6 +14,10 @@ export class index extends PureComponent {
       sizes: PropTypes.object,
       colSpan: PropTypes.number,
       rowSpan: PropTypes.number,
+      mobileColSpan: PropTypes.number,
+      mobileRowSpan: PropTypes.number,
+      tabletColSpan: PropTypes.number,
+      tabletRowSpan: PropTypes.number,
     })),
   }
 
@@ -24,6 +28,10 @@ export class index extends PureComponent {
         key={image.id}
         colSpan={image.colSpan}
         rowSpan={image.rowSpan}
+        mobileColSpan={image.mobileColSpan}
+        mobileRowSpan={image.mobileRowSpan}
+        tabletColSpan={image.tabletColSpan}
+        tabletRowSpan={image.tabletRowSpan}
       >
         <Img sizes={image.sizes}></Img>
       </ImageContainer>

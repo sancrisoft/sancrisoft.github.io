@@ -19,27 +19,35 @@
       {
         "id": "careersPhoto1",
         "colSpan": 2,
-        "rowSpan": 2
+        "rowSpan": 2,
+        "mobileColSpan": 2,
+        "mobileRowSpan": 2,
+        "tabletColSpan": 2,
+        "tabletRowSpan": 2
       },
       {
-        "id": "careersPhoto2",
-        "colSpan": 1,
-        "rowSpan": 1
+        "id": "careersPhoto2"
       },
       {
-        "id": "careersPhoto3",
-        "colSpan": 1,
-        "rowSpan": 1
+        "id": "careersPhoto3"
       },
       {
         "id": "careersPhoto4",
-        "colSpan": 1,
-        "rowSpan": 1
+        "colSpan": 2,
+        "rowSpan": 1,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 1,
+        "tabletColSpan": 2,
+        "tabletRowSpan": 1
       },
       {
-        "id": "careersPhoto5",
-        "colSpan": 1,
-        "rowSpan": 1
+        "id": "careersPhoto6",
+        "colSpan": 4,
+        "rowSpan": 2,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 1,
+        "tabletColSpan": 2,
+        "tabletRowSpan": 2
       }
     ]
 }

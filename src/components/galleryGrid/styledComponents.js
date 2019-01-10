@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const GridContainer = styled.div`
-  width: 100vw;
-  height: 50vh;
+  width: 100%;
+  height: 80vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(100px, 25vh);
+  grid-auto-rows: minmax(100px, auto);
+  grid-auto-flow: dense;
+  overflow: hidden;
   ${breakpoint('tablet')`
     grid-template-columns: repeat(2, 1fr);
   `}
@@ -16,14 +18,19 @@ export const GridContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  grid-column: span ${({ colSpan }) => colSpan};
-  grid-row: span ${({ rowSpan }) => rowSpan};
+  grid-column: ${({ mobileColSpan }) => mobileColSpan ? ('span ' + mobileColSpan) : 'unset'};
+  grid-row: ${({ mobileRowSpan }) => mobileRowSpan ? ('span ' + mobileRowSpan) : 'unset'};
+  ${breakpoint('tablet')`
+    grid-column: ${({ tabletColSpan }) => tabletColSpan ? ('span ' + tabletColSpan) : 'unset'};
+    grid-row: ${({ tabletRowSpan }) => tabletRowSpan ? ('span ' + tabletRowSpan) : 'unset'};
+  `}
+  ${breakpoint('desktop')`
+    grid-column: ${({ colSpan }) => colSpan ? ('span ' + colSpan) : 'unset'};
+    grid-row: ${({ rowSpan }) => rowSpan ? ('span ' + rowSpan) : 'unset'};
+  `}
   .gatsby-image-wrapper {
     height: 100%;
     width: 100%;
-    img {
-      object-fit: cover !important;
-    }
   }
 `;
 

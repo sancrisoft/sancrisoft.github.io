@@ -197,22 +197,22 @@ query portfolioQuery {
   happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
-  careersPhoto1:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto1:file(relativePath: { eq: "careers/team/chicamocha1.jpg" }) {
     ...imageFragment
   }
-  careersPhoto2:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto2:file(relativePath: { eq: "careers/team/chicamocha2.jpg" }) {
     ...imageFragment
   }
-  careersPhoto3:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto3:file(relativePath: { eq: "careers/team/chicamocha3.jpg" }) {
     ...imageFragment
   }
-  careersPhoto4:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto4:file(relativePath: { eq: "careers/team/chicamocha4.jpg" }) {
     ...imageFragment
   }
-  careersPhoto5:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto5:file(relativePath: { eq: "careers/team/chicamocha5.jpg" }) {
     ...imageFragment
   }
-  careersPhoto6:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  careersPhoto6:file(relativePath: { eq: "careers/team/chicamocha6.jpg" }) {
     ...imageFragment
   }
   site {
@@ -225,6 +225,10 @@ query portfolioQuery {
           id
           colSpan
           rowSpan
+          mobileColSpan
+          mobileRowSpan
+          tabletColSpan
+          tabletRowSpan
         }
       }
     }
