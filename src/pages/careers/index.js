@@ -194,6 +194,12 @@ query portfolioQuery {
   happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
+  workstation:file(relativePath: { eq: "careers/benefits/workstation.png" }) {
+    ...imageFragment
+  }
+  support:file(relativePath: { eq: "careers/benefits/support.png" }) {
+    ...imageFragment
+  }
   careersPhoto1:file(relativePath: { eq: "careers/team/chicamocha1.jpg" }) {
     ...imageFragment
   }

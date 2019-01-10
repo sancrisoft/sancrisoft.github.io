@@ -9,10 +9,12 @@
     "benefits": [
       "salary",
       "vacations",
-      "environment",
+      "support",
       "bonus",
       "snack",
-      "happy"
+      "happy",
+      "remote",
+      "workstation"
     ],
     "teamPhotos": [
       {
