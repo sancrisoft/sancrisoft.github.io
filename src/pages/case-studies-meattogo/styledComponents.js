@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
 
 export const ContentCase = styled.section`
   width: 100%;
@@ -14,6 +15,12 @@ export const CasePageSizer = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    ${breakpoint('tablet')`
+      max-width: 90%;
+    `}
+    ${breakpoint('desktop')`
+      max-width: 78%;
+    `}
 `;
 
 export const ContentBack = styled.section`
@@ -21,4 +28,6 @@ export const ContentBack = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f1f1f1;
+  padding: 2em 0;
 `;
