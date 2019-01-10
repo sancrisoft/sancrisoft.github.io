@@ -185,10 +185,11 @@ export const Link = styled.div`
 `;
 export const A = styled.a`
   text-decoration: none;
-  font-weight: 800;
   transition: all .5s;
   color: #F28724;
+  font-size: .8em;
   &:hover {
+    text-decoration: underline;
     span {
       margin-left: 8px;
     }
