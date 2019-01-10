@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { translate } from "react-i18next"
 import PropTypes from 'prop-types'
 
 import {
@@ -7,15 +8,48 @@ import {
 
 import { H3 } from '../styledComponents';
 
+const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 class JoinUs extends Component {
   state = {
     email: '',
     position: '',
     why: '',
+    emailError: '',
+    positionError: '',
+    whyError: '',
+    dirty: false,
+  }
+
+  validate = () => {
+    const {
+      email, 
+      position,
+      why,
+    } = this.state;
+    const { t } = this.props;
+    if (!email) {
+      this.setState({ emailError: t('careers.join.noFieldError'), dirty: true });
+    } else if (email && !emailRegexp.test(email)) {
+      this.setState({ emailError: t('careers.join.emailError'), dirty: true });
+    } else this.setState({ emailError: '' });
+
+    if (!position) this.setState({ positionError: t('careers.join.noFieldError'), dirty: true });
+    else this.setState({ positionError: '' });
+
+    if (!why) this.setState({ whyError: t('careers.join.noFieldError'), dirty: true });
+    else this.setState({ whyError: '' });
   }
 
   changeField = ({ target: { name, value }}) => {
-    this.setState({ [name]: value });
+    this.setState({ [name]: value }, () => {
+      if (this.state.dirty) this.validate();
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.validate();
   }
 
   render() {
@@ -32,11 +66,14 @@ class JoinUs extends Component {
       email,
       position,
       why,
+      emailError,
+      positionError,
+      whyError
     } = this.state;
     return (
       <Container>
         <H3>{title}</H3>
-        <form action={`https://formspree.io/${joinUsEmail}`} method="POST">
+        <form onSubmit={this.handleSubmit} action={`https://formspree.io/${joinUsEmail}`} method="POST">
           <div className="form-control">
             <label htmlFor="email">{emailLabel}</label>
             <input 
@@ -46,6 +83,7 @@ class JoinUs extends Component {
               value={email}
               onChange={this.changeField}
             />
+            { emailError && (<label className="error">{emailError}</label>) }
           </div>
           <div className="form-control">
             <label htmlFor="position">{positionLabel}</label>
@@ -56,6 +94,7 @@ class JoinUs extends Component {
               value={position}
               onChange={this.changeField}
             />
+            { positionError && (<label className="error">{positionError}</label>) }
           </div>
           <div className="form-control">
             <label htmlFor="why">{whyLabel}</label>
@@ -65,12 +104,17 @@ class JoinUs extends Component {
               value={why}
               onChange={this.changeField}
             />
+            { whyError && (<label className="error">{whyError}</label>) }
           </div>
           <div>
             <label>{reminder}</label>
           </div>
           <div className="submit">
-            <input type="submit" value={submitLabel} />
+            <input 
+              type="submit" 
+              value={submitLabel}
+              disabled={emailError || positionError || whyError}
+            />
           </div>
         </form>
       </Container>
@@ -78,4 +122,4 @@ class JoinUs extends Component {
   }
 }
 
-export default JoinUs;
+export default translate("translations")(JoinUs);

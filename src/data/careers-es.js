@@ -13,6 +13,8 @@ const careersES = {
     whyLabel: "Por qué quieres trabajar con nosotros?",
     reminder: "Asegurate de adjuntar un link a tu CV, Linkedin, Github o algo que demuestre tu trabajo",
     submitLabel: "Aplicar",
+    noFieldError: "Este campo es obligatorio",
+    emailError: "Por favor ingresa un email valido",
   },
   benefits: {
     title: "Beneficios",
