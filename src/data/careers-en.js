@@ -6,6 +6,14 @@ const careers = {
   recruitment: {
     title: "Our Recruitment Process",
   },
+  join: {
+    title: "Join Us!",
+    emailLabel: "Email",
+    positionLabel: "Position",
+    whyLabel: "Why do you want to work with us?",
+    reminder: "Make sure to share a link to your CV, Linkedin, Github or whatever shows your work",
+    submitLabel: "Apply Now",
+  },
   benefits: {
     title: "Benefits",
     salary: {

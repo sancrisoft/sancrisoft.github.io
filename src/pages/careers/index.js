@@ -9,6 +9,7 @@ import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
 import OurValues from '../../components/ourValues'
 import GalleryGrid from '../../components/galleryGrid'
+import JoinUs from '../../components/joinUs'
 import {
   H3,
   PageSizer,
@@ -94,6 +95,32 @@ class IndexPage extends Component {
     );
   }
 
+  renderJoinUs = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              joinUsEmail,
+            },
+          },
+        },
+      },
+      t,
+    } = this.props;
+    return (
+      <JoinUs 
+        joinUsEmail={joinUsEmail} 
+        title={t('careers.join.title')}
+        emailLabel={t('careers.join.emailLabel')}
+        positionLabel={t('careers.join.positionLabel')}
+        whyLabel={t('careers.join.whyLabel')}
+        reminder={t('careers.join.reminder')}
+        submitLabel={t('careers.join.submitLabel')}
+      />
+    );
+  }
+
   render() {
     const { data, t } = this.props;
     return (
@@ -141,6 +168,9 @@ class IndexPage extends Component {
               {this.renderBenefits()}
             </RecruitmentProcessContainer>
           </SectionContainer>
+          <section>
+            { this.renderJoinUs() }
+          </section>
         </PageSizer>
         { this.renderGalleryGrid() }
       </Layout>
@@ -227,6 +257,7 @@ query portfolioQuery {
           tabletColSpan
           tabletRowSpan
         }
+        joinUsEmail
       }
     }
   }
