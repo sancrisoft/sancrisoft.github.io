@@ -3,16 +3,17 @@ import breakpoint from 'styled-components-breakpoint';
 
 export const GridContainer = styled.div`
   width: 100%;
-  height: 80vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(100px, auto);
   grid-auto-flow: dense;
+  grid-gap: 5px;
   overflow: hidden;
   ${breakpoint('tablet')`
     grid-template-columns: repeat(2, 1fr);
   `}
   ${breakpoint('desktop')`
+    height: 80vh;
     grid-template-columns: repeat(4, 1fr);
   `}
 `;
