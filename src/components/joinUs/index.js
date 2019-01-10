@@ -8,9 +8,19 @@ import {
 
 import { H3 } from '../styledComponents';
 
-const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const emailRegexp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
 class JoinUs extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    joinUsEmail: PropTypes.string.isRequired,
+    emailLabel: PropTypes.string.isRequired,
+    positionLabel: PropTypes.string.isRequired,
+    whyLabel: PropTypes.string.isRequired,
+    reminder: PropTypes.string.isRequired,
+    submitLabel: PropTypes.string.isRequired,
+  }
+
   state = {
     email: '',
     position: '',
