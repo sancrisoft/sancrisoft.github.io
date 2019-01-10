@@ -28,17 +28,26 @@ class JoinUs extends Component {
       why,
     } = this.state;
     const { t } = this.props;
+    let valid = true;
     if (!email) {
+      valid = false;
       this.setState({ emailError: t('careers.join.noFieldError'), dirty: true });
     } else if (email && !emailRegexp.test(email)) {
+      valid = false;
       this.setState({ emailError: t('careers.join.emailError'), dirty: true });
     } else this.setState({ emailError: '' });
 
-    if (!position) this.setState({ positionError: t('careers.join.noFieldError'), dirty: true });
-    else this.setState({ positionError: '' });
+    if (!position) {
+      valid = false;
+      this.setState({ positionError: t('careers.join.noFieldError'), dirty: true });
+    } else this.setState({ positionError: '' }); 
 
-    if (!why) this.setState({ whyError: t('careers.join.noFieldError'), dirty: true });
-    else this.setState({ whyError: '' });
+    if (!why) {
+      valid = false;
+      this.setState({ whyError: t('careers.join.noFieldError'), dirty: true });
+    } else this.setState({ whyError: '' });
+
+    return valid;
   }
 
   changeField = ({ target: { name, value }}) => {
@@ -49,7 +58,7 @@ class JoinUs extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.validate();
+    if(this.validate()) this.joinUsForm.submit();
   }
 
   render() {
@@ -73,7 +82,12 @@ class JoinUs extends Component {
     return (
       <Container>
         <H3>{title}</H3>
-        <form onSubmit={this.handleSubmit} action={`https://formspree.io/${joinUsEmail}`} method="POST">
+        <form 
+          ref={(form) => this.joinUsForm = form} 
+          onSubmit={this.handleSubmit} 
+          action={`https://formspree.io/${joinUsEmail}`} 
+          method="POST"
+        >
           <div className="form-control">
             <label htmlFor="email">{emailLabel}</label>
             <input 
