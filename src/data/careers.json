@@ -15,5 +15,49 @@
       "happy",
       "remote",
       "workstation"
+    ],
+    "teamPhotos": [
+      {
+        "id": "careersPhoto1",
+        "colSpan": 2,
+        "rowSpan": 2,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 4,
+        "tabletColSpan": 2,
+        "tabletRowSpan": 2
+      },
+      {
+        "id": "careersPhoto2"
+      },
+      {
+        "id": "careersPhoto3"
+      },
+      {
+        "id": "careersPhoto4",
+        "colSpan": 2,
+        "rowSpan": 1,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 1,
+        "tabletColSpan": 2,
+        "tabletRowSpan": 1
+      },
+      {
+        "id": "careersPhoto5",
+        "colSpan": 2,
+        "rowSpan": 2,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 1,
+        "tabletColSpan": 1,
+        "tabletRowSpan": 2
+      },
+      {
+        "id": "careersPhoto6",
+        "colSpan": 2,
+        "rowSpan": 2,
+        "mobileColSpan": 1,
+        "mobileRowSpan": 1,
+        "tabletColSpan": 1,
+        "tabletRowSpan": 2
+      }
     ]
 }
