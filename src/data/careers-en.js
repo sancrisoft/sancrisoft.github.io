@@ -1,6 +1,49 @@
 const careers = {
+  bigImage: {
+    title: 'Become one of us!',
+    description: 'A team of talented people who enjoy and have fun doing their work'
+  },
   recruitment: {
     title: "Our Recruitment Process",
+  },
+  benefits: {
+    title: "Benefits",
+    salary: {
+      title: "Competitive Salary",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    vacations: {
+      title: "Vacations",
+      description: "15 days of paid vacations",
+    },
+    remote: {
+      title: "Work remotely",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    environment: {
+      title: "Work environment",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    bonus: {
+      title: "Bonuses",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    snack: {
+      title: "Snacks & Beers",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    happy: {
+      title: "Happy Hours",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    workstation: {
+      title: "Great Workstation",
+      description: "We like to work on the best equipment.(Mackbooks and accesories)"
+    },
+    support: {
+      title: "Team Support",
+      description: "Give and get feedback, set up goals and develop your skills."
+    }
   },
   recruitmentProcess: {
     application: {

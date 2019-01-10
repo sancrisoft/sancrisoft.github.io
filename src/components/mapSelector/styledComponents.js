@@ -15,19 +15,21 @@ export const ButtonSelector = styled.button`
   flex-direction: column;
   width: 46%;
   padding: 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  h4 {
+    align-self: flex-start;
+    font-size: 1.2em;
+    ${breakpoint('tablet')`
+      font-size: 1.4em;
+    `}
+  }
   &:first-child {
     margin-right: 5px;
   }
   &:last-child {
     margin-left: 5px;
   }
-  ${breakpoint('desktop')`
-    h4 {
-      text-align: start;
-    }
-  `}
   &:active, &:visited {
     border: none;
   }
@@ -39,6 +41,9 @@ export const ButtonSelector = styled.button`
   &:focus {
     outline: 0;
   }
+  ${breakpoint('tablet')`
+      justify-content: center;
+    `}
 `;
 
 export const SectionContainer = styled.section`
@@ -55,6 +60,7 @@ export const SectionContainer = styled.section`
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 0 1em;
     ${breakpoint('desktop')`
       padding: 0em;
     `}
@@ -75,9 +81,14 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  ${breakpoint('desktop')`
-    justify-content: flex-start;
-    align-items: flex-start;
-  `}
+  align-items: flex-start;
+
+  span {
+    text-align: left;
+    font-size: 0.8em;
+
+    ${breakpoint('tablet')`
+      font-size: 1em;
+    `}
+  }
 `;
