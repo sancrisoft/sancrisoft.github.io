@@ -35,6 +35,14 @@ const careersES = {
     happy: {
       title: "Happy Hours",
       description: "Lorem ipsum dolor sit amet",
+    },
+    workstation: {
+      title: "Lugar de trabajo",
+      description: "Nos gusta trabajar con las mejores herramientas.(Mackbooks y accesorios)"
+    },
+    support: {
+      title: "Soporte del equipo",
+      description: "Da y recibe comentarios, establece metas y desarrolla tus habilidades."
     }
   },
   recruitmentProcess: {

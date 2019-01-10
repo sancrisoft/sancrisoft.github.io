@@ -25,7 +25,7 @@ export const Box = styled.div`
   width: 90%;
   margin: 0 auto;
   ${breakpoint('md')`
-    width: 80%;
+    width: 95%;
     flex-direction: ${({ direction }) => direction};
   `}
 `;

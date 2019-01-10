@@ -172,6 +172,12 @@ query portfolioQuery {
   happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
+  workstation:file(relativePath: { eq: "careers/benefits/workstation.png" }) {
+    ...imageFragment
+  }
+  support:file(relativePath: { eq: "careers/benefits/support.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       title
