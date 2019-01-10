@@ -42,9 +42,21 @@ export const H4 = styled.h4`
   height: 2em;
 `;
 
+export const PositionSubtitles = styled.h5`
+  font-size: 1.2em;
+  margin-bottom: 1em;
+`;
+
 export const SubTitle = styled.h5`
   font-size: 0.75em;
   margin: 1em 0;
   font-family: "LatoBold";
   color: #000;
 `
+
+export const ImgCustom = styled.img`
+  max-height: 200px;
+  margin: 1em 0 0 0;
+  width: 100%;
+  object-fit: cover;
+`;

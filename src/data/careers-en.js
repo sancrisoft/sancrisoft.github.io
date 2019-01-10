@@ -29,6 +29,7 @@ const careers = {
       {
         title: "Semi Senior Developer",
         mode: "Full Time",
+        image: 'senior-developer.png',
         positionDescription: "<p>We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.</p>",
         technicalSkills: "<p></p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS, Redux and Webpack</li><li>React Native, Sagas, React Navigation</li><li>olid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li></ul>",
         responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li></ul>",
@@ -38,7 +39,7 @@ const careers = {
       {
         title: "SuperMan Developer",
         mode: "Full Time",
-        positionDescription: "We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.",
+        positionDescription: "<p>We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.</p>",
         technicalSkills: "<p></p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS, Redux and Webpack</li><li>React Native, Sagas, React Navigation</li><li>olid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li></ul>",
         responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li></ul>",
         extraTitle: "And the most important!",
