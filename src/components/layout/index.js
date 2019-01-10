@@ -107,10 +107,10 @@ class Layout extends Component {
           <GlobalFonts />
           {
             (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={hamburStyles} width={ 240 }>
-              <Link to="/" > {t('home.nav.about')} </Link>
-              <Link to="/" > {t('home.nav.cases')} </Link>
+              <Link to="/about-us" > {t('home.nav.about')} </Link>
+              <Link to="/case-studies" > {t('home.nav.cases')} </Link>
               <Link to="/careers"> {t('home.nav.careers')} </Link>
-              <Link to="/" > {t('home.nav.quote')} </Link>
+              <Link to="/get-a-quote" > {t('home.nav.quote')} </Link>
               <div style={{ marginTop:  5}}>
                 <LanguageButtons isBlack changeLanguage={this.eventChangeLang} language={language} />
               </div>
