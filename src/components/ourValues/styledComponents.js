@@ -70,20 +70,20 @@ export const DescContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${breakpoint('tablet')`
+  ${breakpoint('md')`
     margin-left: ${({ direction }) => direction === 'row' ? '1em' : 0 };
   `}
   ${Boxtitle} {
     h6, h3 {
       text-align: center;
-      ${breakpoint('tablet')`
+      ${breakpoint('md')`
         text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
       `}
     }
   }
   p {
     text-align: center;
-    ${breakpoint('tablet')`
+    ${breakpoint('md')`
       text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
     `}
   }

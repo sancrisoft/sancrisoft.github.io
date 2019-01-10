@@ -1,18 +1,21 @@
 import React, {Component} from 'react'
 import { graphql } from 'gatsby'
+import { I18nextProvider, translate } from "react-i18next"
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import CasesImage from '../../components/casesImage'
-import { I18nextProvider, translate } from "react-i18next"
+import Background from '../../components/casesBackground'
 import i18n from '../../data/translations'
 
 import {
   ContentCase,
-  CasePageSizer
+  CasePageSizer,
+  ContentBack
 } from './styledComponents'
 
 class IndexPage extends Component {
+
   renderCases = () => {
     const {
       data: {
@@ -41,6 +44,7 @@ class IndexPage extends Component {
       />
     );
   }
+
   render() {
     const {
       t
@@ -53,6 +57,9 @@ class IndexPage extends Component {
             <CasePageSizer>
               { this.renderCases() }
             </CasePageSizer>
+            <ContentBack>
+              <Background />
+            </ContentBack>
           </ContentCase>
       </Layout>
       </I18nextProvider>
