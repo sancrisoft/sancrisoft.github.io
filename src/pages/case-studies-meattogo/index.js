@@ -34,23 +34,71 @@ class IndexPage extends Component {
       t
     } = this.props;
     const meattogo = cases.find(item => item.id === "meattogo");
+    const {
+      id,
+      name,
+      appStore,
+      playStore
+    } = meattogo;
     return (
       <CasesImage
-        key={meattogo.id}
-        title={meattogo.name}
+        key={id}
+        title={name}
         description={t(`caseStudies.cases.meattogo.description`)}
         image={data.meattogo.childImageSharp.sizes}
         playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={meattogo.playStore}
+        linkPlayStore={playStore}
         appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={meattogo.appStore}
+        linkAppStore={appStore}
         phone={ImagePhone}
+      />
+    );
+  }
+
+  renderCasesAbout = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              about,
+            }
+          }
+        }
+      },
+      data,
+      t
+    } = this.props;
+
+    const meattogo = about.find(item => item.id === "meattogo");
+    const {
+      id,
+      networkApp
+    } = meattogo;
+    console.log(meattogo);
+    return (
+      <About
+        id={id}
+        urlNetwork={networkApp}
+        name={t(`caseStudies.about.title`)}
+        description={t(`caseStudies.about.meattogo.description`)}
       />
     );
   }
 
   render() {
     const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              about: {
+                id
+              },
+            }
+          }
+        }
+      },
       data,
       t
     } = this.props;
@@ -68,7 +116,7 @@ class IndexPage extends Component {
               />
             </ContentBack>
             <ContentAbout>
-              <About></About>
+              { this.renderCasesAbout() }
             </ContentAbout>
           </ContentCase>
       </Layout>
@@ -100,6 +148,10 @@ query caseStudies {
           name
           appStore
           playStore
+        }
+        about {
+          id
+          networkApp
         }
       }
     }

@@ -6,8 +6,8 @@ const caseStudies = {
     }
   },
   about: {
+    title: "About ",
     meattogo: {
-      title: "About Meattogo",
       description: " English About Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid perspiciatis magnam, ipsum rem atque veritatis dolorem fugit qui, beatae excepturi odit fuga repellendus, deleniti. Amet, neque dicta qui totam illum."
     }
   }

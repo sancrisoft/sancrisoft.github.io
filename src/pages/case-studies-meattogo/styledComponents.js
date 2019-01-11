@@ -33,9 +33,16 @@ export const ContentBack = styled.section`
 `;
 
 export const ContentAbout = styled.section`
-  width: 100%;
+  margin: 0 auto;
+  max-width: 90%;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  padding: 2em 0;
+  ${breakpoint('tablet')`
+    max-width: 90%;
+  `}
+  ${breakpoint('desktop')`
+    max-width: 78%;
+  `}
 `;
