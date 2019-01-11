@@ -1,10 +1,14 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint';
 
 export const Container = styled.div`
   padding: 2em 3em;
   border-radius: 10px;
   background-color: rgba(0,0,0,0.15);
-  margin: 3em;
+  margin: 1em;
+  ${breakpoint('tablet')`
+    margin: 2em;
+  `}
   h3 {
     text-align: center;
   }
@@ -47,12 +51,21 @@ export const Container = styled.div`
       border: none;
       border-radius: 15px;
       color: white;
-      padding: 10px 40px;
-      font-size: 24px;
+      padding: 2px 10px;
+      font-size: 16px;
       margin-top: 2em;
       &:focus {
         outline: 0;
       }
+      ${breakpoint('tablet')`
+        padding: 5px 20px;
+        font-size: 20px;
+      `}
+      ${breakpoint('desktop')`
+        padding: 15px 40px;
+        font-size: 24px;
+        margin-top: 2em;
+      `}
     }
   }
 `;

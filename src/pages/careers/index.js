@@ -255,7 +255,7 @@ class IndexPage extends Component {
               )}
             </PositionDetailsText>
             <PositionDetailsForm>
-              {'This is the form'}
+              { this.renderJoinUs() }
             </PositionDetailsForm>
           </PositionDetailsContainer>}
           <SectionContainer>
@@ -264,9 +264,6 @@ class IndexPage extends Component {
               {this.renderBenefits()}
             </RecruitmentProcessContainer>
           </SectionContainer>
-          <section>
-            { this.renderJoinUs() }
-          </section>
         </PageSizer>
         { this.renderGalleryGrid() }
       </Layout>
