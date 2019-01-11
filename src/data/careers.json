@@ -1,5 +1,6 @@
 {
     "title": "Careers",
+    "openPositions": 2,
     "recruitmentProcess": [
       "application",
       "assigment",
@@ -9,10 +10,12 @@
     "benefits": [
       "salary",
       "vacations",
-      "environment",
+      "support",
       "bonus",
       "snack",
-      "happy"
+      "happy",
+      "remote",
+      "workstation"
     ],
     "teamPhotos": [
       {

@@ -8,6 +8,7 @@ import CasesImage from '../../components/casesImage'
 import Background from '../../components/casesBackground'
 import i18n from '../../data/translations'
 
+import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
@@ -41,12 +42,14 @@ class IndexPage extends Component {
         linkPlayStore={meattogo.playStore}
         appStore={data.appStore.childImageSharp.sizes}
         linkAppStore={meattogo.appStore}
+        phone={ImagePhone}
       />
     );
   }
 
   render() {
     const {
+      data,
       t
     } = this.props;
     return (
@@ -58,7 +61,9 @@ class IndexPage extends Component {
               { this.renderCases() }
             </CasePageSizer>
             <ContentBack>
-              <Background />
+              <Background
+                image={data.BackgroundMeattogo.childImageSharp.sizes}
+              />
             </ContentBack>
           </ContentCase>
       </Layout>
@@ -77,6 +82,9 @@ query caseStudies {
     ...imageFragment
   }
   appStore:file(relativePath: { eq: "cases-studies/appStore.png" }) {
+    ...imageFragment
+  }
+  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
     ...imageFragment
   }
   site {

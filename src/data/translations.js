@@ -10,6 +10,8 @@ import careers from "./careers-en"
 import careersES from "./careers-es"
 import caseStudies from "./case-studies-en"
 import caseStudiesES from "./case-studies-es"
+import getQuote from "./get-quote-en"
+import getQuoteEs from "./get-quote-es"
 i18n
 .use(Backend)
 .use(LanguageDetector)
@@ -22,6 +24,7 @@ i18n
         aboutUs: about,
         careers: careers,
         caseStudies: caseStudies,
+        getQuote: getQuote,
       },
     },
     es: {
@@ -30,6 +33,7 @@ i18n
         aboutUs: aboutES,
         careers: careersES,
         caseStudies: caseStudiesES,
+        getQuote: getQuoteEs,
       }
     }
   },

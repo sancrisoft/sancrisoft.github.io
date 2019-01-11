@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { graphql, withPrefix } from 'gatsby'
+import ReactHtmlParser from 'react-html-parser';
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -21,9 +23,61 @@ import {
   PositionCard,
   SubTitle,
   RecruitmentProcessContainer,
-} from '../../utils/careers/styledComponents';
+  ImgCustom,
+  PositionSubtitles,
+  PositionDetailsContainer,
+  PositionDetailsText,
+  PositionDetailsForm,
+} from './styledComponents';
+
+const WrapperButton = ({ id, onClick }) => {
+  const handleClick = () => {
+    onClick(id);
+  }
+  return (
+    <Button
+      text="View More"
+      padding="5px 10px"
+      size="12px"
+      onClick={handleClick}
+    />
+  );
+}
+
+WrapperButton.propTypes = {
+  id: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+}
+
+const PositionCardItems = ({ openPositions, t, onClickPosition }) => {
+  const positionCard = [];
+  for (var i = 0; i < openPositions; i++) {
+    positionCard.push(
+      <PositionCard key={`position-card-${i}`}>
+        <H4>{t(`careers.openPositions.positions.${i}.title`)}</H4>
+        <SubTitle>Full Time</SubTitle>
+        <WrapperButton id={i} onClick={onClickPosition}/>
+      </PositionCard>
+    );
+  }
+  return (
+    <PositonsContainer>
+      {positionCard}
+    </PositonsContainer>
+  );
+};
+
+PositionCardItems.defaultProps = {
+  openPositions: PropTypes.number.isRequired,
+  t: PropTypes.object.isRequired,
+  onClickPosition: PropTypes.func.isRequired,
+}
 
 class IndexPage extends Component {
+  state = {
+    openPositionSelected: null,
+  };
+
   renderOurRecruitment = () => {
     const {
       data: {
@@ -47,6 +101,12 @@ class IndexPage extends Component {
         contentCustomStyles={{ paddingBottom: 0 }}
       />
     ));
+  }
+
+  onClickPosition = ( positionId ) => {
+    this.setState({
+      openPositionSelected: positionId,
+    })
   }
 
   renderBenefits = () => {
@@ -89,7 +149,7 @@ class IndexPage extends Component {
       data,
     } = this.props;
     return(
-      <GalleryGrid 
+      <GalleryGrid
         images={teamPhotos.map((tp) => ({ ...tp, sizes: data[tp.id].childImageSharp.sizes }))}
       />
     );
@@ -122,7 +182,20 @@ class IndexPage extends Component {
   }
 
   render() {
-    const { data, t } = this.props;
+    const { openPositionSelected } = this.state;
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              openPositions,
+            },
+          },
+        },
+      },
+      data,
+      t,
+    } = this.props;
     return (
       <I18nextProvider i18n={i18n}>
       <Layout>
@@ -141,27 +214,50 @@ class IndexPage extends Component {
               {this.renderOurRecruitment()}
             </RecruitmentProcessContainer>
             <H3>{t('careers.openPositions.title')}</H3>
-            <PositonsContainer>
-              <PositionCard>
-                <H4>React Native Mobile Developer</H4>
-                <SubTitle>Full Time</SubTitle>
-                <Button
-                  text="View More"
-                  padding="5px 10px"
-                  size="12px"
-                />
-              </PositionCard>
-              <PositionCard>
-                <H4>React Native Mobile Developer</H4>
-                <SubTitle>Full Time</SubTitle>
-                <Button
-                  text="View More"
-                  padding="5px 10px"
-                  size="12px"
-                />
-              </PositionCard>
-            </PositonsContainer>
+            <PositionCardItems
+              openPositions={openPositions}
+              t={t}
+              onClickPosition={this.onClickPosition}
+            />
           </SectionContainer>
+          {openPositionSelected !== null && <PositionDetailsContainer>
+            <PositionDetailsText>
+              <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
+              {(t([`careers.openPositions.positions.${openPositionSelected}.image`, ''])) && (
+                <ImgCustom src={withPrefix(`/images/careers/${t(`careers.openPositions.positions.${openPositionSelected}.image`)}`)} />
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.positionDescription`, ''])) && (
+                <div>
+                  <PositionSubtitles style={{ marginTop: '1em' }}>{t(`careers.openPositions.positionDescriptionTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.positionDescription`))}
+                </div>
+
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.technicalSkills`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.technicalSkillsTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.technicalSkills`))}
+                </div>
+
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.responsabilities`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.responsabilitiesTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.responsabilities`))}
+                </div>
+
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.extraContent`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.positions.${openPositionSelected}.extraTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.extraContent`))}
+                </div>
+              )}
+            </PositionDetailsText>
+            <PositionDetailsForm>
+              {'This is the form'}
+            </PositionDetailsForm>
+          </PositionDetailsContainer>}
           <SectionContainer>
             <H3>{t('careers.benefits.title')}</H3>
             <RecruitmentProcessContainer>
@@ -224,6 +320,12 @@ query portfolioQuery {
   happy:file(relativePath: { eq: "careers/benefits/happy.png" }) {
     ...imageFragment
   }
+  workstation:file(relativePath: { eq: "careers/benefits/workstation.png" }) {
+    ...imageFragment
+  }
+  support:file(relativePath: { eq: "careers/benefits/support.png" }) {
+    ...imageFragment
+  }
   careersPhoto1:file(relativePath: { eq: "careers/team/chicamocha1.jpg" }) {
     ...imageFragment
   }
@@ -247,6 +349,7 @@ query portfolioQuery {
       title
       careers {
         recruitmentProcess
+        openPositions
         benefits
         teamPhotos {
           id
