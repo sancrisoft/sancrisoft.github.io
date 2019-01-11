@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import axios from 'axios'
+import Recaptcha from 'react-google-invisible-recaptcha'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
+
 import {
   H3,
   PageSizer,
@@ -21,6 +24,7 @@ class IndexPage extends Component {
         message: '',
         send: false,
     }
+    recaptcha = null;
     handleChange = (event) => {
         const {
             target: {
@@ -35,29 +39,40 @@ class IndexPage extends Component {
         if(name === '') return false;
         if(replyto === '' || !this.validateEmail(replyto)) return false;
         if(message === '') return false;
-
+        this.recaptcha.execute();
         return true;
-    } 
+    }
+    onResolved = () => {
+        alert( 'Recaptcha resolved with response: ' + this.recaptcha.getResponse() );
+    }
     handleSubmit = (e) => {
         this.setState({ send: true});
         e.preventDefault();
         const { name, replyto, phone, message } = this.state;
+        
         if(this.validateForm()){
+            
             const opts = {
                 name,
                 replyto,
                 phone,
                 message,
+                'g-recaptcha-response': this.recaptcha.getResponse(),
             };
-            fetch('https://formspree.io/info@sancrisoft.com', {
-                method: 'post',
-                body: JSON.stringify(opts)
-            }).then(function(response) {
-                console.log('response', response);
-                return response.json();
-            }).then(function(data) {
-                console.log('data', data);
+            axios.post(
+                "https://formspree.io/info@sancrisoft.com", 
+                opts, 
+                {headers: {"Accept": "application/json"}}
+            )
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
             });
+        }
+        else {
+            this.recaptcha.reset();
         }
         
     }
@@ -101,6 +116,12 @@ class IndexPage extends Component {
                             (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
                         }
                         <input type="hidden" name="subject" value="Tell us about your project | SancriSoft" />
+                        <Recaptcha
+                            ref={ (ref) => this.recaptcha = ref }
+                            sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                            onResolved={ this.onResolved }
+                            badge="inline"
+                        />
                         <div className="wrapper_button">
                             <input className="input-btn" type="submit" value={t('getQuote.form.send')} />
                         </div>
