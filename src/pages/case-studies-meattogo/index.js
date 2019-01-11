@@ -6,13 +6,15 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import CasesImage from '../../components/casesImage'
 import Background from '../../components/casesBackground'
+import About from '../../components/casesAbout'
 import i18n from '../../data/translations'
 
 import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
-  ContentBack
+  ContentBack,
+  ContentAbout
 } from './styledComponents'
 
 class IndexPage extends Component {
@@ -65,6 +67,9 @@ class IndexPage extends Component {
                 image={data.BackgroundMeattogo.childImageSharp.sizes}
               />
             </ContentBack>
+            <ContentAbout>
+              <About></About>
+            </ContentAbout>
           </ContentCase>
       </Layout>
       </I18nextProvider>

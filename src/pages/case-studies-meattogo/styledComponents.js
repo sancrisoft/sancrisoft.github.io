@@ -31,3 +31,11 @@ export const ContentBack = styled.section`
   background: #f1f1f1;
   padding: 2em 0;
 `;
+
+export const ContentAbout = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+`;
