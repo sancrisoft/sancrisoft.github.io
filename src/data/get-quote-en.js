@@ -11,6 +11,10 @@ const quote = {
     phone: 'Phone',
     message: 'Your message *',
     send: 'Send',
+    errorName: 'Please enter your name',
+    errorEmail: 'Please enter your email',
+    validEmail: 'Enter a valid email',
+    errorMessage: 'Please enter your message', 
   }
 };
 

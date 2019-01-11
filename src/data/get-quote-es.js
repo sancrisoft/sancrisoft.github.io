@@ -10,6 +10,10 @@ const quoteEs = {
     phone: 'Teléfono',
     message: 'Tu mensaje *',
     send: 'Enviar',
+    errorName: 'Por favor ingresa tu nombre',
+    errorEmail: 'Por favor ingresa tu correo',
+    validEmail: 'Ingresa un correo valido',
+    errorMessage: 'Por favor ingresa tu mensaje', 
   }
 };
 
