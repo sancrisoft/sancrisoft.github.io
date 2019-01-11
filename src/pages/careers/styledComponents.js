@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 export const SectionContainer = styled.section`
   padding-top: 2em;
@@ -59,4 +60,30 @@ export const ImgCustom = styled.img`
   margin: 1em 0 0 0;
   width: 100%;
   object-fit: cover;
+`;
+
+export const PositionDetailsContainer = styled.div`
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  ${breakpoint('tablet')`
+    flex-direction: row;
+  `}
+  ${breakpoint('desktop')`
+    padding: 0;
+  `}
+`;
+
+export const PositionDetailsText = styled.div`
+  width: 100%;
+  ${breakpoint('tablet')`
+    width: 60%;
+  `}
+`;
+
+export const PositionDetailsForm = styled.div`
+  width: 100%;
+  ${breakpoint('tablet')`
+    width: 40%;
+  `}
 `;
