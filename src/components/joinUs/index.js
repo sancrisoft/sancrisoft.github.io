@@ -106,6 +106,7 @@ class JoinUs extends Component {
               name="email"
               value={email}
               onChange={this.changeField}
+              aria-invalid={emailError !== ''}
             />
             { emailError && (<label className="error">{emailError}</label>) }
           </div>
@@ -117,6 +118,7 @@ class JoinUs extends Component {
               name="position" 
               value={position}
               onChange={this.changeField}
+              aria-invalid={positionError !== ''}
             />
             { positionError && (<label className="error">{positionError}</label>) }
           </div>
@@ -127,10 +129,11 @@ class JoinUs extends Component {
               name="why"
               value={why}
               onChange={this.changeField}
+              aria-invalid={whyError !== ''}
             />
             { whyError && (<label className="error">{whyError}</label>) }
           </div>
-          <div>
+          <div className="reminder">
             <label>{reminder}</label>
           </div>
           <div className="submit">

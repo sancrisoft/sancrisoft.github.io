@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 3em;
+  padding: 2em 3em;
   border-radius: 10px;
   background-color: rgba(0,0,0,0.15);
+  margin: 3em;
   h3 {
     text-align: center;
   }
@@ -12,6 +13,7 @@ export const Container = styled.div`
     flex-direction: column;
     margin-top: 2em;
     label.error {
+      margin: 5px 0;
       color: #e53935;
     }
     div.submit {
@@ -19,9 +21,15 @@ export const Container = styled.div`
       justify-content: center;
       align-items: center;
     }
+    div.reminder > label {
+      font-style: italic;
+    }
     div.form-control {
       display: flex;
       flex-direction: column;
+      input[aria-invalid="true"], textarea[aria-invalid="true"] {
+        margin-bottom: 0;
+      }
       input, textarea {
         border: none;
         margin: 10px 0 15px 0;
