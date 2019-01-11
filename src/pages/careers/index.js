@@ -11,6 +11,7 @@ import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
 import OurValues from '../../components/ourValues'
 import GalleryGrid from '../../components/galleryGrid'
+import JoinUs from '../../components/joinUs'
 import {
   H3,
   PageSizer,
@@ -24,6 +25,9 @@ import {
   RecruitmentProcessContainer,
   ImgCustom,
   PositionSubtitles,
+  PositionDetailsContainer,
+  PositionDetailsText,
+  PositionDetailsForm,
 } from './styledComponents';
 
 const WrapperButton = ({ id, onClick }) => {
@@ -151,6 +155,32 @@ class IndexPage extends Component {
     );
   }
 
+  renderJoinUs = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              joinUsEmail,
+            },
+          },
+        },
+      },
+      t,
+    } = this.props;
+    return (
+      <JoinUs 
+        joinUsEmail={joinUsEmail} 
+        title={t('careers.join.title')}
+        emailLabel={t('careers.join.emailLabel')}
+        positionLabel={t('careers.join.positionLabel')}
+        whyLabel={t('careers.join.whyLabel')}
+        reminder={t('careers.join.reminder')}
+        submitLabel={t('careers.join.submitLabel')}
+      />
+    );
+  }
+
   render() {
     const { openPositionSelected } = this.state;
     const {
@@ -190,39 +220,44 @@ class IndexPage extends Component {
               onClickPosition={this.onClickPosition}
             />
           </SectionContainer>
-          {openPositionSelected !== null && <div>
-            <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
-            {(t([`careers.openPositions.positions.${openPositionSelected}.image`, ''])) && (
-              <ImgCustom src={withPrefix(`/images/careers/${t(`careers.openPositions.positions.${openPositionSelected}.image`)}`)} />
-            )}
-            {(t([`careers.openPositions.positions.${openPositionSelected}.positionDescription`, ''])) && (
-              <div>
-                <PositionSubtitles style={{ marginTop: '1em' }}>{t(`careers.openPositions.positionDescriptionTitle`)}</PositionSubtitles>
-                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.positionDescription`))}
-              </div>
+          {openPositionSelected !== null && <PositionDetailsContainer>
+            <PositionDetailsText>
+              <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
+              {(t([`careers.openPositions.positions.${openPositionSelected}.image`, ''])) && (
+                <ImgCustom src={withPrefix(`/images/careers/${t(`careers.openPositions.positions.${openPositionSelected}.image`)}`)} />
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.positionDescription`, ''])) && (
+                <div>
+                  <PositionSubtitles style={{ marginTop: '1em' }}>{t(`careers.openPositions.positionDescriptionTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.positionDescription`))}
+                </div>
 
-            )}
-            {(t([`careers.openPositions.positions.${openPositionSelected}.technicalSkills`, ''])) && (
-              <div>
-                <PositionSubtitles>{t(`careers.openPositions.technicalSkillsTitle`)}</PositionSubtitles>
-                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.technicalSkills`))}
-              </div>
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.technicalSkills`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.technicalSkillsTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.technicalSkills`))}
+                </div>
 
-            )}
-            {(t([`careers.openPositions.positions.${openPositionSelected}.responsabilities`, ''])) && (
-              <div>
-                <PositionSubtitles>{t(`careers.openPositions.responsabilitiesTitle`)}</PositionSubtitles>
-                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.responsabilities`))}
-              </div>
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.responsabilities`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.responsabilitiesTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.responsabilities`))}
+                </div>
 
-            )}
-            {(t([`careers.openPositions.positions.${openPositionSelected}.extraContent`, ''])) && (
-              <div>
-                <PositionSubtitles>{t(`careers.openPositions.positions.${openPositionSelected}.extraTitle`)}</PositionSubtitles>
-                {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.extraContent`))}
-              </div>
-            )}
-          </div>}
+              )}
+              {(t([`careers.openPositions.positions.${openPositionSelected}.extraContent`, ''])) && (
+                <div>
+                  <PositionSubtitles>{t(`careers.openPositions.positions.${openPositionSelected}.extraTitle`)}</PositionSubtitles>
+                  {ReactHtmlParser(t(`careers.openPositions.positions.${openPositionSelected}.extraContent`))}
+                </div>
+              )}
+            </PositionDetailsText>
+            <PositionDetailsForm>
+              { this.renderJoinUs() }
+            </PositionDetailsForm>
+          </PositionDetailsContainer>}
           <SectionContainer>
             <H3>{t('careers.benefits.title')}</H3>
             <RecruitmentProcessContainer>
@@ -322,6 +357,7 @@ query portfolioQuery {
           tabletColSpan
           tabletRowSpan
         }
+        joinUsEmail
       }
     }
   }
