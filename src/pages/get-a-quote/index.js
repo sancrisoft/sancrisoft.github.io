@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import axios from 'axios'
-import Recaptcha from 'react-google-invisible-recaptcha'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -15,7 +13,6 @@ import {
 import {
   SectionContainer,
 } from './styledComponents';
-
 class IndexPage extends Component {
     state = {
         name: '',
@@ -24,7 +21,7 @@ class IndexPage extends Component {
         message: '',
         send: false,
     }
-    recaptcha = null;
+    form = null;
     handleChange = (event) => {
         const {
             target: {
@@ -39,45 +36,43 @@ class IndexPage extends Component {
         if(name === '') return false;
         if(replyto === '' || !this.validateEmail(replyto)) return false;
         if(message === '') return false;
-        this.recaptcha.execute();
         return true;
-    }
-    onResolved = () => {
-        alert( 'Recaptcha resolved with response: ' + this.recaptcha.getResponse() );
     }
     handleSubmit = (e) => {
         this.setState({ send: true});
         e.preventDefault();
         const { name, replyto, phone, message } = this.state;
-        
+        //grecaptcha.execute();
+        // const recaptchaValue = recaptchaRef.current.getValue();
+        // console.log('recaptchaValue', recaptchaValue);
         if(this.validateForm()){
-            
-            const opts = {
-                name,
-                replyto,
-                phone,
-                message,
-                'g-recaptcha-response': this.recaptcha.getResponse(),
-            };
-            axios.post(
-                "https://formspree.io/info@sancrisoft.com", 
-                opts, 
-                {headers: {"Accept": "application/json"}}
-            )
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        }
-        else {
-            this.recaptcha.reset();
+            this.form.submit();
+            // const opts = {
+            //     name,
+            //     replyto,
+            //     phone,
+            //     message,
+            //     'g-recaptcha-response': recaptchaValue,
+            // };
+            // axios.post(
+            //     "https://formspree.io/info@sancrisoft.com", 
+            //     opts, 
+            //     {headers: {"Accept": "application/json"}}
+            // )
+            // .then(function (response) {
+            //     console.log(response);
+            // })
+            // .catch(function (error) {
+            //     console.log(error);
+            // });
         }
         
     }
+    onChange = (value) => {
+        console.log("Captcha value:", value);
+      }
     validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
         return re.test(String(email).toLowerCase());
     }
     render() {
@@ -101,7 +96,7 @@ class IndexPage extends Component {
                 <PageSizer>
                 <SectionContainer>
                     <H3>{t('getQuote.form.title')}</H3>
-                    <form className="form contact_form" id="contact_form" method="POST" action="//formspree.io/info@sancrisoft.com" noValidate="novalidate" onSubmit={this.handleSubmit}>
+                    <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com">
                         <input className="input-text" type="text" name="name" id="name" placeholder={t('getQuote.form.name')} value={name} onChange={this.handleChange}/>
                         {
                             (isInValidName) && <label className="error" htmlFor="name">{t('getQuote.form.errorName')}</label>
@@ -116,14 +111,8 @@ class IndexPage extends Component {
                             (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
                         }
                         <input type="hidden" name="subject" value="Tell us about your project | SancriSoft" />
-                        <Recaptcha
-                            ref={ (ref) => this.recaptcha = ref }
-                            sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
-                            onResolved={ this.onResolved }
-                            badge="inline"
-                        />
                         <div className="wrapper_button">
-                            <input className="input-btn" type="submit" value={t('getQuote.form.send')} />
+                            <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('getQuote.form.send')} </button>
                         </div>
                     </form>
                 </SectionContainer>
