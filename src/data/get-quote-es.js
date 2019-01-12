@@ -14,6 +14,9 @@ const quoteEs = {
     errorEmail: 'Por favor ingresa tu correo',
     validEmail: 'Ingresa un correo valido',
     errorMessage: 'Por favor ingresa tu mensaje', 
+    sentMessage: 'Tu mensaje ha sido enviado',
+    oopsMessage: 'Oops algo ha sucedido enviando tu mensaje',
+    descriptionError: 'Write us directly to info@sancrisoft.com',
   }
 };
 

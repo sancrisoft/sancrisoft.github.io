@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import axios from 'axios'
+import ReCAPTCHA from "react-google-recaptcha"
+import SweetAlert from 'sweetalert2-react'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
@@ -13,15 +16,19 @@ import {
 import {
   SectionContainer,
 } from './styledComponents';
-class IndexPage extends Component {
+const recaptchaRef = React.createRef();
+class GetaQuote extends Component {
     state = {
         name: '',
         replyto: '',
         phone: '',
         message: '',
         send: false,
+        showAlert: false,
+        typeAlert: 'success',
+        alertMessage: '',
+        titleAlert: 'Message',
     }
-    form = null;
     handleChange = (event) => {
         const {
             target: {
@@ -30,6 +37,9 @@ class IndexPage extends Component {
             }
         } = event;
         this.setState({[name]: value});
+    }
+    closeAlert = () => {
+        this.setState({ showAlert: false });
     }
     validateForm = () => {
         const { name, replyto, message } = this.state;
@@ -40,44 +50,48 @@ class IndexPage extends Component {
     }
     handleSubmit = (e) => {
         this.setState({ send: true});
+  
         e.preventDefault();
-        const { name, replyto, phone, message } = this.state;
-        //grecaptcha.execute();
-        // const recaptchaValue = recaptchaRef.current.getValue();
-        // console.log('recaptchaValue', recaptchaValue);
+
         if(this.validateForm()){
-            this.form.submit();
-            // const opts = {
-            //     name,
-            //     replyto,
-            //     phone,
-            //     message,
-            //     'g-recaptcha-response': recaptchaValue,
-            // };
-            // axios.post(
-            //     "https://formspree.io/info@sancrisoft.com", 
-            //     opts, 
-            //     {headers: {"Accept": "application/json"}}
-            // )
-            // .then(function (response) {
-            //     console.log(response);
-            // })
-            // .catch(function (error) {
-            //     console.log(error);
-            // });
+            recaptchaRef.current.execute();
         }
         
     }
     onChange = (value) => {
-        console.log("Captcha value:", value);
+        const comp = this;
+        const { t } = this.props;
+        const { name, replyto, phone, message } = this.state;
+        if(value) {
+            const opts = {
+                name,
+                replyto,
+                phone,
+                message,
+            };
+            axios.post(
+                "https://submit-form.com/76a8d3ca-a33b-4442-ac33-158e38a34d82", 
+                opts, 
+                {headers: {"Accept": "application/json"}}
+            )
+            .then(function (response) {
+                recaptchaRef.current.props.grecaptcha.reset()
+                comp.setState({ name: '', replyto: '', phone: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true });
+            })
+            .catch(function (error) {
+                recaptchaRef.current.props.grecaptcha.reset();
+                comp.setState({ titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
+            });
+        }
       }
+    
     validateEmail(email) {
         var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
         return re.test(String(email).toLowerCase());
     }
     render() {
         const { data, t } = this.props;
-        const { name, send, replyto, message } = this.state;
+        const { name, send, replyto, message, showAlert, titleAlert, alertMessage } = this.state;
         const isInValidName = (name === '' && send);
         const isInValidMessage = (message === '' && send);
         const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
@@ -96,7 +110,7 @@ class IndexPage extends Component {
                 <PageSizer>
                 <SectionContainer>
                     <H3>{t('getQuote.form.title')}</H3>
-                    <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com">
+                    <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
                         <input className="input-text" type="text" name="name" id="name" placeholder={t('getQuote.form.name')} value={name} onChange={this.handleChange}/>
                         {
                             (isInValidName) && <label className="error" htmlFor="name">{t('getQuote.form.errorName')}</label>
@@ -111,10 +125,24 @@ class IndexPage extends Component {
                             (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
                         }
                         <input type="hidden" name="subject" value="Tell us about your project | SancriSoft" />
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            size="invisible"
+                            sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                            onChange={this.onChange}
+                        />
                         <div className="wrapper_button">
                             <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('getQuote.form.send')} </button>
                         </div>
                     </form>
+                    <SweetAlert
+                        show={showAlert}
+                        title={titleAlert}
+                        text={alertMessage}
+                        onConfirm={this.closeAlert}
+                        type="error"
+                        
+                    />
                 </SectionContainer>
                 </PageSizer>
             </Layout>
@@ -137,4 +165,4 @@ query getaQuoteQuery {
 }
 `;
 
-export default translate("translations")(IndexPage)
+export default translate("translations")(GetaQuote)

@@ -14,7 +14,10 @@ const quote = {
     errorName: 'Please enter your name',
     errorEmail: 'Please enter your email',
     validEmail: 'Enter a valid email',
-    errorMessage: 'Please enter your message', 
+    errorMessage: 'Please enter your message',
+    sentMessage: 'Your message has been sent',
+    oopsMessage: 'Oops something has happened sending your message',
+    descriptionError: 'Write us directly to info@sancrisoft.com',
   }
 };
 
