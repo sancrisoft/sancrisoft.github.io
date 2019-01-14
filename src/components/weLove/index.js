@@ -65,7 +65,7 @@ WeLove.propTypes = {
   textLink: PropTypes.string,
   link: PropTypes.string,
   image: PropTypes.object,
-  video: PropTypes.object,
+  video: PropTypes.string,
 };
 
 
