@@ -43,15 +43,15 @@ export const ContLeft = styled.div`
       width: 100%;
     `}
     ${breakpoint('desktop')`
-      height: 500px;
-      width: 500px;
+      height: 400px;
+      width: 400px;
     `}
   }
   ${breakpoint('tablet')`
     width: 55%;
   `}
   ${breakpoint('desktop')`
-    height: 640px;
+    height: 600px;
   `}
   .content-video {
     height: auto;
@@ -65,41 +65,29 @@ export const ContLeft = styled.div`
       margin: 0 auto;
       position: relative;
       width: 220px;
+      height: 100%;
+      display: flex;
+      align-items: center;
       ${breakpoint('desktop')`
-        width: 300px;
+        width: 250px;
       `}
       img {
-        margin: 0 auto;
+        margin: auto;
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
       }
-      .video-wrapper {
-        width: 120px;
-        margin: auto;
-        position: absolute;
-        top: 14px;
-        left: 0;
-        bottom: 50px;
+      img.mockup {
+        z-index: 2;
+      }
+      img.imgGif {
+        width: 177px;
         right: -12px;
-        z-index: -1;
         ${breakpoint('desktop')`
-          width: 240px;
-          top: 0px;
-          bottom: 135px;
-          right: 20px;
-          -webkit-transform: translate(8%,5%);
-          -ms-transform: translate(8%,5%);
-          transform: translate(8%,5%);
+          width: 200px;
         `}
-        video {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
       }
     }
   }
@@ -119,7 +107,7 @@ export const ContRight = styled.div`
     padding-top: 0;
   `}
   ${breakpoint('desktop')`
-    padding-bottom: 8em;
+    padding-bottom: 3.5em;
     padding-left: 2.5em;
   `}
 `;
