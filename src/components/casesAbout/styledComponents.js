@@ -23,6 +23,6 @@ export const AboutDescription = styled.div`
 `;
 
 export const A = styled.a`
-  display: flex;
   transition: all .5s;
+  margin-left: 6px;
 `;
