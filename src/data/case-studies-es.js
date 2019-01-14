@@ -8,7 +8,7 @@ const caseStudiesES = {
   about: {
     title: "Acerca de ",
     meattogo: {
-      description: " Spanish About Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid perspiciatis magnam, ipsum rem atque veritatis dolorem fugit qui, beatae excepturi odit fuga repellendus, deleniti. Amet, neque dicta qui totam illum."
+      description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos. Disponen de entregas para hogares y eventos, en porciones personalizadas y envasadas al vacío. La aplicación creada es una tienda virtual para simplificar el proceso de solicitud y entrega de los productos. Si quieres saber más visita."
     }
   }
 }

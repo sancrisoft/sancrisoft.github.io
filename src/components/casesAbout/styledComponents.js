@@ -21,3 +21,8 @@ export const AboutDescription = styled.div`
   width: 100%;
   padding-top: 1em;
 `;
+
+export const A = styled.a`
+  display: flex;
+  transition: all .5s;
+`;

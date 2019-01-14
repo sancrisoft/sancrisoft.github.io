@@ -7,7 +7,8 @@ import Title from '../../components/title'
 import {
   ContentAbout,
   AboutTitle,
-  AboutDescription
+  AboutDescription,
+  A
 } from './styledComponents'
 
 const CasesAbout = ({id ,urlNetwork, name, description}) => {
@@ -20,7 +21,10 @@ const CasesAbout = ({id ,urlNetwork, name, description}) => {
         />
       </AboutTitle>
       <AboutDescription>
-        <p>{description}</p>
+        <p>
+          {description}
+          <A href={urlNetwork} target="_blank" >{urlNetwork}</A>
+        </p>
       </AboutDescription>
     </ContentAbout>
   );
