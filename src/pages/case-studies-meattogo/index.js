@@ -101,6 +101,7 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
+
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
