@@ -20,6 +20,9 @@ import Process from '../components/process'
 import WeLove from '../components/weLove'
 import GetAQuote from '../components/getAQuote'
 import Button from '../components/button'
+
+import VideoPhone from '../images/home/videoHome.gif'
+
 import {
   ContTestimonial,
   ContWeLove,
@@ -122,6 +125,7 @@ class IndexPage extends Component {
                 image={data[`meattogo`].childImageSharp.sizes}
                 textLink={t('home.weLove.textLink')}
                 link={link}
+                video={VideoPhone}
               />
             </PageSizer>
           </ContWeLove>
