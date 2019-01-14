@@ -42,7 +42,10 @@ export const CarouselItem = styled.div`
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      width: 50%;
+      width: 72%;
+      ${breakpoint('tablet')`
+        width: 50%;
+      `}
       ${breakpoint('desktop')`
         width: 45%;
       `}
@@ -52,7 +55,7 @@ export const CarouselItem = styled.div`
         text-align: center;
       }
       h3 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         letter-spacing: 0.03rem;
         ${breakpoint('tablet')`
           font-size: 2rem;

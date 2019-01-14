@@ -6,13 +6,15 @@ import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import CasesImage from '../../components/casesImage'
 import Background from '../../components/casesBackground'
+import About from '../../components/casesAbout'
 import i18n from '../../data/translations'
 
 import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
-  ContentBack
+  ContentBack,
+  ContentAbout
 } from '../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
@@ -32,17 +34,52 @@ class IndexPage extends Component {
       t
     } = this.props;
     const meattogo = cases.find(item => item.id === "meattogo");
+    const {
+      id,
+      name,
+      appStore,
+      playStore
+    } = meattogo;
     return (
       <CasesImage
-        key={meattogo.id}
-        title={meattogo.name}
+        key={id}
+        title={name}
         description={t(`caseStudies.cases.meattogo.description`)}
         image={data.meattogo.childImageSharp.sizes}
         playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={meattogo.playStore}
+        linkPlayStore={playStore}
         appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={meattogo.appStore}
+        linkAppStore={appStore}
         phone={ImagePhone}
+      />
+    );
+  }
+
+  renderCasesAbout = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              about,
+            }
+          }
+        }
+      },
+      t
+    } = this.props;
+
+    const meattogo = about.find(item => item.id === "meattogo");
+    const {
+      id,
+      networkApp
+    } = meattogo;
+    return (
+      <About
+        id={id}
+        urlNetwork={networkApp}
+        name={t(`caseStudies.about.title`)}
+        description={t(`caseStudies.about.meattogo.description`)}
       />
     );
   }
@@ -52,6 +89,7 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
+
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
@@ -65,6 +103,9 @@ class IndexPage extends Component {
                 image={data.BackgroundMeattogo.childImageSharp.sizes}
               />
             </ContentBack>
+            <ContentAbout>
+              { this.renderCasesAbout() }
+            </ContentAbout>
           </ContentCase>
       </Layout>
       </I18nextProvider>
@@ -95,6 +136,10 @@ query caseStudies {
           name
           appStore
           playStore
+        }
+        about {
+          id
+          networkApp
         }
       }
     }
