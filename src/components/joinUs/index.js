@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { translate } from "react-i18next"
+import ReCAPTCHA from "react-google-recaptcha"
 import PropTypes from 'prop-types'
+import axios from 'axios'
+import SweetAlert from 'sweetalert2-react'
+
 
 import {
   Container,
@@ -29,6 +33,10 @@ class JoinUs extends Component {
     positionError: '',
     whyError: '',
     dirty: false,
+    alertMessage: '',
+    titleAlert: '',
+    showAlert: false,
+    alertType: 'success',
   }
 
   validate = () => {
@@ -66,15 +74,60 @@ class JoinUs extends Component {
     });
   }
 
+  closeAlert = () => this.setState({ showAlert: false });
+
   handleSubmit = (e) => {
     e.preventDefault();
-    if(this.validate()) this.joinUsForm.submit();
+    if(this.validate()) this.captchaRef.execute();
+  }
+
+  sendEmail = (value) => {
+    const {
+      email,
+      position,
+      why,
+    } = this.state;
+    const { t } = this.props;
+    if (value) {
+      const opts = {
+        email,
+        position,
+        why,
+      };
+      axios.post(
+          "https://submit-form.com/XPfHm4tw8tBUGwsoebGLX", 
+          opts, 
+          {headers: {"Accept": "application/json"}}
+      )
+      .then((response) => {
+        this.captchaRef.props.grecaptcha.reset();
+        this.setState({
+          email: '',
+          position: '',
+          why: '',
+          titleAlert: t('careers.join.successTitle'),
+          typeAlert: 'success',
+          alertMessage: t('careers.join.successBody'),
+          showAlert: true,
+          alertType: 'success'
+        });
+      })
+      .catch((error) => {
+        this.captchaRef.props.grecaptcha.reset();
+        this.setState({
+          titleAlert: t('careers.join.errorTitle'),
+          typeAlert: 'info',
+          alertMessage: t('careers.join.errorBody'),
+          showAlert: true,
+          alertType: 'error'
+        });
+      });
+    }
   }
 
   render() {
     const {
       title,
-      joinUsEmail,
       emailLabel,
       positionLabel,
       whyLabel,
@@ -87,15 +140,18 @@ class JoinUs extends Component {
       why,
       emailError,
       positionError,
-      whyError
+      whyError,
+      showAlert,
+      titleAlert,
+      alertMessage,
+      alertType,
     } = this.state;
     return (
       <Container>
         <H3>{title}</H3>
         <form 
           ref={(form) => this.joinUsForm = form} 
-          onSubmit={this.handleSubmit} 
-          action={`https://formspree.io/${joinUsEmail}`} 
+          onSubmit={this.handleSubmit}
           method="POST"
         >
           <div className="form-control">
@@ -136,6 +192,12 @@ class JoinUs extends Component {
           <div className="reminder">
             <label>{reminder}</label>
           </div>
+          <ReCAPTCHA
+            ref={(ref) => this.captchaRef = ref}
+            size="invisible"
+            sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+            onChange={this.sendEmail}
+          />
           <div className="submit">
             <input 
               type="submit" 
@@ -144,6 +206,13 @@ class JoinUs extends Component {
             />
           </div>
         </form>
+        <SweetAlert
+          show={showAlert}
+          title={titleAlert}
+          text={alertMessage}
+          onConfirm={this.closeAlert}
+          type={alertType}
+        />
       </Container>
     )
   }
