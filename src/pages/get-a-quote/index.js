@@ -15,7 +15,7 @@ import {
 } from '../../components/styledComponents'
 import {
   SectionContainer,
-} from './styledComponents';
+} from '../../styles/get-a-quote/styledComponents';
 const recaptchaRef = React.createRef();
 class GetaQuote extends Component {
     state = {

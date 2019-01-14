@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
-import { Spring } from 'react-spring'
 import {
   H3,
 } from '../styledComponents'; 
@@ -26,23 +25,19 @@ const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
   }
 
   return (
-    <Spring from={{ opacity: 0, marginRight: -1000 }} to={{ opacity: 1, marginRight: 0 }}>
-      { props => (
-        <>
-          <div className={'grey-filter'} />
-          { renderContent() }
-          <div className={'detail-container'}>
-            <div className={'detail'} style={props}>
-              <H3>{t(`home.carousel.${id}.title`)}</H3>
-              <span>{t(`home.carousel.${id}.description`)}</span>
-              {
-                (link) && <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
-              }
-            </div>
-          </div>
-        </>
-      )}
-    </Spring>
+    <>
+      <div className={'grey-filter'} />
+      { renderContent() }
+      <div className={'detail-container'}>
+        <div className={'detail'}>
+          <H3>{t(`home.carousel.${id}.title`)}</H3>
+          <span>{t(`home.carousel.${id}.description`)}</span>
+          {
+            (link) && <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
+          }
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ import i18n from '../../data/translations'
 
 import {
   ContentCase,
-} from './styledComponents'
+} from '../../styles/case-studies/styledComponents';
 
 class IndexPage extends Component {
   render() {
@@ -21,7 +21,7 @@ class IndexPage extends Component {
           <SEO title={`Sancrisoft | ${t('caseStudies.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
           <ContentCase>
           </ContentCase>
-      </Layout>
+        </Layout>
       </I18nextProvider>
     );
   }
