@@ -7,6 +7,7 @@ import SEO from '../../components/seo'
 import CasesImage from '../../components/casesImage'
 import Background from '../../components/casesBackground'
 import About from '../../components/casesAbout'
+import Tecnology from '../../components/casesTecnology'
 import i18n from '../../data/translations'
 
 import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
@@ -106,6 +107,9 @@ class IndexPage extends Component {
             <ContentAbout>
               { this.renderCasesAbout() }
             </ContentAbout>
+            <Tecnology>
+
+            </Tecnology>
           </ContentCase>
       </Layout>
       </I18nextProvider>

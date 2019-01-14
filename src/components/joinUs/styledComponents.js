@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
 
 export const Container = styled.div`
-  padding: 2em 3em;
+  padding: 2em 2em;
   border-radius: 10px;
   background-color: rgba(197,197,197,0.15);
   margin: 1em;
+  position: sticky;
+  top: 80px;
   ${breakpoint('tablet')`
     margin: 2em;
   `}
