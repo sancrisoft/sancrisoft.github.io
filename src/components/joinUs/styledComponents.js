@@ -27,6 +27,7 @@ export const Container = styled.div`
     }
     div.reminder > label {
       font-style: italic;
+      font-size: 12px;
     }
     div.form-control {
       display: flex;
@@ -49,16 +50,16 @@ export const Container = styled.div`
     input[type="submit"] {
       background-color: #F28724;
       border: none;
-      border-radius: 15px;
+      border-radius: 4px;
       color: white;
-      padding: 2px 10px;
+      padding: 4px 18px;
       font-size: 16px;
       margin-top: 2em;
       &:focus {
         outline: 0;
       }
       ${breakpoint('tablet')`
-        padding: 5px 20px;
+        padding: 8px 24px;
         font-size: 20px;
       `}
       ${breakpoint('desktop')`
