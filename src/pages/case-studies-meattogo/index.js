@@ -13,9 +13,8 @@ import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
-  ContentBack,
-  ContentAbout
-} from './styledComponents'
+  ContentBack
+} from '../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
 

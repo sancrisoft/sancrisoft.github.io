@@ -13,8 +13,10 @@ const careersES = {
     whyLabel: "Por qué quieres trabajar con nosotros?",
     reminder: "Asegurate de adjuntar un link a tu CV, Linkedin, Github o algo que demuestre tu trabajo",
     submitLabel: "Aplicar",
-    noFieldError: "Este campo es obligatorio",
-    emailError: "Por favor ingresa un email valido",
+    successTitle: "Mensaje enviado",
+    successBody: "Nos contactaremos contigo muy pronto",
+    errorTitle: "Oh no!",
+    errorBody: "Algo ha ido mal. Trata de comunicarte directamente: recruitment@sancrisoft.com",
   },
   benefits: {
     title: "Beneficios",

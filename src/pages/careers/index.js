@@ -28,7 +28,7 @@ import {
   PositionDetailsContainer,
   PositionDetailsText,
   PositionDetailsForm,
-} from './styledComponents';
+} from '../../styles/careers/styledComponents';
 
 const WrapperButton = ({ id, onClick }) => {
   const handleClick = () => {

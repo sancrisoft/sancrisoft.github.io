@@ -1,24 +1,33 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import axios from 'axios'
+import ReCAPTCHA from "react-google-recaptcha"
+import SweetAlert from 'sweetalert2-react'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import { I18nextProvider, translate } from "react-i18next"
 import i18n from '../../data/translations'
+
 import {
   H3,
   PageSizer,
 } from '../../components/styledComponents'
 import {
   SectionContainer,
-} from './styledComponents';
-
-class IndexPage extends Component {
+} from '../../styles/get-a-quote/styledComponents';
+const recaptchaRef = React.createRef();
+class GetaQuote extends Component {
     state = {
         name: '',
         replyto: '',
         phone: '',
         message: '',
+        send: false,
+        showAlert: false,
+        typeAlert: 'success',
+        alertMessage: '',
+        titleAlert: 'Message',
     }
     handleChange = (event) => {
         const {
@@ -29,13 +38,65 @@ class IndexPage extends Component {
         } = event;
         this.setState({[name]: value});
     }
-    handleSubmit = (e) => {
-        e.preventDefault();
+    closeAlert = () => {
+        this.setState({ showAlert: false });
     }
+    validateForm = () => {
+        const { name, replyto, message } = this.state;
+        if(name === '') return false;
+        if(replyto === '' || !this.validateEmail(replyto)) return false;
+        if(message === '') return false;
+        return true;
+    }
+    handleSubmit = (e) => {
+        this.setState({ send: true});
+  
+        e.preventDefault();
 
+        if(this.validateForm()){
+            recaptchaRef.current.execute();
+        }
+        
+    }
+    onChange = (value) => {
+        const comp = this;
+        const { t } = this.props;
+        const { name, replyto, phone, message } = this.state;
+        if(value) {
+            const opts = {
+                subject: 'Tell us about your project', 
+                name,
+                replyto,
+                phone,
+                message,
+            };
+            axios.post(
+                "https://submit-form.com/76a8d3ca-a33b-4442-ac33-158e38a34d82", 
+                opts, 
+                {headers: {"Accept": "application/json"}}
+            )
+            .then(function (response) {
+                recaptchaRef.current.props.grecaptcha.reset();
+                comp.setState({ send: false, name: '', replyto: '', phone: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+            })
+            .catch(function (error) {
+                recaptchaRef.current.props.grecaptcha.reset();
+                comp.setState({ titleAlert: t('getQuote.form.descriptionError'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
+            });
+        }
+      }
+    
+    validateEmail(email) {
+        var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        return re.test(String(email).toLowerCase());
+    }
     render() {
         const { data, t } = this.props;
-        const { name } = this.state;
+        const { name, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
+        const isInValidName = (name === '' && send);
+        const isInValidMessage = (message === '' && send);
+        const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
+        const emailValidationMessage = (showErrorEmail && replyto !== '') ? t('getQuote.form.validEmail') : t('getQuote.form.errorEmail');
         return (
         <I18nextProvider i18n={i18n}>
             <Layout>
@@ -50,16 +111,39 @@ class IndexPage extends Component {
                 <PageSizer>
                 <SectionContainer>
                     <H3>{t('getQuote.form.title')}</H3>
-                    <form className="form contact_form" id="contact_form" method="POST" action="//formspree.io/info@sancrisoft.com" noValidate="novalidate" onSubmit={this.handleSubmit}>
+                    <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
                         <input className="input-text" type="text" name="name" id="name" placeholder={t('getQuote.form.name')} value={name} onChange={this.handleChange}/>
-                        <input className="input-text" type="text" name="replyto" id="replyto" placeholder={t('getQuote.form.email')} />
-                        <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} />
-                        <textarea className="input-text text-area" name="message" id="message" cols="0" rows="0" placeholder={t('getQuote.form.message')}></textarea>
+                        {
+                            (isInValidName) && <label className="error" htmlFor="name">{t('getQuote.form.errorName')}</label>
+                        }
+                        <input className="input-text" type="text" name="replyto" id="replyto" placeholder={t('getQuote.form.email')} value={replyto} onChange={this.handleChange} />
+                        {
+                            (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
+                        }
+                        <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
+                        <textarea className="input-text text-area" name="message" id="message" cols="0" rows="0" placeholder={t('getQuote.form.message')} value={message} onChange={this.handleChange}></textarea>
+                        {
+                            (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
+                        }
                         <input type="hidden" name="subject" value="Tell us about your project | SancriSoft" />
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            size="invisible"
+                            sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                            onChange={this.onChange}
+                        />
                         <div className="wrapper_button">
-                            <input className="input-btn" type="submit" value={t('getQuote.form.send')} />
+                            <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('getQuote.form.send')} </button>
                         </div>
                     </form>
+                    <SweetAlert
+                        show={showAlert}
+                        title={titleAlert}
+                        text={alertMessage}
+                        onConfirm={this.closeAlert}
+                        type={typeAlert}
+                        
+                    />
                 </SectionContainer>
                 </PageSizer>
             </Layout>
@@ -82,4 +166,4 @@ query getaQuoteQuery {
 }
 `;
 
-export default translate("translations")(IndexPage)
+export default translate("translations")(GetaQuote)

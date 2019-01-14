@@ -15,6 +15,10 @@ const careers = {
     submitLabel: "Apply Now",
     noFieldError: "This field is required",
     emailError: "Please enter a valid email",
+    successTitle: "Message sent",
+    successBody: "We'll be in touch with you very soon",
+    errorTitle: "Oh no!",
+    errorBody: "Something went wrong. Try to email us directly: recruitment@sancrisoft.com",
   },
   benefits: {
     title: "Benefits",

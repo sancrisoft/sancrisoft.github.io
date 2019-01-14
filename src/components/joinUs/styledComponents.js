@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 export const Container = styled.div`
   padding: 2em 3em;
   border-radius: 10px;
-  background-color: rgba(0,0,0,0.15);
+  background-color: rgba(197,197,197,0.15);
   margin: 1em;
   ${breakpoint('tablet')`
     margin: 2em;
@@ -27,6 +27,7 @@ export const Container = styled.div`
     }
     div.reminder > label {
       font-style: italic;
+      font-size: 12px;
     }
     div.form-control {
       display: flex;
@@ -49,23 +50,18 @@ export const Container = styled.div`
     input[type="submit"] {
       background-color: #F28724;
       border: none;
-      border-radius: 15px;
+      border-radius: 4px;
       color: white;
-      padding: 2px 10px;
-      font-size: 16px;
+      padding: 6px 20px;
+      font-size: 0.9rem;
       margin-top: 2em;
+      cursor: pointer;
+      &:hover {
+        background-color: #ffa44f;
+      }
       &:focus {
         outline: 0;
       }
-      ${breakpoint('tablet')`
-        padding: 5px 20px;
-        font-size: 20px;
-      `}
-      ${breakpoint('desktop')`
-        padding: 15px 40px;
-        font-size: 24px;
-        margin-top: 2em;
-      `}
     }
   }
 `;
