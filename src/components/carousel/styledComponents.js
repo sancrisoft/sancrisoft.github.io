@@ -11,28 +11,32 @@ export const CarouselContainer = styled.div`
     z-index: 1;
     top: 50%;
     svg {
-      width: 36px;
-      height: 36px;
+      width: 25px;
+      height: 25px;
+      ${breakpoint('desktop')`
+        width: 36px;
+        height: 36px;
+      `}
       ${breakpoint('desktop')`
         width: 48px;
         height: 48px;
       `}
     }
   }
-  .slick-prev { 
-    left: 2%; 
-    &:before { 
-      display: none; 
-    } 
+  .slick-prev {
+    left: 2%;
+    &:before {
+      display: none;
+    }
   }
-  .slick-next { 
+  .slick-next {
     right: 5%;
     ${breakpoint('desktop')`
       right: 2%;
     `}
-    &:before { 
-      display: none; 
-    }  
+    &:before {
+      display: none;
+    }
   }
   .slick-dots {
     position: absolute;
