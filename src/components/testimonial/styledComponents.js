@@ -46,7 +46,7 @@ export const ContDescripcion = styled.div`
   }
   p {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-style: italic;
     line-height: 1.2;
     display: flex;
