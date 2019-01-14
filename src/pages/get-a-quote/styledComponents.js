@@ -56,6 +56,14 @@ export const SectionContainer = styled.section`
         color: #fff;
       }
     }
+    label.error {
+      font-weight: normal;
+      color: #d61400;
+      font-size: 14px;
+      font-style: italic;
+      position: relative;
+      top: -4px;
+    }
     ${breakpoint('mobile')`
       width: 100%;
     `}
