@@ -18,8 +18,8 @@ const home = {
   testimonials: {
     1: {
       id: 1,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Founder, Google'
+      description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
+      title: 'Founder / Financial Advisor of ArenaBursatil.com'
     },
     2: {
       id: 2,
