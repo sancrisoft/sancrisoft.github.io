@@ -64,6 +64,7 @@ class GetaQuote extends Component {
         const { name, replyto, phone, message } = this.state;
         if(value) {
             const opts = {
+                subject: 'Tell us about your project', 
                 name,
                 replyto,
                 phone,
@@ -75,12 +76,12 @@ class GetaQuote extends Component {
                 {headers: {"Accept": "application/json"}}
             )
             .then(function (response) {
-                recaptchaRef.current.props.grecaptcha.reset()
-                comp.setState({ name: '', replyto: '', phone: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true });
+                recaptchaRef.current.props.grecaptcha.reset();
+                comp.setState({ send: false, name: '', replyto: '', phone: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
             })
             .catch(function (error) {
                 recaptchaRef.current.props.grecaptcha.reset();
-                comp.setState({ titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
+                comp.setState({ titleAlert: t('getQuote.form.descriptionError'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
             });
         }
       }
@@ -91,7 +92,7 @@ class GetaQuote extends Component {
     }
     render() {
         const { data, t } = this.props;
-        const { name, send, replyto, message, showAlert, titleAlert, alertMessage } = this.state;
+        const { name, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
         const isInValidName = (name === '' && send);
         const isInValidMessage = (message === '' && send);
         const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
@@ -119,7 +120,7 @@ class GetaQuote extends Component {
                         {
                             (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
                         }
-                        <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} />
+                        <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
                         <textarea className="input-text text-area" name="message" id="message" cols="0" rows="0" placeholder={t('getQuote.form.message')} value={message} onChange={this.handleChange}></textarea>
                         {
                             (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
@@ -140,7 +141,7 @@ class GetaQuote extends Component {
                         title={titleAlert}
                         text={alertMessage}
                         onConfirm={this.closeAlert}
-                        type="error"
+                        type={typeAlert}
                         
                     />
                 </SectionContainer>
