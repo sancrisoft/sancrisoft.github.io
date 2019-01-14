@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import ReactPlayer from 'react-player'
 import Img from 'gatsby-image'
 import Title from '../title'
 import Icons from '../icons'
 
 import imgMobile from '../../images/home/iphonePrueba.png'
-import videoMobile from '../../images/home/videoSancri.mp4'
 
 import {
   BoxContent,
@@ -18,23 +16,15 @@ import {
   A,
 } from './styledComponents'
 
-const WeLove = ({ description, image, title, textLink, link }) => {
+const WeLove = ({ description, image, title, textLink, link, video }) => {
   return(
     <BoxContent>
       <ContLeft>
         <div className="content-video">
           <div className="image-wrap">
-            <img src={imgMobile} alt="mob"/>
-            <div className="video-wrapper">
-              <ReactPlayer
-                url={videoMobile}
-                width="100%"
-                height="100%"
-                playing
-                loop
-                muted
-              />
-            </div>
+            <img src={imgMobile} alt="mob" className="mockup" />
+
+            <img src={video} alt="gif" className="imgGif"/>
           </div>
         </div>
       </ContLeft>
@@ -74,6 +64,7 @@ WeLove.propTypes = {
   textLink: PropTypes.string,
   link: PropTypes.string,
   image: PropTypes.object,
+  video: PropTypes.string,
 };
 
 
