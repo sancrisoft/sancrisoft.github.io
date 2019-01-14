@@ -13,7 +13,8 @@ import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
-  ContentBack
+  ContentBack,
+  ContentAbout
 } from '../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
@@ -65,7 +66,6 @@ class IndexPage extends Component {
           }
         }
       },
-      data,
       t
     } = this.props;
 
@@ -86,17 +86,6 @@ class IndexPage extends Component {
 
   render() {
     const {
-      data: {
-        site: {
-          siteMetadata: {
-            caseStudies: {
-              about: {
-                id
-              },
-            }
-          }
-        }
-      },
       data,
       t
     } = this.props;
