@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Title from '../../components/title'
 
@@ -7,14 +8,13 @@ import {
   TecnologyTitle
 } from './styledComponents'
 
-const CasesTecnology = () => {
+const CasesTecnology = ({title}) => {
   return(
     <ContentTecnology>
-      tecnology
       <TecnologyTitle>
         <Title
           type={2}
-          text="Tecnologies"
+          text={title}
         />
       </TecnologyTitle>
     </ContentTecnology>
@@ -22,7 +22,7 @@ const CasesTecnology = () => {
 }
 
 CasesTecnology.propTypes = {
-
+  title: PropTypes.string,
 };
 
 export default CasesTecnology

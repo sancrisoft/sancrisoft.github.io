@@ -16,6 +16,9 @@ const caseStudies = {
         }
       ],
     }
+  },
+  tecnologies: {
+    title: "Tecnologies",
   }
 }
 
