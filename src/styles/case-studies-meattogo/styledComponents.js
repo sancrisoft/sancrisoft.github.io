@@ -46,3 +46,18 @@ export const ContentAbout = styled.section`
     max-width: 78%;
   `}
 `;
+
+export const ContentTecnology = styled.section`
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  ${breakpoint('tablet')`
+    max-width: 90%;
+  `}
+  ${breakpoint('desktop')`
+    max-width: 78%;
+  `}
+`;

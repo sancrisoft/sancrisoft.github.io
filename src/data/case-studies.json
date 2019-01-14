@@ -13,5 +13,10 @@
       "id": "meattogo",
       "networkApp": "https://www.facebook.com/meattogo"
     }
+  ],
+  "tecnologies": [
+    {
+      "id": "meattogo"
+    }
   ]
 }

@@ -15,7 +15,8 @@ import {
   ContentCase,
   CasePageSizer,
   ContentBack,
-  ContentAbout
+  ContentAbout,
+  ContentTecnology
 } from '../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
@@ -85,6 +86,17 @@ class IndexPage extends Component {
     );
   }
 
+  renderCasesTecnologies = () => {
+    const {
+      t
+    } = this.props;
+    return(
+      <Tecnology
+        title={t(`caseStudies.tecnologies.title`)}
+      />
+    );
+  }
+
   render() {
     const {
       data,
@@ -107,9 +119,9 @@ class IndexPage extends Component {
             <ContentAbout>
               { this.renderCasesAbout() }
             </ContentAbout>
-            <Tecnology>
-
-            </Tecnology>
+            <ContentTecnology>
+              { this.renderCasesTecnologies() }
+            </ContentTecnology>
           </ContentCase>
       </Layout>
       </I18nextProvider>
