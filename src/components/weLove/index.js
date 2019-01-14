@@ -22,10 +22,9 @@ const WeLove = ({ description, image, title, textLink, link, video }) => {
       <ContLeft>
         <div className="content-video">
           <div className="image-wrap">
-            <img src={imgMobile} alt="mob"/>
-            <div className="video-wrapper">
-              <img src={video} alt="video"/>
-            </div>
+            <img src={imgMobile} alt="mob" className="mockup" />
+
+            <img src={video} alt="gif" className="imgGif"/>
           </div>
         </div>
       </ContLeft>
