@@ -12,6 +12,9 @@ export const AboutTitle = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  h2 {
+    text-transform: capitalize;
+  }
 `;
 export const AboutDescription = styled.div`
   display: flex;

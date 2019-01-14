@@ -16,7 +16,7 @@ const CasesAbout = ({id ,urlNetwork, name, description}) => {
       <AboutTitle>
         <Title
           type={2}
-          text={`${id}`}
+          text={`${name} ${id}`}
         />
       </AboutTitle>
       <AboutDescription>

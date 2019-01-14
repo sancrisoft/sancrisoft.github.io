@@ -75,7 +75,6 @@ class IndexPage extends Component {
       id,
       networkApp
     } = meattogo;
-    console.log(meattogo);
     return (
       <About
         id={id}

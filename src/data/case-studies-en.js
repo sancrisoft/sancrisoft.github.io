@@ -8,7 +8,7 @@ const caseStudies = {
   about: {
     title: "About ",
     meattogo: {
-      description: " English About Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid perspiciatis magnam, ipsum rem atque veritatis dolorem fugit qui, beatae excepturi odit fuga repellendus, deleniti. Amet, neque dicta qui totam illum."
+      description: "Meat To Go is an online butchery located in Panama specialized in meat, poultry and seafood. They have "
     }
   }
 }
