@@ -2,22 +2,22 @@ import React, {Component} from 'react'
 import { graphql } from 'gatsby'
 import { I18nextProvider, translate } from "react-i18next"
 
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import CasesImage from '../../components/casesImage'
-import Background from '../../components/casesBackground'
-import About from '../../components/casesAbout'
-import Tecnology from '../../components/casesTecnology'
-import i18n from '../../data/translations'
+import Layout from '../../../components/layout'
+import SEO from '../../../components/seo'
+import CasesImage from '../../../components/casesImage'
+import Background from '../../../components/casesBackground'
+import About from '../../../components/casesAbout'
+import Tecnology from '../../../components/casesTecnology'
+import i18n from '../../../data/translations'
 
-import ImagePhone from '../../images/cases-studies/meattogo/Meattogo.gif'
+import ImagePhone from '../../../images/cases-studies/meattogo/Meattogo.gif'
 import {
   ContentCase,
   CasePageSizer,
   ContentBack,
   ContentAbout,
   ContentTecnology
-} from '../../styles/case-studies-meattogo/styledComponents';
+} from '../../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
 
@@ -74,14 +74,28 @@ class IndexPage extends Component {
     const meattogo = about.find(item => item.id === "meattogo");
     const {
       id,
-      networkApp
+      networkApp,
+      services,
+      features
     } = meattogo;
+
+    const service = services.map((item) => {
+      return(t(`caseStudies.about.meattogo.services.${item.id}`))
+    })
+    const feature = features.map((item) => {
+      return(t(`caseStudies.about.meattogo.features.${item.id}`))
+    })
+
     return (
       <About
         id={id}
         urlNetwork={networkApp}
         name={t(`caseStudies.about.title`)}
         description={t(`caseStudies.about.meattogo.description`)}
+        services={service}
+        titleServices={t(`caseStudies.about.meattogo.services.title`)}
+        features={feature}
+        titleFeatures={t(`caseStudies.about.meattogo.features.title`)}
       />
     );
   }
@@ -156,6 +170,12 @@ query caseStudies {
         about {
           id
           networkApp
+          services {
+            id
+          }
+          features {
+            id
+          }
         }
       }
     }

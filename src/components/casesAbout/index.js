@@ -8,10 +8,14 @@ import {
   ContentAbout,
   AboutTitle,
   AboutDescription,
-  A
+  AboutMore,
+  Services,
+  Features,
+  A,
+  UL
 } from './styledComponents'
 
-const CasesAbout = ({id ,urlNetwork, name, description}) => {
+const CasesAbout = ({id ,urlNetwork, name, description, services, features, titleServices, titleFeatures }) => {
   return(
     <ContentAbout>
       <AboutTitle>
@@ -26,6 +30,34 @@ const CasesAbout = ({id ,urlNetwork, name, description}) => {
           <A href={urlNetwork} target="_blank" >{urlNetwork}</A>
         </p>
       </AboutDescription>
+      <AboutMore>
+        <Services>
+          <Title
+            type={4}
+            text={titleServices}
+          />
+          <UL>
+            {
+              services.map((item, i) => {
+                return(<li key={i}>{item}</li>)
+              })
+            }
+          </UL>
+        </Services>
+        <Features>
+          <Title
+            type={4}
+            text={titleFeatures}
+          />
+          <UL>
+            {
+              features.map((item, i) => {
+                return(<li key={i}>{item}</li>)
+              })
+            }
+          </UL>
+        </Features>
+      </AboutMore>
     </ContentAbout>
   );
 }
@@ -35,6 +67,10 @@ CasesAbout.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
   description: PropTypes.string,
+  titleServices: PropTypes.string,
+  services: PropTypes.array,
+  titleFeatures: PropTypes.string,
+  features: PropTypes.array,
 };
 
 export default CasesAbout
