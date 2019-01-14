@@ -78,6 +78,38 @@ class IndexPage extends Component {
     openPositionSelected: null,
   };
 
+  componentDidMount() {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            careers: {
+              openPositions,
+            },
+          },
+        },
+      },
+      t,
+    } = this.props;
+    const friendlyIdToSearch = window.location.hash ? window.location.hash.substr(1) : null;
+    if (friendlyIdToSearch) {
+      for (var i = 0; i < openPositions; i++) {
+        if (t(`careers.openPositions.positions.${i}.friendlyId`) === friendlyIdToSearch) {
+          this.setState({
+            openPositionSelected: i,
+          });
+          setTimeout(() => {
+            document.getElementById(friendlyIdToSearch).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }, 1000);
+          return;
+        }
+      }
+    }
+  }
+
   renderOurRecruitment = () => {
     const {
       data: {
@@ -104,9 +136,19 @@ class IndexPage extends Component {
   }
 
   onClickPosition = ( positionId ) => {
+    const { t } = this.props;
+    const element = t(`careers.openPositions.positions.${positionId}.friendlyId`);
     this.setState({
       openPositionSelected: positionId,
+    }, () => {
+      document.getElementById(element).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     })
+    setTimeout(() => {
+      window.location.hash = element;
+    }, 300)
   }
 
   renderBenefits = () => {
@@ -169,8 +211,8 @@ class IndexPage extends Component {
       t,
     } = this.props;
     return (
-      <JoinUs 
-        joinUsEmail={joinUsEmail} 
+      <JoinUs
+        joinUsEmail={joinUsEmail}
         title={t('careers.join.title')}
         emailLabel={t('careers.join.emailLabel')}
         positionLabel={t('careers.join.positionLabel')}
@@ -222,7 +264,9 @@ class IndexPage extends Component {
           </SectionContainer>
           {openPositionSelected !== null && <PositionDetailsContainer>
             <PositionDetailsText>
-              <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
+              <div id={t(`careers.openPositions.positions.${openPositionSelected}.friendlyId`)} style={{paddingTop: '100px', marginTop: '-100px'}}>
+                <H3>{t(`careers.openPositions.positions.${openPositionSelected}.title`)}</H3>
+              </div>
               {(t([`careers.openPositions.positions.${openPositionSelected}.image`, ''])) && (
                 <ImgCustom src={withPrefix(`/images/careers/${t(`careers.openPositions.positions.${openPositionSelected}.image`)}`)} />
               )}
