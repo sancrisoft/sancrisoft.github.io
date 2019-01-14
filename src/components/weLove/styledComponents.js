@@ -77,28 +77,26 @@ export const ContLeft = styled.div`
         right: 0;
       }
       .video-wrapper {
-        width: 120px;
+        width: 177px;
         margin: auto;
         position: absolute;
-        top: 14px;
+        top: 12px;
         left: 0;
-        bottom: 50px;
         right: -12px;
         z-index: -1;
+        ${breakpoint('tablet')`
+          top: 14px;
+        `}
         ${breakpoint('desktop')`
           width: 240px;
-          top: 0px;
-          bottom: 135px;
           right: 20px;
+          top: 20px;
           -webkit-transform: translate(8%,5%);
           -ms-transform: translate(8%,5%);
           transform: translate(8%,5%);
         `}
-        video {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        img {
+          width: 99%;
         }
       }
     }
