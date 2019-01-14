@@ -13,7 +13,7 @@ import {
   ContentCase,
   CasePageSizer,
   ContentBack
-} from './styledComponents'
+} from '../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
 
