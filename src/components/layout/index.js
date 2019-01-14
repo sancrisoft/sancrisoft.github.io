@@ -36,7 +36,7 @@ class Layout extends Component {
   };
 
   handleScroll = (event) =>  {
-    if(window.scrollY > 100) {
+    if(window.scrollY > 10) {
       this.setState({ isWhiteTheme: true });
     } else {
       this.setState({ isWhiteTheme: false });
