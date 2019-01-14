@@ -176,31 +176,31 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query aboutUs {
-  aboutUsMainImage:file(relativePath: { eq: "aboutUs/team.png" }) {
+  aboutUsMainImage:file(relativePath: { eq: "aboutUs/team.jpg" }) {
     ...imageFragment
   }
-  jhony:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  jhony:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  johan:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  johan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  carlos:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  carlos:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  alejo:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  alejo:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  juan:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  juan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  samuel:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  samuel:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  bryan:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  bryan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  miguel:file(relativePath: { eq: "aboutUs/team/samuel.png" }) {
+  miguel:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
   valueintegrity:file(relativePath: { eq: "aboutUs/values/integrity.png" }) {
