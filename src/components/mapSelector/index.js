@@ -58,10 +58,10 @@ export class MapSelector extends Component {
         </PageSizer>
         <div className="map-container">
           <Map
-            latitude={office ? parseFloat(office.latitude) : 6.163105527919029}
-            longitude={office ? parseFloat(office.longitude) : -75.60219486509112}
+            latitude={office ? parseFloat(office.latitude) : 6.163081958304929}
+            longitude={office ? parseFloat(office.longitude) : -75.6021516674454}
             markerIcon={logo}
-            zoom={16}
+            zoom={15}
           />
         </div>
       </SectionContainer>
