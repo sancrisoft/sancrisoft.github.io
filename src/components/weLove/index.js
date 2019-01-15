@@ -40,7 +40,7 @@ const WeLove = ({ description, image, title, textLink, link, video }) => {
         <RightBottom>
           <p>{description}</p>
           <Link>
-            <A href={link} target="_blank" className="love">
+            <A href={link} className="love">
               {textLink}
               <span className="contentIcon">
                 <Icons

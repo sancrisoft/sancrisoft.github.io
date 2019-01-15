@@ -189,7 +189,7 @@ query caseStudies {
   mailgun:file(relativePath: { eq: "cases-studies/meattogo/mailgun.png" }) {
     ...imageFragment
   }
-  boilerplate:file(relativePath: { eq: "cases-studies/meattogo/boilerplate.jpg" }) {
+  ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
     ...imageFragment
   }
   site {
