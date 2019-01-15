@@ -164,5 +164,8 @@
       {
         "id": "gratitude"
       }
-    ]
+    ],
+    "getAQuote": {
+      "urlGetAQuote": "examples"
+    }
 }

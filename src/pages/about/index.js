@@ -97,11 +97,13 @@ class IndexPage extends Component {
       data: {
         site: {
           siteMetadata: {
-            home: {
-              offices,
+            aboutUs: {
               getAQuote: {
                 urlGetAQuote
               },
+            },
+            home: {
+              offices,
             },
           },
         },
@@ -163,10 +165,11 @@ class IndexPage extends Component {
           </SectionContainer>
         </PageSizer>
         <GetAQuote
-          desc={t('home.getAQuote.description')}
+          desc={t('aboutUs.getAQuote.description')}
         >
           <Button
             size="20px"
+            text={t('aboutUs.getAQuote.titleButton')}
             onClick={ () => navigate(urlGetAQuote)}
           />
         </GetAQuote>
@@ -245,11 +248,11 @@ query aboutUs {
         ourValues {
           id
         }
-      }
-      home {
         getAQuote {
           urlGetAQuote
         },
+      }
+      home {
         offices {
           id
           title
