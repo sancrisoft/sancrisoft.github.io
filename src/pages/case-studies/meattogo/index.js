@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { graphql } from 'gatsby'
-import { I18nextProvider, translate } from "react-i18next"
+import { I18nextProvider, withNamespaces } from "react-i18next"
 
 import Layout from '../../../components/layout'
 import SEO from '../../../components/seo'
@@ -183,4 +183,4 @@ query caseStudies {
 }
 `;
 
-export default translate("translations")(IndexPage)
+export default withNamespaces('translations')(IndexPage)

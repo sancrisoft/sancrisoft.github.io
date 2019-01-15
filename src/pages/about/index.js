@@ -11,7 +11,7 @@ import GetAQuote from '../../components/getAQuote'
 import Button from '../../components/button'
 import MapSelector from '../../components/mapSelector'
 import SEO from '../../components/seo'
-import { I18nextProvider, translate } from "react-i18next"
+import { I18nextProvider, withNamespaces } from "react-i18next"
 import i18n from '../../data/translations'
 
 import {
@@ -260,4 +260,4 @@ query aboutUs {
 }
 `;
 
-export default translate("translations")(IndexPage)
+export default withNamespaces('translations')(IndexPage)

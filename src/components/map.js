@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import ReactMapboxGl from "react-mapbox-gl"
 import { Marker } from "react-mapbox-gl"
 import styled from 'styled-components'
+import MapConfiguration from '../data/map-configuration.json';
 
 const MarkerImage = styled.img`
   margin-bottom: 0 !important;
@@ -15,7 +16,7 @@ const Map = ReactMapboxGl({
 
 const FinalMap = ({ latitude, longitude, markerIcon, zoom }) => (
   <Map
-    style="mapbox://styles/mapbox/streets-v9"
+    style={MapConfiguration}
     containerStyle={{
       height: "100%",
       width: "100%"

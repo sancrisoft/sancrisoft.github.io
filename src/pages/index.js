@@ -12,7 +12,7 @@ import Carousel from '../components/carousel'
 import ViewPort from '../components/HOC/withViewportHandler'
 import { I18nextProvider } from "react-i18next"
 import i18n from '../data/translations'
-import { translate } from "react-i18next"
+import { withNamespaces } from "react-i18next"
 
 import { PageSizer } from '../components/styledComponents'
 import MapSelector from '../components/mapSelector'
@@ -276,4 +276,4 @@ query homeQuery {
 }
 `;
 
-export default translate('translations')(ViewPort(IndexPage))
+export default withNamespaces('translations')(ViewPort(IndexPage))
