@@ -49,7 +49,7 @@ const home = {
     }
   },
   getAQuote: {
-    titleButton: "Get a Quote",
+    titleButton: "Contact Us",
     description: "Drop us a line and let\'s discuss what you have in mind to make it growth your business, no strings attached."
   },
   offices: [

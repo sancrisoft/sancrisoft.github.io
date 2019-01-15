@@ -32,7 +32,7 @@
         }
     ],
     "getAQuote": {
-      "urlGetAQuote": "examples"
+      "urlGetAQuote": "/contact"
     },
     "offices": [
         {

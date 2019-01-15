@@ -49,7 +49,7 @@ const homeES = {
     }
   },
   getAQuote: {
-    titleButton: "Quiero una Cotización",
+    titleButton: "Escríbenos",
     description: "Escríbenos sin ningún compromiso y hablemos de lo que tienes en mente para hacer crecer tu negocio."
   },
   offices: [
