@@ -18,8 +18,8 @@ const homeES = {
   testimonials: {
     1: {
       id: 1,
-      description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Fundador, Google'
+      description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
+      title: 'Fundador de ArenaBursatil.com'
     },
     2: {
       id: 2,

@@ -19,7 +19,7 @@ const home = {
     1: {
       id: 1,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
-      title: 'Founder / Financial Advisor of ArenaBursatil.com'
+      title: 'Founder of ArenaBursatil.com'
     },
     2: {
       id: 2,
@@ -106,14 +106,14 @@ const home = {
       web: {
         id: 'web',
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: 'Beautiful, fast and secure web applications tailored exclusively for your business goals. We\'ll take care of your application from the backend to the frontend using javascript trends techonlogies such as ReactJS. Depending on the scope of the project, features,time and budget, we individually choose the optimal options for your project.',
         technologies: [
           {
             id: 'react',
             tooltip: 'React',
             color: '#65DAF9'
           },
-          {
+          { 
             id: 'webpack',
             tooltip: 'Webpack',
             color: '#2177BE'
@@ -138,7 +138,7 @@ const home = {
       mobile: {
         id: 'mobile',
         title: 'Mobile Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: 'Ready to create a mobile app for your business? Starting from as little as a business concept to mobile app development, Netguru covers the entire application development process. We have years of experience in mobile app development services (in building both native and cross-platform solutions) in the area of healthcare, social networking, FinTech, digital community etc.',
         technologies: [
           {
             id: 'react',

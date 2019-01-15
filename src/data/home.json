@@ -33,22 +33,22 @@
         {
             "id": 1,
             "type": "image",
-            "link": "#"
+            "link": "/case-studies/meattogo"
         },
         {
             "id": 2,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         },
         {
             "id": 3,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         },
         {
             "id": 4,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         }
     ],
     "offices": [
