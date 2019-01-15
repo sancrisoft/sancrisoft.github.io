@@ -55,7 +55,6 @@ class IndexPage extends Component {
         name={member.fullName}
         position={t(`aboutUs.team.members.${member.id}.position`)}
         message1={t(`aboutUs.team.members.${member.id}.message1`)}
-        message2={t(`aboutUs.team.members.${member.id}.message2`)}
         socialMedia={member.socialMedia}
       />
     ));
@@ -183,28 +182,28 @@ query aboutUs {
   aboutUsMainImage:file(relativePath: { eq: "aboutUs/team.jpg" }) {
     ...imageFragment
   }
-  jhony:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  jhony:file(relativePath: { eq: "aboutUs/team/jhony.jpg" }) {
     ...imageFragment
   }
-  johan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  johan:file(relativePath: { eq: "aboutUs/team/johan.jpg" }) {
     ...imageFragment
   }
-  carlos:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  carlos:file(relativePath: { eq: "aboutUs/team/carlos.jpg" }) {
     ...imageFragment
   }
-  alejo:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  alejo:file(relativePath: { eq: "aboutUs/team/alejo.jpg" }) {
     ...imageFragment
   }
-  juan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  juan:file(relativePath: { eq: "aboutUs/team/juan.jpg" }) {
     ...imageFragment
   }
   samuel:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
     ...imageFragment
   }
-  bryan:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  bryan:file(relativePath: { eq: "aboutUs/team/bryan.jpg" }) {
     ...imageFragment
   }
-  miguel:file(relativePath: { eq: "aboutUs/team/samuel.jpg" }) {
+  miguel:file(relativePath: { eq: "aboutUs/team/miguel.jpg" }) {
     ...imageFragment
   }
   valueintegrity:file(relativePath: { eq: "aboutUs/values/integrity.png" }) {
@@ -213,7 +212,7 @@ query aboutUs {
   valuecommitment:file(relativePath: { eq: "aboutUs/values/commitment.png" }) {
     ...imageFragment
   }
-  valuecheerfulness:file(relativePath: { eq: "aboutUs/values/cheerfulness.png" }) {
+  valuehappiness:file(relativePath: { eq: "aboutUs/values/happiness.png" }) {
     ...imageFragment
   }
   valueexcellence:file(relativePath: { eq: "aboutUs/values/excellence.png" }) {

@@ -16,7 +16,7 @@ const renderSocialMedia = (socialMedia) => {
       <Icon
         width={25}
         height={25}
-        backgroundColor={'#000'}
+        backgroundColor={social.type == 'mail' ? '#fff' : '#000'}
         iconName={social.type}
       />
     </IconLink>
@@ -36,7 +36,6 @@ const MemberCard = ({ image, name, position, message1, message2, socialMedia }) 
     </div>
     <GreyOverlay>
       <H6>{message1}</H6>
-      <span>{message2}</span>
       <div className="social-media">
         { renderSocialMedia(socialMedia) }
       </div>

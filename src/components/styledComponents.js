@@ -67,9 +67,18 @@ export const H5 = styled.h5`
 `;
 export const H6 = styled.h6`
     font-family: Averta;
-    font-size: 1rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: .8rem;
+
+    ${breakpoint('desktop')`
+      position: absolute;
+      top: 70px;
+      padding: 0 20px;
+      font-size: 1rem;
+    `}
+}
+    
 `;
 export const Button = styled.button`
   border: none;

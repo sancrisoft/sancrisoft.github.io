@@ -2,51 +2,43 @@ const about = {
   title: "About Us",
   ourValueTitle: 'Our Values',
   bigImage: {
-    title: 'Our team is our greatest strength',
+    title: 'Our Team is Our Greatest Strength',
     description: 'A group of talented people who enjoy and have fun doing their work'
   },
   team: {
     title: 'Meet the Team',
     members: {
       jhony: {
-        position: "Manager",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "CEO & Co-founder",
+        message1: "Working on weekdays, riding on weekends",
       },
       juan: {
-        position: "Team Leader",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Project Leader & Co-founder",
+        message1: "Crafting web & mobile solutions that users love",
       },
       samuel: {
-        position: "Full Stack & Mobil Developer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Full Stack Developer & Co-founder",
+        message1: "In God I trust, in apps I work",
       },
       carlos: {
-        position: "Full Stack & Mobil Developer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Full Stack Developer",
+        message1: "I like electronic music and I consider myself technology lover",
       },
       alejo: {
-        position: "Developer & UI Designer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Software Developer & UI Designer",
+        message1: "I'm Drummer, I love to create and add value to the apps"
       },
       johan: {
-        position: "Full Stack & Mobil Developer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Full Stack Developer & Co-founder",
+        message1: "I’m passionate about trucks, reggaeton, soccer, cars and technology",
       },
       bryan: {
         position: "Frontend Developer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        message1: "I like sports and food, I love what I do!",
       },
       miguel: {
-        position: "Full Stack & Mobil Developer",
-        message1: "The best",
-        message2: "Of the fucking bests"
+        position: "Full Stack Developer",
+        message1: "I love videogames. Epic geek, somewhat nerdy",
       },
     }
   },
@@ -59,8 +51,8 @@ const about = {
       title: 'Commitment',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
-    cheerfulness: {
-      title: 'Cheerfulness',
+    happiness: {
+      title: 'Happiness',
       description: 'Lorem spanish ipsum dolor , ingles'
     },
     excellence: {
@@ -78,7 +70,7 @@ const about = {
   },
   visionMissionTitle: 'Our Mission & Vision',
   mission: 'We build web & mobile solutions, making honor of our agreements in terms of deadlines and quality to meet client expectations and help them to meet their business goals. We have a high qualify team, honest, responsible, service oriented, continuous learning and improving on latest trends technologies. We promote an excellent work environment and generate well-being for our employees.',
-  vision: '<p> Be a reference in building web and mobile solutions capable of develop your own product, consisting of a team of experts with extensive technical knowledge and excellent human quality.</p> <p> At Sancrisoft we feel proud because we enjoy our work, we are passionate about creating, learning, making our customers and our employees happy.</p>'
+  vision: 'Be a reference in building web and mobile solutions capable of develop your own product, consisting of a team of experts with extensive technical knowledge and excellent human quality. At Sancrisoft we feel proud because we enjoy our work, we are passionate about creating, learning, making our customers and our employees happy.'
 };
 
 export default about;

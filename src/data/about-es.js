@@ -2,51 +2,43 @@ const aboutES = {
   title: "Sobre nosotros",
   ourValueTitle: 'Nuestros Valores',
   bigImage: {
-    title: 'Nuestro equipo es nuestra mayor fortaleza.',
+    title: 'Nuestro Equipo es Nuestra Mayor Fortaleza.',
     description: 'Un grupo de personas con talento que disfrutan y se divierten haciendo su trabajo'
   },
   team: {
     title: 'Conoce al Equipo',
     members: {
       jhony: {
-        position: "Director General",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "CEO & Co-fundador",
+        message1: "Trabajo en la semana, monto bicicleta los fines de semana",
       },
       juan: {
-        position: "Lider de Equipo",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Líder de Proyecto & Co-fundador",
+        message1: "Creando soluciones web & móvil que los usuarios amen",
       },
       samuel: {
-        position: "Desarrollador Full Stack & Móvil",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Desarrollador Full Stack & Co-fundador",
+        message1: "En Dios confío, en apps trabajo",
       },
       carlos: {
-        position: "Desarrollador Full Stack & Móvil",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Desarrollador Full Stack",
+        message1: "Me gusta la música electrónica y me considero un amante de la tecnología",
       },
       alejo: {
-        position: "Desarrollador y diseñador UI",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Desarrollador de Software & Diseñador UI",
+        message1: "Soy baterista, amo crear y agregar valor a las aplicaciones"
       },
       johan: {
-        position: "Desarrollador Full Stack & Móvil",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Desarrollador Full Stack & Co-fundador",
+        message1: "Me apasionan los camiones, el reggaeton, el fútbol, los carros y la tecnología",
       },
       bryan: {
         position: "Desarrollador Frontend",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        message1: "Me gustan los deportes y la comida, me gusta lo que hago!",
       },
       miguel: {
-        position: "Desarrollador Full Stack & Móvil",
-        message1: "El mejor",
-        message2: "De todos forever ever after"
+        position: "Desarrollador Full Stack",
+        message1: "Me gustan los videojuegos. Geek épico, algo nerdy",
       },
     }
   },
@@ -59,7 +51,7 @@ const aboutES = {
       title: 'Compromiso',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
-    cheerfulness: {
+    happiness: {
       title: 'Alegría',
       description: 'Lorem spanish ipsum dolor , espanol'
     },
@@ -78,7 +70,7 @@ const aboutES = {
   },
   visionMissionTitle: 'Nuestra Misión y Visión',
   mission: 'Construimos soluciones web y móviles, haciendo honor a nuestros acuerdos en términos de plazos y calidad para satisfacer las expectativas de los clientes y ayudarles a cumplir sus objetivos comerciales. Contamos con un equipo altamente calificado, honesto, responsable, orientado al servicio, con aprendizaje continuo y con mejoras en las últimas tecnologías. Promovemos un excelente ambiente de trabajo y generamos bienestar para nuestros empleados.',
-  vision: '<p> Ser un referente en la creación de soluciones web y móviles, capaces de desarrollar su propio producto, conformado por un equipo de expertos con amplios conocimientos técnicos y una excelente calidad humana. </p> <p> En Sancrisoft nos sentimos orgullosos porque disfrutamos nuestro trabajo, nos apasiona crear, aprender, hacer felices a nuestros clientes y colaboradores. </p>'
+  vision: 'Ser un referente en la creación de soluciones web y móviles, capaces de desarrollar su propio producto, conformado por un equipo de expertos con amplios conocimientos técnicos y una excelente calidad humana. En Sancrisoft nos sentimos orgullosos porque disfrutamos nuestro trabajo, nos apasiona crear, aprender, hacer felices a nuestros clientes y colaboradores.'
 };
 
 export default aboutES;

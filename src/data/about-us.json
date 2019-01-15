@@ -5,52 +5,48 @@
             "fullName": "Jhony Moncada",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:jhony@sancrisoft.com"
                 },
                 {
                     "type": "twitter",
-                    "value": "https://"
+                    "value": "https://twitter.com/jhonymoncada"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/jhony-moncada/"
                 }
             ]
         },
         {
             "id": "juan",
-            "fullName": "Juan Gonzales",
+            "fullName": "Juan Gonzalez",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:juan@sancrisoft.com"
                 },
                 {
                     "type": "twitter",
-                    "value": "https://"
+                    "value": "https://twitter.com/juanjo4"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/juanjgonzalezp/"
                 }
             ]
         },
         {
             "id": "carlos",
-            "fullName": "Carlos Gonzales",
+            "fullName": "Carlos Gonzalez",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
-                },
-                {
-                    "type": "twitter",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:carlos@sancrisoft.com"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/carlosjgonzalez28"
                 }
             ]
         },
@@ -59,16 +55,16 @@
             "fullName": "Alejandro Marín",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:alejandro@sancrisoft.com"
                 },
                 {
                     "type": "twitter",
-                    "value": "https://"
+                    "value": "https://twitter.com/chepitoco"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/joalmarinl/"
                 }
             ]
         },
@@ -77,16 +73,12 @@
             "fullName": "Johan Moncada",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
-                },
-                {
-                    "type": "twitter",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:johan@sancrisoft.com"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/johanjmoncada/"
                 }
             ]
         },
@@ -95,16 +87,12 @@
             "fullName": "Samuel Granja",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
-                },
-                {
-                    "type": "twitter",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:samuel@sancrisoft.com"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/samuelgranja"
                 }
             ]
         },
@@ -113,16 +101,16 @@
             "fullName": "Bryan Villamil",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:bryan.v@sancrisoft.com"
                 },
                 {
                     "type": "twitter",
-                    "value": "https://"
+                    "value": "https://twitter.com/bryan1017200"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/bryanvillamil/"
                 }
             ]
         },
@@ -131,16 +119,16 @@
             "fullName": "Miguel Bolivar",
             "socialMedia": [
                 {
-                    "type": "facebook",
-                    "value": "https://"
+                    "type": "mail",
+                    "value": "mailto:miguel.b@sancrisoft.com"
                 },
                 {
                     "type": "twitter",
-                    "value": "https://"
+                    "value": "https://twitter.com/darking360"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://"
+                    "value": "https://www.linkedin.com/in/darking360/"
                 }
             ]
         }
@@ -153,7 +141,7 @@
         "id": "commitment"
       },
       {
-        "id": "cheerfulness"
+        "id": "happiness"
       },
       {
         "id": "excellence"

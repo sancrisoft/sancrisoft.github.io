@@ -51,7 +51,7 @@ export const GreyOverlay = styled.div`
       &:nth-child(1):hover {
         svg {
           path {
-            fill: #3b5998;
+            fill: #f89800;
           }
         }
       }
@@ -105,6 +105,15 @@ export const CardContainer = styled.div`
     opacity: 1;
     transition: all .3s ease-in-out;
     transform: scale(1);
+    min-height: 50px;
+
+    ${breakpoint('tablet')`
+      min-height: 60px;
+    `}
+    ${breakpoint('desktop')`
+      min-height: 70px;
+    `}
+
     h4 {
       font-size: 14px;
       margin-bottom: 0;
@@ -118,11 +127,17 @@ export const CardContainer = styled.div`
     }
     span {
       font-size: 9px;
+      padding: 0 20px;
+      line-height: 11px;
+      margin-top: 5px;
+      text-align: center;
       ${breakpoint('tablet')`
         font-size: 10px;
+        line-height: 12px;
       `}
       ${breakpoint('desktop')`
         font-size: 13px;
+        line-height: 16px;
       `}
     }
   }
