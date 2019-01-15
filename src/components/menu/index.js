@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { MenuContainer } from './styledComponents'
-import { translate } from "react-i18next"
+import { withNamespaces } from "react-i18next"
 
 const Menu = ({ isBlack, t }) => {
   return (
@@ -13,4 +13,4 @@ const Menu = ({ isBlack, t }) => {
     </MenuContainer>
 )}
 
-export default translate("translations")(Menu)
+export default withNamespaces('translations')(Menu)

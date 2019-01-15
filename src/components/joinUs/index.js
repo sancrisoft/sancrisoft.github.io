@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { translate } from "react-i18next"
+import { withNamespaces } from "react-i18next"
 import ReCAPTCHA from "react-google-recaptcha"
 import PropTypes from 'prop-types'
 import axios from 'axios'
@@ -218,4 +218,4 @@ class JoinUs extends Component {
   }
 }
 
-export default translate("translations")(JoinUs);
+export default withNamespaces('translations')(JoinUs);
