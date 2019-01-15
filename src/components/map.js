@@ -13,8 +13,6 @@ const Map = ReactMapboxGl({
   dragRotate: false,
 });
 
-// TODO Agregar llave de Google maps cuando se tenga!!!!! OJO
-
 const FinalMap = ({ latitude, longitude, markerIcon, zoom }) => (
   <Map
     style="mapbox://styles/mapbox/streets-v9"
@@ -33,10 +31,10 @@ const FinalMap = ({ latitude, longitude, markerIcon, zoom }) => (
   </Map>
 )
 
-Map.propTypes = {
-  latitude: PropTypes.number.isRequired,
-  longitude: PropTypes.number.isRequired,
-  zoom: PropTypes.number.isRequired,
+FinalMap.propTypes = {
+  latitude: PropTypes.number,
+  longitude: PropTypes.number,
+  zoom: PropTypes.number,
   markerIcon: PropTypes.string,
 }
 
