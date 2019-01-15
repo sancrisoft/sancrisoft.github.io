@@ -106,23 +106,23 @@ export const CardContainer = styled.div`
     transition: all .3s ease-in-out;
     transform: scale(1);
     h4 {
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 0;
       text-shadow: 1px 1px 2px #333;
       ${breakpoint('tablet')`
         font-size: 18px;
       `}
       ${breakpoint('desktop')`
-        font-size: 20px;
+        font-size: 18px;
       `}
     }
     span {
-      font-size: 13px;
+      font-size: 9px;
       ${breakpoint('tablet')`
-        font-size: 14px;
+        font-size: 10px;
       `}
       ${breakpoint('desktop')`
-        font-size: 15px;
+        font-size: 13px;
       `}
     }
   }
