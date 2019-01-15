@@ -68,6 +68,10 @@ const about = {
       description: 'Lorem spanish ipsum dolor , ingles'
     }
   },
+  getAQuote: {
+    titleButton: "Quiero una Cotización About",
+    description: "description About."
+  },
   visionMissionTitle: 'Our Mission & Vision',
   mission: 'We build web & mobile solutions, making honor of our agreements in terms of deadlines and quality to meet client expectations and help them to meet their business goals. We have a high qualify team, honest, responsible, service oriented, continuous learning and improving on latest trends technologies. We promote an excellent work environment and generate well-being for our employees.',
   vision: 'Be a reference in building web and mobile solutions capable of develop your own product, consisting of a team of experts with extensive technical knowledge and excellent human quality. At Sancrisoft we feel proud because we enjoy our work, we are passionate about creating, learning, making our customers and our employees happy.'
