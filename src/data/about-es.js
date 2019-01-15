@@ -69,8 +69,8 @@ const aboutES = {
     }
   },
   getAQuote: {
-    titleButton: "Quiero una Cotización Acerca",
-    description: "descripcion Acerca de."
+    titleButton: "Ver Trabajos",
+    description: "Siempre estamos buscando personas talentosas para unirse a nuestro equipo. Mira nuestros puestos disponibles y aplica."
   },
   visionMissionTitle: 'Nuestra Misión y Visión',
   mission: 'Construimos soluciones web y móviles, haciendo honor a nuestros acuerdos en términos de plazos y calidad para satisfacer las expectativas de los clientes y ayudarles a cumplir sus objetivos comerciales. Contamos con un equipo altamente calificado, honesto, responsable, orientado al servicio, con aprendizaje continuo y con mejoras en las últimas tecnologías. Promovemos un excelente ambiente de trabajo y generamos bienestar para nuestros empleados.',

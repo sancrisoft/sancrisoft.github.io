@@ -69,8 +69,8 @@ const about = {
     }
   },
   getAQuote: {
-    titleButton: "Quiero una Cotización About",
-    description: "description About."
+    titleButton: "See Jobs Positions",
+    description: "We're constantly looking for new talented people to join our team. Check our open positions and apply."
   },
   visionMissionTitle: 'Our Mission & Vision',
   mission: 'We build web & mobile solutions, making honor of our agreements in terms of deadlines and quality to meet client expectations and help them to meet their business goals. We have a high qualify team, honest, responsible, service oriented, continuous learning and improving on latest trends technologies. We promote an excellent work environment and generate well-being for our employees.',

@@ -66,19 +66,17 @@ export const H5 = styled.h5`
     margin-bottom: 0.3rem;
 `;
 export const H6 = styled.h6`
-    font-family: Averta;
-    margin: 0 auto;
-    text-align: center;
-    font-size: .8rem;
+  font-family: Averta;
+  margin: 0 auto;
+  text-align: center;
+  font-size: .8rem;
 
-    ${breakpoint('desktop')`
-      position: absolute;
-      top: 70px;
-      padding: 0 20px;
-      font-size: 1rem;
-    `}
-}
-    
+  ${breakpoint('desktop')`
+    position: absolute;
+    top: 70px;
+    padding: 0 20px;
+    font-size: 1rem;
+  `}
 `;
 export const Button = styled.button`
   border: none;
