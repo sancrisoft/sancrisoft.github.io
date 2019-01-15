@@ -138,7 +138,7 @@ const home = {
       mobile: {
         id: 'mobile',
         title: 'Mobile Development',
-        description: 'Ready to create a mobile app for your business? Starting from as little as a business concept to mobile app development, Netguru covers the entire application development process. We have years of experience in mobile app development services (in building both native and cross-platform solutions) in the area of healthcare, social networking, FinTech, digital community etc.',
+        description: 'Is your business still not in the world of mobile applications? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
         technologies: [
           {
             id: 'react',
