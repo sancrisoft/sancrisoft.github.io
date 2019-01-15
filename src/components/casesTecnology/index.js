@@ -1,28 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import Title from '../../components/title'
+import Img from 'gatsby-image'
 
 import {
   ContentTecnology,
-  TecnologyTitle
 } from './styledComponents'
 
-const CasesTecnology = ({title}) => {
+const CasesTecnology = ({text, image}) => {
   return(
     <ContentTecnology>
-      <TecnologyTitle>
-        <Title
-          type={2}
-          text={title}
-        />
-      </TecnologyTitle>
+      <Img
+        sizes={image}
+      />
+      <span>{text}</span>
     </ContentTecnology>
   );
 }
 
 CasesTecnology.propTypes = {
-  title: PropTypes.string,
+  text: PropTypes.string,
+  image: PropTypes.object
 };
 
 export default CasesTecnology

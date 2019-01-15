@@ -49,7 +49,8 @@ const homeES = {
     }
   },
   getAQuote: {
-    description: "Escríbenos sin ningún compromiso y hablemos de lo que tienes en mente para hacer crecer tu negocio"
+    titleButton: "Quiero una Cotización",
+    description: "Escríbenos sin ningún compromiso y hablemos de lo que tienes en mente para hacer crecer tu negocio."
   },
   offices: [
     {

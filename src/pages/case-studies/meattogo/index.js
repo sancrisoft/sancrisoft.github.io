@@ -4,6 +4,7 @@ import { I18nextProvider, withNamespaces } from "react-i18next"
 
 import Layout from '../../../components/layout'
 import SEO from '../../../components/seo'
+import Title from '../../../components/title'
 import CasesImage from '../../../components/casesImage'
 import Background from '../../../components/casesBackground'
 import About from '../../../components/casesAbout'
@@ -16,7 +17,8 @@ import {
   CasePageSizer,
   ContentBack,
   ContentAbout,
-  ContentTecnology
+  ContentTecnology,
+  Tecnologies
 } from '../../../styles/case-studies-meattogo/styledComponents';
 
 class IndexPage extends Component {
@@ -102,13 +104,24 @@ class IndexPage extends Component {
 
   renderCasesTecnologies = () => {
     const {
-      t
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              tecnologies,
+            }
+          }
+        }
+      },
+      data,
     } = this.props;
-    return(
+    return tecnologies[0].meattogo.map((item) => (
       <Tecnology
-        title={t(`caseStudies.tecnologies.title`)}
+        key={item.id}
+        text={item.text}
+        image={data[item.id].childImageSharp.sizes}
       />
-    );
+    ));
   }
 
   render() {
@@ -134,7 +147,13 @@ class IndexPage extends Component {
               { this.renderCasesAbout() }
             </ContentAbout>
             <ContentTecnology>
-              { this.renderCasesTecnologies() }
+              <Title
+                type={2}
+                text={t('caseStudies.tecnologies.title')}
+              />
+              <Tecnologies>
+                { this.renderCasesTecnologies() }
+              </Tecnologies>
             </ContentTecnology>
           </ContentCase>
       </Layout>
@@ -158,6 +177,21 @@ query caseStudies {
   BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
     ...imageFragment
   }
+  nodeJs:file(relativePath: { eq: "cases-studies/meattogo/nodeJs.png" }) {
+    ...imageFragment
+  }
+  swagger:file(relativePath: { eq: "cases-studies/meattogo/swagger.png" }) {
+    ...imageFragment
+  }
+  reactN:file(relativePath: { eq: "cases-studies/meattogo/reactNative.png" }) {
+    ...imageFragment
+  }
+  mailgun:file(relativePath: { eq: "cases-studies/meattogo/mailgun.png" }) {
+    ...imageFragment
+  }
+  boilerplate:file(relativePath: { eq: "cases-studies/meattogo/boilerplate.jpg" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {
@@ -175,6 +209,12 @@ query caseStudies {
           }
           features {
             id
+          }
+        }
+        tecnologies {
+          meattogo {
+            id
+            text
           }
         }
       }

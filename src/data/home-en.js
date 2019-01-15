@@ -49,6 +49,7 @@ const home = {
     }
   },
   getAQuote: {
+    titleButton: "Get a Quote",
     description: "Drop us a line and let\'s discuss what you have in mind to make it growth your business, no strings attached."
   },
   offices: [
@@ -86,7 +87,7 @@ const home = {
             tooltip: 'React',
             color: '#65DAF9'
           },
-          { 
+          {
             id: 'webpack',
             tooltip: 'Webpack',
             color: '#2177BE'

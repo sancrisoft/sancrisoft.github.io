@@ -49,6 +49,7 @@ export const ContTestimonial = styled.section`
       height: 420px;
       .slick-track {
         height: 85%;
+        overflow: hidden;
         .slick-slide {
           height: 100%;
           display: flex;
