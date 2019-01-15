@@ -31,6 +31,9 @@
             "link": "/get-a-quote"
         }
     ],
+    "getAQuote": {
+      "urlGetAQuote": "examples"
+    },
     "offices": [
         {
             "id": "colombia/antioquia/envigado",

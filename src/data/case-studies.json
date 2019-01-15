@@ -44,7 +44,28 @@
   ],
   "tecnologies": [
     {
-      "id": "meattogo"
+      "id": "meattogo",
+      "meattogo": [
+        {
+          "id": "nodeJs",
+          "text": "NodeJs"
+        },
+        {
+          "id": "swagger",
+          "text": "Swagger"
+        },
+        {
+          "id": "reactN",
+          "text": "React Native"
+        },
+        {
+          "id": "mailgun",
+          "text": "Mailgun"
+        },{
+          "id": "boilerplate",
+          "text": "Boilerplate"
+        }
+      ]
     }
   ]
 }
