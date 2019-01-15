@@ -76,7 +76,7 @@ const home = {
     }
   },
   getAQuote: {
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore saepe tempore hic. Corporis dolor amet beatae eligendi totam hic ad, tenetur sequi nostrum veniam officia. 🚀  INGLES"
+    description: "Drop us a line to discuss what you have in mind, no strings attached."
   },
   offices: [
     {
@@ -106,7 +106,7 @@ const home = {
       web: {
         id: 'web',
         title: 'Web Development',
-        description: 'Beautiful, fast and secure web applications tailored exclusively for your business goals. We\'ll take care of your application from the backend to the frontend using javascript trends techonlogies such as ReactJS. Depending on the scope of the project, features,time and budget, we individually choose the optimal options for your project.',
+        description: 'Beautiful, fast and secure web applications tailored exclusively for your business goals. We\'ll take care of your application from the backend to the frontend using javascript trends techonlogies such as ReactJS. Depending on the scope of the project, features, time and budget, we individually choose the optimal options for your project.',
         technologies: [
           {
             id: 'react',
@@ -138,7 +138,7 @@ const home = {
       mobile: {
         id: 'mobile',
         title: 'Mobile Development',
-        description: 'Is your business still not in the world of mobile applications? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
+        description: 'Isn\'t your business not in the world of mobile applications yet? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
         technologies: [
           {
             id: 'react',
