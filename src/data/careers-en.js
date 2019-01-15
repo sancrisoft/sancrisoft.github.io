@@ -84,6 +84,7 @@ const careers = {
     responsabilitiesTitle: "Responsabilities",
     positions: [
       {
+        friendlyId: 'semi-senior-developer',
         title: "Semi Senior Developer",
         mode: "Full Time",
         image: 'senior-developer.png',
@@ -94,6 +95,7 @@ const careers = {
         extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li></ul>",
       },
       {
+        friendlyId: 'superman-developer',
         title: "SuperMan Developer",
         mode: "Full Time",
         positionDescription: "<p>We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.</p>",

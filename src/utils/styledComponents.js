@@ -88,5 +88,11 @@ export const WhatWeDo = styled(PageSizer)`
       margin-top: 2em;
       justify-content: space-between;
     `}
+
+    div.detail {
+      p {
+        font-size: 0.8rem;
+      }
+    }
   }
 `;

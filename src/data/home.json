@@ -6,33 +6,29 @@
     "testimonials": [
         {
             "id": 1,
-            "name": "juan perez"
-        },
-        {
-            "id": 2,
-            "name": "pedro pablo"
+            "name": "Sebastian Toro"
         }
     ],
     "carousel": [
         {
             "id": 1,
             "type": "image",
-            "link": "#"
+            "link": "/case-studies/meattogo"
         },
         {
             "id": 2,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         },
         {
             "id": 3,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         },
         {
             "id": 4,
             "type": "image",
-            "link": "#"
+            "link": "/get-a-quote"
         }
     ],
     "getAQuote": {
@@ -47,19 +43,19 @@
             "state": "Colombia",
             "phone": "+57 (4) 4797416",
             "postalCode": "055422",
-            "latitude": "6.162996",
-            "longitude": "-75.602191"
+            "latitude": "6.163081958304929",
+            "longitude": "-75.6021516674454"
         },
         {
             "id": "venezuela/tachira/san-cristobal",
             "title": "San Cristóbal",
-            "address1": "Santa Teresa",
+            "address1": "Calle 4. Santa Teresa",
             "address2": "San Cristóbal, Táchira",
             "phone": "+58 (276) 3412769",
             "state": "Venezuela",
             "postalCode": "5001",
-            "latitude": "7.798563",
-            "longitude": "-72.222281"
+            "latitude": "7.798595057267448",
+            "longitude": "-72.2223486015943"
         }
     ],
     "processes": [

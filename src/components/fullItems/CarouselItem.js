@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import {
   H3,
 } from '../styledComponents'; 
-import { translate } from "react-i18next"
+import { withNamespaces } from "react-i18next"
 
 const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
   const renderContent = () => {
@@ -51,4 +51,4 @@ CarouselItem.propTypes = {
   videoSrc: PropTypes.string,
 };
 
-export default translate('translations')(CarouselItem)
+export default withNamespaces('translations')(CarouselItem)

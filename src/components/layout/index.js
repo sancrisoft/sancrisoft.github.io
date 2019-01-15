@@ -11,7 +11,7 @@ import LanguageButtons from '../languageButtons'
 // import Header from '../header' El header se debe posicionar absoluto, lo comente para que el carousel del home se vea bien #MIGUEL
 import './layout.css'
 import { GlobalFonts } from '../styledComponents'
-import { translate } from "react-i18next"
+import { withNamespaces } from "react-i18next"
 
 // Los componentes se conectan a graphql con "Static Query" (OJO solo debe ser usado para componentes que deban consultar)
 // De resto los que deben conectarse son los contenedores y enviarlo a los componentes
@@ -36,7 +36,7 @@ class Layout extends Component {
   };
 
   handleScroll = (event) =>  {
-    if(window.scrollY > 100) {
+    if(window.scrollY > 10) {
       this.setState({ isWhiteTheme: true });
     } else {
       this.setState({ isWhiteTheme: false });
@@ -145,4 +145,4 @@ Layout.propTypes = {
   viewport: PropTypes.object,
 }
 
-export default translate("translations")(Viewport(Layout));
+export default withNamespaces('translations')(Viewport(Layout));

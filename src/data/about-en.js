@@ -14,37 +14,37 @@ const about = {
         message2: "Of the fucking bests"
       },
       juan: {
-        position: "Manager",
+        position: "Team Leader",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       samuel: {
-        position: "Manager",
+        position: "Full Stack & Mobil Developer",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       carlos: {
-        position: "Manager",
+        position: "Full Stack & Mobil Developer",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       alejo: {
-        position: "Manager",
+        position: "Developer & UI Designer",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       johan: {
-        position: "Manager",
+        position: "Full Stack & Mobil Developer",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       bryan: {
-        position: "Manager",
+        position: "Frontend Developer",
         message1: "The best",
         message2: "Of the fucking bests"
       },
       miguel: {
-        position: "Manager",
+        position: "Full Stack & Mobil Developer",
         message1: "The best",
         message2: "Of the fucking bests"
       },

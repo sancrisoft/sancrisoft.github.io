@@ -9,42 +9,42 @@ const aboutES = {
     title: 'Conoce al Equipo',
     members: {
       jhony: {
-        position: "Jefe encargado",
+        position: "Director General",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       juan: {
-        position: "Jefe encargado",
+        position: "Lider de Equipo",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       samuel: {
-        position: "Jefe encargado",
+        position: "Desarrollador Full Stack & Móvil",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       carlos: {
-        position: "Jefe encargado",
+        position: "Desarrollador Full Stack & Móvil",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       alejo: {
-        position: "Jefe encargado",
+        position: "Desarrollador y diseñador UI",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       johan: {
-        position: "Jefe encargado",
+        position: "Desarrollador Full Stack & Móvil",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       bryan: {
-        position: "Jefe encargado",
+        position: "Desarrollador Frontend",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
       miguel: {
-        position: "Jefe encargado",
+        position: "Desarrollador Full Stack & Móvil",
         message1: "El mejor",
         message2: "De todos forever ever after"
       },
