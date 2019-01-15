@@ -20,33 +20,6 @@ const home = {
       id: 1,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
       title: 'Founder of ArenaBursatil.com'
-    },
-    2: {
-      id: 2,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-      title: 'Head of sales'
-    },
-    3: {
-      id: 3,
-      description: 'Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Designer'
-    },
-    4: {
-      id: 4,
-      description: 'Lorem ipsum dolor sit amet, iaukgs bdsd.',
-      title: 'Co-founder'
-    },
-    5: {
-      id: 5,
-      description: 'asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.',
-      title: 'Founder'
-    },
-    6: {
-      id: 6,
-      description: 'Lorem ipsum doweeua.Ut enim ad minimo cborum.',
-      name: 'cristian puerto',
-      image: '../../images/small-logo.png',
-      title: 'Co-founder'
     }
   },
   carousel: {

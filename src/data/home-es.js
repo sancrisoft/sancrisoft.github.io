@@ -20,33 +20,6 @@ const homeES = {
       id: 1,
       description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
       title: 'Fundador de ArenaBursatil.com'
-    },
-    2: {
-      id: 2,
-      description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-      title: 'Encargado de Ventas'
-    },
-    3: {
-      id: 3,
-      description: 'Lorem spanish ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Diseñador'
-    },
-    4: {
-      id: 4,
-      description: 'Lorem spanish ipsum dolor sit amet, iaukgs bdsd.',
-      title: 'Co-fundador'
-    },
-    5: {
-      id: 5,
-      description: 'Spanish asdhasjdhasdjashasjas asdhdasjhdasas ashdadsjhdas asdjadshashd',
-      title: 'Fundador'
-    },
-    6: {
-      id: 6,
-      description: 'Lorem spanish ipsum doweeua.Ut enim ad minimo cborum.',
-      name: 'cristian puerto',
-      image: '../../images/small-logo.png',
-      title: 'Co-founder'
     }
   },
   carousel: {
