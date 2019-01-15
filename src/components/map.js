@@ -1,34 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import ReactMapboxGl from "react-mapbox-gl"
+import { Marker } from "react-mapbox-gl"
+import styled from 'styled-components'
 
-// TODO Agregar llave de Google maps cuando se tenga!!!!! OJO
+const MarkerImage = styled.img`
+  margin-bottom: 0 !important;
+`;
 
-const Map = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAJWh1ypnLfbuOVrKhKRs2_Ad6DWL7zLeM",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `100%` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withScriptjs,
-  withGoogleMap
-)(({ latitude: lat, longitude: lng, zoom, markerIcon }) =>
-  <GoogleMap
-    defaultZoom={zoom}
-    defaultCenter={{ lat, lng }}
-    center={{ lat, lng }}
+const Map = ReactMapboxGl({
+  accessToken: "pk.eyJ1IjoiZGFya2luZzM2MCIsImEiOiJjanF3eHl4MzQwNzk0NDJudzJxZ2JqeTBpIn0.T83Goh06X-GD50LOTtKcog",
+  dragRotate: false,
+});
+
+const FinalMap = ({ latitude, longitude, markerIcon, zoom }) => (
+  <Map
+    style="mapbox://styles/mapbox/streets-v9"
+    containerStyle={{
+      height: "100%",
+      width: "100%"
+    }}
+    center={[longitude, latitude]}
+    zoom={[zoom]}
   >
-    <Marker position={{ lat, lng }} icon={markerIcon}  />
-  </GoogleMap>
+    <Marker
+      coordinates={[longitude, latitude]}
+      anchor="bottom">
+        <MarkerImage src={markerIcon} alt="Sancrisoft logo" />
+    </Marker>
+  </Map>
 )
 
-Map.propTypes = {
-  latitude: PropTypes.number.isRequired,
-  longitude: PropTypes.number.isRequired,
-  zoom: PropTypes.number.isRequired,
+FinalMap.propTypes = {
+  latitude: PropTypes.number,
+  longitude: PropTypes.number,
+  zoom: PropTypes.number,
   markerIcon: PropTypes.string,
 }
 
-export default Map
+export default FinalMap

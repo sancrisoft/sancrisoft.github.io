@@ -22,7 +22,7 @@ export class MapSelector extends Component {
 
   componentDidMount = () => {
     const { offices } = this.props;
-    this.setState({ selectedOffice: offices[0].id });
+    this.setState({ selectedOffice: offices[0].id }, () => this.forceUpdate());
   }
 
   renderSelectors = () => {
@@ -58,10 +58,10 @@ export class MapSelector extends Component {
         </PageSizer>
         <div className="map-container">
           <Map
-            latitude={office ? parseFloat(office.latitude) : 0}
-            longitude={office ? parseFloat(office.longitude) : 0}
-            zoom={15}
+            latitude={office ? parseFloat(office.latitude) : 6.163081958304929}
+            longitude={office ? parseFloat(office.longitude) : -75.6021516674454}
             markerIcon={logo}
+            zoom={15}
           />
         </div>
       </SectionContainer>
