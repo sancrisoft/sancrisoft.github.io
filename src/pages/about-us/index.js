@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { graphql } from 'gatsby'
+import { graphql, navigate } from 'gatsby'
 import ReactHtmlParser from 'react-html-parser';
 import Img from 'gatsby-image'
 import BigGreyImage from '../../components/bigGreyImage'
@@ -99,6 +99,9 @@ class IndexPage extends Component {
           siteMetadata: {
             home: {
               offices,
+              getAQuote: {
+                urlGetAQuote
+              },
             },
           },
         },
@@ -164,6 +167,7 @@ class IndexPage extends Component {
         >
           <Button
             size="20px"
+            onClick={ () => navigate(urlGetAQuote)}
           />
         </GetAQuote>
         <MapSelector title={t('home.mapTitle')} offices={offices} />
@@ -243,6 +247,9 @@ query aboutUs {
         }
       }
       home {
+        getAQuote {
+          urlGetAQuote
+        },
         offices {
           id
           title

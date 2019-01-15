@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   graphql,
+  navigate,
 } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -94,6 +95,9 @@ class IndexPage extends Component {
               offices,
               weLove: {
                 link
+              },
+              getAQuote: {
+                urlGetAQuote
               }
             }
           }
@@ -163,6 +167,8 @@ class IndexPage extends Component {
           >
             <Button
               size="20px"
+              text={t('home.getAQuote.titleButton')}
+              onClick={ () => navigate(urlGetAQuote)}
             />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
@@ -250,6 +256,9 @@ query homeQuery {
         testimonials {
           id
           name
+        },
+        getAQuote {
+          urlGetAQuote
         },
         offices {
           id

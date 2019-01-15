@@ -35,11 +35,12 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
           <Title
             type={4}
             text={titleServices}
+            align="left"
           />
           <UL>
             {
               services.map((item, i) => {
-                return(<li key={i}>{item}</li>)
+                return(<li key={i}>- {item}</li>)
               })
             }
           </UL>
@@ -48,11 +49,12 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
           <Title
             type={4}
             text={titleFeatures}
+            align="left"
           />
           <UL>
             {
               features.map((item, i) => {
-                return(<li key={i}>{item}</li>)
+                return(<li key={i}>- {item}</li>)
               })
             }
           </UL>

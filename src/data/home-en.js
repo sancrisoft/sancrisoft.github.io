@@ -25,28 +25,6 @@ const home = {
       id: 2,
       description: 'Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
       title: 'Head of sales'
-    },
-    3: {
-      id: 3,
-      description: 'Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Designer'
-    },
-    4: {
-      id: 4,
-      description: 'Lorem ipsum dolor sit amet, iaukgs bdsd.',
-      title: 'Co-founder'
-    },
-    5: {
-      id: 5,
-      description: 'asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.',
-      title: 'Founder'
-    },
-    6: {
-      id: 6,
-      description: 'Lorem ipsum doweeua.Ut enim ad minimo cborum.',
-      name: 'cristian puerto',
-      image: '../../images/small-logo.png',
-      title: 'Co-founder'
     }
   },
   carousel: {
@@ -76,6 +54,7 @@ const home = {
     }
   },
   getAQuote: {
+    titleButton: "Get a Quote",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore saepe tempore hic. Corporis dolor amet beatae eligendi totam hic ad, tenetur sequi nostrum veniam officia. 🚀  INGLES"
   },
   offices: [

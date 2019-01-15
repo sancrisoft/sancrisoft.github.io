@@ -1,16 +1,31 @@
 import styled from 'styled-components';
-// import breakpoint from 'styled-components-breakpoint';
+import breakpoint from 'styled-components-breakpoint';
 
 export const ContentTecnology = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 2em 0 1em;
-`;
-
-export const TecnologyTitle = styled.div`
-  display: flex;
-  width: 100%;
+  width: 33.333%;
   padding: 2em 0 1em;
   justify-content: center;
+  align-items: center;
+  ${breakpoint('tablet')`
+    width: 120px;
+  `}
+  .gatsby-image-wrapper {
+    width: 45px;
+    position: relative;
+    ${breakpoint('tablet')`
+      width: 60px;
+    `}
+    ${breakpoint('desktop')`
+      width: 50px;
+    `}
+  }
+  span {
+    font-size: .8em;
+    font-weight: 800;
+    ${breakpoint('tablet')`
+      font-size: .9em;
+    `}
+  }
 `;

@@ -78,7 +78,7 @@ const CasesImage = ({
 }
 
 CasesImage.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.object.isRequired,
   phone: PropTypes.string,

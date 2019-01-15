@@ -78,6 +78,12 @@ export const ChipContainer = styled.div`
     &:hover .technology img {
       animation: none;
     }
+    span.text {
+      text-align: center;
+      font-weight: 800;
+      display: block;
+      width: 100%;
+    }
     div.technology-icon-container {
       width: 100%;
       height: 100%;
@@ -109,9 +115,10 @@ export const ChipContainer = styled.div`
 export class FloatingChip extends PureComponent {
   static propTypes = {
     sizes: PropTypes.object.isRequired,
-    color: PropTypes.string.isRequired,
-    tooltip: PropTypes.string.isRequired,
-    duration: PropTypes.number.isRequired,
+    color: PropTypes.string,
+    tooltip: PropTypes.string,
+    text: PropTypes.string,
+    duration: PropTypes.number,
   }
 
   /*
@@ -139,14 +146,19 @@ export class FloatingChip extends PureComponent {
   */
 
   render() {
-    const { sizes, duration, tooltip } = this.props;
+    const { sizes, duration, tooltip, text } = this.props;
     return (
       <ChipContainer duration={duration}>
         <div ref={(ref) => this.reactTech = ref} className="technology-item" onMouseEnter={this.handleEmotion}>
           <div className="technology-icon-container">
             <Img className="technology" sizes={sizes} />
           </div>
-          <span className="tooltip">{tooltip}</span>
+          {
+            (tooltip) && <span className="tooltip">{tooltip}</span>
+          }
+          {
+            (text) && <span className="text">{text}</span>
+          }
         </div>
       </ChipContainer>
     )
