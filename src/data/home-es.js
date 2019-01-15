@@ -18,35 +18,8 @@ const homeES = {
   testimonials: {
     1: {
       id: 1,
-      description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Fundador, Google'
-    },
-    2: {
-      id: 2,
-      description: 'Lorem spanish ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-      title: 'Encargado de Ventas'
-    },
-    3: {
-      id: 3,
-      description: 'Lorem spanish ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Diseñador'
-    },
-    4: {
-      id: 4,
-      description: 'Lorem spanish ipsum dolor sit amet, iaukgs bdsd.',
-      title: 'Co-fundador'
-    },
-    5: {
-      id: 5,
-      description: 'Spanish asdhasjdhasdjashasjas asdhdasjhdasas ashdadsjhdas asdjadshashd',
-      title: 'Fundador'
-    },
-    6: {
-      id: 6,
-      description: 'Lorem spanish ipsum doweeua.Ut enim ad minimo cborum.',
-      name: 'cristian puerto',
-      image: '../../images/small-logo.png',
-      title: 'Co-founder'
+      description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
+      title: 'Fundador de ArenaBursatil.com'
     }
   },
   carousel: {
@@ -76,7 +49,7 @@ const homeES = {
     }
   },
   getAQuote: {
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore saepe tempore hic. Corporis dolor amet beatae eligendi totam hic ad, tenetur sequi nostrum veniam officia. 🚀  ESPAÑOL"
+    description: "Escríbenos sin ningún compromiso y hablemos de lo que tienes en mente para hacer crecer tu negocio"
   },
   offices: [
     {
@@ -106,7 +79,7 @@ const homeES = {
       web: {
         id: 'web',
         title: 'Desarrollo Web',
-        description: 'Lorem spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: 'Apliaciones web elegantes, rápidas y seguras exclusivamente diseñadas de acuerdo a sus objetivos de negocio. Nos encargamos de tu aplicación desde el backend hasta el frontend usando las últimas tecnologías javascript como ReactJS. Dependiendo del alcance del proyecto, funcionalidades, tiempo y presupuesto escogemos individualmente la solución óptima para su proyecto.',
         technologies: [
           {
             id: 'react',
@@ -138,7 +111,7 @@ const homeES = {
       mobile: {
         id: 'mobile',
         title: 'Desarrollo Móvil',
-        description: 'Lorem spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: '¿Tu negocio aún no esta en el mundo de las aplcaciones móviles? Leevamos tu idea a la realidad y cubrimos todo el proceso de desarrollo, construimos aplicaciones en React Native una librería robusta para crear aplications android y iOS nativas. También construimos soluciones web responsivas para el mundo móvil.',
         technologies: [
           {
             id: 'react',

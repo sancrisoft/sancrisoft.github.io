@@ -19,34 +19,7 @@ const home = {
     1: {
       id: 1,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
-      title: 'Founder / Financial Advisor of ArenaBursatil.com'
-    },
-    2: {
-      id: 2,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisiciminimo cborum.',
-      title: 'Head of sales'
-    },
-    3: {
-      id: 3,
-      description: 'Lorem ipsum dolor sit ar adipisicing elit, aliqua.Ut enim ad minimo cborum.',
-      title: 'Designer'
-    },
-    4: {
-      id: 4,
-      description: 'Lorem ipsum dolor sit amet, iaukgs bdsd.',
-      title: 'Co-founder'
-    },
-    5: {
-      id: 5,
-      description: 'asdasdasdasd asdkag dasd gaskdasd ciminimo cborum.',
-      title: 'Founder'
-    },
-    6: {
-      id: 6,
-      description: 'Lorem ipsum doweeua.Ut enim ad minimo cborum.',
-      name: 'cristian puerto',
-      image: '../../images/small-logo.png',
-      title: 'Co-founder'
+      title: 'Founder of ArenaBursatil.com'
     }
   },
   carousel: {
@@ -76,7 +49,7 @@ const home = {
     }
   },
   getAQuote: {
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore saepe tempore hic. Corporis dolor amet beatae eligendi totam hic ad, tenetur sequi nostrum veniam officia. 🚀  INGLES"
+    description: "Drop us a line and let\'s discuss what you have in mind to make it growth your business, no strings attached."
   },
   offices: [
     {
@@ -106,14 +79,14 @@ const home = {
       web: {
         id: 'web',
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: 'Beautiful, fast and secure web applications tailored exclusively for your business goals. We\'ll take care of your application from the backend to the frontend using javascript trends techonlogies such as ReactJS. Depending on the scope of the project, features, time and budget, we individually choose the optimal options for your project.',
         technologies: [
           {
             id: 'react',
             tooltip: 'React',
             color: '#65DAF9'
           },
-          {
+          { 
             id: 'webpack',
             tooltip: 'Webpack',
             color: '#2177BE'
@@ -138,7 +111,7 @@ const home = {
       mobile: {
         id: 'mobile',
         title: 'Mobile Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        description: 'Isn\'t your business not in the world of mobile applications yet? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
         technologies: [
           {
             id: 'react',

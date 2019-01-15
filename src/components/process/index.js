@@ -5,7 +5,7 @@ import {
 } from './styledComponents'
 import ChipDescription from '../chipDescription'
 import FloatingChip from './FloatingChip'
-import { translate } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 
 
 export class Process extends Component {
@@ -46,4 +46,4 @@ export class Process extends Component {
   }
 }
 
-export default translate("translations")(Process)
+export default withNamespaces('translations')(Process)
