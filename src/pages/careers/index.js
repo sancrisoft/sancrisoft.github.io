@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import { I18nextProvider, translate } from "react-i18next"
+import { I18nextProvider, withNamespaces } from "react-i18next"
 import i18n from '../../data/translations'
 import Button from '../../components/button'
 import OurRecruitment from '../../components/ourValues'
@@ -408,4 +408,4 @@ query portfolioQuery {
 }
 `;
 
-export default translate("translations")(IndexPage)
+export default withNamespaces('translations')(IndexPage)

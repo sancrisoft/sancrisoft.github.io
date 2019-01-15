@@ -6,7 +6,7 @@ import SweetAlert from 'sweetalert2-react'
 import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import { I18nextProvider, translate } from "react-i18next"
+import { I18nextProvider, withNamespaces } from "react-i18next"
 import i18n from '../../data/translations'
 
 import {
@@ -166,4 +166,4 @@ query getaQuoteQuery {
 }
 `;
 
-export default translate("translations")(GetaQuote)
+export default withNamespaces('translations')(GetaQuote)
