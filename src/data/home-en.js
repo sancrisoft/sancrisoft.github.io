@@ -76,7 +76,7 @@ const home = {
     }
   },
   getAQuote: {
-    description: "Drop us a line to discuss what you have in mind, no strings attached."
+    description: "Drop us a line and let\'s discuss what you have in mind to make it growth your business, no strings attached."
   },
   offices: [
     {
