@@ -111,7 +111,7 @@ const homeES = {
       mobile: {
         id: 'mobile',
         title: 'Desarrollo Móvil',
-        description: '¿Tu negocio aún no esta en el mundo de las aplcaciones móviles? Leevamos tu idea a la realidad y cubrimos todo el proceso de desarrollo, construimos aplicaciones en React Native una librería robusta para crear aplications android y iOS nativas. También construimos soluciones web responsivas para el mundo móvil.',
+        description: '¿Tu negocio aún no esta en el mundo de las aplcaciones móviles? Llevamos tu idea a la realidad y cubrimos todo el proceso de desarrollo, construimos aplicaciones en React Native una librería robusta para crear aplications android y iOS nativas. También construimos soluciones web responsivas para el mundo móvil.',
         technologies: [
           {
             id: 'react',

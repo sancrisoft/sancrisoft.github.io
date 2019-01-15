@@ -86,7 +86,7 @@ const home = {
             tooltip: 'React',
             color: '#65DAF9'
           },
-          { 
+          {
             id: 'webpack',
             tooltip: 'Webpack',
             color: '#2177BE'
@@ -111,7 +111,7 @@ const home = {
       mobile: {
         id: 'mobile',
         title: 'Mobile Development',
-        description: 'Isn\'t your business not in the world of mobile applications yet? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
+        description: 'Isn\'t your business in the world of mobile applications yet? We can take your concept to reality covering all the development process, we build apps on React Native a powerfull library to create Android and iOS native applications. Also, we build web responsive solutions for the mobile world.',
         technologies: [
           {
             id: 'react',
