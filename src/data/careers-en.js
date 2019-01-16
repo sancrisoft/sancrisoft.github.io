@@ -1,7 +1,7 @@
 const careers = {
   bigImage: {
     title: 'Become one of us!',
-    description: 'A team of talented people who enjoy and have fun doing their work'
+    description: 'We\'re looking for talented developer to join our team'
   },
   recruitment: {
     title: "Our Recruitment Process",
@@ -84,25 +84,14 @@ const careers = {
     responsabilitiesTitle: "Responsabilities",
     positions: [
       {
-        friendlyId: 'semi-senior-developer',
-        title: "Semi Senior Developer",
-        mode: "Full Time",
-        image: 'senior-developer.png',
-        positionDescription: "<p>We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.</p>",
-        technicalSkills: "<p></p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS, Redux and Webpack</li><li>React Native, Sagas, React Navigation</li><li>olid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li></ul>",
-        responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li></ul>",
-        extraTitle: "And the most important!",
-        extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li></ul>",
-      },
-      {
-        friendlyId: 'superman-developer',
-        title: "SuperMan Developer",
+        friendlyId: 'react-developer',
+        title: "React Semi Senior Developer",
         mode: "Full Time",
         positionDescription: "<p>We’re looking for semi senior developers to join our team. You will work on front-end and back-end tasks to build top-notch products. We look for talented people who want to solve real life problems with good attitude and striving for the quality of their work.</p>",
-        technicalSkills: "<p></p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS, Redux and Webpack</li><li>React Native, Sagas, React Navigation</li><li>olid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li></ul>",
+        technicalSkills: "<p>You must be proficient on most of these areas or technologies:</p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS, Redux and Webpack</li><li>React Native, Sagas, React Navigation</li><li>Solid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li><li>Styled-components (desirable)</li><li>Git version control</li><li>Knowledge on REST services and GraphQL (desirable)</li><li>Relational databases and NoSQL</li><li>General understanding of UI/UX design principles and best practices</li><li>Be able to read and write in english. Verbal communication skills are optional but desirable</li></ul>",
         responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li></ul>",
         extraTitle: "And the most important!",
-        extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li></ul>",
+        extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li><li>Be willing to help your teammates, share your knowledge with them, and learn from them</li><li>Proactive and problem solver</li><li>Always open to give and receive feedback</li></ul>",
       },
     ],
   },

@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 export const Container = styled.div`
   padding: 2em 2em;
   border-radius: 10px;
-  background-color: rgba(197,197,197,0.15);
+  background-color: #ebebeb;
   margin: 1em;
   position: sticky;
   top: 80px;

@@ -31,7 +31,7 @@ export const PositonsContainer = styled.div`
 
 export const PositionCard = styled.div`
   width: 15em;
-  background-color: #f7f7f7;
+  background-color: #ebebeb;
   padding: 1.5em 2em;
   border-radius: 0.3em;
   margin: 20px;
