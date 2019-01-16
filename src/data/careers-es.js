@@ -21,40 +21,36 @@ const careersES = {
   benefits: {
     title: 'Beneficios',
     salary: {
-      title: 'Salario competitivo',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Salario Competitivo",
+      description: "Salario competitivo de acuerdo a experiencia",
     },
     vacations: {
-      title: 'Vacaciones',
-      description: '15 días de vacaciones pagas',
+      title: "Vacaciones",
+      description: "15 día de vacaciones pagas",
     },
     remote: {
-      title: 'Trabajo remoto',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Trabajo Remoto",
+      description: "Trabaja desde casa o desde tu café favorito",
     },
     environment: {
-      title: 'Ambiente de trabajo',
-      description: 'Lorem ipsum dolor sit amet',
-    },
-    bonus: {
-      title: 'Bonos',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Ambiente de Trabajo",
+      description: "Gran ambiente como el de una familia",
     },
     snack: {
-      title: 'Meriendas y Cervezas',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Snacks & Cervezas",
+      description: "Café, snacks, comida saludable y cervezas",
     },
     happy: {
-      title: 'Happy Hours',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Happy Hours",
+      description: "Eventos sociales para celebrar e integrarnos como equipo",
     },
     workstation: {
-      title: 'Lugar de trabajo',
-      description: 'Nos gusta trabajar con las mejores herramientas.(Mackbooks y accesorios)'
+      title: "Estacion de Trabajo",
+      description: "Estación de trabajo de tus sueño para que estes cómodo"
     },
     support: {
-      title: 'Soporte del equipo',
-      description: 'Da y recibe comentarios, establece metas y desarrolla tus habilidades.'
+      title: "Trabajo Colaborativo",
+      description: "Ambiente colaborativo para crecer profesionalmente"
     }
   },
   recruitmentProcess: {

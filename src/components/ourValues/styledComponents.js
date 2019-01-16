@@ -76,6 +76,7 @@ export const DescContainer = styled.div`
   ${Boxtitle} {
     h6, h3 {
       text-align: center;
+      font-size: ${({ direction }) => direction === 'row' ? '16px' : '20px' };
       ${breakpoint('md')`
         text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
       `}
@@ -83,6 +84,7 @@ export const DescContainer = styled.div`
   }
   p {
     text-align: center;
+    font-size: ${({ direction }) => direction === 'row' ? '14px' : '16px' };
     ${breakpoint('md')`
       text-align: ${({ direction }) => direction === 'row' ? 'start !important' : 'center' };
     `}

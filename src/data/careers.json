@@ -11,11 +11,11 @@
       "salary",
       "vacations",
       "support",
-      "bonus",
       "snack",
       "happy",
       "remote",
-      "workstation"
+      "workstation",
+      "environment"
     ],
     "teamPhotos": [
       {

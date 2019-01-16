@@ -33,6 +33,11 @@ export const GreyOverlay = styled.div`
   transform: scale(0);
   z-index: -10;
   padding: 1em;
+  h6 {
+    position: absolute;
+    top: 70px;
+    padding: 0 20px;
+  }
   h4, span {
     text-align: center;
   }
