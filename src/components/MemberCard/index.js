@@ -16,7 +16,7 @@ const renderSocialMedia = (socialMedia) => {
       <Icon
         width={25}
         height={25}
-        backgroundColor={social.type == 'mail' ? '#fff' : '#000'}
+        backgroundColor={social.type === 'mail' ? '#fff' : '#000'}
         iconName={social.type}
       />
     </IconLink>

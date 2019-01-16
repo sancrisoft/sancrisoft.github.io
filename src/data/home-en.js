@@ -50,7 +50,7 @@ const home = {
   },
   getAQuote: {
     titleButton: "Contact Us",
-    description: "Drop us a line and let\'s discuss what you have in mind to make it growth your business, no strings attached."
+    description: "Drop us a line and let's discuss what you have in mind to make it growth your business, no strings attached."
   },
   offices: [
     {
