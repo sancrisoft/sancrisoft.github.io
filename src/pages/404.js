@@ -1,14 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
+import {
+  graphql,
+} from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import { Content404 } from '../utils/styledComponents'
+
+
+class NotFoundPage extends Component {
+  render() {
+    const {
+      data,
+    } = this.props;
+
+    return(
+      <Layout>
+        <SEO title="404: Not found" />
+        <Content404>
+          <Img
+            sizes={data.img404.childImageSharp.sizes}
+          />
+        </Content404>
+      </Layout>
+    );
+  }
+}
+
+// Queries for images (One query by image)
+export const query = graphql`
+query notFoundQuery {
+  img404:file(relativePath: { eq: "404/404.png" }) {
+    ...imageFragment
+  }
+}
+`;
 
 export default NotFoundPage
