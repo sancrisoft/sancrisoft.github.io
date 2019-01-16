@@ -37,6 +37,10 @@ export const Services = styled.div`
   ${breakpoint('tablet')`
     width: 50%;
   `}
+
+  h4 {
+    margin-bottom: 1rem;
+  }
 `;
 export const Features = styled.div`
   display: flex;
@@ -45,6 +49,10 @@ export const Features = styled.div`
   ${breakpoint('tablet')`
     width: 50%;
   `}
+
+  h4 {
+    margin-bottom: 1rem;
+  }
 `;
 
 
