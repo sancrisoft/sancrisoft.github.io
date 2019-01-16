@@ -96,3 +96,22 @@ export const WhatWeDo = styled(PageSizer)`
     }
   }
 `;
+
+export const Content404 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65vh;
+  padding: 2em 1em;
+  margin: 0 auto;
+  width: 100%;
+  background: #f8f8f8;
+  ${breakpoint('desktop')`
+    height: 80vh;
+  `}
+  .gatsby-image-wrapper {
+    width: 99%;
+    margin: auto;
+    max-width: 1024px;
+  }
+`;
