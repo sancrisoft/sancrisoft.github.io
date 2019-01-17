@@ -110,7 +110,7 @@ class Layout extends Component {
               <Link to="/about-us" > {t('home.nav.about')} </Link>
               <Link to="/case-studies" > {t('home.nav.cases')} </Link>
               <Link to="/careers"> {t('home.nav.careers')} </Link>
-              <Link to="/get-a-quote" > {t('home.nav.quote')} </Link>
+              <Link to="/contact" > {t('home.nav.quote')} </Link>
               <div style={{ marginTop:  5}}>
                 <LanguageButtons isBlack changeLanguage={this.eventChangeLang} language={language} />
               </div>
