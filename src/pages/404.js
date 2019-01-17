@@ -25,6 +25,7 @@ class NotFoundPage extends Component {
           <Content404>
             <Img
               sizes={data.img404.childImageSharp.sizes}
+              className="example"
             />
           </Content404>
         </Layout>
