@@ -22,6 +22,8 @@ class Layout extends Component {
     language: 'en',
   }
   componentDidMount() {
+    const { i18n: { language } } = this.props;
+    this.setState({ language });
     this.setPathname();
     window.addEventListener('scroll', this.handleScroll, { passive: true })
   }
