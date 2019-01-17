@@ -32,7 +32,7 @@ export const MenuContainer = styled.div`
       border-radius: 4px;
       transition: all 0.3s ease;
       &:after {
-        display: none;
+        display: none; 
         background: transparent;
       }
       &:hover{
