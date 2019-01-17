@@ -95,7 +95,7 @@ class JoinUs extends Component {
         why,
       };
       axios.post(
-          "https://submit-form.com/XPfHm4tw8tBUGwsoebGLX", 
+          "https://submit-form.com/4giIQwtVFQRA95qYQrYHS", 
           opts, 
           {headers: {"Accept": "application/json"}}
       )
