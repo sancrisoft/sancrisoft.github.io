@@ -38,7 +38,7 @@ const about = {
       },
       miguel: {
         position: "Full Stack Developer",
-        message1: "I love videogames. Epic geek, somewhat nerdy",
+        message1: "I love videogames. Epic geek, somewhat nerd",
       },
     }
   },

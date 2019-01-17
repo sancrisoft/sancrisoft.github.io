@@ -35,8 +35,13 @@ export const GreyOverlay = styled.div`
   padding: 1em;
   h6 {
     position: absolute;
-    top: 70px;
-    padding: 0 20px;
+    top: 20%;
+    font-size: 12px;
+    padding: 0 10px;
+    ${breakpoint('desktop')`
+      font-size: inherit;
+      top: 70px;
+    `}
   }
   h4, span {
     text-align: center;
