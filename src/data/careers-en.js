@@ -1,7 +1,7 @@
 const careers = {
   bigImage: {
     title: 'Become one of us!',
-    description: 'We\'re looking for talented developer to join our team'
+    description: ''
   },
   recruitment: {
     title: "Our Recruitment Process",
@@ -24,57 +24,57 @@ const careers = {
     title: "Benefits",
     salary: {
       title: "Competitive Salary",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Great salary according to experience",
     },
     vacations: {
       title: "Vacations",
       description: "15 days of paid vacations",
     },
     remote: {
-      title: "Work remotely",
-      description: "Lorem ipsum dolor sit amet",
+      title: "Remote Work",
+      description: "Work from home or from your favorite coffee shop",
     },
     environment: {
-      title: "Work environment",
-      description: "Lorem ipsum dolor sit amet",
+      title: "Work Environment",
+      description: "Great environment just like a family",
     },
     bonus: {
       title: "Bonuses",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Bonuses for outstanding performes",
     },
     snack: {
       title: "Snacks & Beers",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Free coffee, snacks, healthy food and beers",
     },
     happy: {
       title: "Happy Hours",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Social events to celebrate and integrate as a team",
     },
     workstation: {
-      title: "Great Workstation",
-      description: "We like to work on the best equipment.(Mackbooks and accesories)"
+      title: "Workstation",
+      description: "A dream workstation to keep you comfortable"
     },
     support: {
       title: "Team Support",
-      description: "Give and get feedback, set up goals and develop your skills."
+      description: "Collaborative environment to growht professionally"
     }
   },
   recruitmentProcess: {
     application: {
       title: "Application",
-      description: "Description",
+      description: "Fill the form below of write us an email saying why do you want to work with us",
     },
     assigment: {
       title: "Assignment",
-      description: "Description",
+      description: "We'll send you a little task so we can review your skills and match with our needs",
     },
     interview: {
       title: "Interview",
-      description: "Description",
+      description: "Once assignment is passed we'll set a time for a interview to know you better",
     },
     offer: {
       title: "Offer",
-      description: "Description",
+      description: "If all looks good we'll make a formal offer to you to join our team",
     },
   },
   openPositions: {

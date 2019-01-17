@@ -72,9 +72,6 @@ export const H6 = styled.h6`
   font-size: .8rem;
 
   ${breakpoint('desktop')`
-    position: absolute;
-    top: 70px;
-    padding: 0 20px;
     font-size: 1rem;
   `}
 `;

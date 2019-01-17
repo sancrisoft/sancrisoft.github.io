@@ -64,6 +64,26 @@ export const SectionContainer = styled.section`
       position: relative;
       top: -4px;
     }
+    .wrapper_button {
+      display: flex;
+      justify-content: center;
+      padding-top: 1em;
+      ${breakpoint('tablet')`
+        justify-content: flex-start;
+        padding-top: 0;
+      `}
+      button {
+        border: none;
+        transition: all .5s;
+        &:hover {
+          border-color: #F28724;
+          background: #FFA449;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
     ${breakpoint('mobile')`
       width: 100%;
     `}

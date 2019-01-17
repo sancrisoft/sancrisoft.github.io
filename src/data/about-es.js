@@ -34,7 +34,7 @@ const aboutES = {
       },
       bryan: {
         position: "Desarrollador Frontend",
-        message1: "Me gustan los deportes y la comida, me gusta lo que hago!",
+        message1: "Me gustan los deportes y la comida. Amo lo que hago!",
       },
       miguel: {
         position: "Desarrollador Full Stack",

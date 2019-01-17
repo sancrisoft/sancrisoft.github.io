@@ -18,17 +18,17 @@
         {
             "id": 2,
             "type": "image",
-            "link": "/get-a-quote"
+            "link": "/contact"
         },
         {
             "id": 3,
             "type": "image",
-            "link": "/get-a-quote"
+            "link": "/contact"
         },
         {
             "id": 4,
             "type": "image",
-            "link": "/get-a-quote"
+            "link": "/contact"
         }
     ],
     "getAQuote": {
