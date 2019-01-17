@@ -1,7 +1,7 @@
 const careersES = {
   bigImage: {
     title: 'Convienterte en uno de nosotros!',
-    description: 'Un equipo de personas con talento que disfrutan y se divierten haciendo su trabajo'
+    description: ''
   },
   recruitment: {
     title: 'Nuestro proceso de reclutamiento',
@@ -42,33 +42,33 @@ const careersES = {
     },
     happy: {
       title: "Happy Hours",
-      description: "Eventos sociales para celebrar e integrarnos como equipo",
+      description: "Eventos sociales para integrarnos como equipo",
     },
     workstation: {
       title: "Estacion de Trabajo",
-      description: "Estación de trabajo de tus sueño para que estes cómodo"
+      description: "Estación de trabajo cómodas y de ensueño"
     },
     support: {
       title: "Trabajo Colaborativo",
-      description: "Ambiente colaborativo para crecer profesionalmente"
+      description: "Ambiente colaborativo entre todo todo el equipo"
     }
   },
   recruitmentProcess: {
     application: {
-      title: 'Aplicación',
-      description: 'Descripcion',
+      title: "Aplicación",
+      description: "Llena el formulario de esta página o escríbenos un email diciendonos porque quieres trabajar con nosotros",
     },
     assigment: {
-      title: 'Pruebas',
-      description: 'Descripcion',
+      title: "Prueba",
+      description: "Te enviaremos una pequeña tarea para revisar tus habilidades y comprararlas con nuestras necesidades",
     },
     interview: {
-      title: 'Entrevista',
-      description: 'Descripcion',
+      title: "Entrevista",
+      description: "Una vez la pruebas es aprobada fijaremos una fecha para una entrevista y conocerte mejor",
     },
     offer: {
-      title: 'Oferta',
-      description: 'Descripcion',
+      title: "Oferta",
+      description: "Si todo luce bien te haremos una oferta formal para que te unas a nuestro equipo",
     },
   },
   openPositions: {
