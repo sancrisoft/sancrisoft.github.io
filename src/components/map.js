@@ -1,15 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactMapboxGl from "react-mapbox-gl"
 import { Marker } from "react-mapbox-gl"
 import styled from 'styled-components'
 import MapConfiguration from '../data/map-configuration.json';
+
+let ReactMapboxGl = {}
+
+if (typeof window !== `undefined`) {
+  ReactMapboxGl = require('react-mapbox-gl')
+} else {
+  ReactMapboxGl.Map = () => {
+    return class Mock extends React.Component {
+      render() {
+        return <div />
+      }
+    }
+  }
+}
 
 const MarkerImage = styled.img`
   margin-bottom: 0 !important;
 `;
 
-const Map = ReactMapboxGl({
+const Map = ReactMapboxGl.Map({
   accessToken: "pk.eyJ1IjoiZGFya2luZzM2MCIsImEiOiJjanF3eHl4MzQwNzk0NDJudzJxZ2JqeTBpIn0.T83Goh06X-GD50LOTtKcog",
   dragRotate: false,
 });

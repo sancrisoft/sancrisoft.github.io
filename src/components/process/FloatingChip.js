@@ -85,8 +85,8 @@ export const ChipContainer = styled.div`
       width: 100%;
     }
     div.technology-icon-container {
-      width: 100%;
-      height: 100%;
+      width: 3.6em;
+      height: 3.6em;
       overflow: hidden;
       transition: all ${({ duration }) => duration}s ease-in-out;
       animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
@@ -103,6 +103,7 @@ export const ChipContainer = styled.div`
         flex: 1;
         width: 3.6em;
         height: 3.6em;
+        border-radius: 50%;
         img {
           flex: 1;
           object-fit: contain !important;

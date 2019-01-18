@@ -1,7 +1,7 @@
 const careers = {
   bigImage: {
     title: 'Become one of us!',
-    description: 'We\'re looking for talented developer to join our team'
+    description: ''
   },
   recruitment: {
     title: "Our Recruitment Process",
@@ -62,19 +62,19 @@ const careers = {
   recruitmentProcess: {
     application: {
       title: "Application",
-      description: "Description",
+      description: "Fill the form below of write us an email saying why do you want to work with us",
     },
     assigment: {
       title: "Assignment",
-      description: "Description",
+      description: "We'll send you a little task so we can review your skills and match with our needs",
     },
     interview: {
       title: "Interview",
-      description: "Description",
+      description: "Once assignment is passed we'll set a time for a interview to know you better",
     },
     offer: {
       title: "Offer",
-      description: "Description",
+      description: "If all looks good we'll make a formal offer to you to join our team",
     },
   },
   openPositions: {
