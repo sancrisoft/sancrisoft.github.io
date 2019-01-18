@@ -23,7 +23,7 @@ const Menu = ({ isBlack, t }) => {
           to="/contact"
           className={'special'}
           activeStyle={{
-            color: "#F28724",
+            color: "#fff",
           }}
         > {t('home.nav.quote')} </Link>
     </MenuContainer>
