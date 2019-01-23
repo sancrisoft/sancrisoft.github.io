@@ -45,27 +45,27 @@ const about = {
   ourValues: {
     integrity: {
       title: 'Integrity',
-      description: 'Lorem spanish ipsum dolor sit amet, ingles.'
+      description: 'We act with honesty, rectitude, respect and responsibility'
     },
     commitment: {
       title: 'Commitment',
-      description: 'Lorem spanish ipsum dolor , ingles'
+      description: 'We know the importance of fulfilling something previously agreed upon'
     },
     happiness: {
       title: 'Happiness',
-      description: 'Lorem spanish ipsum dolor , ingles'
+      description: 'We generate well-being and celebrate every objective achieved'
     },
     excellence: {
       title: 'Excellence',
-      description: 'Lorem spanish ipsum dolor , ingles'
+      description: 'We strive to be the best for the benefit of our customers and the entire organization'
     },
     kindness: {
       title: 'Kindness',
-      description: 'Lorem spanish ipsum dolor , ingles'
+      description: 'We are human, we love to help and see our colleagues and clients happy'
     },
     gratitude: {
       title: 'Gratitude',
-      description: 'Lorem spanish ipsum dolor , ingles'
+      description: 'We value every opportunity and appreciate the trust that our customers give us'
     }
   },
   getAQuote: {

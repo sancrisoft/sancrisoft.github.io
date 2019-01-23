@@ -2,7 +2,7 @@ const aboutES = {
   title: "Sobre nosotros",
   ourValueTitle: 'Nuestros Valores',
   bigImage: {
-    title: 'Nuestro Equipo es Nuestra Mayor Fortaleza.',
+    title: 'Nuestro Equipo es Nuestra Mayor Fortaleza',
     description: 'Un grupo de personas con talento que disfrutan y se divierten haciendo su trabajo'
   },
   team: {
@@ -43,29 +43,29 @@ const aboutES = {
     }
   },
   ourValues: {
-    integrity : {
+    integrity: {
       title: 'Integridad',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Actuamos con honestidad, rectitud, respeto y responsabilidad'
     },
     commitment: {
       title: 'Compromiso',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Conocemos la importancia de cumplir con algo previamente acordado'
     },
     happiness: {
       title: 'Alegría',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Generamos bienestar y celebramos cada objetivo logrado'
     },
     excellence: {
       title: 'Excelencia',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Buscamos ser los mejores para el beneficio de nuestros clientes y el de toda la organización'
     },
     kindness: {
       title: 'Amabilidad',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Somos humanos, nos encanta ayudar y ver felices a nuestros compañeros y clientes'
     },
     gratitude: {
       title: 'Gratitud',
-      description: 'Lorem spanish ipsum dolor , espanol'
+      description: 'Valoramos cada oportunidad y apreciamos la confianza que nos dan nuestro clientes'
     }
   },
   getAQuote: {
