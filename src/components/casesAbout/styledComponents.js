@@ -102,8 +102,6 @@ export const Features = styled.div`
   }
 `;
 
-
-
 export const A = styled.a`
   transition: all .5s;
   ${'' /* margin-left: 6px; */}

@@ -1,5 +1,59 @@
 {
   "title": "Case Studies",
+  "proyects": [
+    {
+      "id": "proyect1",
+      "name": "proyect1",
+      "typeProyect": "Mobile App",
+      "private": "true"
+    },
+    {
+      "id": "proyect2",
+      "name": "proyect2",
+      "typeProyect": "Web",
+      "private": "true"
+    },
+    {
+      "id": "proyect3",
+      "name": "proyect3",
+      "typeProyect": "Mobile App",
+      "private": "false"
+    },
+    {
+      "id": "proyect4",
+      "name": "proyect4",
+      "typeProyect": "Web",
+      "private": "true"
+    },
+    {
+      "id": "proyect5",
+      "name": "proyect5",
+      "typeProyect": "Mobile App",
+      "private": "false"
+    }
+  ],
+  "logos": [
+    {
+      "id": "logo1",
+      "name": "logo1"
+    },
+    {
+      "id": "logo2",
+      "name": "logo2"
+    },
+    {
+      "id": "logo3",
+      "name": "logo3"
+    },
+    {
+      "id": "logo4",
+      "name": "logo4"
+    },
+    {
+      "id": "logo5",
+      "name": "logo5"
+    }
+  ],
   "cases": [
     {
       "id": "meattogo",
