@@ -40,23 +40,28 @@
   "logos": [
     {
       "id": "double",
-      "name": "Double Nines"
+      "name": "Double Nines",
+      "private": true
     },
     {
       "id": "arena",
-      "name": "Arena Alfa"
+      "name": "Arena Alfa",
+      "private": true
     },
     {
       "id": "logo500",
-      "name": "logo 500"
+      "name": "logo 500",
+      "private": false
     },
     {
       "id": "enter",
-      "name": "logo Enter"
+      "name": "logo Enter",
+      "private": false
     },
     {
       "id": "cc",
-      "name": "logo cc"
+      "name": "logo cc",
+      "private": false
     }
   ],
   "cases": [

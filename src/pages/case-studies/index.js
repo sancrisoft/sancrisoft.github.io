@@ -71,6 +71,9 @@ class IndexPage extends Component {
 
   renderLogos =() => {
     const {
+      location: {
+        hash,
+      },
       data: {
         site: {
           siteMetadata: {
@@ -91,6 +94,7 @@ class IndexPage extends Component {
               key={item.id}
               name={item.name}
               image={data[item.id].childImageSharp.sizes}
+              active={(hash === "#seall") ? false : item.private}
             />
           ))
         }
@@ -187,6 +191,7 @@ query caseStudiesMain {
         logos {
           id
           name
+          private
         }
         getAQuote {
           urlGetAQuote
