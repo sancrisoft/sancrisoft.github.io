@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 export const Logos = styled.div`
   display: flex;
@@ -7,6 +8,22 @@ export const Logos = styled.div`
   width: 33.333%;
   padding-bottom: .5em;
   .gatsby-image-wrapper {
-    width: 120px;
+    width: 70px;
+    transition: all .5s;
+    ${breakpoint('tablet')`
+      width: 100px;
+    `}
+    ${breakpoint('desktop')`
+      width: 120px;
+    `}
+    img {
+      filter: grayscale(1);
+      transition: all .5s;
+    }
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
   }
 `;

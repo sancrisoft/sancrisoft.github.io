@@ -69,7 +69,7 @@ export const ContainerLogos = styled.div`
   align-items: center;
   align-content: space-around;
   height: 10em;
-  padding: 1.5em 0;
+  margin: 1.5em 0;
   flex-wrap: wrap;
   ${breakpoint('tablet')`
     max-width: 80%;

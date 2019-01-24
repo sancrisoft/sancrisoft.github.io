@@ -5,53 +5,53 @@
       "id": "proyect1",
       "name": "proyect1",
       "typeProyect": "Mobile App",
-      "private": "true"
+      "private": true
     },
     {
       "id": "proyect2",
       "name": "proyect2",
       "typeProyect": "Web",
-      "private": "true"
+      "private": true
     },
     {
       "id": "proyect3",
       "name": "proyect3",
       "typeProyect": "Mobile App",
-      "private": "false"
+      "private": false
     },
     {
       "id": "proyect4",
       "name": "proyect4",
       "typeProyect": "Web",
-      "private": "true"
+      "private": true
     },
     {
       "id": "proyect5",
       "name": "proyect5",
       "typeProyect": "Mobile App",
-      "private": "false"
+      "private": false
     }
   ],
   "logos": [
     {
-      "id": "logo1",
-      "name": "logo1"
+      "id": "double",
+      "name": "Double Nines"
     },
     {
-      "id": "logo2",
-      "name": "logo2"
+      "id": "arena",
+      "name": "Arena Alfa"
     },
     {
-      "id": "logo3",
-      "name": "logo3"
+      "id": "logo500",
+      "name": "logo 500"
     },
     {
-      "id": "logo4",
-      "name": "logo4"
+      "id": "enter",
+      "name": "logo Enter"
     },
     {
-      "id": "logo5",
-      "name": "logo5"
+      "id": "cc",
+      "name": "logo cc"
     }
   ],
   "cases": [
