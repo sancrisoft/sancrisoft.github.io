@@ -24,6 +24,9 @@ class IndexPage extends Component {
 
   renderItemProyect =() => {
     const {
+      location: {
+        hash,
+      },
       data: {
         site: {
           siteMetadata: {
@@ -38,18 +41,19 @@ class IndexPage extends Component {
       },
       data
     } = this.props;
+    console.log(this.props);
 
     return (
       <ContainerProyect>
         {
           proyects.map((item) => (
-            <Proyect
-              key={item.id}
-              name={item.name}
-              image={data.team.childImageSharp.sizes}
-              type={item.typeProyect}
-              active={item.flag}
-            />
+              <Proyect
+                key={item.id}
+                name={item.name}
+                image={data.team.childImageSharp.sizes}
+                type={item.typeProyect}
+                active={(hash === "#seall") ? false : item.private}
+              />
           ))
         }
         <BoxAboutFinal>
@@ -86,7 +90,7 @@ class IndexPage extends Component {
             <LogoSection
               key={item.id}
               name={item.name}
-              image={data.logo.childImageSharp.sizes}
+              image={data[item.id].childImageSharp.sizes}
             />
           ))
         }
@@ -155,7 +159,19 @@ query caseStudiesMain {
   team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
     ...imageFragment
   }
-  logo:file(relativePath: { eq: "cases-studies/logo.png" }) {
+  double:file(relativePath: { eq: "cases-studies/double.png" }) {
+    ...imageFragment
+  }
+  arena:file(relativePath: { eq: "cases-studies/arena.png" }) {
+    ...imageFragment
+  }
+  logo500:file(relativePath: { eq: "cases-studies/logo500.png" }) {
+    ...imageFragment
+  }
+  enter:file(relativePath: { eq: "cases-studies/enter.png" }) {
+    ...imageFragment
+  }
+  cc:file(relativePath: { eq: "cases-studies/cc.png" }) {
     ...imageFragment
   }
   site {
@@ -165,6 +181,7 @@ query caseStudiesMain {
           id
           name
           typeProyect
+          private
         }
         logos {
           id

@@ -11,9 +11,11 @@ import {
 } from './styledComponents'
 
 
-const Proyect = ({ name, image, type }) =>  {
+const Proyect = ({ name, image, type, active }) =>  {
   return(
-    <Box>
+    <Box
+      style={{display: active ? 'none' : 'block' }}
+    >
       <BoxImage>
         <Img sizes={image} />
         <ContentBox>
@@ -33,6 +35,7 @@ const Proyect = ({ name, image, type }) =>  {
 Proyect.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
+  active: PropTypes.bool,
   image: PropTypes.object,
 };
 
