@@ -6,6 +6,7 @@ import offices from '../../images/home/offices.jpg'
 export const ContentGetaQuote = styled.div`
   padding: 3em 1em 2.5em;
   position: relative;
+  width: 100%;
   &::after {
     content: '';
     display: flex;
