@@ -41,7 +41,6 @@ class IndexPage extends Component {
       },
       data
     } = this.props;
-    console.log(this.props);
 
     return (
       <ContainerProyect>
@@ -52,6 +51,7 @@ class IndexPage extends Component {
                 name={item.name}
                 image={data.team.childImageSharp.sizes}
                 type={item.typeProyect}
+                url={item.link}
                 active={(hash === "#seall") ? false : item.private}
               />
           ))
@@ -182,6 +182,7 @@ query caseStudiesMain {
           name
           typeProyect
           private
+          link
         }
         logos {
           id

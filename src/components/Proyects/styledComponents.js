@@ -5,15 +5,17 @@ export const Box = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 2em;
-  border-radius: 8px;
   overflow: hidden;
   transition: all .5s;
-  ${breakpoint('tablet')`
+  ${breakpoint('md')`
     width: 48%;
   `}
-  ${breakpoint('desktop')`
+  ${breakpoint('lg')`
     width: 31%;
-    height: 230px;
+    height: 210px;
+  `}
+  ${breakpoint('xl')`
+    height: 240px;
   `}
 `;
 
@@ -21,7 +23,11 @@ export const BoxImage = styled.div`
   display: flex;
   position: relative;
   width: 100%;
+  height: 100%;
   cursor: default;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
   .gatsby-image-wrapper {
     width: 100%;
     transition: all .5s;
@@ -60,4 +66,12 @@ export const ContentBox = styled.div`
     font-size: 14px;
     text-shadow: 1px 1px 2px #333;
   }
+`;
+
+export const A = styled.a`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  cursor: pointer;
 `;
