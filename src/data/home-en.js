@@ -20,6 +20,11 @@ const home = {
       id: 1,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
       title: 'Founder of ArenaBursatil.com'
+    },
+    2: {
+      id: 2,
+      description: 'I\'ve worked with Sancrisoft on a variety of projects now and they come through every time. Not only on delivery but they also help our team scope the project and come up with the best solutions',
+      title: 'CEO of Double Nines Productions LLC'
     }
   },
   carousel: {

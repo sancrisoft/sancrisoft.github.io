@@ -197,7 +197,7 @@ query homeQuery {
   Testimonial1:file(relativePath: { eq: "home/foto1.jpg" }) {
     ...imageFragment
   }
-  Testimonial2:file(relativePath: { eq: "home/foto3.jpg" }) {
+  Testimonial2:file(relativePath: { eq: "home/foto2.png" }) {
     ...imageFragment
   }
   Testimonial3:file(relativePath: { eq: "home/foto5.jpg" }) {

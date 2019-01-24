@@ -20,6 +20,11 @@ const homeES = {
       id: 1,
       description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
       title: 'Fundador de ArenaBursatil.com'
+    },
+    2: {
+      id: 2,
+      description: 'He trabajado con Sancrisoft en varios proyectos y ellos estan ahi para resolver en cualquier momento. No solamente en las estregas también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones',
+      title: 'CEO of Double Nines Productions LLC'
     }
   },
   carousel: {
