@@ -1,10 +1,17 @@
 import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-// import mojs from 'mo-js';
-// import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
 // import breakpoint from 'styled-components-breakpoint';
+
+let mojs = {}
+let ReactDOM = {}
+
+// Validation in order to work with Gatsby build phase
+if (typeof window !== `undefined`) {
+  mojs = require('mo-js')
+  ReactDOM = require('react-dom')
+}
 
 const float = keyframes`
   0% {
@@ -122,7 +129,6 @@ export class FloatingChip extends PureComponent {
     duration: PropTypes.number,
   }
 
-  /*
   handleEmotion = () => {
     const { color } = this.props;
     if (this.moAnimation) this.moAnimation.replay();
@@ -144,7 +150,6 @@ export class FloatingChip extends PureComponent {
       this.moAnimation.play();
     }
   }
-  */
 
   render() {
     const { sizes, duration, tooltip, text } = this.props;
