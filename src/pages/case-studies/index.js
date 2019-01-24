@@ -120,7 +120,7 @@ class IndexPage extends Component {
           <SEO title={`Sancrisoft | ${t('caseStudies.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
             <section>
               <BigGreyImage
-                image={data.careersMainImage.childImageSharp.sizes}
+                image={data.caseStudiesMainImage.childImageSharp.sizes}
                 title={t('caseStudies.bigImage.title')}
                 description={t('caseStudies.bigImage.description')}
               />
@@ -153,7 +153,7 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query caseStudiesMain {
-  careersMainImage:file(relativePath: { eq: "careers/work.jpg" }) {
+  caseStudiesMainImage:file(relativePath: { eq: "cases-studies/case-studies.jpg" }) {
     ...imageFragment
   }
   team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
