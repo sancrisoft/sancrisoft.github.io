@@ -9,6 +9,7 @@ import CasesImage from '../../../components/casesImage'
 import Background from '../../../components/casesBackground'
 import About from '../../../components/casesAbout'
 import Tecnology from '../../../components/casesTecnology'
+import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
 import ImagePhone from '../../../images/cases-studies/meattogo/Meattogo.gif'
@@ -18,6 +19,7 @@ import {
   ContentBack,
   ContentAbout,
   ContentTecnology,
+  ContentSimilar,
   Tecnologies
 } from '../../../styles/case-studies-meattogo/styledComponents';
 
@@ -124,6 +126,43 @@ class IndexPage extends Component {
     ));
   }
 
+  renderCasesSimilar = () => {
+    const {
+      location: {
+        hash
+      },
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              proyects,
+            }
+          }
+        }
+      },
+      data,
+    } = this.props;
+
+    let item = proyects.sort(function() { return 0.5 - Math.random() });
+    let newArray = [];
+
+
+    if (hash === "#seeall") {
+      newArray = item.slice(0, 3);
+    } else {
+      newArray = item.filter(item => item.private === false).slice(0, 3);
+    }
+
+    console.log("resultado ", newArray);
+
+
+    // return proyects.map((item) => (
+    //   <Similar
+    //     key={item.id}
+    //   />
+    // ));
+  }
+
   render() {
     const {
       data,
@@ -135,17 +174,21 @@ class IndexPage extends Component {
         <Layout>
           <SEO title={`Sancrisoft | ${t('caseStudies.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
           <ContentCase>
+
             <CasePageSizer>
               { this.renderCases() }
             </CasePageSizer>
+
             <ContentBack>
               <Background
                 image={data.BackgroundMeattogo.childImageSharp.sizes}
               />
             </ContentBack>
+
             <ContentAbout>
               { this.renderCasesAbout() }
             </ContentAbout>
+
             <ContentTecnology>
               <Title
                 type={2}
@@ -155,6 +198,11 @@ class IndexPage extends Component {
                 { this.renderCasesTecnologies() }
               </Tecnologies>
             </ContentTecnology>
+
+            <ContentSimilar>
+              { this.renderCasesSimilar() }
+            </ContentSimilar>
+
           </ContentCase>
       </Layout>
       </I18nextProvider>
@@ -195,6 +243,13 @@ query caseStudies {
   site {
     siteMetadata {
       caseStudies {
+        proyects {
+          id
+          name
+          typeProyect
+          private
+          link
+        }
         cases {
           id
           name

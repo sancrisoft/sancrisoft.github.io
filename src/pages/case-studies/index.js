@@ -39,7 +39,8 @@ class IndexPage extends Component {
           }
         }
       },
-      data
+      data,
+      t
     } = this.props;
 
     return (
@@ -52,16 +53,15 @@ class IndexPage extends Component {
                 image={data.team.childImageSharp.sizes}
                 type={item.typeProyect}
                 url={item.link}
-                active={(hash === "#seall") ? false : item.private}
+                active={(hash === "#seeall") ? false : item.private}
               />
           ))
         }
         <BoxAboutFinal>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quae nihil, blanditiis vero fuga voluptates
-            inventore illo rem quam velit!</p>
+            <p>{t('caseStudies.proyects.textBox')}</p>
             <Button
-              size="18px"
-              text="Contact Us"
+              size="15px"
+              text={t('caseStudies.proyects.titleButton')}
               onClick={ () => navigate(urlGetAQuote)}
             />
         </BoxAboutFinal>
@@ -94,7 +94,8 @@ class IndexPage extends Component {
               key={item.id}
               name={item.name}
               image={data[item.id].childImageSharp.sizes}
-              active={(hash === "#seall") ? false : item.private}
+              url={item.link}
+              active={(hash === "#seeall") ? false : item.private}
             />
           ))
         }
@@ -192,6 +193,7 @@ query caseStudiesMain {
           id
           name
           private
+          link
         }
         getAQuote {
           urlGetAQuote

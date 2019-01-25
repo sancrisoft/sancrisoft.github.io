@@ -135,7 +135,7 @@ export class Icons extends PureComponent {
         );
       case 'check':
         return(
-          <svg enable-background="new 0 0 24 24" height={height} version="1.1" viewBox="0 0 24 24" width={width}>
+          <svg height={height} version="1.1" viewBox="0 0 24 24" width={width}>
             <g>
               <g>
                 <path

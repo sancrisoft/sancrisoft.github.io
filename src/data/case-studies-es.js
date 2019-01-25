@@ -4,6 +4,10 @@ const caseStudiesES = {
     title: 'Pagina Casos de Estudio!',
     description: ''
   },
+  proyects: {
+    titleButton: 'Contáctenos',
+    textBox: "¿Quieres ver más?, Envíanos una línea y te contestaremos con más detalles."
+  },
   getAQuote: {
     titleButton: "Contact case-studies",
     description: "descripcion case-studies."

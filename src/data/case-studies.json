@@ -35,32 +35,60 @@
       "typeProyect": "Mobile App",
       "link": "/example5",
       "private": false
+    },
+    {
+      "id": "proyect6",
+      "name": "proyect6",
+      "typeProyect": "Mobile App",
+      "link": "/example6",
+      "private": false
+    }
+    ,
+    {
+      "id": "proyect7",
+      "name": "proyect7",
+      "typeProyect": "Mobile App",
+      "link": "/example7",
+      "private": true
+    }
+    ,
+    {
+      "id": "proyect8",
+      "name": "proyect8",
+      "typeProyect": "Mobile App",
+      "link": "/example8",
+      "private": false
     }
   ],
   "logos": [
     {
       "id": "double",
       "name": "Double Nines",
+      "link": "/urllogo1",
       "private": true
     },
     {
       "id": "arena",
       "name": "Arena Alfa",
+      "link": "/urllogo2",
       "private": true
     },
     {
       "id": "logo500",
       "name": "logo 500",
+      "link": "/urllogo3",
       "private": false
     },
     {
       "id": "enter",
       "name": "logo Enter",
+      "link": "/urllogo4",
       "private": false
     },
     {
       "id": "cc",
       "name": "logo cc",
+      "link": "/urllogo5",
       "private": false
     }
   ],
@@ -139,6 +167,6 @@
     }
   ],
   "getAQuote": {
-    "urlGetAQuote": "/careers"
+    "urlGetAQuote": "/contact"
   }
 }

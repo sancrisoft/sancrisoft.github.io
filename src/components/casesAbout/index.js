@@ -46,8 +46,8 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
                     <Icons
                       iconName="check"
                       backgroundColor="#F28724"
-                      height="13"
-                      width="13"
+                      height={13}
+                      width={13}
                     />
                       {item}
                   </li>
@@ -70,8 +70,8 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
                     <Icons
                       iconName="check"
                       backgroundColor="#F28724"
-                      height="13"
-                      width="13"
+                      height={13}
+                      width={13}
                     />
                       {item}
                   </li>

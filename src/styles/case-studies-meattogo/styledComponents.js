@@ -78,3 +78,20 @@ export const Tecnologies = styled.div`
     padding-bottom: 3em;
   `}
 `;
+
+export const ContentSimilar = styled.section`
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  ${breakpoint('tablet')`
+    max-width: 90%;
+  `}
+  ${breakpoint('desktop')`
+    max-width: 78%;
+    padding-top: 1em;
+  `}
+`;
