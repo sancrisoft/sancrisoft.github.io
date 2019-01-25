@@ -19,7 +19,7 @@ import {
   ContentAbout,
   ContentTecnology,
   Tecnologies
-} from '../../../styles/case-studies-meattogo/styledComponents';
+} from '../../../styles/case-studies-lacochera/styledComponents';
 
 class IndexPage extends Component {
 
@@ -48,8 +48,9 @@ class IndexPage extends Component {
       <CasesImage
         key={id}
         title={name}
+        widthImage={'200'}
         description={t(`caseStudies.cases.meattogo.description`)}
-        image={data.meattogo.childImageSharp.sizes}
+        image={data.lacochera.childImageSharp.sizes}
         playStore={data.playStore.childImageSharp.sizes}
         linkPlayStore={playStore}
         appStore={data.appStore.childImageSharp.sizes}
@@ -129,7 +130,7 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-
+    console.log(this.props);
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
@@ -165,7 +166,7 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query lacochera {
-  meattogo:file(relativePath: { eq: "home/meattogo.png" }) {
+  lacochera:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
     ...imageFragment
   }
   playStore:file(relativePath: { eq: "cases-studies/playStore.png" }) {

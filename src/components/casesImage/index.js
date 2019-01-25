@@ -34,13 +34,13 @@ const CasesImage = ({
   playStore,
   appStore,
   linkPlayStore,
-  linkAppStore }) => {
+  linkAppStore, widthImage }) => {
 
   return(
     <ThemeProvider theme={theme}>
       <ContentCases>
         <CaseLeft>
-          <CaseLeftTop>
+          <CaseLeftTop widthImage={widthImage}>
             <Img sizes={image} />
             <Title
               type={3}
@@ -81,6 +81,7 @@ CasesImage.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.object.isRequired,
+  widthImage: PropTypes.string,
   phone: PropTypes.string,
   playStore: PropTypes.object,
   appStore: PropTypes.object,

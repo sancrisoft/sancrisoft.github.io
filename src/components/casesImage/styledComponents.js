@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const ContentCases = styled.section`
@@ -37,9 +37,15 @@ export const CaseLeftTop = styled.div`
     right: 10px;
     ${breakpoint('md')`
       width: 100px;
+      ${(props) => props.widthImage && css`
+        width: ${props.widthImage}
+      `}
     `}
     ${breakpoint('xl')`
       width: 120px;
+      ${(props) => props.widthImage && css`
+        width: ${props.widthImage}
+      `}
     `}
   }
 `;
