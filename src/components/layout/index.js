@@ -22,6 +22,9 @@ class Layout extends Component {
     language: 'en',
   }
   componentDidMount() {
+    const { i18n: { language }, i18n } = this.props;
+    if(["en", "es"].includes(language)) this.setState({ language });
+    else i18n.changeLanguage("en");
     this.setPathname();
     window.addEventListener('scroll', this.handleScroll, { passive: true })
   }
@@ -107,10 +110,10 @@ class Layout extends Component {
           <GlobalFonts />
           {
             (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={hamburStyles} width={ 240 }>
-              <Link to="/about-us" > {t('home.nav.about')} </Link>
-              <Link to="/case-studies" > {t('home.nav.cases')} </Link>
+              <Link to="/about" > {t('home.nav.about')} </Link>
+              {/* <Link to="/case-studies" > {t('home.nav.cases')} </Link> */}
               <Link to="/careers"> {t('home.nav.careers')} </Link>
-              <Link to="/get-a-quote" > {t('home.nav.quote')} </Link>
+              <Link to="/contact" > {t('home.nav.quote')} </Link>
               <div style={{ marginTop:  5}}>
                 <LanguageButtons isBlack changeLanguage={this.eventChangeLang} language={language} />
               </div>

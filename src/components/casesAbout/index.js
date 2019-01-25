@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Title from '../../components/title'
+import Title from '../title'
+import Icons from '../icons'
 
 
 import {
@@ -18,13 +19,13 @@ import {
 const CasesAbout = ({id ,urlNetwork, name, description, services, features, titleServices, titleFeatures }) => {
   return(
     <ContentAbout>
-      <AboutTitle>
-        <Title
-          type={2}
-          text={`${name} ${id}`}
-        />
-      </AboutTitle>
       <AboutDescription>
+        <AboutTitle>
+          <Title
+            type={2}
+            text={`${name} ${id}`}
+          />
+        </AboutTitle>
         <p>
           {description}
           <A href={urlNetwork} target="_blank" >{urlNetwork}</A>
@@ -40,7 +41,17 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
           <UL>
             {
               services.map((item, i) => {
-                return(<li key={i}>- {item}</li>)
+                return(
+                  <li key={i}>
+                    <Icons
+                      iconName="check"
+                      backgroundColor="#F28724"
+                      height="13"
+                      width="13"
+                    />
+                      {item}
+                  </li>
+                )
               })
             }
           </UL>
@@ -54,7 +65,17 @@ const CasesAbout = ({id ,urlNetwork, name, description, services, features, titl
           <UL>
             {
               features.map((item, i) => {
-                return(<li key={i}>- {item}</li>)
+                return(
+                  <li key={i}>
+                    <Icons
+                      iconName="check"
+                      backgroundColor="#F28724"
+                      height="13"
+                      width="13"
+                    />
+                      {item}
+                  </li>
+                )
               })
             }
           </UL>

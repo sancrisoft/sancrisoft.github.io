@@ -33,6 +33,16 @@ export const GreyOverlay = styled.div`
   transform: scale(0);
   z-index: -10;
   padding: 1em;
+  h6 {
+    position: absolute;
+    top: 20%;
+    font-size: 12px;
+    padding: 0 10px;
+    ${breakpoint('desktop')`
+      font-size: inherit;
+      top: 70px;
+    `}
+  }
   h4, span {
     text-align: center;
   }
@@ -131,6 +141,7 @@ export const CardContainer = styled.div`
       line-height: 11px;
       margin-top: 5px;
       text-align: center;
+      white-space: nowrap;
       ${breakpoint('tablet')`
         font-size: 10px;
         line-height: 12px;

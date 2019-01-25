@@ -1,5 +1,13 @@
 const caseStudiesES = {
   title: "Caso de estudio",
+  bigImage: {
+    title: 'Pagina Casos de Estudio!',
+    description: ''
+  },
+  getAQuote: {
+    titleButton: "Contact case-studies",
+    description: "descripcion case-studies."
+  },
   cases: {
     meattogo: {
       description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos."

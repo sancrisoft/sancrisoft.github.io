@@ -1,7 +1,7 @@
 const careersES = {
   bigImage: {
-    title: 'Convienterte en uno de nosotros!',
-    description: 'Un equipo de personas con talento que disfrutan y se divierten haciendo su trabajo'
+    title: 'Se Parte de Nuestro Equipo!',
+    description: ''
   },
   recruitment: {
     title: 'Nuestro proceso de reclutamiento',
@@ -21,58 +21,54 @@ const careersES = {
   benefits: {
     title: 'Beneficios',
     salary: {
-      title: 'Salario competitivo',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Salario Competitivo",
+      description: "Salario competitivo de acuerdo a experiencia",
     },
     vacations: {
-      title: 'Vacaciones',
-      description: '15 días de vacaciones pagas',
+      title: "Vacaciones",
+      description: "15 día de vacaciones pagas",
     },
     remote: {
-      title: 'Trabajo remoto',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Trabajo Remoto",
+      description: "Trabaja desde casa o desde tu café favorito",
     },
     environment: {
-      title: 'Ambiente de trabajo',
-      description: 'Lorem ipsum dolor sit amet',
-    },
-    bonus: {
-      title: 'Bonos',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Ambiente de Trabajo",
+      description: "Gran ambiente como el de una familia",
     },
     snack: {
-      title: 'Meriendas y Cervezas',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Snacks & Cervezas",
+      description: "Café, snacks, comida saludable y cervezas",
     },
     happy: {
-      title: 'Happy Hours',
-      description: 'Lorem ipsum dolor sit amet',
+      title: "Happy Hours",
+      description: "Eventos sociales para integrarnos como equipo",
     },
     workstation: {
-      title: 'Lugar de trabajo',
-      description: 'Nos gusta trabajar con las mejores herramientas.(Mackbooks y accesorios)'
+      title: "Estacion de Trabajo",
+      description: "Estación de trabajo cómodas y de ensueño"
     },
     support: {
-      title: 'Soporte del equipo',
-      description: 'Da y recibe comentarios, establece metas y desarrolla tus habilidades.'
+      title: "Trabajo Colaborativo",
+      description: "Ambiente colaborativo entre todo todo el equipo"
     }
   },
   recruitmentProcess: {
     application: {
-      title: 'Aplicación',
-      description: 'Descripcion',
+      title: "Aplicación",
+      description: "Llena el formulario de esta página o escríbenos un email diciendonos porque quieres trabajar con nosotros",
     },
     assigment: {
-      title: 'Pruebas',
-      description: 'Descripcion',
+      title: "Prueba",
+      description: "Te enviaremos una pequeña tarea para revisar tus habilidades y comprararlas con nuestras necesidades",
     },
     interview: {
-      title: 'Entrevista',
-      description: 'Descripcion',
+      title: "Entrevista",
+      description: "Una vez la pruebas es aprobada fijaremos una fecha para una entrevista y conocerte mejor",
     },
     offer: {
-      title: 'Oferta',
-      description: 'Descripcion',
+      title: "Oferta",
+      description: "Si todo luce bien te haremos una oferta formal para que te unas a nuestro equipo",
     },
   },
   openPositions: {

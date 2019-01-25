@@ -1,5 +1,13 @@
 const caseStudies = {
   title: "Case Studies",
+  bigImage: {
+    title: 'Page Case Studie',
+    description: ''
+  },
+  getAQuote: {
+    titleButton: "get Quote case-studies",
+    description: "description case-studies."
+  },
   cases: {
     meattogo: {
       description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."

@@ -3,6 +3,8 @@ import {
   graphql,
 } from 'gatsby'
 import Img from 'gatsby-image'
+import { I18nextProvider } from "react-i18next"
+import i18n from '../data/translations'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -17,14 +19,17 @@ class NotFoundPage extends Component {
     } = this.props;
 
     return(
-      <Layout>
-        <SEO title="404: Not found" />
-        <Content404>
-          <Img
-            sizes={data.img404.childImageSharp.sizes}
-          />
-        </Content404>
-      </Layout>
+      <I18nextProvider i18n={i18n}>
+        <Layout>
+          <SEO title="404: Not found" />
+          <Content404>
+            <Img
+              sizes={data.img404.childImageSharp.sizes}
+              className="example"
+            />
+          </Content404>
+        </Layout>
+      </I18nextProvider>
     );
   }
 }

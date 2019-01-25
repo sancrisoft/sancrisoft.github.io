@@ -113,5 +113,11 @@ export const Content404 = styled.div`
     width: 99%;
     margin: auto;
     max-width: 1024px;
+    & > div {
+      padding-bottom: 100% !important;
+      ${breakpoint('tablet')`
+        padding-bottom: 75% !important;
+      `}
+    }
   }
 `;

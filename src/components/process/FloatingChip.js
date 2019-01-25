@@ -1,10 +1,17 @@
 import React, { PureComponent } from 'react'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-// import mojs from 'mo-js';
-// import ReactDOM from 'react-dom'
 import styled, { keyframes } from 'styled-components'
 // import breakpoint from 'styled-components-breakpoint';
+
+let mojs = {}
+let ReactDOM = {}
+
+// Validation in order to work with Gatsby build phase
+if (typeof window !== `undefined`) {
+  mojs = require('mo-js')
+  ReactDOM = require('react-dom')
+}
 
 const float = keyframes`
   0% {
@@ -85,8 +92,8 @@ export const ChipContainer = styled.div`
       width: 100%;
     }
     div.technology-icon-container {
-      width: 100%;
-      height: 100%;
+      width: 3.6em;
+      height: 3.6em;
       overflow: hidden;
       transition: all ${({ duration }) => duration}s ease-in-out;
       animation: ${float} ${({ duration }) => duration}s ease-in-out infinite;
@@ -103,6 +110,7 @@ export const ChipContainer = styled.div`
         flex: 1;
         width: 3.6em;
         height: 3.6em;
+        border-radius: 50%;
         img {
           flex: 1;
           object-fit: contain !important;
@@ -121,7 +129,6 @@ export class FloatingChip extends PureComponent {
     duration: PropTypes.number,
   }
 
-  /*
   handleEmotion = () => {
     const { color } = this.props;
     if (this.moAnimation) this.moAnimation.replay();
@@ -143,7 +150,6 @@ export class FloatingChip extends PureComponent {
       this.moAnimation.play();
     }
   }
-  */
 
   render() {
     const { sizes, duration, tooltip, text } = this.props;

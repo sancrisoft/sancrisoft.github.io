@@ -48,7 +48,7 @@ MemberCard.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   message1: PropTypes.string.isRequired,
-  message2: PropTypes.string.isRequired,
+  message2: PropTypes.string,
   socialMedia: PropTypes.array.isRequired,
 };
 

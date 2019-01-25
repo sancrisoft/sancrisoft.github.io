@@ -18,9 +18,19 @@ const home = {
   testimonials: {
     1: {
       id: 1,
+      description: 'I\'ve worked with Sancrisoft on a variety of projects now and they come through every time. Not only on delivery but they also help our team scope the project and come up with the best solutions.',
+      title: 'CEO of Double Nines Productions LLC'
+    },
+    2: {
+      id: 2,
+      description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
+      title: 'CEO of Innovation Factory SAS'
+    },
+    3: {
+      id: 3,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
-      title: 'Founder of ArenaBursatil.com'
-    }
+      title: 'Founder of arenaalfa.com'
+    },
   },
   carousel: {
     1: {
