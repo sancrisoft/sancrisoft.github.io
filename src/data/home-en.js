@@ -24,7 +24,7 @@ const home = {
     2: {
       id: 2,
       description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
-      title: 'Co-Director of Innovation Factory SAS'
+      title: 'CEO of Innovation Factory SAS'
     },
     3: {
       id: 3,

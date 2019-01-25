@@ -24,7 +24,7 @@ const homeES = {
     2: {
       id: 2,
       description: 'Contar con Sancrisoft es garantía de una integración de equipo, en donde el equipo de ingenieros resultante entienden y se complementan tanto técnicamente como a nivel de modelo de negocio.',
-      title: 'Codirector de Innovation Factory SAS'
+      title: 'CEO de Innovation Factory SAS'
     },
     3: {
       id: 3,
