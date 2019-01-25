@@ -11,7 +11,7 @@ import About from '../../../components/casesAbout'
 import Tecnology from '../../../components/casesTecnology'
 import i18n from '../../../data/translations'
 
-import ImagePhone from '../../../images/cases-studies/meattogo/Meattogo.gif'
+import ImagePhone from '../../../images/cases-studies/lacochera/lacochera-bg.png'
 import {
   ContentCase,
   CasePageSizer,
@@ -37,25 +37,21 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    const meattogo = cases.find(item => item.id === "meattogo");
+    const cochera = cases.find(item => item.id === "lacochera");
     const {
       id,
       name,
-      appStore,
-      playStore
-    } = meattogo;
+      weblink
+    } = cochera;
     return (
       <CasesImage
         key={id}
         title={name}
-        widthImage={'200'}
-        description={t(`caseStudies.cases.meattogo.description`)}
-        image={data.lacochera.childImageSharp.sizes}
-        playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={playStore}
-        appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={appStore}
+        widthImage={'200px'}
+        description={t(`caseStudies.cases.lacochera.description`)}
+        image={data.lacocheralogo.childImageSharp.sizes}
         phone={ImagePhone}
+        weblink={weblink}
       />
     );
   }
@@ -74,31 +70,30 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const meattogo = about.find(item => item.id === "meattogo");
+    const lacochera = about.find(item => item.id === "lacochera");
     const {
-      id,
       networkApp,
       services,
       features
-    } = meattogo;
+    } = lacochera;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.about.meattogo.services.${item.id}`))
+      return(t(`caseStudies.about.lacochera.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.about.meattogo.features.${item.id}`))
+      return(t(`caseStudies.about.lacochera.features.${item.id}`))
     })
 
     return (
       <About
-        id={id}
+        id={"La Cochera"}
         urlNetwork={networkApp}
         name={t(`caseStudies.about.title`)}
-        description={t(`caseStudies.about.meattogo.description`)}
+        description={t(`caseStudies.about.lacochera.description`)}
         services={service}
-        titleServices={t(`caseStudies.about.meattogo.services.title`)}
+        titleServices={t(`caseStudies.about.lacochera.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.about.meattogo.features.title`)}
+        titleFeatures={t(`caseStudies.about.lacochera.features.title`)}
       />
     );
   }
@@ -116,7 +111,9 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    return tecnologies[0].meattogo.map((item) => (
+    console.log('props', tecnologies);
+    const lacochera = tecnologies.find(item => item.id === "lacochera");
+    return lacochera.logos.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
@@ -130,7 +127,6 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    console.log(this.props);
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
@@ -141,7 +137,7 @@ class IndexPage extends Component {
             </CasePageSizer>
             <ContentBack>
               <Background
-                image={data.BackgroundMeattogo.childImageSharp.sizes}
+                image={data.BackgroundLaCochera.childImageSharp.sizes}
               />
             </ContentBack>
             <ContentAbout>
@@ -166,7 +162,10 @@ class IndexPage extends Component {
 // Queries for images (One query by image)
 export const query = graphql`
 query lacochera {
-  lacochera:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
+  lacocheralogo:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
+    ...imageFragment
+  }
+  lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
     ...imageFragment
   }
   playStore:file(relativePath: { eq: "cases-studies/playStore.png" }) {
@@ -175,22 +174,31 @@ query lacochera {
   appStore:file(relativePath: { eq: "cases-studies/appStore.png" }) {
     ...imageFragment
   }
-  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
+  BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
     ...imageFragment
   }
-  nodeJs:file(relativePath: { eq: "cases-studies/meattogo/nodeJs.png" }) {
+  nodeJs:file(relativePath: { eq: "cases-studies/lacochera/nodeJs.png" }) {
     ...imageFragment
   }
-  swagger:file(relativePath: { eq: "cases-studies/meattogo/swagger.png" }) {
+  react:file(relativePath: { eq: "cases-studies/lacochera/react.png" }) {
     ...imageFragment
   }
-  reactN:file(relativePath: { eq: "cases-studies/meattogo/reactNative.png" }) {
+  redux:file(relativePath: { eq: "cases-studies/lacochera/redux.png" }) {
     ...imageFragment
   }
-  mailgun:file(relativePath: { eq: "cases-studies/meattogo/mailgun.png" }) {
+  aws:file(relativePath: { eq: "cases-studies/lacochera/aws.png" }) {
     ...imageFragment
   }
-  ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
+  loopback:file(relativePath: { eq: "cases-studies/lacochera/loopback.png" }) {
+    ...imageFragment
+  }
+  elasticsearch:file(relativePath: { eq: "cases-studies/lacochera/elasticsearch.png" }) {
+    ...imageFragment
+  }
+  styled:file(relativePath: { eq: "cases-studies/lacochera/styled.png" }) {
+    ...imageFragment
+  }
+  webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
     ...imageFragment
   }
   site {
@@ -201,6 +209,7 @@ query lacochera {
           name
           appStore
           playStore
+          weblink
         }
         about {
           id
@@ -213,7 +222,8 @@ query lacochera {
           }
         }
         tecnologies {
-          meattogo {
+          id
+          logos {
             id
             text
           }

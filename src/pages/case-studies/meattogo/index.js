@@ -9,7 +9,6 @@ import CasesImage from '../../../components/casesImage'
 import Background from '../../../components/casesBackground'
 import About from '../../../components/casesAbout'
 import Tecnology from '../../../components/casesTecnology'
-import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
 import ImagePhone from '../../../images/cases-studies/meattogo/Meattogo.gif'
@@ -117,7 +116,8 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    return tecnologies[0].meattogo.map((item) => (
+    const meattogo = tecnologies.find(item => item.id === "meattogo");
+    return meattogo.logos.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
@@ -140,7 +140,6 @@ class IndexPage extends Component {
           }
         }
       },
-      data,
     } = this.props;
 
     let item = proyects.sort(function() { return 0.5 - Math.random() });
@@ -267,7 +266,8 @@ query caseStudies {
           }
         }
         tecnologies {
-          meattogo {
+          id
+          logos {
             id
             text
           }

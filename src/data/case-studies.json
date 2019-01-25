@@ -95,9 +95,17 @@
   "cases": [
     {
       "id": "meattogo",
-      "name": "Meattogo",
+      "name": "La Cochera",
       "appStore": "https://itunes.apple.com/pa/app/meattogo/id1215006192",
-      "playStore": "https://play.google.com/store/apps/details?id=com.meattogoapp"
+      "playStore": "https://play.google.com/store/apps/details?id=com.meattogoapp",
+      "weblink": null
+    },
+    {
+      "id": "lacochera",
+      "name": "La Cochera",
+      "appStore": "",
+      "playStore": "",
+      "weblink": "https://www.lacochera.com.pa/"
     }
   ],
   "about": [
@@ -138,12 +146,56 @@
           "id": 4
         }
       ]
+    },
+    {
+      "id": "lacochera",
+      "networkApp": "",
+      "services": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        }
+      ],
+      "features": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ]
     }
   ],
   "tecnologies": [
     {
       "id": "meattogo",
-      "meattogo": [
+      "logos": [
         {
           "id": "nodeJs",
           "text": "NodeJs"
@@ -162,6 +214,43 @@
         },{
           "id": "ignite",
           "text": "Ignite"
+        }
+      ]
+    },
+    {
+      "id": "lacochera",
+      "logos": [
+        {
+          "id": "nodeJs",
+          "text": "NodeJs"
+        },
+        {
+          "id": "react",
+          "text": "ReactJs"
+        },
+        {
+          "id": "redux",
+          "text": "Redux"
+        },
+        {
+          "id": "aws",
+          "text": "AWS"
+        },
+        {
+          "id": "loopback",
+          "text": "LoopBack"
+        },
+        {
+          "id": "elasticsearch",
+          "text": "ElasticSearch"
+        },
+        {
+          "id": "styled",
+          "text": "Styled Components"
+        },
+        {
+          "id": "webpack",
+          "text": "Webpack"
         }
       ]
     }
