@@ -4,6 +4,10 @@ const caseStudies = {
     title: 'Page Case Studie',
     description: ''
   },
+  proyects: {
+    titleButton: 'Contact Us',
+    textBox: "¿Want to see more? Drop us a line and will back to you with more details."
+  },
   getAQuote: {
     titleButton: "get Quote case-studies",
     description: "description case-studies."

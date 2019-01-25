@@ -18,13 +18,15 @@ export const Logos = styled.div`
       width: 120px;
     `}
     img {
-      filter: grayscale(1);
       transition: all .5s;
     }
-    &:hover {
-      img {
-        filter: grayscale(0);
-      }
-    }
   }
+`;
+
+
+export const A = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;

@@ -43,13 +43,20 @@ export const BoxAboutFinal = styled.div`
     width: 31%;
   `}
   p {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 1rem;
     text-align: center;
+    ${breakpoint('tablet')`
+      font-size: 15px;
+    `}
+    ${breakpoint('desktop')`
+      font-size: 16px;
+    `}
   }
   button {
-    width: 160px;
+    width: 165px;
     margin: 0 auto;
+    padding: 8px 20px !important;
   }
 `;
 

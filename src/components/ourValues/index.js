@@ -20,7 +20,8 @@ const theme = {
     sm: 568,
     md: 768,
     lg: 992,
-    xl: 1200
+    xl: 1200,
+    desktop: 992,
   }
 };
 const OurValue = ({ description, title, image, contentCustomStyles, descDirection }) => {
