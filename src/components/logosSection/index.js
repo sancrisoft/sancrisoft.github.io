@@ -2,19 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image'
 
-import { Logos
+import {
+  Logos,
+  A
 } from './styledComponents'
 
-const LogosSection = ({ image, active }) =>  {
+const LogosSection = ({ image, active, url }) =>  {
   return(
     <Logos style={{display: active ? 'none' : 'block' }}>
-      <Img sizes={image} />
+      <A href={url}>
+        <Img sizes={image} />
+      </A>
     </Logos>
   )
 }
 
 LogosSection.propTypes = {
   image: PropTypes.object,
+  url: PropTypes.string,
   active: PropTypes.bool,
 };
 
