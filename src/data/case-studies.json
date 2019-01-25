@@ -5,53 +5,63 @@
       "id": "proyect1",
       "name": "proyect1",
       "typeProyect": "Mobile App",
+      "link": "/example1",
       "private": true
     },
     {
       "id": "proyect2",
       "name": "proyect2",
       "typeProyect": "Web",
+      "link": "/example2",
       "private": true
     },
     {
       "id": "proyect3",
       "name": "proyect3",
       "typeProyect": "Mobile App",
+      "link": "/example3",
       "private": false
     },
     {
       "id": "proyect4",
       "name": "proyect4",
       "typeProyect": "Web",
+      "link": "/example4",
       "private": true
     },
     {
       "id": "proyect5",
       "name": "proyect5",
       "typeProyect": "Mobile App",
+      "link": "/example5",
       "private": false
     }
   ],
   "logos": [
     {
       "id": "double",
-      "name": "Double Nines"
+      "name": "Double Nines",
+      "private": true
     },
     {
       "id": "arena",
-      "name": "Arena Alfa"
+      "name": "Arena Alfa",
+      "private": true
     },
     {
       "id": "logo500",
-      "name": "logo 500"
+      "name": "logo 500",
+      "private": false
     },
     {
       "id": "enter",
-      "name": "logo Enter"
+      "name": "logo Enter",
+      "private": false
     },
     {
       "id": "cc",
-      "name": "logo cc"
+      "name": "logo cc",
+      "private": false
     }
   ],
   "cases": [

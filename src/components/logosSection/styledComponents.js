@@ -10,6 +10,7 @@ export const Logos = styled.div`
   .gatsby-image-wrapper {
     width: 70px;
     transition: all .5s;
+    margin: 0 auto;
     ${breakpoint('tablet')`
       width: 100px;
     `}

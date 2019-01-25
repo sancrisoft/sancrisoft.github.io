@@ -5,9 +5,9 @@ import Img from 'gatsby-image'
 import { Logos
 } from './styledComponents'
 
-const LogosSection = ({ image }) =>  {
+const LogosSection = ({ image, active }) =>  {
   return(
-    <Logos>
+    <Logos style={{display: active ? 'none' : 'block' }}>
       <Img sizes={image} />
     </Logos>
   )
@@ -15,6 +15,7 @@ const LogosSection = ({ image }) =>  {
 
 LogosSection.propTypes = {
   image: PropTypes.object,
+  active: PropTypes.bool,
 };
 
 

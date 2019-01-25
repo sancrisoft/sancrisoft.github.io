@@ -41,7 +41,6 @@ class IndexPage extends Component {
       },
       data
     } = this.props;
-    console.log(this.props);
 
     return (
       <ContainerProyect>
@@ -52,6 +51,7 @@ class IndexPage extends Component {
                 name={item.name}
                 image={data.team.childImageSharp.sizes}
                 type={item.typeProyect}
+                url={item.link}
                 active={(hash === "#seall") ? false : item.private}
               />
           ))
@@ -71,6 +71,9 @@ class IndexPage extends Component {
 
   renderLogos =() => {
     const {
+      location: {
+        hash,
+      },
       data: {
         site: {
           siteMetadata: {
@@ -91,6 +94,7 @@ class IndexPage extends Component {
               key={item.id}
               name={item.name}
               image={data[item.id].childImageSharp.sizes}
+              active={(hash === "#seall") ? false : item.private}
             />
           ))
         }
@@ -182,10 +186,12 @@ query caseStudiesMain {
           name
           typeProyect
           private
+          link
         }
         logos {
           id
           name
+          private
         }
         getAQuote {
           urlGetAQuote

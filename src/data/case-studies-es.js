@@ -1,7 +1,7 @@
 const caseStudiesES = {
   title: "Caso de estudio",
   bigImage: {
-    title: 'Pagina Casos De Estudios!',
+    title: 'Pagina Casos de Estudio!',
     description: ''
   },
   getAQuote: {
