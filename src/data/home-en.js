@@ -24,12 +24,12 @@ const home = {
     2: {
       id: 2,
       description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
-      title: 'Codirector de pidealatienda.com'
+      title: 'Co-Director of Innovation Factory SAS'
     },
     3: {
       id: 3,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
-      title: 'Founder of ArenaBursatil.com'
+      title: 'Founder of arenaalfa.com'
     },
   },
   carousel: {
