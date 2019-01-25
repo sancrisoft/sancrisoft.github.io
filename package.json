@@ -1,0 +1,65 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Sancrisoft Site - v2",
+  "version": "1.0.0",
+  "author": "Sancrisoft <developerssancrisoft@gmail.com>",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-styled-components": "^1.9.4",
+    "gatsby": "2.0.53",
+    "gatsby-image": "2.0.20",
+    "gatsby-plugin-manifest": "2.0.9",
+    "gatsby-plugin-offline": "2.0.16",
+    "gatsby-plugin-react-helmet": "3.0.2",
+    "gatsby-plugin-sharp": "2.0.14",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-source-filesystem": "2.0.8",
+    "gatsby-transformer-sharp": "2.1.8",
+    "i18next": "^13.0.0",
+    "i18next-browser-languagedetector": "^2.2.4",
+    "i18next-xhr-backend": "^1.5.1",
+    "mapbox-gl": "^0.52.0",
+    "mo-js": "^0.288.2",
+    "prop-types": "15.6.2",
+    "react": "16.6.3",
+    "react-burger-menu": "^2.5.4",
+    "react-dom": "16.6.3",
+    "react-google-invisible-recaptcha": "^0.2.11",
+    "react-google-recaptcha": "^1.0.5",
+    "react-helmet": "5.2.0",
+    "react-html-parser": "^2.0.2",
+    "react-i18next": "^8.4.0",
+    "react-mapbox-gl": "^4.1.0",
+    "react-player": "^1.8.0",
+    "react-recaptcha": "^2.3.10",
+    "react-reveal": "^1.2.2",
+    "react-slick": "^0.23.2",
+    "recompose": "^0.30.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^4.1.2",
+    "styled-components-breakpoint": "^2.1.1",
+    "sweetalert2-react": "^0.7.2"
+  },
+  "keywords": [
+    "gatsby",
+    "sancrisoft",
+    "react"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "prettier": "1.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sancrisoft/sancrisoft.github.io"
+  }
+}

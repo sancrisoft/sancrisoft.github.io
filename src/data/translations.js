@@ -1,0 +1,54 @@
+import i18n from "i18next"
+import Backend from "i18next-xhr-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { reactI18nextModule } from "react-i18next"
+import home from "./home-en"
+import homeEs from "./home-es"
+import about from "./about-en"
+import aboutES from "./about-es"
+import careers from "./careers-en"
+import careersES from "./careers-es"
+import caseStudies from "./case-studies-en"
+import caseStudiesES from "./case-studies-es"
+import getQuote from "./get-quote-en"
+import getQuoteEs from "./get-quote-es"
+i18n
+.use(Backend)
+.use(LanguageDetector)
+.use(reactI18nextModule)
+.init({
+  resources: {
+    en: {
+      translations: {
+        home: home,
+        aboutUs: about,
+        careers: careers,
+        caseStudies: caseStudies,
+        getQuote: getQuote,
+      },
+    },
+    es: {
+      translations: {
+        home: homeEs,
+        aboutUs: aboutES,
+        careers: careersES,
+        caseStudies: caseStudiesES,
+        getQuote: getQuoteEs,
+      }
+    }
+  },
+  fallbackLng: "en",
+  debug: true,
+  ns: ["translations"],
+  defaultNS: "translations",
+  keySeparator: '.',
+  interpolation: {
+    escapeValue: false, // not needed for react!!
+    formatSeparator: ","
+  },
+  react: {
+    wait: true
+  }
+});
+
+export default i18n;
