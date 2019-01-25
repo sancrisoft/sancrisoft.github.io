@@ -141,6 +141,7 @@ export const CardContainer = styled.div`
       line-height: 11px;
       margin-top: 5px;
       text-align: center;
+      white-space: nowrap;
       ${breakpoint('tablet')`
         font-size: 10px;
         line-height: 12px;
