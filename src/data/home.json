@@ -6,11 +6,15 @@
     "testimonials": [
         {
             "id": 1,
-            "name": "Sebastian Toro"
+            "name": "Alexander Corr"
         },
         {
             "id": 2,
-            "name": "Alexander Corr"
+            "name": "Rodrigo Ramírez"
+        },
+        {
+            "id": 3,
+            "name": "Sebastian Toro"
         }
     ],
     "carousel": [

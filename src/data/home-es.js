@@ -16,15 +16,20 @@ const homeES = {
     quote: "Quiero una Cotización"
   },
   testimonials: {
-    1: {
-      id: 1,
+    3: {
+      id: 3,
       description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
       title: 'Fundador de ArenaBursatil.com'
     },
+    1: {
+      id: 1,
+      description: 'He trabajado con Sancrisoft en varios proyectos y ellos estan ahi para resolver en cualquier momento. No solamente en las estregas también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones.',
+      title: 'CEO de Double Nines Productions LLC'
+    },
     2: {
       id: 2,
-      description: 'He trabajado con Sancrisoft en varios proyectos y ellos estan ahi para resolver en cualquier momento. No solamente en las estregas también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones',
-      title: 'CEO of Double Nines Productions LLC'
+      description: 'Contar con Sancrisoft es garantía de una integración de equipo, en donde el equipo de ingenieros resultante entienden y se complementan tanto técnicamente como a nivel de modelo de negocio.',
+      title: 'Codirector de pidealatienda.com'
     }
   },
   carousel: {

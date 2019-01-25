@@ -194,22 +194,13 @@ query homeQuery {
   office4:file(relativePath: { eq: "home/carousel/office-4.jpg" }) {
     ...imageFragment
   }
-  Testimonial1:file(relativePath: { eq: "home/foto1.jpg" }) {
+  Testimonial1:file(relativePath: { eq: "home/foto1.png" }) {
     ...imageFragment
   }
-  Testimonial2:file(relativePath: { eq: "home/foto2.png" }) {
+  Testimonial2:file(relativePath: { eq: "home/foto2.jpg" }) {
     ...imageFragment
   }
-  Testimonial3:file(relativePath: { eq: "home/foto5.jpg" }) {
-    ...imageFragment
-  }
-  Testimonial4:file(relativePath: { eq: "home/foto4.jpg" }) {
-    ...imageFragment
-  }
-  Testimonial5:file(relativePath: { eq: "home/foto2.jpg" }) {
-    ...imageFragment
-  }
-  Testimonial6:file(relativePath: { eq: "home/foto6.jpg" }) {
+  Testimonial3:file(relativePath: { eq: "home/foto3.jpg" }) {
     ...imageFragment
   }
   react:file(relativePath: { eq: "home/react.png" }) {
