@@ -6,6 +6,14 @@
     "testimonials": [
         {
             "id": 1,
+            "name": "Alexander Corr"
+        },
+        {
+            "id": 2,
+            "name": "Rodrigo Ramírez"
+        },
+        {
+            "id": 3,
             "name": "Sebastian Toro"
         }
     ],

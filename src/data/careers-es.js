@@ -1,6 +1,6 @@
 const careersES = {
   bigImage: {
-    title: 'Convienterte en uno de nosotros!',
+    title: 'Se Parte de Nuestro Equipo!',
     description: ''
   },
   recruitment: {

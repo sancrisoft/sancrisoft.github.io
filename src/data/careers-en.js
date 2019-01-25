@@ -1,6 +1,6 @@
 const careers = {
   bigImage: {
-    title: 'Become one of us!',
+    title: 'Be Part of Our Team!',
     description: ''
   },
   recruitment: {
