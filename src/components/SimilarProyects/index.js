@@ -1,6 +1,6 @@
 import React from 'react'
-// import PropTypes from 'prop-types';
-// import Img from 'gatsby-image'
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image'
 import {ThemeProvider} from 'styled-components'
 
 import Title from '../title';
@@ -23,23 +23,21 @@ const theme = {
 };
 
 
-const Similar = () =>  {
+const Similar = ({ name, image, type, link }) =>  {
   return(
     <ThemeProvider theme={theme}>
-      <Box
-        // style={{display: active ? 'none' : 'block' }}
-      >
-        <A href="url" >
+      <Box>
+        <A href={link} >
           <BoxImage>
-            {/* <Img sizes={image} /> */}
+            <Img sizes={image} />
             <ContentBox>
               <Title
                 type={4}
-                text="name"
+                text={name}
                 color="#fff"
                 align="left"
               />
-              <span>type</span>
+            <span>{type}</span>
             </ContentBox>
           </BoxImage>
         </A>
@@ -49,7 +47,10 @@ const Similar = () =>  {
 }
 
 Similar.propTypes = {
-
+  name: PropTypes.string,
+  type: PropTypes.string,
+  link: PropTypes.string,
+  image: PropTypes.object,
 };
 
 

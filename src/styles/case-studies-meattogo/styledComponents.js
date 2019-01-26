@@ -83,7 +83,6 @@ export const ContentSimilar = styled.section`
   margin: 0 auto;
   max-width: 90%;
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   align-items: center;
