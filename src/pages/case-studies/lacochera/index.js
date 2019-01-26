@@ -9,19 +9,17 @@ import CasesImage from '../../../components/casesImage'
 import Background from '../../../components/casesBackground'
 import About from '../../../components/casesAbout'
 import Tecnology from '../../../components/casesTecnology'
-import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
-import ImagePhone from '../../../images/cases-studies/meattogo/Meattogo.gif'
+import ImagePhone from '../../../images/cases-studies/lacochera/lacochera-bg.png'
 import {
   ContentCase,
   CasePageSizer,
   ContentBack,
   ContentAbout,
   ContentTecnology,
-  ContentSimilar,
   Tecnologies
-} from '../../../styles/case-studies-meattogo/styledComponents';
+} from '../../../styles/case-studies-lacochera/styledComponents';
 
 class IndexPage extends Component {
 
@@ -39,24 +37,21 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    const meattogo = cases.find(item => item.id === "meattogo");
+    const cochera = cases.find(item => item.id === "lacochera");
     const {
       id,
       name,
-      appStore,
-      playStore
-    } = meattogo;
+      weblink
+    } = cochera;
     return (
       <CasesImage
         key={id}
         title={name}
-        description={t(`caseStudies.cases.meattogo.description`)}
-        image={data.meattogo.childImageSharp.sizes}
-        playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={playStore}
-        appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={appStore}
+        widthImage={'200px'}
+        description={t(`caseStudies.cases.lacochera.description`)}
+        image={data.lacocheralogo.childImageSharp.sizes}
         phone={ImagePhone}
+        weblink={weblink}
       />
     );
   }
@@ -75,31 +70,30 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const meattogo = about.find(item => item.id === "meattogo");
+    const lacochera = about.find(item => item.id === "lacochera");
     const {
-      id,
       networkApp,
       services,
       features
-    } = meattogo;
+    } = lacochera;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.about.meattogo.services.${item.id}`))
+      return(t(`caseStudies.about.lacochera.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.about.meattogo.features.${item.id}`))
+      return(t(`caseStudies.about.lacochera.features.${item.id}`))
     })
 
     return (
       <About
-        id={id}
+        id={"La Cochera"}
         urlNetwork={networkApp}
         name={t(`caseStudies.about.title`)}
-        description={t(`caseStudies.about.meattogo.description`)}
+        description={t(`caseStudies.about.lacochera.description`)}
         services={service}
-        titleServices={t(`caseStudies.about.meattogo.services.title`)}
+        titleServices={t(`caseStudies.about.lacochera.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.about.meattogo.features.title`)}
+        titleFeatures={t(`caseStudies.about.lacochera.features.title`)}
       />
     );
   }
@@ -117,49 +111,12 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    const meattogo = tecnologies.find(item => item.id === "meattogo");
-    return meattogo.logos.map((item) => (
+    const lacochera = tecnologies.find(item => item.id === "lacochera");
+    return lacochera.logos.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
         image={data[item.id].childImageSharp.sizes}
-      />
-    ));
-  }
-
-  renderCasesSimilar = () => {
-    const {
-      location: {
-        hash
-      },
-      data: {
-        site: {
-          siteMetadata: {
-            caseStudies: {
-              proyects,
-            }
-          }
-        }
-      },
-      data,
-    } = this.props;
-
-    let item = proyects.sort(function() { return 0.5 - Math.random() });
-    let newArray = [];
-
-    if (hash === "#seeall") {
-      newArray = item.slice(0, 3);
-    } else {
-      newArray = item.filter(item => item.private === false).slice(0, 3);
-    }
-
-    return newArray.map((item) => (
-      <Similar
-        key={item.id}
-        name={item.name}
-        type={item.typeProyect}
-        link={item.link}
-        image={data.team.childImageSharp.sizes}
       />
     ));
   }
@@ -169,27 +126,22 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
           <SEO title={`Sancrisoft | ${t('caseStudies.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
           <ContentCase>
-
             <CasePageSizer>
               { this.renderCases() }
             </CasePageSizer>
-
             <ContentBack>
               <Background
-                image={data.BackgroundMeattogo.childImageSharp.sizes}
+                image={data.BackgroundLaCochera.childImageSharp.sizes}
               />
             </ContentBack>
-
             <ContentAbout>
               { this.renderCasesAbout() }
             </ContentAbout>
-
             <ContentTecnology>
               <Title
                 type={2}
@@ -199,11 +151,6 @@ class IndexPage extends Component {
                 { this.renderCasesTecnologies() }
               </Tecnologies>
             </ContentTecnology>
-
-            <ContentSimilar>
-              { this.renderCasesSimilar() }
-            </ContentSimilar>
-
           </ContentCase>
       </Layout>
       </I18nextProvider>
@@ -213,8 +160,11 @@ class IndexPage extends Component {
 
 // Queries for images (One query by image)
 export const query = graphql`
-query caseStudies {
-  meattogo:file(relativePath: { eq: "home/meattogo.png" }) {
+query lacochera {
+  lacocheralogo:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
+    ...imageFragment
+  }
+  lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
     ...imageFragment
   }
   playStore:file(relativePath: { eq: "cases-studies/playStore.png" }) {
@@ -223,42 +173,42 @@ query caseStudies {
   appStore:file(relativePath: { eq: "cases-studies/appStore.png" }) {
     ...imageFragment
   }
-  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
+  BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
     ...imageFragment
   }
-  nodeJs:file(relativePath: { eq: "cases-studies/meattogo/nodeJs.png" }) {
+  nodeJs:file(relativePath: { eq: "cases-studies/lacochera/nodeJs.png" }) {
     ...imageFragment
   }
-  swagger:file(relativePath: { eq: "cases-studies/meattogo/swagger.png" }) {
+  react:file(relativePath: { eq: "cases-studies/lacochera/react.png" }) {
     ...imageFragment
   }
-  reactN:file(relativePath: { eq: "cases-studies/meattogo/reactNative.png" }) {
+  redux:file(relativePath: { eq: "cases-studies/lacochera/redux.png" }) {
     ...imageFragment
   }
-  mailgun:file(relativePath: { eq: "cases-studies/meattogo/mailgun.png" }) {
+  aws:file(relativePath: { eq: "cases-studies/lacochera/aws.png" }) {
     ...imageFragment
   }
-  ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
+  loopback:file(relativePath: { eq: "cases-studies/lacochera/loopback.png" }) {
     ...imageFragment
   }
-  team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
+  elasticsearch:file(relativePath: { eq: "cases-studies/lacochera/elasticsearch.png" }) {
+    ...imageFragment
+  }
+  styled:file(relativePath: { eq: "cases-studies/lacochera/styled.png" }) {
+    ...imageFragment
+  }
+  webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
     ...imageFragment
   }
   site {
     siteMetadata {
       caseStudies {
-        proyects {
-          id
-          name
-          typeProyect
-          private
-          link
-        }
         cases {
           id
           name
           appStore
           playStore
+          weblink
         }
         about {
           id

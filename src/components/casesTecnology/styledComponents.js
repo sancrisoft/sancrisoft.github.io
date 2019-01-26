@@ -24,6 +24,9 @@ export const ContentTecnology = styled.div`
   span {
     font-size: .8em;
     font-weight: 800;
+    line-height: 0.9em;
+    text-align: center;
+    margin-top: 8px;
     ${breakpoint('tablet')`
       font-size: .9em;
     `}

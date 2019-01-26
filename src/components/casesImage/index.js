@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import {ThemeProvider} from 'styled-components'
-
+import { withNamespaces } from "react-i18next"
 import Title from '../title'
 
 import {
@@ -13,7 +13,8 @@ import {
   CaseRight,
   CaseRightImage,
   Logos,
-  A
+  A,
+  ExternalLink,
 } from './styledComponents'
 
 const theme = {
@@ -26,21 +27,24 @@ const theme = {
   }
 };
 
-const CasesImage = ({
-  title,
-  description,
-  image,
-  phone,
-  playStore,
-  appStore,
-  linkPlayStore,
-  linkAppStore }) => {
-
+const CasesImage = (props) => {
+  const {
+    title,
+    description,
+    image,
+    phone,
+    playStore,
+    appStore,
+    linkPlayStore,
+    linkAppStore, 
+    widthImage,
+    weblink, 
+    t } = props;
   return(
     <ThemeProvider theme={theme}>
       <ContentCases>
         <CaseLeft>
-          <CaseLeftTop>
+          <CaseLeftTop widthImage={widthImage}>
             <Img sizes={image} />
             <Title
               type={3}
@@ -51,20 +55,32 @@ const CasesImage = ({
             <p>{description}</p>
           </CaseLeftBottom>
           <Logos>
-            <A
+            {
+              (playStore) && <A
               href={linkPlayStore}
               target="_blank"
               className="playStore"
             >
               <Img sizes={playStore} />
             </A>
-            <A
-              href={linkAppStore}
-              target="_blank"
-              className="appStore"
-            >
-              <Img sizes={appStore} />
-            </A>
+            }
+            {
+              (playStore) && <A
+                href={linkAppStore}
+                target="_blank"
+                className="appStore"
+              >
+                <Img sizes={appStore} />
+              </A>
+            }
+            {
+              (weblink) && <ExternalLink
+                href={weblink}
+                target="_blank"
+              >
+                {t(`caseStudies.seeWebsite`)}
+              </ExternalLink>
+            }
           </Logos>
         </CaseLeft>
         <CaseRight>
@@ -81,12 +97,14 @@ CasesImage.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.object.isRequired,
+  widthImage: PropTypes.string,
   phone: PropTypes.string,
   playStore: PropTypes.object,
   appStore: PropTypes.object,
   linkAppStore: PropTypes.string,
   linkPlayStore: PropTypes.string,
+  weblink: PropTypes.string,
 };
 
 
-export default CasesImage
+export default withNamespaces('translations')(CasesImage)

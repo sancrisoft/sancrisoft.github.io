@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const ContentCases = styled.section`
@@ -33,13 +33,22 @@ export const CaseLeftTop = styled.div`
   `}
   & > .gatsby-image-wrapper {
     width: 90px;
+    ${(props) => props.widthImage && css`
+      width: ${props.widthImage};
+    `}
     position: relative;
     right: 10px;
     ${breakpoint('md')`
       width: 100px;
+      ${(props) => props.widthImage && css`
+        width: ${props.widthImage};
+      `}
     `}
     ${breakpoint('xl')`
       width: 120px;
+      ${(props) => props.widthImage && css`
+        width: ${props.widthImage};
+      `}
     `}
   }
 `;
@@ -94,6 +103,19 @@ export const CaseRight = styled.div`
   ${breakpoint('lg')`
     width: 55%;
   `}
+`;
+export const ExternalLink = styled.a`
+  display: flex;
+  padding: 5px 12px;
+  background: #F28724;
+  margin: 0px;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  &:hover{
+    background-color: #ffa44f;
+  }
 `;
 export const CaseRightImage = styled.div`
   display: flex;
