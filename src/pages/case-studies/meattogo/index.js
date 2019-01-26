@@ -145,21 +145,21 @@ class IndexPage extends Component {
     let item = proyects.sort(function() { return 0.5 - Math.random() });
     let newArray = [];
 
-
     if (hash === "#seeall") {
       newArray = item.slice(0, 3);
     } else {
       newArray = item.filter(item => item.private === false).slice(0, 3);
     }
 
-    console.log("resultado ", newArray);
-
-
-    // return proyects.map((item) => (
-    //   <Similar
-    //     key={item.id}
-    //   />
-    // ));
+    return newArray.map((item) => (
+      <Similar
+        key={item.id}
+        name={item.name}
+        type={item.typeProyect}
+        link={item.link}
+        image={data.team.childImageSharp.sizes}
+      />
+    ));
   }
 
   render() {
@@ -237,6 +237,9 @@ query caseStudies {
     ...imageFragment
   }
   ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
+    ...imageFragment
+  }
+  team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
     ...imageFragment
   }
   site {

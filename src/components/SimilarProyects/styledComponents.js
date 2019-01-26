@@ -16,6 +16,7 @@ export const Box = styled.div`
   `}
   ${breakpoint('xl')`
     height: 240px;
+    width: 350px;
   `}
 `;
 
