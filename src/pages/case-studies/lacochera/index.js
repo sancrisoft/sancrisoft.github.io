@@ -111,7 +111,6 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    console.log('props', tecnologies);
     const lacochera = tecnologies.find(item => item.id === "lacochera");
     return lacochera.logos.map((item) => (
       <Tecnology
