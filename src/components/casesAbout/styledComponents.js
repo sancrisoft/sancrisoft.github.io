@@ -40,7 +40,7 @@ export const AboutDescription = styled.div`
   `}
   p {
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.5;
     margin: 0 auto;
     ${breakpoint('tablet')`
       font-size: 15px;
@@ -115,7 +115,7 @@ export const UL = styled.ul`
   li {
     list-style: none;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.5;
     margin-bottom: 5px;
     ${breakpoint('tablet')`
       font-size: 15px;
