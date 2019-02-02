@@ -12,7 +12,11 @@ const Menu = ({ isBlack, t }) => {
             color: "#F28724",
           }}
         > {t('home.nav.about')} </Link>
-        {/*<Link to="/case-studies" > {t('home.nav.cases')} </Link>*/}
+        <Link 
+          to="/case-studies"
+          activeStyle={{
+            color: "#F28724",
+          }}> {t('home.nav.cases')} </Link>
         <Link
           to="/careers"
           activeStyle={{

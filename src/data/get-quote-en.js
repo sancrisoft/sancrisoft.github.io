@@ -1,7 +1,7 @@
 const quote = {
 
   bigImage: {
-    title: 'Get in touch with us!',
+    title: 'Get In Touch With Us!',
     description: 'The real value of services we provide, resides in discovering and understanding the business goals and  proposing technologies solutions'
   },
   form: {

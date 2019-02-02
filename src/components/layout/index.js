@@ -111,7 +111,7 @@ class Layout extends Component {
           {
             (!isDesktopView) && <MenuMobile pageWrapId={ "page-wrap" } styles={hamburStyles} width={ 240 }>
               <Link to="/about" > {t('home.nav.about')} </Link>
-              {/* <Link to="/case-studies" > {t('home.nav.cases')} </Link> */}
+              <Link to="/case-studies" > {t('home.nav.cases')} </Link>
               <Link to="/careers"> {t('home.nav.careers')} </Link>
               <Link to="/contact" > {t('home.nav.quote')} </Link>
               <div style={{ marginTop:  5}}>

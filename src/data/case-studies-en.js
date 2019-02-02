@@ -1,8 +1,8 @@
 const caseStudies = {
   title: "Case Studies",
   bigImage: {
-    title: 'Page Case Studie',
-    description: ''
+    title: 'A Brief of What We Have Done',
+    description: 'Websites, webapps, mobile applications, APIs and more'
   },
   proyects: {
     titleButton: 'Contact Us',
