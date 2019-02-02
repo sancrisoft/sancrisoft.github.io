@@ -31,7 +31,7 @@ class IndexPage extends Component {
         site: {
           siteMetadata: {
             caseStudies: {
-              proyects,
+              cases,
               getAQuote: {
                 urlGetAQuote
               }
@@ -46,12 +46,12 @@ class IndexPage extends Component {
     return (
       <ContainerProyect>
         {
-          proyects.map((item) => (
+          cases.map((item) => (
               <Proyect
                 key={item.id}
                 name={item.name}
                 image={data.team.childImageSharp.sizes}
-                type={item.typeProyect}
+                type={item.type}
                 url={item.link}
                 active={(hash === "#seeall") ? false : item.private}
               />
@@ -182,13 +182,6 @@ query caseStudiesMain {
   site {
     siteMetadata {
       caseStudies {
-        proyects {
-          id
-          name
-          typeProyect
-          private
-          link
-        }
         logos {
           id
           name
@@ -203,6 +196,10 @@ query caseStudiesMain {
           name
           appStore
           playStore
+          weblink
+          type
+          link
+          private
         }
       }
     }

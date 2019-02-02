@@ -50,7 +50,7 @@ class IndexPage extends Component {
       <CasesImage
         key={id}
         title={name}
-        description={t(`caseStudies.cases.meattogo.description`)}
+        description={t(`caseStudies.cases.meattogo.brief`)}
         image={data.meattogo.childImageSharp.sizes}
         playStore={data.playStore.childImageSharp.sizes}
         linkPlayStore={playStore}
@@ -67,7 +67,7 @@ class IndexPage extends Component {
         site: {
           siteMetadata: {
             caseStudies: {
-              about,
+              cases,
             }
           }
         }
@@ -75,31 +75,27 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const meattogo = about.find(item => item.id === "meattogo");
+    const meattogo = cases.find(item => item.id === "meattogo");
     const {
-      id,
-      networkApp,
       services,
       features
     } = meattogo;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.about.meattogo.services.${item.id}`))
+      return(t(`caseStudies.cases.meattogo.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.about.meattogo.features.${item.id}`))
+      return(t(`caseStudies.cases.meattogo.features.${item.id}`))
     })
 
     return (
       <About
-        id={id}
-        urlNetwork={networkApp}
-        name={t(`caseStudies.about.title`)}
-        description={t(`caseStudies.about.meattogo.description`)}
+        name={t(`caseStudies.cases.meattogo.aboutTitle`)}
+        description={t(`caseStudies.cases.meattogo.description`)}
         services={service}
-        titleServices={t(`caseStudies.about.meattogo.services.title`)}
+        titleServices={t(`caseStudies.cases.meattogo.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.about.meattogo.features.title`)}
+        titleFeatures={t(`caseStudies.cases.meattogo.features.title`)}
       />
     );
   }
@@ -136,7 +132,7 @@ class IndexPage extends Component {
         site: {
           siteMetadata: {
             caseStudies: {
-              proyects,
+              cases,
             }
           }
         }
@@ -144,7 +140,7 @@ class IndexPage extends Component {
       data,
     } = this.props;
 
-    let item = proyects.sort(function() { return 0.5 - Math.random() });
+    let item = cases.sort(function() { return 0.5 - Math.random() });
     let newArray = [];
 
     if (hash === "#seeall") {
@@ -157,7 +153,7 @@ class IndexPage extends Component {
       <Similar
         key={item.id}
         name={item.name}
-        type={item.typeProyect}
+        type={item.type}
         link={item.link}
         image={data.team.childImageSharp.sizes}
       />
@@ -200,11 +196,9 @@ class IndexPage extends Component {
               </Tecnologies>
             </ContentTecnology>
 
-            {
             <ContentSimilar>
               { this.renderCasesSimilar() }
             </ContentSimilar>
-            }
 
           </ContentCase>
       </Layout>
@@ -261,10 +255,10 @@ query caseStudies {
           name
           appStore
           playStore
-        }
-        about {
-          id
-          networkApp
+          weblink
+          type
+          link
+          private
           services {
             id
           }

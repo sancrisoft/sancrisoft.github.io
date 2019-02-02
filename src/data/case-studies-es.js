@@ -14,16 +14,8 @@ const caseStudiesES = {
   },
   cases: {
     meattogo: {
-      description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos."
-    },
-    lacochera: {
-      description: "La Cochera pertenece a una empresa que fabrica accesorios automotrices de alta calidad, funciones de protección, estética de los vehículos y seguridad de sus ocupantes. A través de su portal, comercializan y publican su variada gama de productos, y también permiten que los vendedores hagan sus publicaciones para vender productos relacionados con el área vehicular.",
-    }
-  },
-  seeWebsite: "Ver sitio web",
-  about: {
-    title: "Acerca de ",
-    meattogo: {
+      brief: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
+      aboutTitle: "Acerda de Meat To Go",
       description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos. Disponen de entregas para hogares y eventos, en porciones personalizadas y envasadas al vacío. La aplicación creada es una tienda virtual para simplificar el proceso de solicitud y entrega de los productos. Si quieres saber más visita.",
       services: {
         title: "Servicios",
@@ -43,6 +35,8 @@ const caseStudiesES = {
       }
     },
     lacochera: {
+      brief: "La Cochera pertenece a una empresa que fabrica accesorios automotrices de alta calidad, funciones de protección, estética de los vehículos y seguridad de sus ocupantes. A través de su portal, comercializan y publican su variada gama de productos, y también permiten que los vendedores hagan sus publicaciones para vender productos relacionados con el área vehicular.",
+      aboutTitle: "Acerca de La Cochera",
       description: " La cochera tiene una amplia gama de productos que se ajustan a cualquier tipo de vehículo, buscan que sus clientes según su estilo de vida y necesidades emergentes tengan en el mejor precio del mercado. En el website comercializan  accesorios automotrices en términos competitivos de diseño, calidad y eficiente servicio.",
       services: {
         title: "Servicios",
@@ -64,6 +58,7 @@ const caseStudiesES = {
       }
     }
   },
+  seeWebsite: "Ver sitio web",
   tecnologies: {
     title: "Tecnologías",
   }

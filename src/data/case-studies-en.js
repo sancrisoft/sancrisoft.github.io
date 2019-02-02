@@ -14,17 +14,9 @@ const caseStudies = {
   },
   cases: {
     meattogo: {
-      description: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood."
-    },
-    lacochera: {
-      description: "La Cochera belongs to a company that manufactures high-quality automotive accessories, protection functions, aesthetics of the vehicles and safety of its occupants. Through its portal they market and publish their diverse range of products, and they also allow sellers to make their publications to sell products related to the vehicular area."
-    }
-  },
-  seeWebsite: "See website",
-  about: {
-    title: "About ",
-    meattogo: {
-      description: "Meat To Go is an online butchery located in Panama specialized in meat, poultry and seafood. They have deliveries for homes and events, in personalized portions and vacuum packaged. The application created is a virtual store to simplify the process of requesting and delivering the products. If you want to know more visit",
+      brief: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood.",
+      aboutTitle: "About Meat To Go",
+      description: "Meat To Go is an online butchery located in Panama specialized in meat, poultry and seafood. They have deliveries for homes and events, in personalized portions and vacuum packaged. The application created is a virtual store to simplify the process of requesting and delivering the products.",
       services: {
         title: "Services",
         1: "UI & UX Design",
@@ -43,6 +35,8 @@ const caseStudies = {
       }
     },
     lacochera: {
+      brief: "La Cochera belongs to a company that manufactures high-quality automotive accessories, protection functions, aesthetics of the vehicles and safety of its occupants. Through its portal they market and publish their diverse range of products, and they also allow sellers to make their publications to sell products related to the vehicular area.",
+      aboutTitle: "About La Cochera",
       description: "La cochera has a wide range of products that fit any type of vehicle, they look for their customers according to their lifestyle and emerging needs at the best market price. On the website they market automotive accessories in competitive terms of design, quality and efficient service.",
       services: {
         title: "Services",
@@ -64,6 +58,7 @@ const caseStudies = {
       }
     }
   },
+  seeWebsite: "See website",
   tecnologies: {
     title: "Technologies",
   }

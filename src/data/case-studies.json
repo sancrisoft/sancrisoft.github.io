@@ -98,20 +98,10 @@
       "name": "Meat To Go",
       "appStore": "https://itunes.apple.com/pa/app/meattogo/id1215006192",
       "playStore": "https://play.google.com/store/apps/details?id=com.meattogoapp",
-      "weblink": null
-    },
-    {
-      "id": "lacochera",
-      "name": "La Cochera",
-      "appStore": "",
-      "playStore": "",
-      "weblink": "https://www.lacochera.com.pa/"
-    }
-  ],
-  "about": [
-    {
-      "id": "meattogo",
-      "networkApp": "https://www.facebook.com/meattogo",
+      "weblink": null,
+      "type": "Mobile App",
+      "link": "/case-studies/meattogo",
+      "private": false,
       "services": [
         {
           "id": 1
@@ -149,7 +139,13 @@
     },
     {
       "id": "lacochera",
-      "networkApp": "",
+      "name": "La Cochera",
+      "appStore": "",
+      "playStore": "",
+      "weblink": "https://www.lacochera.com.pa/",
+      "type": "Mobile App",
+      "link": "/case-studies/lacochera",
+      "private": false,
       "services": [
         {
           "id": 1

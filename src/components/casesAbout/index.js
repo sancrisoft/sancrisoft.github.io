@@ -12,23 +12,21 @@ import {
   AboutMore,
   Services,
   Features,
-  A,
   UL
 } from './styledComponents'
 
-const CasesAbout = ({id ,urlNetwork, name, description, services, features, titleServices, titleFeatures }) => {
+const CasesAbout = ({ name, description, services, features, titleServices, titleFeatures }) => {
   return(
     <ContentAbout>
       <AboutDescription>
         <AboutTitle>
           <Title
             type={2}
-            text={`${name} ${id}`}
+            text={name}
           />
         </AboutTitle>
         <p>
           {description}
-          <A href={urlNetwork} target="_blank" >{urlNetwork}</A>
         </p>
       </AboutDescription>
       <AboutMore>

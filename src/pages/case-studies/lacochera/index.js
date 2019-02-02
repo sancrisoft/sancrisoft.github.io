@@ -9,6 +9,7 @@ import CasesImage from '../../../components/casesImage'
 import Background from '../../../components/casesBackground'
 import About from '../../../components/casesAbout'
 import Tecnology from '../../../components/casesTecnology'
+import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
 import ImagePhone from '../../../images/cases-studies/lacochera/lacochera-bg.png'
@@ -18,6 +19,7 @@ import {
   ContentBack,
   ContentAbout,
   ContentTecnology,
+  ContentSimilar,
   Tecnologies
 } from '../../../styles/case-studies-lacochera/styledComponents';
 
@@ -48,7 +50,7 @@ class IndexPage extends Component {
         key={id}
         title={name}
         widthImage={'200px'}
-        description={t(`caseStudies.cases.lacochera.description`)}
+        description={t(`caseStudies.cases.lacochera.brief`)}
         image={data.lacocheralogo.childImageSharp.sizes}
         phone={ImagePhone}
         weblink={weblink}
@@ -62,7 +64,7 @@ class IndexPage extends Component {
         site: {
           siteMetadata: {
             caseStudies: {
-              about,
+              cases,
             }
           }
         }
@@ -70,30 +72,27 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const lacochera = about.find(item => item.id === "lacochera");
+    const lacochera = cases.find(item => item.id === "lacochera");
     const {
-      networkApp,
       services,
       features
     } = lacochera;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.about.lacochera.services.${item.id}`))
+      return(t(`caseStudies.cases.lacochera.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.about.lacochera.features.${item.id}`))
+      return(t(`caseStudies.cases.lacochera.features.${item.id}`))
     })
 
     return (
       <About
-        id={"La Cochera"}
-        urlNetwork={networkApp}
-        name={t(`caseStudies.about.title`)}
-        description={t(`caseStudies.about.lacochera.description`)}
+        name={t(`caseStudies.cases.lacochera.aboutTitle`)}
+        description={t(`caseStudies.cases.lacochera.description`)}
         services={service}
-        titleServices={t(`caseStudies.about.lacochera.services.title`)}
+        titleServices={t(`caseStudies.cases.lacochera.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.about.lacochera.features.title`)}
+        titleFeatures={t(`caseStudies.cases.lacochera.features.title`)}
       />
     );
   }
@@ -117,6 +116,43 @@ class IndexPage extends Component {
         key={item.id}
         text={item.text}
         image={data[item.id].childImageSharp.sizes}
+      />
+    ));
+  }
+
+  renderCasesSimilar = () => {
+    const {
+      location: {
+        hash
+      },
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              cases,
+            }
+          }
+        }
+      },
+      data,
+    } = this.props;
+
+    let item = cases.sort(function() { return 0.5 - Math.random() });
+    let newArray = [];
+
+    if (hash === "#seeall") {
+      newArray = item.slice(0, 3);
+    } else {
+      newArray = item.filter(item => item.private === false).slice(0, 3);
+    }
+
+    return newArray.map((item) => (
+      <Similar
+        key={item.id}
+        name={item.name}
+        type={item.type}
+        link={item.link}
+        image={data.team.childImageSharp.sizes}
       />
     ));
   }
@@ -151,6 +187,11 @@ class IndexPage extends Component {
                 { this.renderCasesTecnologies() }
               </Tecnologies>
             </ContentTecnology>
+
+            <ContentSimilar>
+              { this.renderCasesSimilar() }
+            </ContentSimilar>
+
           </ContentCase>
       </Layout>
       </I18nextProvider>
@@ -200,6 +241,9 @@ query lacochera {
   webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
     ...imageFragment
   }
+  team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {
@@ -209,10 +253,9 @@ query lacochera {
           appStore
           playStore
           weblink
-        }
-        about {
-          id
-          networkApp
+          type
+          link
+          private
           services {
             id
           }
