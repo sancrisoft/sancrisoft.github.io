@@ -155,7 +155,7 @@ class IndexPage extends Component {
         name={item.name}
         type={item.type}
         link={item.link}
-        image={data.team.childImageSharp.sizes}
+        image={data[item.thumbnail].childImageSharp.sizes}
       />
     ));
   }
@@ -237,22 +237,16 @@ query caseStudies {
   ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
     ...imageFragment
   }
-  team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
+  BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
     ...imageFragment
   }
   site {
     siteMetadata {
       caseStudies {
-        proyects {
-          id
-          name
-          typeProyect
-          private
-          link
-        }
         cases {
           id
           name
+          thumbnail
           appStore
           playStore
           weblink

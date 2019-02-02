@@ -153,7 +153,7 @@ class IndexPage extends Component {
         name={item.name}
         type={item.type}
         link={item.link}
-        image={data.team.childImageSharp.sizes}
+        image={data[item.thumbnail].childImageSharp.sizes}
       />
     ));
   }
@@ -242,7 +242,7 @@ query lacochera {
   webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
     ...imageFragment
   }
-  team:file(relativePath: { eq: "aboutUs/team.jpg" }) {
+  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
     ...imageFragment
   }
   site {
@@ -251,6 +251,7 @@ query lacochera {
         cases {
           id
           name
+          thumbnail
           appStore
           playStore
           weblink

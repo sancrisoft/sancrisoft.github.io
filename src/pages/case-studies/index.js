@@ -50,7 +50,7 @@ class IndexPage extends Component {
               <Proyect
                 key={item.id}
                 name={item.name}
-                image={data.team.childImageSharp.sizes}
+                image={data[item.thumbnail].childImageSharp.sizes}
                 type={item.type}
                 url={item.link}
                 active={(hash === "#seeall") ? false : item.private}
@@ -179,6 +179,12 @@ query caseStudiesMain {
   cc:file(relativePath: { eq: "cases-studies/cc.png" }) {
     ...imageFragment
   }
+  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
+    ...imageFragment
+  }
+  BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {
@@ -194,6 +200,7 @@ query caseStudiesMain {
         cases {
           id
           name
+          thumbnail
           appStore
           playStore
           weblink

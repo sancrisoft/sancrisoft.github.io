@@ -36,6 +36,7 @@
     {
       "id": "meattogo",
       "name": "Meat To Go",
+      "thumbnail": "BackgroundMeattogo",
       "appStore": "https://itunes.apple.com/pa/app/meattogo/id1215006192",
       "playStore": "https://play.google.com/store/apps/details?id=com.meattogoapp",
       "weblink": null,
@@ -80,6 +81,7 @@
     {
       "id": "lacochera",
       "name": "La Cochera",
+      "thumbnail": "BackgroundLaCochera",
       "appStore": "",
       "playStore": "",
       "weblink": "https://www.lacochera.com.pa/",
