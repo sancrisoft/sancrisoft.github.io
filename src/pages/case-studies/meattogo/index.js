@@ -200,9 +200,11 @@ class IndexPage extends Component {
               </Tecnologies>
             </ContentTecnology>
 
-            <ContentSimilar>
+            {
+            /*<ContentSimilar>
               { this.renderCasesSimilar() }
-            </ContentSimilar>
+            </ContentSimilar>*/
+            }
 
           </ContentCase>
       </Layout>
