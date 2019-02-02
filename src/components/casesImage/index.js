@@ -38,8 +38,9 @@ const CasesImage = (props) => {
     linkPlayStore,
     linkAppStore, 
     widthImage,
-    weblink, 
-    t } = props;
+    weblink,
+    weblinkTitle
+  } = props;
   return(
     <ThemeProvider theme={theme}>
       <ContentCases>
@@ -78,7 +79,7 @@ const CasesImage = (props) => {
                 href={weblink}
                 target="_blank"
               >
-                {t(`caseStudies.seeWebsite`)}
+                {weblinkTitle}
               </ExternalLink>
             }
           </Logos>

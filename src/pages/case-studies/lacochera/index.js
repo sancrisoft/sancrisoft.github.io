@@ -43,7 +43,7 @@ class IndexPage extends Component {
     const {
       id,
       name,
-      weblink
+      weblink,
     } = cochera;
     return (
       <CasesImage
@@ -54,6 +54,7 @@ class IndexPage extends Component {
         image={data.lacocheralogo.childImageSharp.sizes}
         phone={ImagePhone}
         weblink={weblink}
+        weblinkTitle={t(`caseStudies.cases.lacochera.weblinkTitle`)}
       />
     );
   }
