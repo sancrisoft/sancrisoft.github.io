@@ -9,8 +9,8 @@ const caseStudies = {
     textBox: "Want to see more? Drop us a line and will back to you with more details."
   },
   getAQuote: {
-    titleButton: "get Quote case-studies",
-    description: "description case-studies."
+    titleButton: "Get a Quote",
+    description: "Your project will be in good hands and we'll make sure to boost your businness. Reach us and so we can help you!"
   },
   cases: {
     meattogo: {

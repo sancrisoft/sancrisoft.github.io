@@ -9,8 +9,8 @@ const caseStudiesES = {
     textBox: "¿Quieres ver más? Escríbenos y te contestaremos con más detalles."
   },
   getAQuote: {
-    titleButton: "Contact case-studies",
-    description: "descripcion case-studies."
+    titleButton: "Quiero una cotización",
+    description: "Tu proyecto estará en buenas manos y nos aseguraremos de impulsar su negocio. Escríbenos y así podremos ayudarte!"
   },
   cases: {
     meattogo: {
