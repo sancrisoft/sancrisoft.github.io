@@ -2,33 +2,27 @@
   "title": "Case Studies",
   "logos": [
     {
+      "id": "meattogo",
+      "name": "Meat to Go",
+      "link": "#",
+      "private": false 
+    },
+    {
       "id": "double",
       "name": "Double Nines",
-      "link": "/urllogo1",
-      "private": true
+      "link": "",
+      "private": false
     },
     {
       "id": "arena",
       "name": "Arena Alfa",
-      "link": "/urllogo2",
-      "private": true
-    },
-    {
-      "id": "logo500",
-      "name": "logo 500",
-      "link": "/urllogo3",
+      "link": "www.arenaalfa.com",
       "private": false
     },
     {
-      "id": "enter",
-      "name": "logo Enter",
-      "link": "/urllogo4",
-      "private": false
-    },
-    {
-      "id": "cc",
-      "name": "logo cc",
-      "link": "/urllogo5",
+      "id": "lacochera",
+      "name": "La Cochera",
+      "link": "www.lacochera.com.pa",
       "private": false
     }
   ],

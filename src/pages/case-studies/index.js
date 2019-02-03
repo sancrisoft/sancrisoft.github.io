@@ -170,13 +170,10 @@ query caseStudiesMain {
   arena:file(relativePath: { eq: "cases-studies/arena.png" }) {
     ...imageFragment
   }
-  logo500:file(relativePath: { eq: "cases-studies/logo500.png" }) {
+  meattogo:file(relativePath: { eq: "cases-studies/meattogo.png" }) {
     ...imageFragment
   }
-  enter:file(relativePath: { eq: "cases-studies/enter.png" }) {
-    ...imageFragment
-  }
-  cc:file(relativePath: { eq: "cases-studies/cc.png" }) {
+  lacochera:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
     ...imageFragment
   }
   BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
