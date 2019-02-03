@@ -84,7 +84,7 @@ export const ContentSimilar = styled.section`
   max-width: 90%;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   ${breakpoint('tablet')`
     max-width: 90%;

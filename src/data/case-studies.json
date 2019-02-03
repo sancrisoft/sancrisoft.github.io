@@ -4,7 +4,7 @@
     {
       "id": "meattogo",
       "name": "Meat to Go",
-      "link": "#",
+      "link": "https://play.google.com/store/apps/details?id=com.meattogoapp",
       "private": false 
     },
     {
@@ -16,13 +16,13 @@
     {
       "id": "arena",
       "name": "Arena Alfa",
-      "link": "www.arenaalfa.com",
+      "link": "http://www.arenaalfa.com",
       "private": false
     },
     {
       "id": "lacochera",
       "name": "La Cochera",
-      "link": "www.lacochera.com.pa",
+      "link": "http://www.lacochera.com.pa",
       "private": false
     }
   ],

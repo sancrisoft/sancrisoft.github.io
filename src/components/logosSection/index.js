@@ -10,9 +10,15 @@ import {
 const LogosSection = ({ image, active, url }) =>  {
   return(
     <Logos style={{display: active ? 'none' : 'block' }}>
-      <A href={url}>
-        <Img sizes={image} />
-      </A>
+      { url &&
+        <A href={url}>
+          <Img sizes={image} />
+        </A>
+      }
+
+      {
+        !url && <Img sizes={image} />
+      }
     </Logos>
   )
 }
