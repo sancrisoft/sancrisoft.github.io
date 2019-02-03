@@ -196,6 +196,10 @@ class IndexPage extends Component {
               </Tecnologies>
             </ContentTecnology>
 
+            <Title
+                type={2}
+                text={t('caseStudies.seemore')}
+              />
             <ContentSimilar>
               { this.renderCasesSimilar() }
             </ContentSimilar>

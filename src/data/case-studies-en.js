@@ -62,7 +62,8 @@ const caseStudies = {
   },
   tecnologies: {
     title: "Technologies",
-  }
+  },
+  seemore: "See More Case Studies"
 }
 
 export default caseStudies;

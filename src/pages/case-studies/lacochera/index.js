@@ -112,7 +112,7 @@ class IndexPage extends Component {
       data,
     } = this.props;
     const lacochera = cases.find(item => item.id === "lacochera");
-    
+
     return lacochera.technologies.map((item) => (
       <Tecnology
         key={item.id}
@@ -190,6 +190,10 @@ class IndexPage extends Component {
               </Tecnologies>
             </ContentTecnology>
 
+            <Title
+                type={2}
+                text={t('caseStudies.seemore')}
+              />
             <ContentSimilar>
               { this.renderCasesSimilar() }
             </ContentSimilar>
