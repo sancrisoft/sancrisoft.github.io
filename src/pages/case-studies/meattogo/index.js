@@ -106,15 +106,15 @@ class IndexPage extends Component {
         site: {
           siteMetadata: {
             caseStudies: {
-              tecnologies,
+              cases,
             }
           }
         }
       },
       data,
     } = this.props;
-    const meattogo = tecnologies.find(item => item.id === "meattogo");
-    return meattogo.logos.map((item) => (
+    const meattogo = cases.find(item => item.id === "meattogo");
+    return meattogo.technologies.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
@@ -259,10 +259,7 @@ query caseStudies {
           features {
             id
           }
-        }
-        tecnologies {
-          id
-          logos {
+          technologies {
             id
             text
           }

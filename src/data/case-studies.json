@@ -76,6 +76,27 @@
         {
           "id": 4
         }
+      ],
+      "technologies": [
+        {
+          "id": "nodeJs",
+          "text": "NodeJs"
+        },
+        {
+          "id": "swagger",
+          "text": "Swagger"
+        },
+        {
+          "id": "reactN",
+          "text": "React Native"
+        },
+        {
+          "id": "mailgun",
+          "text": "Mailgun"
+        },{
+          "id": "ignite",
+          "text": "Ignite"
+        }
       ]
     },
     {
@@ -127,37 +148,8 @@
         {
           "id": 5
         }
-      ]
-    }
-  ],
-  "tecnologies": [
-    {
-      "id": "meattogo",
-      "logos": [
-        {
-          "id": "nodeJs",
-          "text": "NodeJs"
-        },
-        {
-          "id": "swagger",
-          "text": "Swagger"
-        },
-        {
-          "id": "reactN",
-          "text": "React Native"
-        },
-        {
-          "id": "mailgun",
-          "text": "Mailgun"
-        },{
-          "id": "ignite",
-          "text": "Ignite"
-        }
-      ]
-    },
-    {
-      "id": "lacochera",
-      "logos": [
+      ],
+      "technologies": [
         {
           "id": "nodeJs",
           "text": "NodeJs"
