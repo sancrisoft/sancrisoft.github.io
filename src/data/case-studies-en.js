@@ -14,6 +14,7 @@ const caseStudies = {
   },
   cases: {
     meattogo: {
+      title: "Meat To Go",
       brief: "Meat To Go is an online butchery located in panama specialized in meat, poultry and seafood.",
       aboutTitle: "About Meat To Go",
       weblinkTitle: "",
@@ -36,6 +37,7 @@ const caseStudies = {
       }
     },
     lacochera: {
+      title: "La Cochera",
       brief: "La Cochera belongs to a company that manufactures high-quality automotive accessories, protection functions, aesthetics of the vehicles and safety of its occupants. Through its portal they market and publish their diverse range of products, and they also allow sellers to make their publications to sell products related to the vehicular area.",
       aboutTitle: "About La Cochera",
       weblinkTitle: "See Website",

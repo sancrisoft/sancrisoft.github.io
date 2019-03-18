@@ -126,7 +126,8 @@ class IndexPage extends Component {
   renderCasesSimilar = () => {
     const {
       location: {
-        hash
+        hash,
+        pathname,
       },
       data: {
         site: {
@@ -140,13 +141,15 @@ class IndexPage extends Component {
       data,
     } = this.props;
 
+    const [,, projectName] = pathname.split('/')
+
     let item = cases.sort(function() { return 0.5 - Math.random() });
     let newArray = [];
 
     if (hash === "#seeall") {
       newArray = item.slice(0, 3);
     } else {
-      newArray = item.filter(item => item.private === false).slice(0, 3);
+      newArray = item.filter(item => item.private === false && item.id !== projectName).slice(0, 3);
     }
 
     return newArray.map((item) => (
@@ -163,13 +166,16 @@ class IndexPage extends Component {
   render() {
     const {
       data,
-      t
+      t,
+      location: {
+        pathname,
+      },
     } = this.props;
-
+    const [,, projectName] = pathname.split('/')
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
-          <SEO title={`Sancrisoft | ${t('caseStudies.title')}`} keywords={['sancrisoft', 'digital-solutions']} />
+          <SEO title={`Sancrisoft | ${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} />
           <ContentCase>
 
             <CasePageSizer>

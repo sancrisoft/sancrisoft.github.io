@@ -86,8 +86,10 @@ export const ContentSimilar = styled.section`
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   ${breakpoint('tablet')`
     max-width: 90%;
+    flex-direction: row;
   `}
   ${breakpoint('desktop')`
     max-width: 78%;

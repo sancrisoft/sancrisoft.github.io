@@ -14,6 +14,7 @@ const caseStudiesES = {
   },
   cases: {
     meattogo: {
+      title: "Meat To Go",
       brief: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
       aboutTitle: "Acerda de Meat To Go",
       weblinkTitle: "",
@@ -36,6 +37,7 @@ const caseStudiesES = {
       }
     },
     lacochera: {
+      title: "La Cochera",
       brief: "La Cochera pertenece a una empresa que fabrica accesorios automotrices de alta calidad, funciones de protección, estética de los vehículos y seguridad de sus ocupantes. A través de su portal, comercializan y publican su variada gama de productos, y también permiten que los vendedores hagan sus publicaciones para vender productos relacionados con el área vehicular.",
       aboutTitle: "Acerca de La Cochera",
       weblinkTitle: "Ver Sitio Web",
