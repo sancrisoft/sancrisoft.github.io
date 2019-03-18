@@ -62,6 +62,7 @@ const caseStudies = {
       }
     },
     pidealatienda: {
+      title: "Pidealatienda",
       brief: "Pidealatienda, your best choice to delivery your groceries from your favorite neighborhood store!",
       aboutTitle: "About Pidealatienda",
       weblinkTitle: "",
