@@ -60,6 +60,25 @@ const caseStudies = {
         4: "Email Order Notifications",
         5: "Content Management"
       }
+    },
+    pidealatienda: {
+      brief: "Pidealatienda, your best choice to delivery your groceries from your favorite neighborhood store!",
+      aboutTitle: "About Pidealatienda",
+      weblinkTitle: "",
+      description: "Pidealatienda is a new sales channel of neighborhood stores created to facilitate purchases in your favorite stores, get your orders through a smartphone very easily.",
+      services: {
+        title: "Services",
+        1: "Mobile Development (Android & iOS)",
+        2: "RESTful Services",
+        3: "Push Notifications",
+        4: "Apps publication in Apple Store and Google Play",
+      },
+      features: {
+        title: "Features",
+        1: "Users management and Login",
+        2: "Geolocation",
+        3: "IOS and Android",
+      }
     }
   },
   tecnologies: {
