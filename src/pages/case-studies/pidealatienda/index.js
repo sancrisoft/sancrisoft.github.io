@@ -39,10 +39,12 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    const cochera = cases.find(item => item.id === "lacochera");
+    const cochera = cases.find(item => item.id === "pidealatienda");
     const {
       id,
       name,
+      playStore,
+      appStore,
       weblink,
     } = cochera;
     return (
@@ -50,11 +52,15 @@ class IndexPage extends Component {
         key={id}
         title={name}
         widthImage={'200px'}
-        description={t(`caseStudies.cases.lacochera.brief`)}
-        image={data.lacocheralogo.childImageSharp.sizes}
+        description={t(`caseStudies.cases.pidealatienda.brief`)}
+        image={data.pidealatiendalogo.childImageSharp.sizes}
         phone={ImagePhone}
         weblink={weblink}
-        weblinkTitle={t(`caseStudies.cases.lacochera.weblinkTitle`)}
+        weblinkTitle={t(`caseStudies.cases.pidealatienda.weblinkTitle`)}
+        playStore={data.playStore.childImageSharp.sizes}
+        linkPlayStore={playStore}
+        appStore={data.appStore.childImageSharp.sizes}
+        linkAppStore={appStore}
       />
     );
   }
@@ -73,27 +79,27 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const lacochera = cases.find(item => item.id === "lacochera");
+    const pidealatienda = cases.find(item => item.id === "pidealatienda");
     const {
       services,
       features
-    } = lacochera;
+    } = pidealatienda;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.cases.lacochera.services.${item.id}`))
+      return(t(`caseStudies.cases.pidealatienda.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.cases.lacochera.features.${item.id}`))
+      return(t(`caseStudies.cases.pidealatienda.features.${item.id}`))
     })
 
     return (
       <About
-        name={t(`caseStudies.cases.lacochera.aboutTitle`)}
-        description={t(`caseStudies.cases.lacochera.description`)}
+        name={t(`caseStudies.cases.pidealatienda.aboutTitle`)}
+        description={t(`caseStudies.cases.pidealatienda.description`)}
         services={service}
-        titleServices={t(`caseStudies.cases.lacochera.services.title`)}
+        titleServices={t(`caseStudies.cases.pidealatienda.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.cases.lacochera.features.title`)}
+        titleFeatures={t(`caseStudies.cases.pidealatienda.features.title`)}
       />
     );
   }
@@ -111,9 +117,9 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    const lacochera = cases.find(item => item.id === "lacochera");
+    const pidealatienda = cases.find(item => item.id === "pidealatienda");
 
-    return lacochera.technologies.map((item) => (
+    return pidealatienda.technologies.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
@@ -133,14 +139,13 @@ class IndexPage extends Component {
           siteMetadata: {
             caseStudies: {
               cases,
-              title,
             }
           }
         }
       },
       data,
     } = this.props;
-    
+
     const [,, projectName] = pathname.split('/')
 
     let item = cases.sort(function() { return 0.5 - Math.random() });
@@ -215,8 +220,8 @@ class IndexPage extends Component {
 
 // Queries for images (One query by image)
 export const query = graphql`
-query lacochera {
-  lacocheralogo:file(relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }) {
+query pidealatienda {
+  pidealatiendalogo:file(relativePath: { eq: "cases-studies/pidealatienda/logo.png" }) {
     ...imageFragment
   }
   lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
@@ -234,19 +239,10 @@ query lacochera {
   nodeJs:file(relativePath: { eq: "cases-studies/lacochera/nodeJs.png" }) {
     ...imageFragment
   }
-  react:file(relativePath: { eq: "cases-studies/lacochera/react.png" }) {
+  reactN:file(relativePath: { eq: "cases-studies/meattogo/reactNative.png" }) {
     ...imageFragment
   }
-  redux:file(relativePath: { eq: "cases-studies/lacochera/redux.png" }) {
-    ...imageFragment
-  }
-  aws:file(relativePath: { eq: "cases-studies/lacochera/aws.png" }) {
-    ...imageFragment
-  }
-  loopback:file(relativePath: { eq: "cases-studies/lacochera/loopback.png" }) {
-    ...imageFragment
-  }
-  elasticsearch:file(relativePath: { eq: "cases-studies/lacochera/elasticsearch.png" }) {
+  ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
     ...imageFragment
   }
   styled:file(relativePath: { eq: "cases-studies/lacochera/styled.png" }) {

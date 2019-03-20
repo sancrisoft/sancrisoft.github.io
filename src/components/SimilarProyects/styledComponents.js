@@ -7,6 +7,7 @@ export const Box = styled.div`
   margin-bottom: 2em;
   overflow: hidden;
   transition: all .5s;
+  flex-direction: column;
   ${breakpoint('md')`
     width: 48%;
   `}

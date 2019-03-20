@@ -14,6 +14,7 @@ const caseStudiesES = {
   },
   cases: {
     meattogo: {
+      title: "Meat To Go",
       brief: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
       aboutTitle: "Acerda de Meat To Go",
       weblinkTitle: "",
@@ -36,10 +37,36 @@ const caseStudiesES = {
       }
     },
     lacochera: {
+      title: "La Cochera",
       brief: "La Cochera pertenece a una empresa que fabrica accesorios automotrices de alta calidad, funciones de protección, estética de los vehículos y seguridad de sus ocupantes. A través de su portal, comercializan y publican su variada gama de productos, y también permiten que los vendedores hagan sus publicaciones para vender productos relacionados con el área vehicular.",
       aboutTitle: "Acerca de La Cochera",
       weblinkTitle: "Ver Sitio Web",
       description: " La cochera tiene una amplia gama de productos que se ajustan a cualquier tipo de vehículo, buscan que sus clientes según su estilo de vida y necesidades emergentes tengan en el mejor precio del mercado. En el website comercializan  accesorios automotrices en términos competitivos de diseño, calidad y eficiente servicio.",
+      services: {
+        title: "Servicios",
+        1: "Levantamiento de Requisitos",
+        2: "Diseño UI & UX",
+        3: "Diseño responsivo (Dispositivos Móviles)",
+        4: "Diseño API",
+        5: "Servicios RESTful",
+        6: "Email templates",
+        7: "Publicación del sitio web y soporte"
+      },
+      features: {
+        title: "Funcionalidades",
+        1: "Gestion de usuarios e inicio de sesión",
+        2: "Carrito de compras",
+        3: "Integración con Paypal",
+        4: "Notificaciones de órdenes via Email",
+        5: "Administración de contenido"
+      }
+    },
+    pidealatienda: {
+      title: "Pidealatienda",
+      brief: "Pidealatienda, tu mejor opción para pedir domicilios a tus tiendas de barrio preferidas!",
+      aboutTitle: "Acerca de Pidealatienda",
+      weblinkTitle: "",
+      description: "Pidealatienda es un nuevo canal de ventas de las tiendas de barrio creado para facilitar las compras en tus tiendas favoritas, obten tus pedidos a través de un celular de manera muy fácil.",
       services: {
         title: "Servicios",
         1: "Levantamiento de Requisitos",
