@@ -12,7 +12,7 @@ import Tecnology from '../../../components/casesTecnology'
 import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
-import ImagePhone from '../../../images/cases-studies/lacochera/lacochera-bg.png'
+import ImagePhone from '../../../images/cases-studies/pidealatienda/hero.png'
 import {
   ContentCase,
   CasePageSizer,
@@ -180,7 +180,7 @@ class IndexPage extends Component {
             </CasePageSizer>
             <ContentBack>
               <Background
-                image={data.BackgroundLaCochera.childImageSharp.sizes}
+                image={data.pidealatiendamiddle.childImageSharp.sizes}
               />
             </ContentBack>
             <ContentAbout>
@@ -215,6 +215,12 @@ class IndexPage extends Component {
 export const query = graphql`
 query pidealatienda {
   pidealatiendalogo:file(relativePath: { eq: "cases-studies/pidealatienda/logo.png" }) {
+    ...imageFragment
+  }
+  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+    ...imageFragment
+  }
+  pidealatiendamiddle:file(relativePath: { eq: "cases-studies/pidealatienda/middle-section.png" }) {
     ...imageFragment
   }
   lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
