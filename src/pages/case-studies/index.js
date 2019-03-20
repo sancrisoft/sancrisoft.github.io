@@ -182,6 +182,9 @@ query caseStudiesMain {
   BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
     ...imageFragment
   }
+  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {

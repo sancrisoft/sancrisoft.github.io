@@ -258,6 +258,9 @@ query lacochera {
   BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
     ...imageFragment
   }
+  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {
