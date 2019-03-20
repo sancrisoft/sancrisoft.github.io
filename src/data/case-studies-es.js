@@ -62,6 +62,7 @@ const caseStudiesES = {
       }
     },
     pidealatienda: {
+      title: "Pidealatienda",
       brief: "Pidealatienda, tu mejor opción para pedir domicilios a tus tiendas de barrio preferidas!",
       aboutTitle: "Acerca de Pidealatienda",
       weblinkTitle: "",
