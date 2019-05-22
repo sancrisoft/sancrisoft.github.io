@@ -53,17 +53,6 @@
             "postalCode": "055422",
             "latitude": "6.163081958304929",
             "longitude": "-75.6021516674454"
-        },
-        {
-            "id": "venezuela/tachira/san-cristobal",
-            "title": "San Cristóbal",
-            "address1": "Calle 4. Santa Teresa",
-            "address2": "San Cristóbal, Táchira",
-            "phone": "+58 (276) 3412769",
-            "state": "Venezuela",
-            "postalCode": "5001",
-            "latitude": "7.798595057267448",
-            "longitude": "-72.2223486015943"
         }
     ],
     "processes": [
