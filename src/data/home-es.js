@@ -72,16 +72,6 @@ const homeES = {
       postalCode: '055422',
       latitude: '6.1629538',
       longitude: '-75.6042868'
-    },
-    {
-      id: 'venezuela/tachira/san-cristobal',
-      title: 'Venezuela',
-      address1: 'Santa Teresa',
-      address2: 'Casa al fondo',
-      state: 'San Cristóbal. Táchira',
-      postalCode: '5001',
-      latitude: '7.798563',
-      longitude: '-72.222281'
     }
   ],
   processes: {
