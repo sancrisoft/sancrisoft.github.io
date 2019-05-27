@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Map from '../map';
-import logo from "../../images/small-logo.png";
 import {
   ButtonSelector,
   SectionContainer,
   Column,
 } from './styledComponents';
+import Iframe from 'react-iframe'
 import { PageSizer, H4, H3 } from '../styledComponents';
 
 export class MapSelector extends Component {
@@ -47,9 +46,9 @@ export class MapSelector extends Component {
   };
 
   render() {
-    const { selectedOffice } = this.state;
+    // const { selectedOffice } = this.state;
     const { title } = this.props;
-    const office = this.props.offices.find((office) => office.id === selectedOffice);
+    // const office = this.props.offices.find((office) => office.id === selectedOffice);
     return (
       <SectionContainer>
         {title && <H3 className="section-heading">{title}</H3>}
@@ -57,11 +56,15 @@ export class MapSelector extends Component {
           { this.renderSelectors() }
         </PageSizer>
         <div className="map-container">
-          <Map
-            latitude={office ? parseFloat(office.latitude) : 6.163081958304929}
-            longitude={office ? parseFloat(office.longitude) : -75.6021516674454}
-            markerIcon={logo}
-            zoom={15}
+          <Iframe
+            url={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC1mS0oYjAJ6rkCK--bRm3JUN74amLExzw&q=Sancrisoft+Calle+49+Sur+Envigado+Antioquia`}
+            width="100%"
+            height="100%"
+            id="map"
+            className="myClassname"
+            display="initial"
+            position="relative"
+            allowfullscreen
           />
         </div>
       </SectionContainer>

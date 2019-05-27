@@ -133,7 +133,6 @@ class IndexPage extends Component {
           siteMetadata: {
             caseStudies: {
               cases,
-              title,
             }
           }
         }
