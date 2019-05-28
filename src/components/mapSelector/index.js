@@ -6,6 +6,7 @@ import {
   Column,
 } from './styledComponents';
 import Iframe from 'react-iframe'
+import { APP_CONFIG } from '../../utils/constants'
 import { PageSizer, H4, H3 } from '../styledComponents';
 
 export class MapSelector extends Component {
@@ -57,7 +58,7 @@ export class MapSelector extends Component {
         </PageSizer>
         <div className="map-container">
           <Iframe
-            url={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC1mS0oYjAJ6rkCK--bRm3JUN74amLExzw&q=Sancrisoft+Calle+49+Sur+Envigado+Antioquia`}
+            url={`https://www.google.com/maps/embed/v1/place?key=${APP_CONFIG.embedGoogleApiKey}&q=Sancrisoft+Calle+49+Sur+Envigado+Antioquia`}
             width="100%"
             height="100%"
             id="map"
