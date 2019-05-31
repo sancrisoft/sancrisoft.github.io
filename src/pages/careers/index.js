@@ -30,13 +30,13 @@ import {
   PositionDetailsForm,
 } from '../../styles/careers/styledComponents';
 
-const WrapperButton = ({ id, onClick }) => {
+const WrapperButton = ({ id, onClick, text }) => {
   const handleClick = () => {
     onClick(id);
   }
   return (
     <Button
-      text="View More"
+      text={text}
       padding="5px 10px"
       size="12px"
       onClick={handleClick}
@@ -47,6 +47,7 @@ const WrapperButton = ({ id, onClick }) => {
 WrapperButton.propTypes = {
   id: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 const PositionCardItems = ({ openPositions, t, onClickPosition }) => {
@@ -55,8 +56,8 @@ const PositionCardItems = ({ openPositions, t, onClickPosition }) => {
     positionCard.push(
       <PositionCard key={`position-card-${i}`}>
         <H4>{t(`careers.openPositions.positions.${i}.title`)}</H4>
-        <SubTitle>Full Time</SubTitle>
-        <WrapperButton id={i} onClick={onClickPosition}/>
+        <SubTitle>{t(`careers.openPositions.positions.${i}.mode`)}</SubTitle>
+        <WrapperButton id={i} onClick={onClickPosition} text={t(`careers.openPositions.positions.${i}.moreLink`)}/>
       </PositionCard>
     );
   }
