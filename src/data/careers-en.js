@@ -112,7 +112,7 @@ const careers = {
         moreLink: 'View More',
         positionDescription: '<p>We’re looking for an administrator able to do operative tasks for Sancrisoft and manage the human resources of our team.</p>',
         technicalSkills: '<p>You must have knowledge on these areas:</p><ul><li>Administration</li><li>Accounting</li></ul>',
-        responsabilities: '<ul><li>Payroll payments</li><li>Billing</li><li>Make payments to suppliers</li><li>Conciliar bancos</li><li>Envío de papelería</li><li>Pagos de impuestos</li><li>Organizar happy hours mensuales y celebraciones de cumpleaños</li></ul>',
+        responsabilities: '<ul><li>Payroll payments</li><li>Billing</li><li>Make payments to suppliers</li><li>Bank reconciliation</li><li>Paper work</li><li>Tax payments</li><li>Organize monthly happy hours and birthday celebrations</li></ul>',
         extraTitle: 'And the most important!',
         extraContent: '<ul><li>Hight proficiency on writing and verbal communications</li><li>Creative</li><li>Proactive</li><li>Always open to give and receive feedback</li></ul>',
       },

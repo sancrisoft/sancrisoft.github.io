@@ -18,7 +18,7 @@ const homeES = {
   testimonials: {
     1: {
       id: 1,
-      description: 'He trabajado con Sancrisoft en varios proyectos y ellos estan ahi para resolver en cualquier momento. No solamente en las estregas también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones.',
+      description: 'He trabajado con Sancrisoft en varios proyectos y ellos están ahí para resolver en cualquier momento. No solamente en las entregas, también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones.',
       title: 'CEO de Double Nines Productions LLC'
     },
     2: {
@@ -30,6 +30,11 @@ const homeES = {
       id: 3,
       description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
       title: 'Fundador de arenaalfa.com'
+    },
+    4: {
+      id: 4,
+      description: 'Trabajar con el equipo de Sancrisoft es un placer. Son oportunos, profesionales y están dispuestos a trabajar contigo para realizar cualquier tarea. Lo único mejor que la calidad del servicio es la calidad de su trabajo.',
+      title: 'Lider de marketing de Skip'
     }
   },
   carousel: {
