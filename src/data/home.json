@@ -6,11 +6,11 @@
     "testimonials": [
         {
             "id": 1,
-            "name": "Alexander Corr"
+            "name": "Marshall Mann"
         },
         {
             "id": 2,
-            "name": "Rodrigo Ramírez"
+            "name": "Alexander Corr"
         },
         {
             "id": 3,
@@ -18,7 +18,7 @@
         },
         {
             "id": 4,
-            "name": "Marshall Mann"
+            "name": "Rodrigo Ramírez"
         }
     ],
     "carousel": [

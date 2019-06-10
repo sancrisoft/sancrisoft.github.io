@@ -18,13 +18,13 @@ const home = {
   testimonials: {
     1: {
       id: 1,
-      description: 'I\'ve worked with Sancrisoft on a variety of projects now and they come through every time. Not only on delivery but they also help our team scope the project and come up with the best solutions.',
-      title: 'CEO of Double Nines Productions LLC'
+      description: 'The team at Sancrisoft is a pleasure to work with. They are timely and professional and are always willing to work with you to accomplish any task. The only thing better than the quality of service is the quality of their work.',
+      title: 'Marketing Lead at Skip'
     },
     2: {
       id: 2,
-      description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
-      title: 'CEO of Innovation Factory SAS'
+      description: 'I\'ve worked with Sancrisoft on a variety of projects now and they come through every time. Not only on delivery but they also help our team scope the project and come up with the best solutions.',
+      title: 'CEO of Double Nines Productions LLC'
     },
     3: {
       id: 3,
@@ -33,8 +33,8 @@ const home = {
     },
     4: {
       id: 4,
-      description: 'The team at Sancrisoft is a pleasure to work with. They are timely and professional and are always willing to work with you to accomplish any task. The only thing better than the quality of service is the quality of their work.',
-      title: 'Marketing Lead at Skip'
+      description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
+      title: 'CEO of Innovation Factory SAS'
     }
   },
   carousel: {

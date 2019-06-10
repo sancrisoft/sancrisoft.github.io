@@ -18,13 +18,13 @@ const homeES = {
   testimonials: {
     1: {
       id: 1,
-      description: 'He trabajado con Sancrisoft en varios proyectos y ellos están ahí para resolver en cualquier momento. No solamente en las entregas, también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones.',
-      title: 'CEO de Double Nines Productions LLC'
+      description: 'Trabajar con el equipo de Sancrisoft es un placer. Son oportunos, profesionales y están dispuestos a trabajar contigo para realizar cualquier tarea. Lo único mejor que la calidad del servicio es la calidad de su trabajo.',
+      title: 'Lider de marketing de Skip'
     },
     2: {
       id: 2,
-      description: 'Contar con Sancrisoft es garantía de una integración de equipo, en donde el equipo de ingenieros resultante entienden y se complementan tanto técnicamente como a nivel de modelo de negocio.',
-      title: 'CEO de Innovation Factory SAS'
+      description: 'He trabajado con Sancrisoft en varios proyectos y ellos están ahí para resolver en cualquier momento. No solamente en las entregas, también ayudan a nuestro equipo a estimar el proyecto y brindar las mejores soluciones.',
+      title: 'CEO de Double Nines Productions LLC'
     },
     3: {
       id: 3,
@@ -33,8 +33,8 @@ const homeES = {
     },
     4: {
       id: 4,
-      description: 'Trabajar con el equipo de Sancrisoft es un placer. Son oportunos, profesionales y están dispuestos a trabajar contigo para realizar cualquier tarea. Lo único mejor que la calidad del servicio es la calidad de su trabajo.',
-      title: 'Lider de marketing de Skip'
+      description: 'Contar con Sancrisoft es garantía de una integración de equipo, en donde el equipo de ingenieros resultante entienden y se complementan tanto técnicamente como a nivel de modelo de negocio.',
+      title: 'CEO de Innovation Factory SAS'
     }
   },
   carousel: {
