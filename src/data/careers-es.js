@@ -1,6 +1,6 @@
 const careersES = {
   bigImage: {
-    title: 'Se Parte de Nuestro Equipo!',
+    title: 'Sé Parte de Nuestro Equipo!',
     description: ''
   },
   recruitment: {
@@ -73,8 +73,8 @@ const careersES = {
   },
   openPositions: {
     title: 'Vacantes',
-    positionDescriptionTitle: 'Descrición de posición',
-    technicalSkillsTitle: 'Habilidades Tecnicas',
+    positionDescriptionTitle: 'Descripción de posición',
+    technicalSkillsTitle: 'Habilidades Técnicas',
     responsabilitiesTitle: 'Responsabilidades',
     positions: [
       {
