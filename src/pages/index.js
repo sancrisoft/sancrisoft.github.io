@@ -47,7 +47,7 @@ class IndexPage extends Component {
       data,
       t,
     } = this.props;
-
+    console.log(data)
     const newArray = testimonials.map((item) => {
       const {
         id,
@@ -201,6 +201,9 @@ query homeQuery {
     ...imageFragment
   }
   Testimonial3:file(relativePath: { eq: "home/foto3.jpg" }) {
+    ...imageFragment
+  }
+  Testimonial4:file(relativePath: { eq: "home/foto7.png" }) {
     ...imageFragment
   }
   react:file(relativePath: { eq: "home/react.png" }) {

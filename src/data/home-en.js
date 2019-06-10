@@ -31,6 +31,11 @@ const home = {
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
       title: 'Founder of arenaalfa.com'
     },
+    4: {
+      id: 4,
+      description: 'The team at Sancrisoft is a pleasure to work with. They are timely and professional and are always willing to work with you to accomplish any task. The only thing better than the quality of service is the quality of their work.',
+      title: 'Marketing Lead at Skip'
+    }
   },
   carousel: {
     1: {
