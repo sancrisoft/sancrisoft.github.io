@@ -107,10 +107,10 @@ const careers = {
       },
       {
         friendlyId: 'manager',
-        title: 'Administrator',
+        title: 'Office Manager',
         mode: 'Part time',
         moreLink: 'View More',
-        positionDescription: '<p>We’re looking for an administrator able to do operative tasks for Sancrisoft and manage the human resources of our team.</p>',
+        positionDescription: '<p>We’re looking for an Office Manager able to do operative tasks for Sancrisoft and manage the human resources of our team.</p>',
         technicalSkills: '<p>You must have knowledge on these areas:</p><ul><li>Administration</li><li>Accounting</li></ul>',
         responsabilities: '<ul><li>Payroll payments</li><li>Billing</li><li>Make payments to suppliers</li><li>Bank reconciliation</li><li>Paper work</li><li>Tax payments</li><li>Organize monthly happy hours and birthday celebrations</li></ul>',
         extraTitle: 'And the most important!',

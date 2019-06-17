@@ -16,7 +16,7 @@ const caseStudiesES = {
     meattogo: {
       title: "Meat To Go",
       brief: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
-      aboutTitle: "Acerda de Meat To Go",
+      aboutTitle: "Acerca de Meat To Go",
       weblinkTitle: "",
       description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos. Disponen de entregas para hogares y eventos, en porciones personalizadas y envasadas al vacío. La aplicación creada es una tienda virtual para simplificar el proceso de solicitud y entrega de los productos. Si quieres saber más visita.",
       services: {

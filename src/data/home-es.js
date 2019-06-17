@@ -40,7 +40,7 @@ const homeES = {
   carousel: {
     1: {
       id: 1,
-      title: 'Elaboramos Soluciones Digitales Para Sus Negocios',
+      title: 'Elaboramos Soluciones Digitales Para Tus Negocios',
       description: 'Creamos aplicaciones de alta calidad para llevar su negocio al siguiente nivel',
       linkText: 'Ver Nuestro Trabajo'
     },
@@ -85,7 +85,7 @@ const homeES = {
       web: {
         id: 'web',
         title: 'Desarrollo Web',
-        description: 'Apliaciones web elegantes, rápidas y seguras exclusivamente diseñadas de acuerdo a sus objetivos de negocio. Nos encargamos de tu aplicación desde el backend hasta el frontend usando las últimas tecnologías javascript como ReactJS. Dependiendo del alcance del proyecto, funcionalidades, tiempo y presupuesto escogemos individualmente la solución óptima para su proyecto.',
+        description: 'Apliaciones web elegantes, rápidas y seguras exclusivamente diseñadas de acuerdo a tus objetivos de negocio. Nos encargamos de tu aplicación desde el backend hasta el frontend usando las últimas tecnologías javascript como ReactJS. Dependiendo del alcance del proyecto, funcionalidades, tiempo y presupuesto escogemos individualmente la solución óptima para tu proyecto.',
         technologies: [
           {
             id: 'react',
@@ -117,7 +117,7 @@ const homeES = {
       mobile: {
         id: 'mobile',
         title: 'Desarrollo Móvil',
-        description: '¿Tu negocio aún no esta en el mundo de las aplcaciones móviles? Llevamos tu idea a la realidad y cubrimos todo el proceso de desarrollo, construimos aplicaciones en React Native una librería robusta para crear aplications android y iOS nativas. También construimos soluciones web responsivas para el mundo móvil.',
+        description: '¿Tu negocio aún no esta en el mundo de las aplcaciones móviles? Llevamos tu idea a la realidad y cubrimos todo el proceso de desarrollo, construimos aplicaciones en React Native una librería robusta para crear aplicaciones android y iOS nativas. También construimos soluciones web responsivas para el mundo móvil.',
         technologies: [
           {
             id: 'react',

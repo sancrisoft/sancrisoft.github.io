@@ -46,7 +46,7 @@ const careersES = {
     },
     workstation: {
       title: "Estacion de Trabajo",
-      description: "Estación de trabajo cómodas y de ensueño"
+      description: "Estación de trabajo cómoda y de ensueño"
     },
     support: {
       title: "Trabajo Colaborativo",
@@ -56,7 +56,7 @@ const careersES = {
   recruitmentProcess: {
     application: {
       title: "Aplicación",
-      description: "Llena el formulario de esta página o escríbenos un email diciendonos porque quieres trabajar con nosotros",
+      description: "Llena el formulario de esta página o escríbenos un email diciendonos porqué quieres trabajar con nosotros",
     },
     assigment: {
       title: "Prueba",
