@@ -1,10 +1,8 @@
 {
-    "team": [
-        {
+    "team": [{
             "id": "jhony",
             "fullName": "Jhony Moncada",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:jhony@sancrisoft.com"
                 },
@@ -21,8 +19,7 @@
         {
             "id": "juan",
             "fullName": "Juan Gonzalez",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:juan@sancrisoft.com"
                 },
@@ -39,8 +36,7 @@
         {
             "id": "carlos",
             "fullName": "Carlos Gonzalez",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:carlos@sancrisoft.com"
                 },
@@ -53,8 +49,7 @@
         {
             "id": "alejo",
             "fullName": "Alejandro Marín",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:alejandro@sancrisoft.com"
                 },
@@ -71,8 +66,7 @@
         {
             "id": "johan",
             "fullName": "Johan Moncada",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:johan@sancrisoft.com"
                 },
@@ -85,8 +79,7 @@
         {
             "id": "samuel",
             "fullName": "Samuel Granja",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:samuel@sancrisoft.com"
                 },
@@ -99,8 +92,7 @@
         {
             "id": "bryan",
             "fullName": "Bryan Villamil",
-            "socialMedia": [
-                {
+            "socialMedia": [{
                     "type": "mail",
                     "value": "mailto:bryan.v@sancrisoft.com"
                 },
@@ -115,45 +107,52 @@
             ]
         },
         {
-            "id": "miguel",
-            "fullName": "Miguel Bolivar",
-            "socialMedia": [
-                {
+            "id": "ruben",
+            "fullName": "Rubén Acosta",
+            "socialMedia": [{
                     "type": "mail",
-                    "value": "mailto:miguel.b@sancrisoft.com"
-                },
-                {
-                    "type": "twitter",
-                    "value": "https://twitter.com/darking360"
+                    "value": "mailto:ruben.a@sancrisoft.com"
                 },
                 {
                     "type": "linkedin",
-                    "value": "https://www.linkedin.com/in/darking360/"
+                    "value": "https://www.linkedin.com/in/ruben-acosta-10b24359/"
+                }
+            ]
+        },
+        {
+            "id": "john",
+            "fullName": "John Angel",
+            "socialMedia": [{
+                    "type": "mail",
+                    "value": "mailto:john.a@sancrisoft.com"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://www.linkedin.com/in/jeangel/"
                 }
             ]
         }
     ],
-    "ourValues": [
-      {
-        "id": "integrity"
-      },
-      {
-        "id": "commitment"
-      },
-      {
-        "id": "happiness"
-      },
-      {
-        "id": "excellence"
-      },
-      {
-        "id": "kindness"
-      },
-      {
-        "id": "gratitude"
-      }
+    "ourValues": [{
+            "id": "integrity"
+        },
+        {
+            "id": "commitment"
+        },
+        {
+            "id": "happiness"
+        },
+        {
+            "id": "excellence"
+        },
+        {
+            "id": "kindness"
+        },
+        {
+            "id": "gratitude"
+        }
     ],
     "getAQuote": {
-      "urlGetAQuote": "/careers"
+        "urlGetAQuote": "/careers"
     }
 }
