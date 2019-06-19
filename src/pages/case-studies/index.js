@@ -40,6 +40,7 @@ class IndexPage extends Component {
       data,
       t,
     } = this.props
+    
     return (
       <MainContainer>
         <ContainerProyect>
@@ -80,7 +81,6 @@ class IndexPage extends Component {
       },
       data,
     } = this.props
-    
     return (
       <ContainerLogos>
         <Carousel
@@ -121,13 +121,15 @@ class IndexPage extends Component {
           }
         >
           {logos.map(item => (
-          <LogoSection
-            key={item.id}
-            name={item.name}
-            image={data[item.id].childImageSharp.sizes}
-            url={item.link}
-            active={hash === '#seeall' ? false : item.private}
-          />
+            // !item.private ? 
+            (<LogoSection
+              key={item.id}
+              name={item.name}
+              image={data[item.id].childImageSharp.sizes}
+              url={item.link}
+              active={hash === '#seeall' ? false : item.private}
+            />)
+            // : null
         ))}
         </Carousel>
         
@@ -207,6 +209,16 @@ export const query = graphql`
     }
     lacochera: file(
       relativePath: { eq: "cases-studies/lacochera/LaCochera.png" }
+    ) {
+      ...imageFragment
+    }
+    hocmobile: file(
+      relativePath: { eq: "cases-studies/hocmobile/hero.png" }
+    ) {
+      ...imageFragment
+    }
+    hero: file(
+      relativePath: { eq: "cases-studies/hocmobile/hero.png" }
     ) {
       ...imageFragment
     }

@@ -97,6 +97,7 @@ export const CardContainer = styled.div`
   background-color: white;
   position: relative;
   margin: 0.5em;
+  overflow: hidden;
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;

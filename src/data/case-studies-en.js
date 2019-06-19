@@ -36,6 +36,27 @@ const caseStudies = {
         4: "Email Order Notifications",
       }
     },
+    hocmobile: {
+      title: "HandsOn Connect",
+      brief: "HandsOn Connect mobile is...",
+      aboutTitle: "About HandsOn Connect Mobile",
+      weblinkTitle: "",
+      description: "HandsOn Connect Mobile...",
+      services: {
+        title: "Services",
+        1: "Diseño UI & UX",
+        1: "Firebase",
+        2: "Mobile Development (Android & iOS)",
+        6: "Apps publication in Apple Store and Google Play"
+      },
+      features: {
+        title: "Features",
+        1: "Feature A",
+        2: "Feature B",
+        3: "Feature C",
+        4: "Feature D",
+      }
+    },
     lacochera: {
       title: "La Cochera",
       brief: "La Cochera belongs to a company that manufactures high-quality automotive accessories, protection functions, aesthetics of the vehicles and safety of its occupants. Through its portal they market and publish their diverse range of products, and they also allow sellers to make their publications to sell products related to the vehicular area.",

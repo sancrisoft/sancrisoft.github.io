@@ -36,6 +36,27 @@ const caseStudiesES = {
         4: "Notificaciiones de órdenes via Email",
       }
     },
+    hocmobile: {
+      title: "HandsOn Connect",
+      brief: "HandsOn Connect mobile es...",
+      aboutTitle: "Acerca de HandsOn Connect Mobile",
+      weblinkTitle: "",
+      description: "HandsOn Connect Mobile...",
+      services: {
+        title: "Servicios",
+        1: "Diseño UI & UX",
+        1: "Firebase",
+        2: "Desarrollo Móvil (Android & iOS)",
+        6: "Publicación de apps en el Apple Store y Google Play"
+      },
+      features: {
+        title: "Funcionalidades",
+        1: "Gestion de usuarios e inicio de sesión",
+        2: "Carrito de compras",
+        3: "Geolocalización",
+        4: "Notificaciiones de órdenes via Email",
+      }
+    },
     lacochera: {
       title: "La Cochera",
       brief: "La Cochera pertenece a una empresa que fabrica accesorios automotrices de alta calidad, funciones de protección, estética de los vehículos y seguridad de sus ocupantes. A través de su portal, comercializan y publican su variada gama de productos, y también permiten que los vendedores hagan sus publicaciones para vender productos relacionados con el área vehicular.",

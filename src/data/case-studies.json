@@ -24,6 +24,12 @@
       "name": "La Cochera",
       "link": "http://www.lacochera.com.pa",
       "private": false
+    },
+    {
+      "id": "skip",
+      "name": "Skip",
+      "link": "",
+      "private": false
     }
   ],
   "cases": [
@@ -229,6 +235,56 @@
         {
           "id": "styled",
           "text": "Styled Components"
+        },
+        {
+          "id": "webpack",
+          "text": "Webpack"
+        }
+      ]
+    },
+    {
+      "id": "hocmobile",
+      "name": "HandsOn Connect",
+      "thumbnail": "hero",
+      "appStore": "",
+      "playStore": "",
+      "weblink": "",
+      "type": "Mobile App",
+      "link": "/case-studies/hocmobile",
+      "private": true,
+      "services": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "features": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        }
+      ],
+      "technologies": [
+        {
+          "id": "reactN",
+          "text": "React Native"
+        },
+        {
+          "id": "ignite",
+          "text": "Ignite"
         },
         {
           "id": "webpack",
