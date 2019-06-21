@@ -170,6 +170,7 @@ class IndexPage extends Component {
             />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
+          
         </Layout>
       </I18nextProvider>
     )

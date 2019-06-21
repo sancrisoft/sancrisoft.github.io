@@ -28,6 +28,9 @@ export const CaseLeftTop = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  ${(props) => props.marginBottom && css`
+    margin-bottom: ${props.marginBottom};
+  `}
   ${breakpoint('md')`
     justify-content: flex-start;
   `}
@@ -71,6 +74,9 @@ export const CaseLeftBottom = styled.div`
       font-size: 1em;
       line-height: 1.5;
     `}
+    &.long-text{
+      margin-top:10px;
+    }
   }
 `;
 export const Logos = styled.div`

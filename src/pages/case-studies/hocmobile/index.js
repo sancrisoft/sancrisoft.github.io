@@ -20,8 +20,9 @@ import {
   ContentAbout,
   ContentTecnology,
   ContentSimilar,
-  Tecnologies
-} from '../../../styles/case-studies-lacochera/styledComponents';
+  Tecnologies,
+  CaseImageHoc
+} from '../../../styles/case-studies-hocmobile/styledComponents';
 
 class IndexPage extends Component {
 
@@ -48,16 +49,19 @@ class IndexPage extends Component {
       weblink,
     } = cochera;
     return (
-      <CasesImage
-        key={id}
-        title={name}
-        widthImage={'200px'}
-        description={t(`caseStudies.cases.hocmobile.brief`)}
-        image={data.hocmobilelogo.childImageSharp.sizes}
-        phone={ImagePhone}
-        weblink={weblink}
-        weblinkTitle={t(`caseStudies.cases.hocmobile.weblinkTitle`)}
-      />
+      <CaseImageHoc>
+          <CasesImage
+            key={id}
+            title={name}
+            widthImage={'150px'}
+            marginBottom={'30px'}
+            description={t(`caseStudies.cases.hocmobile.brief`)}
+            image={data.hocmobilelogo.childImageSharp.sizes}
+            phone={ImagePhone}
+            weblink={weblink}
+            weblinkTitle={t(`caseStudies.cases.hocmobile.weblinkTitle`)}
+        />
+      </CaseImageHoc>
     );
   }
 

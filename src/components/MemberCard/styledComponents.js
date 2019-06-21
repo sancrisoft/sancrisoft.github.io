@@ -138,6 +138,7 @@ export const CardContainer = styled.div`
     }
     span {
       font-size: 9px;
+      padding: 0 4px;
       line-height: 11px;
       margin-top: 5px;
       text-align: center;
