@@ -38,23 +38,23 @@ const caseStudiesES = {
     },
     hocmobile: {
       title: "HandsOn Connect",
-      brief: "HandsOn Connect mobile es...",
+      brief: "Esta aplicación mejora las capacidades digitales de los líderes voluntarios, lo que les permite tener una mayor precisión y facilidad para informar las cifras de asistencia e impacto. Con líderes voluntarios empoderados, HandsOn podrá administrar más programas de servicio para la comunidad sin la necesidad de aumentar el personal. Mediremos los resultados mediante el seguimiento y la revisión del aumento en las horas de trabajo de voluntariado, y lo más importante, la cantidad de beneficiarios atendidos.",
       aboutTitle: "Acerca de HandsOn Connect Mobile",
       weblinkTitle: "",
-      description: "HandsOn Connect Mobile...",
+      description: "Usada por cientos de organizaciones sin fines de lucro, fundaciones corporativas y educación superior, HandsOn Connect aprovecha el conocimiento y la experiencia de Points of Light, la organización más grande del mundo dedicada al servicio voluntario, para ofrecerle el mejor producto para que tenga éxito al atraer voluntarios.",
       services: {
         title: "Servicios",
         1: "Diseño UI & UX",
-        1: "Firebase",
-        2: "Desarrollo Móvil (Android & iOS)",
-        6: "Publicación de apps en el Apple Store y Google Play"
+        2: "Notificaciones",
+        3: "Desarrollo Móvil (Android & iOS)",
+        4: "Publicación de apps en el Apple Store y Google Play"
       },
       features: {
         title: "Funcionalidades",
-        1: "Gestion de usuarios e inicio de sesión",
-        2: "Carrito de compras",
-        3: "Geolocalización",
-        4: "Notificaciiones de órdenes via Email",
+        1: "Registro de voluntarios",
+        2: "Chat",
+        3: "Busqueda de oportunidades",
+        4: "Registro de oportunidades",
       }
     },
     lacochera: {

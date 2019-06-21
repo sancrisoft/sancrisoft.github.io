@@ -246,8 +246,6 @@
       "id": "hocmobile",
       "name": "HandsOn Connect",
       "thumbnail": "hero",
-      "appStore": "",
-      "playStore": "",
       "weblink": "",
       "type": "Mobile App",
       "link": "/case-studies/hocmobile",
@@ -275,6 +273,9 @@
         },
         {
           "id": 3
+        },
+        {
+          "id": 4
         }
       ],
       "technologies": [
@@ -289,6 +290,14 @@
         {
           "id": "webpack",
           "text": "Webpack"
+        },
+        {
+          "id": "redux",
+          "text": "Redux"
+        },
+        {
+          "id": "firebase",
+          "text": "Firebase"
         }
       ]
     }

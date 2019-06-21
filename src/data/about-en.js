@@ -38,7 +38,7 @@ const about = {
             },
             ruben: {
                 position: "Full Stack Developer",
-                message1: "",
+                message1: "I love physics and computer science. I like challenges and sports.",
             },
             john: {
                 position: "Full Stack Developer",

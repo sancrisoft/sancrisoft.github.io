@@ -38,7 +38,7 @@ const aboutES = {
             },
             ruben: {
                 position: "Desarrollador Full Stack",
-                message1: "",
+                message1: "Amo la fisica y las ciencias computacionales. Me gustan los retos y los deportes.",
             },
             john: {
                 position: "Desarrollador Full Stack",

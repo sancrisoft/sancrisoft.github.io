@@ -39,7 +39,6 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    console.log('cases', cases)
     const cochera = cases.find(item => item.id === "hocmobile");
     const {
       id,
@@ -48,7 +47,6 @@ class IndexPage extends Component {
       appStore,
       weblink,
     } = cochera;
-    console.log(cochera, data, 'DAAAATA')
     return (
       <CasesImage
         key={id}
@@ -59,10 +57,6 @@ class IndexPage extends Component {
         phone={ImagePhone}
         weblink={weblink}
         weblinkTitle={t(`caseStudies.cases.hocmobile.weblinkTitle`)}
-        playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={playStore}
-        appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={appStore}
       />
     );
   }
@@ -120,7 +114,6 @@ class IndexPage extends Component {
       data,
     } = this.props;
     const hocmobile = cases.find(item => item.id === "hocmobile");
-
     return hocmobile.technologies.map((item) => (
       <Tecnology
         key={item.id}
@@ -179,7 +172,6 @@ class IndexPage extends Component {
       },
     } = this.props;
     const [,, projectName] = pathname.split('/')
-    console.log(projectName)
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
@@ -254,7 +246,10 @@ query hocmobile {
   ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
     ...imageFragment
   }
-  styled:file(relativePath: { eq: "cases-studies/lacochera/styled.png" }) {
+  redux:file(relativePath: { eq: "cases-studies/lacochera/redux.png" }) {
+    ...imageFragment
+  }
+  firebase:file(relativePath: { eq: "cases-studies/hocmobile/firebase.png" }) {
     ...imageFragment
   }
   webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
