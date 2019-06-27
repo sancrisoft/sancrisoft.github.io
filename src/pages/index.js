@@ -47,7 +47,6 @@ class IndexPage extends Component {
       data,
       t,
     } = this.props;
-    console.log(testimonials)
     const newArray = testimonials.map((item) => {
       const {
         id,
@@ -171,6 +170,7 @@ class IndexPage extends Component {
             />
           </GetAQuote>
           <MapSelector title={t('home.mapTitle')} offices={offices} />
+          
         </Layout>
       </I18nextProvider>
     )

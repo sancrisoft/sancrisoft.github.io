@@ -5,7 +5,7 @@ export const Logos = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 100%;
   padding-bottom: .5em;
   .gatsby-image-wrapper {
     width: 70px;

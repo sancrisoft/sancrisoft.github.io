@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const CarouselContainer = styled.div`
-  height: ${({ full }) => full ? '100vh' : 'inherit' };
+  height: ${({ full }) => full ? '100vh' : '' };
   width: 100%;
   overflow: hidden;
   position: relative;

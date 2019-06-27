@@ -1,6 +1,6 @@
 const quoteEs = {
   bigImage: {
-    title: 'Póngase en Contacto con Nosotros!',
+    title: 'Ponte en Contacto con Nosotros!',
     description: 'El valor real de los servicios que ofrecemos, reside en descubrir y comprender los objetivos comerciales y luego proponer soluciones de tecnología.'
   },
   form: {

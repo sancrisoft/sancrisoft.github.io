@@ -30,6 +30,28 @@ export const ContainerProyect = styled.div`
   `}
 `;
 
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
+export const ContainerContactButton = styled.div`
+  margin: 0 auto;
+  max-width: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  ${breakpoint('tablet')`
+    max-width: 80%;
+  `}
+  ${breakpoint('desktop')`
+    max-width: 70%;
+  `}
+`;
+
 export const BoxAboutFinal = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,6 +100,10 @@ export const ContainerLogos = styled.div`
   height: 10em;
   margin: 1.5em 0;
   flex-wrap: wrap;
+  div > .slick-slider > .slick-list > .slick-track{
+    display:flex;
+    align-items:center;
+  }
   ${breakpoint('tablet')`
     max-width: 80%;
   `}

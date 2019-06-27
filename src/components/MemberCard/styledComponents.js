@@ -97,6 +97,7 @@ export const CardContainer = styled.div`
   background-color: white;
   position: relative;
   margin: 0.5em;
+  overflow: hidden;
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;
@@ -137,11 +138,12 @@ export const CardContainer = styled.div`
     }
     span {
       font-size: 9px;
-      padding: 0 20px;
+      padding: 0 4px;
       line-height: 11px;
       margin-top: 5px;
       text-align: center;
-      white-space: nowrap;
+      width: 100%;
+      white-space: initial;
       ${breakpoint('tablet')`
         font-size: 10px;
         line-height: 12px;

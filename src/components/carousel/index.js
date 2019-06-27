@@ -33,6 +33,7 @@ var settings = {
   slidesToScroll: 1,
   pauseOnHover: true,
   lazyLoad: true,
+  responsive: []
 };
 
 class Carousel extends PureComponent {
@@ -46,6 +47,7 @@ class Carousel extends PureComponent {
     swipeToSlide: PropTypes.bool,
     autoplaySpeed: PropTypes.number,
     arrowColor: PropTypes.string,
+    responsive: PropTypes.array
   }
 
   render() {
@@ -60,6 +62,7 @@ class Carousel extends PureComponent {
       arrowColor,
       swipeToSlide,
       full,
+      responsive
     } = this.props;
     return (
       <CarouselContainer full={full}>
@@ -74,6 +77,7 @@ class Carousel extends PureComponent {
           nextArrow={<NextArrow backgroundColor={arrowColor} />}
           prevArrow={<PrevArrow backgroundColor={arrowColor} />}
           swipeToSlide={swipeToSlide}
+          responsive={responsive}
         >
           { children }
         </Slider>

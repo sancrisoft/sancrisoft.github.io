@@ -38,6 +38,7 @@ const CasesImage = (props) => {
     linkPlayStore,
     linkAppStore, 
     widthImage,
+    marginBottom,
     weblink,
     weblinkTitle
   } = props;
@@ -45,7 +46,7 @@ const CasesImage = (props) => {
     <ThemeProvider theme={theme}>
       <ContentCases>
         <CaseLeft>
-          <CaseLeftTop widthImage={widthImage}>
+          <CaseLeftTop widthImage={widthImage} marginBottom={marginBottom}>
             <Img sizes={image} />
             <Title
               type={3}
@@ -105,6 +106,7 @@ CasesImage.propTypes = {
   linkAppStore: PropTypes.string,
   linkPlayStore: PropTypes.string,
   weblink: PropTypes.string,
+  marginBottom: PropTypes.string
 };
 
 

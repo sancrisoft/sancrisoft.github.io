@@ -16,7 +16,7 @@ const caseStudiesES = {
     meattogo: {
       title: "Meat To Go",
       brief: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos.",
-      aboutTitle: "Acerda de Meat To Go",
+      aboutTitle: "Acerca de Meat To Go",
       weblinkTitle: "",
       description: "Meat To Go es una carnicería en línea ubicada en Panamá especializada en carnes, aves y mariscos. Disponen de entregas para hogares y eventos, en porciones personalizadas y envasadas al vacío. La aplicación creada es una tienda virtual para simplificar el proceso de solicitud y entrega de los productos. Si quieres saber más visita.",
       services: {
@@ -34,6 +34,27 @@ const caseStudiesES = {
         2: "Carrito de compras",
         3: "Geolocalización",
         4: "Notificaciiones de órdenes via Email",
+      }
+    },
+    hocmobile: {
+      title: "HandsOn Connect",
+      brief: "Esta aplicación mejora las capacidades digitales de los líderes voluntarios, lo que les permite tener una mayor precisión y facilidad para informar las cifras de asistencia e impacto. Con líderes voluntarios empoderados, HandsOn podrá administrar más programas de servicio para la comunidad sin la necesidad de aumentar el personal. Mediremos los resultados mediante el seguimiento y la revisión del aumento en las horas de trabajo de voluntariado, y lo más importante, la cantidad de beneficiarios atendidos.",
+      aboutTitle: "Acerca de HandsOn Connect Mobile",
+      weblinkTitle: "",
+      description: "Usada por cientos de organizaciones sin fines de lucro, fundaciones corporativas y educación superior, HandsOn Connect aprovecha el conocimiento y la experiencia de Points of Light, la organización más grande del mundo dedicada al servicio voluntario, para ofrecerle el mejor producto para que tenga éxito al atraer voluntarios.",
+      services: {
+        title: "Servicios",
+        1: "Diseño UI & UX",
+        2: "Notificaciones",
+        3: "Desarrollo Móvil (Android & iOS)",
+        4: "Publicación de apps en el Apple Store y Google Play"
+      },
+      features: {
+        title: "Funcionalidades",
+        1: "Registro de voluntarios",
+        2: "Chat",
+        3: "Busqueda de oportunidades",
+        4: "Registro de oportunidades",
       }
     },
     lacochera: {
