@@ -112,3 +112,28 @@ export const FooterBottom = styled.div`
     margin: 0 auto;
   }
 `;
+
+export const Address = styled.div`
+  margin: .8rem 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span, a {
+    font-family: Averta;
+    font-size: .7rem;
+  }
+
+  a {
+    color: #F28724;
+  }
+
+  ${breakpoint('tablet')`
+    flex-direction: row;
+    align-items: flex-start;
+
+    span {
+      margin-right: .3rem;
+    }
+  `}
+`;

@@ -169,8 +169,6 @@ class IndexPage extends Component {
               onClick={ () => navigate(urlGetAQuote)}
             />
           </GetAQuote>
-          <MapSelector title={t('home.mapTitle')} offices={offices} />
-          
         </Layout>
       </I18nextProvider>
     )
