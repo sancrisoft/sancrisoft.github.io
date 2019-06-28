@@ -48,14 +48,15 @@ class IndexPage extends Component {
             t
         } = this.props;
 
-        return team.map((member) => ( <
-            MemberCard key = { member.id }
+        return team.map((member) => (
+          <MemberCard
+            key = { member.id }
             image = { data[member.id].childImageSharp.sizes }
             name = { member.fullName }
             position = { t(`aboutUs.team.members.${member.id}.position`) }
             message1 = { t(`aboutUs.team.members.${member.id}.message1`) }
             socialMedia = { member.socialMedia }
-            />
+          />
         ));
     }
 
@@ -78,12 +79,13 @@ class IndexPage extends Component {
                 id,
             } = item;
 
-            return ( <
-                OurValues key = { id }
+            return (
+              <OurValues
+                key = { id }
                 description = { t(`aboutUs.ourValues.${id}.description`) }
                 title = { t(`aboutUs.ourValues.${id}.title`) }
                 image = { data[`value${id}`].childImageSharp.sizes }
-                />
+              />
             )
         });
         return newArray;
@@ -109,85 +111,68 @@ class IndexPage extends Component {
             t
         } = this.props;
 
-        return ( <
-            I18nextProvider i18n = { i18n } >
-            <
-            Layout >
-            <
-            SEO title = { `Sancrisoft | ${t('aboutUs.title')}` }
-            keywords = {
-                ['sancrisoft', 'digital-solutions'] }
-            /> <
-            section >
-            <
-            BigGreyImage image = { data.aboutUsMainImage.childImageSharp.sizes }
-            title = { t('aboutUs.bigImage.title') }
-            description = { t('aboutUs.bigImage.description') }
-            /> <
-            /section> <
-            PageSizer >
-            <
-            SectionContainer >
-            <
-            MembersContainer >
-            <
-            Title type = { 2 }
-            text = { t('aboutUs.team.title') }
-            /> <
-            BoxMembers > { this.renderTeamMembers() } <
-            /BoxMembers> <
-            /MembersContainer> <
-            OurValuesContainer >
-            <
-            Title type = { 2 }
-            text = { t('aboutUs.ourValueTitle') }
-            /> <
-            ContentValues > { this.renderOurValues() } <
-            /ContentValues> <
-            /OurValuesContainer> <
-            MissionContainer >
-            <
-            H3 > { t('aboutUs.visionMissionTitle') } < /H3> <
-            Mission >
-            <
-            Content > { t('aboutUs.mission') } <
-            /Content> <
-            ImgContent >
-            <
-            Img sizes = { data.mission.childImageSharp.sizes }
-            style = {
-                { width: '50%' } }
-            /> <
-            /ImgContent> <
-            /Mission> <
-            Vision >
-            <
-            ImgContent >
-            <
-            Img sizes = { data.vision.childImageSharp.sizes }
-            style = {
-                { width: '50%' } }
-            /> <
-            /ImgContent> <
-            Content > { ReactHtmlParser(t('aboutUs.vision')) } <
-            /Content> <
-            /Vision> <
-            /MissionContainer> <
-            /SectionContainer> <
-            /PageSizer> <
-            GetAQuote desc = { t('aboutUs.getAQuote.description') } >
-            <
-            Button size = "20px"
-            text = { t('aboutUs.getAQuote.titleButton') }
-            onClick = {
-                () => navigate(urlGetAQuote) }
-            /> <
-            /GetAQuote> <
-            MapSelector title = { t('home.mapTitle') }
-            offices = { offices }
-            /> <
-            /Layout> <
-            /I18nextProvider>
+        return (
+          <I18nextProvider i18n={i18n}>
+            <Layout>
+              <SEO
+                title={`Sancrisoft | ${t('aboutUs.title')}`}
+                keywords={['sancrisoft', 'digital-solutions']}
+              />
+              <section>
+                <BigGreyImage
+                  image={data.aboutUsMainImage.childImageSharp.sizes}
+                  title={t('aboutUs.bigImage.title')}
+                  description={t('aboutUs.bigImage.description')}
+                />
+              </section>
+              <PageSizer>
+                <SectionContainer>
+                  <MembersContainer>
+                    <Title
+                      type={2}
+                      text={t('aboutUs.team.title')}
+                    />
+                    <BoxMembers>{this.renderTeamMembers()}</BoxMembers>
+                  </MembersContainer>
+                  <OurValuesContainer>
+                    <Title
+                      type={2}
+                      text={t('aboutUs.ourValueTitle')}
+                    />
+                    <ContentValues>{this.renderOurValues()}</ContentValues>
+                  </OurValuesContainer>
+                  <MissionContainer>
+                    <H3>{t('aboutUs.visionMissionTitle')}</H3>
+                    <Mission>
+                      <Content>{t('aboutUs.mission')}</Content>
+                      <ImgContent>
+                        <Img
+                          sizes={data.mission.childImageSharp.sizes}
+                          style={{width: '50%'}}
+                        />
+                      </ImgContent>
+                    </Mission>
+                    <Vision>
+                      <ImgContent>
+                        <Img
+                          sizes={data.vision.childImageSharp.sizes}
+                          style={{width: '50%'}}
+                        />
+                      </ImgContent>
+                      <Content>{ReactHtmlParser(t('aboutUs.vision'))}</Content>
+                    </Vision>
+                  </MissionContainer>
+                </SectionContainer>
+              </PageSizer>
+              <GetAQuote desc={t('aboutUs.getAQuote.description')}>
+                <Button
+                  size="20px"
+                  text={t('aboutUs.getAQuote.titleButton')}
+                  onClick={() => navigate(urlGetAQuote)}
+                />
+              </GetAQuote>
+            </Layout>
+          </I18nextProvider>
         );
     }
 }

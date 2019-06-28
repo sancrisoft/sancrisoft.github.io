@@ -13,6 +13,7 @@ import {
   Networks,
   ContentIcon,
   A,
+  Address
 } from './styledComponents'
 
 class Footer extends Component {
@@ -36,9 +37,15 @@ class Footer extends Component {
       <FooterContainer>
         <FooterPageSizer>
           <FooterTop>
-            <div className="menu">
-              <Menu isBlack />
-              <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
+            <div className="left-container">
+              <div className="menu">
+                <Menu isBlack />
+                <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
+              </div>
+              <Address>
+                <span>Calle 49 Sur #45 A 300.</span>
+                <span>Envigado, Antioquia, Colombia.</span>
+                <a href="tel:+5744797416">+57 (4) 4797416</a></Address>
             </div>
             <Networks>
               <ContentIcon>

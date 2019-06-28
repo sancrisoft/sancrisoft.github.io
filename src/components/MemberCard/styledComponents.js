@@ -101,6 +101,7 @@ export const CardContainer = styled.div`
   ${breakpoint('desktop')`
     width: 13em;
     height: 13em;
+    flex-basis:25%;
   `}
   div.first-details {
     position: absolute;
