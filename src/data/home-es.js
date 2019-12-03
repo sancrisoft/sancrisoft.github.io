@@ -30,11 +30,6 @@ const homeES = {
       id: 3,
       description: 'Me gustan mucho los cambios realizados y nuevamente les agradezco y felicito por la diligencia y buena disposición frente a las observaciones. ¡Creo que estamos logrando algo muy positivo aquí y estoy muy contento con este trabajo!',
       title: 'Fundador de arenaalfa.com'
-    },
-    4: {
-      id: 4,
-      description: 'Contar con Sancrisoft es garantía de una integración de equipo, en donde el equipo de ingenieros resultante entienden y se complementan tanto técnicamente como a nivel de modelo de negocio.',
-      title: 'CEO de Innovation Factory SAS'
     }
   },
   carousel: {
