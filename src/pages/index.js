@@ -113,7 +113,7 @@ class IndexPage extends Component {
     return(
       <I18nextProvider i18n={i18n}>
         <Layout>
-          <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} />
+          <SEO title="Home" keywords={['sancrisoft', 'digital-solutions']} description="page Home" />
           <FullItems data={data} />
           <ContWeLove>
             <PageSizer>
