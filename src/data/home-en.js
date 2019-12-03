@@ -30,11 +30,6 @@ const home = {
       id: 3,
       description: 'I really like the changes made and once again, congratulations for the quick turn around and care about feedback. I think we are achieving something very positive. I\'m very happy with this work!',
       title: 'Founder of arenaalfa.com'
-    },
-    4: {
-      id: 4,
-      description: 'Having Sancrisoft is a guarantee of a team integration, where the team of engineers are complemented both technically and in a business model level.',
-      title: 'CEO of Innovation Factory SAS'
     }
   },
   carousel: {
