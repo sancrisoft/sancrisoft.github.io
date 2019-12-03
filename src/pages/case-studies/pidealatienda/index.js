@@ -180,7 +180,7 @@ class IndexPage extends Component {
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
-          <SEO title={`Sancrisoft | ${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} />
+          <SEO title={`Sancrisoft | ${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case pidealatienda" />
           <ContentCase>
             <CasePageSizer>
               { this.renderCases() }
