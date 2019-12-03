@@ -100,7 +100,7 @@ class GetaQuote extends Component {
         return (
         <I18nextProvider i18n={i18n}>
             <Layout>
-                <SEO title="Sancrisoft | Get a Quote" keywords={['sancrisoft', 'digital-solutions', 'get-quote']} />
+                <SEO title="Sancrisoft | Get a Quote" keywords={['sancrisoft', 'digital-solutions', 'get-quote']} description="page Contact" />
                 <section>
                 <BigGreyImage
                     image={data.getQuote.childImageSharp.sizes}

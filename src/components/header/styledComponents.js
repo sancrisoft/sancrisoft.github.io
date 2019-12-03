@@ -32,6 +32,14 @@ export const HeaderPageSizer = styled.div`
 `;
 export const Head1 = styled.h1`
   margin: 0px;
+  a {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const ImgLogo = styled.img`
+  margin-bottom: 0;
 `;
 
 

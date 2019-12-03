@@ -1,11 +1,12 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
-import Img from 'gatsby-image'
-import { HeaderContainer, HeaderPageSizer, Head1, RighSection } from './styledComponents'
+import { HeaderContainer, HeaderPageSizer, Head1, ImgLogo, RighSection } from './styledComponents'
 import Viewport from '../HOC/withViewportHandler'
 import LanguageButtons from '../languageButtons'
 import Menu from '../menu';
+import LogoSs from '../../images/logo-ss.png';
+import LogoSsW from '../../images/logo-ssw.png';
 
 
 class Header extends PureComponent {
@@ -20,7 +21,7 @@ class Header extends PureComponent {
         <HeaderPageSizer>
           <Head1>
             <Link to="/" >
-              <Img sizes={(isWhiteTheme) ? logo.childImageSharp.sizes : logoWhite.childImageSharp.sizes} style={{ width: "200px" }} />
+              <ImgLogo src={(isWhiteTheme) ? LogoSs : LogoSsW } alt="Logo Sancrisoft" style={{ width: "200px" }} />
             </Link>
           </Head1>
           <RighSection>

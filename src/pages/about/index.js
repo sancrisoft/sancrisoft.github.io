@@ -117,6 +117,7 @@ class IndexPage extends Component {
               <SEO
                 title={`Sancrisoft | ${t('aboutUs.title')}`}
                 keywords={['sancrisoft', 'digital-solutions']}
+                description="page about"
               />
               <section>
                 <BigGreyImage
