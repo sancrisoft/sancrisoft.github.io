@@ -36,10 +36,6 @@ const about = {
                 position: "Frontend Developer",
                 message1: "I like sports and food. I love what I do!",
             },
-            ruben: {
-                position: "Full Stack Developer",
-                message1: "I love physics and computer science. I like challenges and sports.",
-            },
             john: {
                 position: "Full Stack Developer",
                 message1: "I love technology, languages and culture of other countries.",

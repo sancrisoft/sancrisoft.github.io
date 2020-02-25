@@ -36,10 +36,6 @@ const aboutES = {
                 position: "Desarrollador Frontend",
                 message1: "Me gustan los deportes y la comida. Amo lo que hago!",
             },
-            ruben: {
-                position: "Desarrollador Full Stack",
-                message1: "Amo la fisica y las ciencias computacionales. Me gustan los retos y los deportes.",
-            },
             john: {
                 position: "Desarrollador Full Stack",
                 message1: "Me encantan los idiomas, la tecnología y la cultura de otros países.",

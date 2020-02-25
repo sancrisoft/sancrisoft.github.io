@@ -205,9 +205,6 @@ query aboutUs {
   bryan:file(relativePath: { eq: "aboutUs/team/bryan.jpg" }) {
     ...imageFragment
   }
-  ruben:file(relativePath: { eq: "aboutUs/team/ruben.jpg" }) {
-    ...imageFragment
-  }
   john:file(relativePath: { eq: "aboutUs/team/john.jpg" }) {
     ...imageFragment
   }

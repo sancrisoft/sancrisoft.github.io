@@ -95,17 +95,6 @@ const careers = {
         extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li><li>Be willing to help your teammates, share your knowledge with them, and learn from them</li><li>Proactive and problem solver</li><li>Always open to give and receive feedback</li></ul>",
       },
       {
-        friendlyId: 'junior-react-developer',
-        title: "React Junior Developer",
-        mode: "Full Time",
-        moreLink: 'View More',
-        positionDescription: '<p>We’re looking for junior talented developers with big desires of learning and develop their career in Sancrisoft, people who want to build top-notch products; creating solutions with good attitude and striving for the quality of their work.</p>',
-        technicalSkills: "<p>You must have basic knowledge on most of these areas or technologies:</p><ul><li>Node.js and Yarn/NPM</li><li>Knowledge on ES6</li><li>ReactJS</li><li>React Native, React Navigation</li><li>Solid knowledge on HTML5 and CSS3 to create responsive interfaces for web</li><li>Git version control</li><li>Knowledge on REST services</li><li>Relational databases and NoSQL</li><li>General understanding of UI/UX design principles and best practices</li><li>Be able to read and write in english. Verbal communication skills are optional but desirable</li></ul>",
-        responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li><li>Estimate projects together with other coworkers</li></ul>",
-        extraTitle: "And the most important!",
-        extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li><li>Be willing to help your teammates, share your knowledge with them, and learn from them</li><li>Proactive and problem solver</li><li>Be willing to ask for help when needed</li><li>Always open to give and receive feedback</li></ul>",
-      },
-      {
         friendlyId: 'manager',
         title: 'Office Manager',
         mode: 'Part time',

@@ -107,19 +107,6 @@
             ]
         },
         {
-            "id": "ruben",
-            "fullName": "Rubén Acosta",
-            "socialMedia": [{
-                    "type": "mail",
-                    "value": "mailto:ruben.a@sancrisoft.com"
-                },
-                {
-                    "type": "linkedin",
-                    "value": "https://www.linkedin.com/in/ruben-acosta-10b24359/"
-                }
-            ]
-        },
-        {
             "id": "john",
             "fullName": "John Angel",
             "socialMedia": [{

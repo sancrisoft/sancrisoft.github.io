@@ -89,17 +89,6 @@ const careersES = {
         extraContent: '<ul><li>Muchas ganas de crear productos innovadores de excelente calidad</li><li>Apasionado por el desarrollo web, empoderado y orgullo de su trabajo</li><li>Autodidacta y altamente motivado</li><li>Dispuesto a ayudar a sus compañeros, compartir su conocimiento y aprender de ellos</li><li>Proactivo en la solución de problemas</li><li>Apertura para dar y recibir feedback</li></ul>',
       },
       {
-        friendlyId: 'junior-react-developer',
-        title: 'Desarrollador React Junior',
-        mode: 'Tiempo completo',
-        moreLink: 'Ver Más',
-        positionDescription: '<p>Estamos buscando desarrolladores junior talentosos con enormes deseos de aprender y desarrollar su carrera de la mano de Sancrisoft, dispuestos a construir productos de primera categoría; generando soluciones con buena actitud y calidad en su trabajo.</p>',
-        technicalSkills: '<p>Debes tener un dominio básico sobre la mayoría de las siguientes áreas o tecnologías:</p><ul><li>Node.js y Yarn/NPM</li><li>Conocimiento de ES6</li><li>ReactJS</li><li>React Native, React Navigation</li><li>Conocimientos sólidos de HTML5 y CSS3 para la creación de interfaces web responsive</li><li>Manejo de sistema de control de versiones Git</li><li>Conocimiento sobre servicios REST</li><li>Manejo de bases de datos relacionales y NoSQL</li><li>Comprensión general de principios de diseño UI/UX y mejores prácticas</li><li>Poder leer y escribir en Inglés. Deseable pero no limitante, tener habilidades conversacionales</li></ul>',
-        responsabilities: '<ul><li>Crear aplicaciones web / móviles elegantes, eficientes y mantenibles</li><li>Participar activamente en el desarrollo de nuevos proyectos y mantenimiento de otros existentes</li><li>Colaborar continuamente con los demás miembros del equipo y clientes</li><li>Hacer estimaciones de partes de proyectos junto con otros miembros del equipo</li></ul>',
-        extraTitle: 'Y lo más importante!',
-        extraContent: '<ul><li>Muchas ganas de crear productos innovadores de excelente calidad</li><li>Apasionado por el desarrollo web, empoderado y orgullo de su trabajo</li><li>Autodidacta y orientado al aprendizaje</li><li>Dispuesto a ayudar a sus compañeros, compartir su conocimiento y aprender de ellos</li><li>Proactivo en la solución de problemas</li><li>Dispuesto pedir ayuda a otros miembros del equipo cuando sea necesario</li><li>Apertura para dar y recibir feedback</li></ul>',
-      },
-      {
         friendlyId: 'manager',
         title: 'Administrador',
         mode: 'Medio tiempo',
