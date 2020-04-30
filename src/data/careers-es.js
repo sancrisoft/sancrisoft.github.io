@@ -87,18 +87,7 @@ const careersES = {
         responsabilities: '<ul><li>Crear aplicaciones web / móviles elegantes, eficientes y mantenibles</li><li>Participar activamente en el desarrollo de nuevos proyectos y mantenimiento de otros existentes</li><li>Colaborar continuamente con los demás miembros del equipo y clientes</li><li>Hacer estimaciones de partes de proyectos junto con otros miembros del equipo</li></ul>',
         extraTitle: 'Y lo más importante!',
         extraContent: '<ul><li>Muchas ganas de crear productos innovadores de excelente calidad</li><li>Apasionado por el desarrollo web, empoderado y orgullo de su trabajo</li><li>Autodidacta y altamente motivado</li><li>Dispuesto a ayudar a sus compañeros, compartir su conocimiento y aprender de ellos</li><li>Proactivo en la solución de problemas</li><li>Apertura para dar y recibir feedback</li></ul>',
-      },
-      {
-        friendlyId: 'manager',
-        title: 'Administrador',
-        mode: 'Medio tiempo',
-        moreLink: 'Ver Más',
-        positionDescription: '<p>Estamos buscando un administrador o administradora con capacidades para llevar a cabo tareas operativas de nuestra organización y la administración de los recursos humanos que forman el equipo Sancrisoft.</p>',
-        technicalSkills: '<p>Debes tener dominio sobre las siguientes áreas:</p><ul><li>Administración de empresas</li><li>Contabilidad</li></ul>',
-        responsabilities: '<ul><li>Pagos de nómina</li><li>Facturación</li><li>Realizar pagos a proveedores</li><li>Conciliar bancos</li><li>Envío de papelería</li><li>Pagos de impuestos</li><li>Organizar happy hours mensuales y celebraciones de cumpleaños</li></ul>',
-        extraTitle: 'Y lo más importante!',
-        extraContent: '<ul><li>Alta competencia en escritura y comunicación verbal.</li><li>Creativo</li><li>Proactivo</li><li>Apertura para dar y recibir feedback</li></ul>',
-      },
+      }
     ],
   },
 };

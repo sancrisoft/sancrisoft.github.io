@@ -93,18 +93,7 @@ const careers = {
         responsabilities: "<ul><li>Help to create elegant, efficient and maintainable web applications</li><li>Engage in development of new projects and extending existing ones</li><li>Collaborate with other team members and stakeholders</li><li>Estimate projects together with other coworkers</li></ul>",
         extraTitle: "And the most important!",
         extraContent: "<ul><li>Goodwill to create great products with high quality</li><li>Passionate in web development, takes ownership and pride in their job</li><li>Self-taught and highly motivated</li><li>Be willing to help your teammates, share your knowledge with them, and learn from them</li><li>Proactive and problem solver</li><li>Always open to give and receive feedback</li></ul>",
-      },
-      {
-        friendlyId: 'manager',
-        title: 'Office Manager',
-        mode: 'Part time',
-        moreLink: 'View More',
-        positionDescription: '<p>We’re looking for an Office Manager able to do operative tasks for Sancrisoft and manage the human resources of our team.</p>',
-        technicalSkills: '<p>You must have knowledge on these areas:</p><ul><li>Administration</li><li>Accounting</li></ul>',
-        responsabilities: '<ul><li>Payroll payments</li><li>Billing</li><li>Make payments to suppliers</li><li>Bank reconciliation</li><li>Paper work</li><li>Tax payments</li><li>Organize monthly happy hours and birthday celebrations</li></ul>',
-        extraTitle: 'And the most important!',
-        extraContent: '<ul><li>Hight proficiency on writing and verbal communications</li><li>Creative</li><li>Proactive</li><li>Always open to give and receive feedback</li></ul>',
-      },
+      }
     ],
   },
 };
