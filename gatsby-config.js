@@ -59,7 +59,7 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: "sancrisoft site" },
+        defaultDataLayer: { platform: "Sancrisoft Site" },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
