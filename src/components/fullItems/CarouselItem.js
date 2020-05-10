@@ -33,7 +33,7 @@ const CarouselItem = ({ id, image, type, videoSrc, link, t }) => {
           <H3>{t(`home.carousel.${id}.title`)}</H3>
           <span>{t(`home.carousel.${id}.description`)}</span>
           {
-            (link) && <Link to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
+            (link) && <Link className="cta" to={link}>{t(`home.carousel.${id}.linkText`)}</Link>
           }
         </div>
       </div>

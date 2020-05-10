@@ -25,7 +25,7 @@ const Menu = ({ isBlack, t }) => {
         > {t('home.nav.careers')} </Link>
         <Link
           to="/contact"
-          className={'special'}
+          className={'special cta'}
           activeStyle={{
             color: "#fff",
           }}

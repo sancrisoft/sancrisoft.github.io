@@ -167,6 +167,7 @@ class IndexPage extends Component {
               </PageSizer>
               <GetAQuote desc={t('aboutUs.getAQuote.description')}>
                 <Button
+                  className="cta"
                   size="20px"
                   text={t('aboutUs.getAQuote.titleButton')}
                   onClick={() => navigate(urlGetAQuote)}

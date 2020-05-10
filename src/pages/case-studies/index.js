@@ -59,6 +59,7 @@ class IndexPage extends Component {
           <BoxAboutFinal>
             <p>{t('caseStudies.proyects.textBox')}</p>
             <Button
+              className="cta"
               size="15px"
               text={t('caseStudies.proyects.titleButton')}
               onClick={() => navigate(urlGetAQuote)}
@@ -172,6 +173,7 @@ class IndexPage extends Component {
 
             <GetAQuote desc={t('caseStudies.getAQuote.description')}>
               <Button
+                className="cta"
                 size="20px"
                 text={t('caseStudies.getAQuote.titleButton')}
                 onClick={() => navigate(urlGetAQuote)}

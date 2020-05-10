@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from './styledComponents'
 
-const PressButton = ({ text, color, background, size, padding, onClick }) => {
+const PressButton = ({ text, color, background, size, padding, onClick, className }) => {
   return(
     <Button
+      className={className}
       style={{
         color: `${color}`,
         background: `${background}`,
