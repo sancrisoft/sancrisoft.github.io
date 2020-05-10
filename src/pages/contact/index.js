@@ -76,8 +76,15 @@ class GetaQuote extends Component {
                 {headers: {"Accept": "application/json"}}
             )
             .then(function (response) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'form_submitted',
+                    'category': 'Contact Us',
+                    'subject': name
+                });
                 recaptchaRef.current.props.grecaptcha.reset();
                 comp.setState({ send: false, name: '', replyto: '', phone: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+                
             })
             .catch(function (error) {
                 recaptchaRef.current.props.grecaptcha.reset();
@@ -125,7 +132,7 @@ class GetaQuote extends Component {
                         {
                             (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
                         }
-                        <input type="hidden" name="subject" value="Tell us about your project | SancriSoft" />
+                        <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
                         <ReCAPTCHA
                             ref={recaptchaRef}
                             size="invisible"

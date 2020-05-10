@@ -100,6 +100,13 @@ class JoinUs extends Component {
           {headers: {"Accept": "application/json"}}
       )
       .then((response) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'form_submitted',
+            'category': 'Join Us Form',
+            'subject': position
+        });
+        
         this.captchaRef.props.grecaptcha.reset();
         this.setState({
           email: '',
