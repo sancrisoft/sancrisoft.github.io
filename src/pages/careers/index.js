@@ -242,7 +242,7 @@ class IndexPage extends Component {
     return (
       <I18nextProvider i18n={i18n}>
       <Layout>
-        <SEO title="Sancrisoft | Careers" keywords={['sancrisoft', 'digital-solutions']} description="page Careers" />
+        <SEO title="Careers" keywords={['sancrisoft', 'digital-solutions']} description="page Careers" />
         <section>
           <BigGreyImage
             image={data.careersMainImage.childImageSharp.sizes}

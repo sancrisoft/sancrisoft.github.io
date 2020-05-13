@@ -106,6 +106,31 @@ const caseStudiesES = {
         4: "Notificaciones de órdenes via Email",
         5: "Administración de contenido"
       }
+    },
+    deliveryapp: {
+      title: "deliveryapp",
+      brief: "deliveryapp, tu mejor opción para pedir domicilios a tus tiendas de barrio preferidas!",
+      aboutTitle: "Acerca de deliveryapp",
+      weblinkTitle: "",
+      description: "deliveryapp es un nuevo canal de ventas de las tiendas de barrio creado para facilitar las compras en tus tiendas favoritas, obten tus pedidos a través de un celular de manera muy fácil.",
+      services: {
+        title: "Servicios",
+        1: "Levantamiento de Requisitos",
+        2: "Diseño UI & UX",
+        3: "Diseño responsivo (Dispositivos Móviles)",
+        4: "Diseño API",
+        5: "Servicios RESTful",
+        6: "Email templates",
+        7: "Publicación del sitio web y soporte"
+      },
+      features: {
+        title: "Funcionalidades",
+        1: "Gestion de usuarios e inicio de sesión",
+        2: "Carrito de compras",
+        3: "Integración con Paypal",
+        4: "Notificaciones de órdenes via Email",
+        5: "Administración de contenido"
+      }
     }
   },
   tecnologies: {

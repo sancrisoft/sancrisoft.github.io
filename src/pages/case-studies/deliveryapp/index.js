@@ -12,7 +12,7 @@ import Tecnology from '../../../components/casesTecnology'
 import Similar from '../../../components/SimilarProyects'
 import i18n from '../../../data/translations'
 
-import ImagePhone from '../../../images/cases-studies/pidealatienda/hero.png'
+import ImagePhone from '../../../images/cases-studies/deliveryapp/hero.png'
 import {
   ContentCase,
   CasePageSizer,
@@ -39,7 +39,7 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    const cochera = cases.find(item => item.id === "pidealatienda");
+    const cochera = cases.find(item => item.id === "deliveryapp");
     const {
       id,
       name,
@@ -52,11 +52,11 @@ class IndexPage extends Component {
         key={id}
         title={name}
         widthImage={'200px'}
-        description={t(`caseStudies.cases.pidealatienda.brief`)}
-        image={data.pidealatiendalogo.childImageSharp.sizes}
+        description={t(`caseStudies.cases.deliveryapp.brief`)}
+        image={data.deliveryapplogo.childImageSharp.sizes}
         phone={ImagePhone}
         weblink={weblink}
-        weblinkTitle={t(`caseStudies.cases.pidealatienda.weblinkTitle`)}
+        weblinkTitle={t(`caseStudies.cases.deliveryapp.weblinkTitle`)}
         playStore={data.playStore.childImageSharp.sizes}
         linkPlayStore={playStore}
         appStore={data.appStore.childImageSharp.sizes}
@@ -79,27 +79,27 @@ class IndexPage extends Component {
       t
     } = this.props;
 
-    const pidealatienda = cases.find(item => item.id === "pidealatienda");
+    const deliveryapp = cases.find(item => item.id === "deliveryapp");
     const {
       services,
       features
-    } = pidealatienda;
+    } = deliveryapp;
 
     const service = services.map((item) => {
-      return(t(`caseStudies.cases.pidealatienda.services.${item.id}`))
+      return(t(`caseStudies.cases.deliveryapp.services.${item.id}`))
     })
     const feature = features.map((item) => {
-      return(t(`caseStudies.cases.pidealatienda.features.${item.id}`))
+      return(t(`caseStudies.cases.deliveryapp.features.${item.id}`))
     })
 
     return (
       <About
-        name={t(`caseStudies.cases.pidealatienda.aboutTitle`)}
-        description={t(`caseStudies.cases.pidealatienda.description`)}
+        name={t(`caseStudies.cases.deliveryapp.aboutTitle`)}
+        description={t(`caseStudies.cases.deliveryapp.description`)}
         services={service}
-        titleServices={t(`caseStudies.cases.pidealatienda.services.title`)}
+        titleServices={t(`caseStudies.cases.deliveryapp.services.title`)}
         features={feature}
-        titleFeatures={t(`caseStudies.cases.pidealatienda.features.title`)}
+        titleFeatures={t(`caseStudies.cases.deliveryapp.features.title`)}
       />
     );
   }
@@ -117,9 +117,9 @@ class IndexPage extends Component {
       },
       data,
     } = this.props;
-    const pidealatienda = cases.find(item => item.id === "pidealatienda");
+    const deliveryapp = cases.find(item => item.id === "deliveryapp");
 
-    return pidealatienda.technologies.map((item) => (
+    return deliveryapp.technologies.map((item) => (
       <Tecnology
         key={item.id}
         text={item.text}
@@ -176,18 +176,21 @@ class IndexPage extends Component {
         pathname,
       },
     } = this.props;
+
+    console.log('deliveryapp', data)
+
     const [,, projectName] = pathname.split('/')
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
-          <SEO title={`${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case pidealatienda" />
+          <SEO title={`${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case deliveryapp" />
           <ContentCase>
             <CasePageSizer>
               { this.renderCases() }
             </CasePageSizer>
             <ContentBack>
               <Background
-                image={data.pidealatiendamiddle.childImageSharp.sizes}
+                image={data.deliveryappmiddle.childImageSharp.sizes}
               />
             </ContentBack>
             <ContentAbout>
@@ -220,14 +223,14 @@ class IndexPage extends Component {
 
 // Queries for images (One query by image)
 export const query = graphql`
-query pidealatienda {
-  pidealatiendalogo:file(relativePath: { eq: "cases-studies/pidealatienda/logo.png" }) {
+query deliveryapp {
+  deliveryapplogo:file(relativePath: { eq: "cases-studies/deliveryapp/logo.png" }) {
     ...imageFragment
   }
-  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+  deliveryapphero:file(relativePath: { eq: "cases-studies/deliveryapp/hero.png" }) {
     ...imageFragment
   }
-  pidealatiendamiddle:file(relativePath: { eq: "cases-studies/pidealatienda/middle-section.png" }) {
+  deliveryappmiddle:file(relativePath: { eq: "cases-studies/deliveryapp/middle-section.png" }) {
     ...imageFragment
   }
   lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
@@ -260,7 +263,7 @@ query pidealatienda {
   BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
     ...imageFragment
   }
-  deliveryapphero:file(relativePath: { eq: "cases-studies/deliveryapp/hero.png" }) {
+  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
     ...imageFragment
   }
   site {

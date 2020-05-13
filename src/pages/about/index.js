@@ -115,7 +115,7 @@ class IndexPage extends Component {
           <I18nextProvider i18n={i18n}>
             <Layout>
               <SEO
-                title={`Sancrisoft | ${t('aboutUs.title')}`}
+                title={`${t('aboutUs.title')}`}
                 keywords={['sancrisoft', 'digital-solutions']}
                 description="page about"
               />
