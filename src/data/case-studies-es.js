@@ -130,6 +130,17 @@ const caseStudiesES = {
         3: "Integración con Paypal",
         4: "Notificaciones de órdenes via Email",
         5: "Administración de contenido"
+      },
+      form: {
+        title: "¿Estas interesado o quieres saber más de Delivery App?",
+        fieldName: "Nombre Completo",
+        errorFieldName: "Ingrese su nombre completo",
+        fieldCompany: "Nombre de la Empresa",
+        errorFieldCompany: "Ingrese nombre de la empresa",
+        errorValidEmail: "Ingresa un correo valido",
+        errorFieldEmail: "Por favor ingresa tu correo",
+        howDoYouSell: "Como vendes actualmente?",
+        buttonForm: "Estoy Interesado",
       }
     }
   },

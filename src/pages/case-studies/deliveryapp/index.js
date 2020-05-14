@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import { graphql } from 'gatsby'
 import { I18nextProvider, withNamespaces } from "react-i18next"
+import ReCAPTCHA from "react-google-recaptcha"
+import SweetAlert from 'sweetalert2-react'
+import axios from 'axios'
 
 import Layout from '../../../components/layout'
 import SEO from '../../../components/seo'
@@ -20,10 +23,63 @@ import {
   ContentAbout,
   ContentTecnology,
   ContentSimilar,
-  Tecnologies
+  Tecnologies,
+  SectionForm
 } from '../../../styles/case-studies-lacochera/styledComponents';
+import { object } from 'prop-types'
+
+const recaptchaRef = React.createRef();
 
 class IndexPage extends Component {
+  
+  state = {
+    name: '',
+    empresa: '',
+    replyto: '',
+    phone: '',
+    youSell: {
+      instagram: {
+        text: "Instagram",
+        active: false
+      },
+      whatsapp: {
+        text: "Whatsapp",
+        active: false
+      },
+      forPhone: {
+        text: 'Por Teléfono',
+        active: false
+      },
+      inPerson: {
+        text: 'Presencialmente',
+        active: false
+      },
+    },
+    message: '',
+    send: false,
+    showAlert: false,
+    typeAlert: 'success',
+    alertMessage: '',
+    titleAlert: 'Message',
+    sortedCases: []
+  }
+
+  componentDidMount = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              cases,
+            }
+          }
+        }
+      }
+    } = this.props;
+    let items = cases.sort(function() { return 0.5 - Math.random() });
+    this.setState({ sortedCases: items })
+  }
+
 
   renderCases = () => {
     const {
@@ -134,21 +190,12 @@ class IndexPage extends Component {
         hash,
         pathname,
       },
-      data: {
-        site: {
-          siteMetadata: {
-            caseStudies: {
-              cases,
-            }
-          }
-        }
-      },
       data,
     } = this.props;
+    const { sortedCases: item } = this.state
 
     const [,, projectName] = pathname.split('/')
 
-    let item = cases.sort(function() { return 0.5 - Math.random() });
     let newArray = [];
 
     if (hash === "#seeall") {
@@ -168,6 +215,104 @@ class IndexPage extends Component {
     ));
   }
 
+  closeAlert = () => {
+    this.setState({ showAlert: false });
+  }
+
+  // Validations Form
+  handleChange = (event) => {
+    const {
+        target: {
+          name,
+          value,
+        }
+    } = event;
+    this.setState({[name]: value});
+  }
+
+  validateForm = () => {
+    const { name, empresa, replyto, message } = this.state;
+    if(name === '') return false;
+    if(empresa === '') return false;
+    if(replyto === '' || !this.validateEmail(replyto)) return false;
+    if(message === '') return false;
+    return true;
+  }
+
+  handleSubmit = (e) => {
+    this.setState({ send: true});
+    e.preventDefault();
+    if(this.validateForm()){
+      recaptchaRef.current.execute();
+    }
+  }
+
+  validateEmail(email) {
+    var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  handleToggle = (event) => {
+    const {
+      target: {
+        name,
+      }
+    } = event;
+
+    this.setState(state => ({
+      ...state,
+      youSell:{
+        ...state.youSell,
+        [name]: {
+          ...state.youSell[name],
+          active: !state.youSell[name].active
+        } 
+      }
+    }));
+  }
+
+  onChange = (value) => {
+    const comp = this;
+    const { t } = this.props;
+    const { name, empresa, youSell, replyto, phone, message } = this.state;
+
+    const youSellData = Object.keys(youSell).filter(item => {
+      return youSell[item].active && item;
+    })
+
+    if(value) {
+      const opts = {
+        subject: 'Tell us about your project', 
+        name,
+        empresa,
+        replyto,
+        youSellData,
+        phone,
+        message,
+      };
+
+      axios.post(
+        "https://submit-form.com/BXef95h140v6_B6pU1irm", 
+        opts, 
+        {headers: {"Accept": "application/json"}}
+      )
+      .then(function (response) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'form_submitted',
+            'category': 'Contact Us',
+            'subject': name
+        });
+        recaptchaRef.current.props.grecaptcha.reset();
+        comp.setState({ send: false, name: '', empresa: '', replyto: '', phone: '', youSellData: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+      })
+      .catch(function (error) {
+        recaptchaRef.current.props.grecaptcha.reset();
+        comp.setState({ titleAlert: t('getQuote.form.descriptionError'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
+      });
+    }
+  }
+
   render() {
     const {
       data,
@@ -177,7 +322,12 @@ class IndexPage extends Component {
       },
     } = this.props;
 
-    console.log('deliveryapp', data)
+    const { name, empresa, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
+    const isInValidName = (name === '' && send);
+    const isInValidEmpresa = (empresa === '' && send);
+    const isInValidMessage = (message === '' && send);
+    const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
+    const emailValidationMessage = (showErrorEmail && replyto !== '') ? t('caseStudies.cases.deliveryapp.form.errorValidEmail') : t('caseStudies.cases.deliveryapp.form.errorFieldEmail');
 
     const [,, projectName] = pathname.split('/')
     return (
@@ -207,12 +357,77 @@ class IndexPage extends Component {
             </ContentTecnology>
 
             <Title
-                type={2}
-                text={t('caseStudies.seemore')}
-              />
+              type={2}
+              text={t('caseStudies.seemore')}
+            />
             <ContentSimilar>
               { this.renderCasesSimilar() }
             </ContentSimilar>
+
+
+            <SectionForm>
+              <Title
+                type={3}
+                text={t('caseStudies.cases.deliveryapp.form.title')}
+              />
+
+              <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
+                  <input className="input-text" type="text" name="name" id="name" placeholder={t('caseStudies.cases.deliveryapp.form.fieldName')} value={name} onChange={this.handleChange}/>
+                  {
+                    (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
+                  }
+                  <input className="input-text" type="text" name="empresa" id="empresa" placeholder={t('caseStudies.cases.deliveryapp.form.fieldCompany')} value={empresa} onChange={this.handleChange}/>
+                  {
+                    (isInValidEmpresa) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldCompany')}</label>
+                  }
+                  <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
+                  {
+                    (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
+                  }
+                  <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
+
+                  <div className="content-youSell">
+                    <h3>{t('caseStudies.cases.deliveryapp.form.howDoYouSell')}</h3>
+                    {Object.keys(this.state.youSell).map(item => {
+                      return (
+                        <div key={item} className="item-youSell">
+                          <input
+                            type="checkbox"
+                            onChange={this.handleToggle}
+                            name={item}
+                            checked={this.state.youSell[item].active}
+                          />
+                          <label htmlFor={item}>{this.state.youSell[item].text}</label>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  <textarea className="input-text text-area" name="message" id="message" cols="0" rows="0" placeholder={t('getQuote.form.message')} value={message} onChange={this.handleChange}></textarea>
+                  {
+                    (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
+                  }
+                  <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                    onChange={this.onChange}
+                  />
+                  <div className="wrapper_button">
+                    <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('caseStudies.cases.deliveryapp.form.buttonForm')}</button>
+                  </div>
+              </form>
+
+              <SweetAlert
+                show={showAlert}
+                title={titleAlert}
+                text={alertMessage}
+                onConfirm={this.closeAlert}
+                type={typeAlert}
+              />
+
+            </SectionForm>
 
           </ContentCase>
       </Layout>

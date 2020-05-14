@@ -91,7 +91,7 @@ class GetaQuote extends Component {
                 comp.setState({ titleAlert: t('getQuote.form.descriptionError'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
             });
         }
-      }
+    }
     
     validateEmail(email) {
         var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
