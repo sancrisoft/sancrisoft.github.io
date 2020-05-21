@@ -141,6 +141,7 @@ const caseStudiesES = {
         errorFieldEmail: "Por favor ingresa tu correo",
         howDoYouSell: "Como vendes actualmente?",
         buttonForm: "Estoy Interesado",
+        interestFormTitle: "Formulario de Interés en Targi"
       }
     }
   },

@@ -25,7 +25,7 @@ import {
   ContentSimilar,
   Tecnologies,
   SectionForm
-} from '../../../styles/case-studies-lacochera/styledComponents';
+} from '../../../styles/case-studies-delivery-app/styledComponents';
 import { object } from 'prop-types'
 
 const recaptchaRef = React.createRef();
@@ -34,7 +34,7 @@ class IndexPage extends Component {
   
   state = {
     name: '',
-    empresa: '',
+    company: '',
     replyto: '',
     phone: '',
     youSell: {
@@ -46,7 +46,7 @@ class IndexPage extends Component {
         text: "Whatsapp",
         active: false
       },
-      forPhone: {
+      byPhone: {
         text: 'Por Teléfono',
         active: false
       },
@@ -95,14 +95,14 @@ class IndexPage extends Component {
       data,
       t
     } = this.props;
-    const cochera = cases.find(item => item.id === "deliveryapp");
+    const deliver = cases.find(item => item.id === "deliveryapp");
     const {
       id,
       name,
       playStore,
       appStore,
       weblink,
-    } = cochera;
+    } = deliver;
     return (
       <CasesImage
         key={id}
@@ -231,9 +231,9 @@ class IndexPage extends Component {
   }
 
   validateForm = () => {
-    const { name, empresa, replyto, message } = this.state;
+    const { name, company, replyto, message } = this.state;
     if(name === '') return false;
-    if(empresa === '') return false;
+    if(company === '') return false;
     if(replyto === '' || !this.validateEmail(replyto)) return false;
     if(message === '') return false;
     return true;
@@ -274,7 +274,7 @@ class IndexPage extends Component {
   onChange = (value) => {
     const comp = this;
     const { t } = this.props;
-    const { name, empresa, youSell, replyto, phone, message } = this.state;
+    const { name, company, youSell, replyto, phone, message } = this.state;
 
     const youSellData = Object.keys(youSell).filter(item => {
       return youSell[item].active && item;
@@ -282,9 +282,9 @@ class IndexPage extends Component {
 
     if(value) {
       const opts = {
-        subject: 'Tell us about your project', 
+        subject: t('caseStudies.cases.deliveryapp.form.interestFormTitle'), 
         name,
-        empresa,
+        company,
         replyto,
         youSellData,
         phone,
@@ -300,11 +300,11 @@ class IndexPage extends Component {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': 'form_submitted',
-            'category': 'Contact Us',
+            'category': 'Delivery App',
             'subject': name
         });
         recaptchaRef.current.props.grecaptcha.reset();
-        comp.setState({ send: false, name: '', empresa: '', replyto: '', phone: '', youSellData: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+        comp.setState({ send: false, name: '', company: '', replyto: '', phone: '', youSellData: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
       })
       .catch(function (error) {
         recaptchaRef.current.props.grecaptcha.reset();
@@ -322,9 +322,9 @@ class IndexPage extends Component {
       },
     } = this.props;
 
-    const { name, empresa, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
+    const { name, company, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
     const isInValidName = (name === '' && send);
-    const isInValidEmpresa = (empresa === '' && send);
+    const isInValidCompany = (company === '' && send);
     const isInValidMessage = (message === '' && send);
     const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
     const emailValidationMessage = (showErrorEmail && replyto !== '') ? t('caseStudies.cases.deliveryapp.form.errorValidEmail') : t('caseStudies.cases.deliveryapp.form.errorFieldEmail');
@@ -376,9 +376,9 @@ class IndexPage extends Component {
                   {
                     (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
                   }
-                  <input className="input-text" type="text" name="empresa" id="empresa" placeholder={t('caseStudies.cases.deliveryapp.form.fieldCompany')} value={empresa} onChange={this.handleChange}/>
+                  <input className="input-text" type="text" name="company" id="company" placeholder={t('caseStudies.cases.deliveryapp.form.fieldCompany')} value={company} onChange={this.handleChange}/>
                   {
-                    (isInValidEmpresa) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldCompany')}</label>
+                    (isInValidCompany) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldCompany')}</label>
                   }
                   <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
                   {
