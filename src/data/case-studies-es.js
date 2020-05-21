@@ -106,6 +106,43 @@ const caseStudiesES = {
         4: "Notificaciones de órdenes via Email",
         5: "Administración de contenido"
       }
+    },
+    deliveryapp: {
+      title: "deliveryapp",
+      brief: "deliveryapp, tu mejor opción para pedir domicilios a tus tiendas de barrio preferidas!",
+      aboutTitle: "Acerca de deliveryapp",
+      weblinkTitle: "",
+      description: "deliveryapp es un nuevo canal de ventas de las tiendas de barrio creado para facilitar las compras en tus tiendas favoritas, obten tus pedidos a través de un celular de manera muy fácil.",
+      services: {
+        title: "Servicios",
+        1: "Levantamiento de Requisitos",
+        2: "Diseño UI & UX",
+        3: "Diseño responsivo (Dispositivos Móviles)",
+        4: "Diseño API",
+        5: "Servicios RESTful",
+        6: "Email templates",
+        7: "Publicación del sitio web y soporte"
+      },
+      features: {
+        title: "Funcionalidades",
+        1: "Gestion de usuarios e inicio de sesión",
+        2: "Carrito de compras",
+        3: "Integración con Paypal",
+        4: "Notificaciones de órdenes via Email",
+        5: "Administración de contenido"
+      },
+      form: {
+        title: "¿Estas interesado o quieres saber más de Delivery App?",
+        fieldName: "Nombre Completo",
+        errorFieldName: "Ingrese su nombre completo",
+        fieldCompany: "Nombre de la Empresa",
+        errorFieldCompany: "Ingrese nombre de la empresa",
+        errorValidEmail: "Ingresa un correo valido",
+        errorFieldEmail: "Por favor ingresa tu correo",
+        howDoYouSell: "Como vendes actualmente?",
+        buttonForm: "Estoy Interesado",
+        interestFormTitle: "Formulario de Interés en Targi"
+      }
     }
   },
   tecnologies: {

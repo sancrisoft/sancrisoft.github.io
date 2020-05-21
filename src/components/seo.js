@@ -11,14 +11,15 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
-            title={title}
+            title={title ? `${title} | ` : "Sancrisoft"}
             description={description}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={title && `%s${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: 'description',

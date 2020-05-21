@@ -96,3 +96,4 @@ export const ContentSimilar = styled.section`
     padding-top: 1em;
   `}
 `;
+

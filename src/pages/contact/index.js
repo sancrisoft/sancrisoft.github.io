@@ -91,7 +91,7 @@ class GetaQuote extends Component {
                 comp.setState({ titleAlert: t('getQuote.form.descriptionError'), typeAlert: 'info', alertMessage: t('getQuote.form.descriptionError'), showAlert: true });
             });
         }
-      }
+    }
     
     validateEmail(email) {
         var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -107,7 +107,7 @@ class GetaQuote extends Component {
         return (
         <I18nextProvider i18n={i18n}>
             <Layout>
-                <SEO title="Sancrisoft | Get a Quote" keywords={['sancrisoft', 'digital-solutions', 'get-quote']} description="page Contact" />
+                <SEO title="Get a Quote" keywords={['sancrisoft', 'digital-solutions', 'get-quote']} description="page Contact" />
                 <section>
                 <BigGreyImage
                     image={data.getQuote.childImageSharp.sizes}

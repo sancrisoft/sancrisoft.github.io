@@ -243,6 +243,64 @@
       ]
     },
     {
+      "id": "deliveryapp",
+      "name": "deliveryapp",
+      "thumbnail": "deliveryapphero",
+      "appStore": "https://itunes.apple.com/co/app/deliveryapp/id1396794886",
+      "playStore": "https://play.google.com/store/apps/details?id=com.deliveryappappcliente",
+      "weblink": "",
+      "type": "Mobile App",
+      "link": "/case-studies/deliveryapp",
+      "private": false,
+      "services": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "features": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        }
+      ],
+      "technologies": [
+        {
+          "id": "nodeJs",
+          "text": "NodeJs"
+        },
+        {
+          "id": "reactN",
+          "text": "React Native"
+        },
+        {
+          "id": "ignite",
+          "text": "Ignite"
+        },
+        {
+          "id": "styled",
+          "text": "Styled Components"
+        },
+        {
+          "id": "webpack",
+          "text": "Webpack"
+        }
+      ]
+    },
+    {
       "id": "hocmobile",
       "name": "HandsOn Connect",
       "thumbnail": "hero",

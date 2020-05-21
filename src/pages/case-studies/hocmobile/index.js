@@ -179,7 +179,7 @@ class IndexPage extends Component {
     return (
       <I18nextProvider i18n={i18n}>
         <Layout>
-          <SEO title={`Sancrisoft | ${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case hocmobile" />
+          <SEO title={`${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case hocmobile" />
           <ContentCase>
             <CasePageSizer>
               { this.renderCases() }
@@ -263,6 +263,9 @@ query hocmobile {
     ...imageFragment
   }
   pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+    ...imageFragment
+  }
+  deliveryapphero:file(relativePath: { eq: "cases-studies/deliveryapp/hero.png" }) {
     ...imageFragment
   }
   site {
