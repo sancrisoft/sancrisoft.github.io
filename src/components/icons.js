@@ -146,6 +146,12 @@ export class Icons extends PureComponent {
             </g>
           </svg>
         );
+      case 'bottom-arrow':
+        return(
+          <svg height={height} version="1.1" viewBox="0 0 26 15" width={width}>
+            <polygon fill={backgroundColor} points="23.303,-0.002 12.467,10.834 1.63,-0.002 -0.454,2.082 12.467,15.002 14.551,12.918 25.387,2.082   "/>
+          </svg>
+        );
       default:
         return null;
     }

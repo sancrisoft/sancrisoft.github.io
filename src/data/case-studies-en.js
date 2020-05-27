@@ -103,17 +103,63 @@ const caseStudies = {
       }
     },
     deliveryapp: {
-      title: "deliveryapp",
-      brief: "deliveryapp, your best choice to delivery your groceries from your favorite neighborhood store!",
+      title: "Targi",
+      brief: "App Móvil Para Tu Negocio",
       aboutTitle: "About deliveryapp",
       weblinkTitle: "",
-      description: "deliveryapp is a new sales channel of neighborhood stores created to facilitate purchases in your favorite stores, get your orders through a smartphone very easily.",
-      services: {
-        title: "Services",
-        1: "Mobile Development (Android & iOS)",
-        2: "RESTful Services",
-        3: "Push Notifications",
-        4: "Apps publication in Apple Store and Google Play",
+      description: "¡Lleva tu ventas al mundo del eComerce con tu propia marca!",
+      littleSatisfied: {
+        title: "Cuando vendes por Internet o piensas en hacerlo...",
+        subtitle: "¿Has experimentado esto?",
+        case1: {
+          text: "Resulta complicado dar a conocer mi catalogo de productos.",
+        },
+        case2: {
+          text: "Han disminuido los ingresos con la llegada del COVID-19.",
+        },
+        case3: {
+          text: "Vendo por Instagram pero tomar los pedidos por teléfono o Whatsapp es complicado.",
+        },
+        case4: {
+          text: "Quiero vender por internet pero no tengo las herramientas.",
+        },
+        case5: {
+          text: "Mientras la demanda aumenta, más dificil se hace el proceso de pedidos.",
+        },
+        case6: {
+          text: "A veces hay errores en las órdenes y es dificil conseguir la dirección de entrega.",
+        },
+        case7: {
+          text: "Mi negocio vende sólo mientras mis empleados o yo estamos trabajando.",
+        },
+      },
+      targiSolve: {
+        title: "¡Targi lo resuelve!",
+        description: "Estas son las principales ventajas y beneficios de nuestra solución:",
+        solution1: {
+          title: "Tu negocio tendrá un app con tu marca, disponible para Android y iOS.",
+          text: "Le llegarás a más del 95% del mercado.",
+        },
+        solution2: {
+          title: "Fideliza a tus clientes al tener a tu negocio en su celular.",
+          text: "Hacer ventas recurrentes estará al alcance de un tap.",
+        },
+        solution3: {
+          title: "Presenta tu oferta completa de productos, organizados por categorías.",
+          text: "Hasta 50 categorías y 200 productos.",
+        },
+        solution4: {
+          title: "Permite ordernar por peso o unidades.",
+          text: "Ideal para productos prefabricados o por peso como alimentos y bebidas",
+        },
+        solution5: {
+          title: "Recibe comentarios/notas en los detalles del pedido.",
+          text: "Para que no se escape nada y tengas clientes 100% satisfechos.",
+        },
+        solution6: {
+          title: "Crea tu propia base de datos d clientes y pedidos.",
+          text: "Que puedes usar para compañas de mercadeo y promociones.",
+        },
       },
       features: {
         title: "Features",

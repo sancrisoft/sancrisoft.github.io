@@ -8,25 +8,26 @@ import axios from 'axios'
 import Layout from '../../../components/layout'
 import SEO from '../../../components/seo'
 import Title from '../../../components/title'
-import CasesImage from '../../../components/casesImage'
-import Background from '../../../components/casesBackground'
-import About from '../../../components/casesAbout'
-import Tecnology from '../../../components/casesTecnology'
-import Similar from '../../../components/SimilarProyects'
+import CasesImage from '../../../components/targi/casesImageDelivery'
+import LittleSatisfied from '../../../components/targi/LittleSatisfied'
+import TargiSolve from '../../../components/targi/TargiSolve'
+
 import i18n from '../../../data/translations'
 
 import ImagePhone from '../../../images/cases-studies/deliveryapp/hero.png'
 import {
   ContentCase,
   CasePageSizer,
-  ContentBack,
-  ContentAbout,
-  ContentTecnology,
-  ContentSimilar,
-  Tecnologies,
+  ContentLittleSatisfied,
+  ExperienceTitle,
+  ExperienceSubtitle,
+  Experiences,
+  ContentTargiSolve,
+  TargiSolveTitle,
+  TargiSolveDesc,
+  BoxTargiSolve,
   SectionForm
 } from '../../../styles/case-studies-delivery-app/styledComponents';
-import { object } from 'prop-types'
 
 const recaptchaRef = React.createRef();
 
@@ -80,7 +81,6 @@ class IndexPage extends Component {
     this.setState({ sortedCases: items })
   }
 
-
   renderCases = () => {
     const {
       data: {
@@ -96,130 +96,94 @@ class IndexPage extends Component {
       t
     } = this.props;
     const deliver = cases.find(item => item.id === "deliveryapp");
+    console.log('deliver', deliver);
     const {
       id,
       name,
-      playStore,
-      appStore,
+      linkPurchase,
       weblink,
     } = deliver;
+
     return (
       <CasesImage
         key={id}
         title={name}
+        subtitle={t(`caseStudies.cases.deliveryapp.brief`)}
         widthImage={'200px'}
-        description={t(`caseStudies.cases.deliveryapp.brief`)}
+        description={t(`caseStudies.cases.deliveryapp.description`)}
         image={data.deliveryapplogo.childImageSharp.sizes}
         phone={ImagePhone}
         weblink={weblink}
         weblinkTitle={t(`caseStudies.cases.deliveryapp.weblinkTitle`)}
-        playStore={data.playStore.childImageSharp.sizes}
-        linkPlayStore={playStore}
-        appStore={data.appStore.childImageSharp.sizes}
-        linkAppStore={appStore}
+        linkPurchase={linkPurchase}
       />
     );
   }
 
-  renderCasesAbout = () => {
+  renderExperiences = () => {
     const {
       data: {
         site: {
           siteMetadata: {
             caseStudies: {
-              cases,
+              cases
             }
           }
         }
       },
-      t
+      t,
+      data,
     } = this.props;
 
     const deliveryapp = cases.find(item => item.id === "deliveryapp");
-    const {
-      services,
-      features
-    } = deliveryapp;
 
-    const service = services.map((item) => {
-      return(t(`caseStudies.cases.deliveryapp.services.${item.id}`))
-    })
-    const feature = features.map((item) => {
-      return(t(`caseStudies.cases.deliveryapp.features.${item.id}`))
-    })
-
-    return (
-      <About
-        name={t(`caseStudies.cases.deliveryapp.aboutTitle`)}
-        description={t(`caseStudies.cases.deliveryapp.description`)}
-        services={service}
-        titleServices={t(`caseStudies.cases.deliveryapp.services.title`)}
-        features={feature}
-        titleFeatures={t(`caseStudies.cases.deliveryapp.features.title`)}
-      />
-    );
+    return deliveryapp.littleSatisfied.map((item) =>{
+      return  (
+        <LittleSatisfied
+          key={item}
+          textExperience={t(`caseStudies.cases.deliveryapp.littleSatisfied.${item}.text`)}
+          image={data[`${item}`].childImageSharp.sizes}
+        />
+      )
+    });
   }
 
-  renderCasesTecnologies = () => {
+  renderTargiSolve = () => {
     const {
       data: {
         site: {
           siteMetadata: {
             caseStudies: {
-              cases,
+              cases
             }
           }
         }
       },
+      t,
       data,
     } = this.props;
+
     const deliveryapp = cases.find(item => item.id === "deliveryapp");
 
-    return deliveryapp.technologies.map((item) => (
-      <Tecnology
-        key={item.id}
-        text={item.text}
-        image={data[item.id].childImageSharp.sizes}
-      />
-    ));
+    return deliveryapp.targiSolve.map((item) =>{
+      console.log('item', item);
+      return  (
+        <TargiSolve
+          key={item}
+          titleSolution={t(`caseStudies.cases.deliveryapp.targiSolve.${item}.title`)}
+          textSolution={t(`caseStudies.cases.deliveryapp.targiSolve.${item}.text`)}
+          image={data[`${item}`].childImageSharp.sizes}
+        />
+      )
+    });
   }
 
-  renderCasesSimilar = () => {
-    const {
-      location: {
-        hash,
-        pathname,
-      },
-      data,
-    } = this.props;
-    const { sortedCases: item } = this.state
-
-    const [,, projectName] = pathname.split('/')
-
-    let newArray = [];
-
-    if (hash === "#seeall") {
-      newArray = item.slice(0, 3);
-    } else {
-      newArray = item.filter(item => item.private === false && item.id !== projectName).slice(0, 3);
-    }
-
-    return newArray.map((item) => (
-      <Similar
-        key={item.id}
-        name={item.name}
-        type={item.type}
-        link={item.link}
-        image={data[item.thumbnail].childImageSharp.sizes}
-      />
-    ));
-  }
-
+  
+  // Validations Form
   closeAlert = () => {
     this.setState({ showAlert: false });
   }
 
-  // Validations Form
   handleChange = (event) => {
     const {
         target: {
@@ -338,31 +302,23 @@ class IndexPage extends Component {
             <CasePageSizer>
               { this.renderCases() }
             </CasePageSizer>
-            <ContentBack>
-              <Background
-                image={data.deliveryappmiddle.childImageSharp.sizes}
-              />
-            </ContentBack>
-            <ContentAbout>
-              { this.renderCasesAbout() }
-            </ContentAbout>
-            <ContentTecnology>
-              <Title
-                type={2}
-                text={t('caseStudies.tecnologies.title')}
-              />
-              <Tecnologies>
-                { this.renderCasesTecnologies() }
-              </Tecnologies>
-            </ContentTecnology>
 
-            <Title
-              type={2}
-              text={t('caseStudies.seemore')}
-            />
-            <ContentSimilar>
-              { this.renderCasesSimilar() }
-            </ContentSimilar>
+            <ContentLittleSatisfied>
+              <ExperienceTitle>{t(`caseStudies.cases.deliveryapp.littleSatisfied.title`)}</ExperienceTitle>
+              <ExperienceSubtitle>{t(`caseStudies.cases.deliveryapp.littleSatisfied.subtitle`)}</ExperienceSubtitle>
+              <Experiences>
+                { this.renderExperiences() }
+              </Experiences>
+            </ContentLittleSatisfied>
+
+
+            <ContentTargiSolve>
+              <TargiSolveTitle>{t(`caseStudies.cases.deliveryapp.targiSolve.title`)}</TargiSolveTitle>
+              <TargiSolveDesc>{t(`caseStudies.cases.deliveryapp.targiSolve.description`)}</TargiSolveDesc>
+              <BoxTargiSolve>
+                { this.renderTargiSolve() }
+              </BoxTargiSolve>
+            </ContentTargiSolve>
 
 
             <SectionForm>
@@ -451,34 +407,43 @@ query deliveryapp {
   lacocherabg:file(relativePath: { eq: "cases-studies/lacochera/la-cochera-bg.png" }) {
     ...imageFragment
   }
-  playStore:file(relativePath: { eq: "cases-studies/playStore.png" }) {
+  case1:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  appStore:file(relativePath: { eq: "cases-studies/appStore.png" }) {
+  case2:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  BackgroundLaCochera:file(relativePath: { eq: "cases-studies/lacochera/lacochera-main.png" }) {
+  case3:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  nodeJs:file(relativePath: { eq: "cases-studies/lacochera/nodeJs.png" }) {
+  case4:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  reactN:file(relativePath: { eq: "cases-studies/meattogo/reactNative.png" }) {
+  case5:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  ignite:file(relativePath: { eq: "cases-studies/meattogo/ignite.jpeg" }) {
+  case6:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  styled:file(relativePath: { eq: "cases-studies/lacochera/styled.png" }) {
+  case7:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  webpack:file(relativePath: { eq: "cases-studies/lacochera/webpack.png" }) {
+  solution1:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  BackgroundMeattogo:file(relativePath: { eq: "cases-studies/meattogo/Bg-Meattogo.png" }) {
+  solution2:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
-  pidealatiendahero:file(relativePath: { eq: "cases-studies/pidealatienda/hero.png" }) {
+  solution3:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
+    ...imageFragment
+  }
+  solution4:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
+    ...imageFragment
+  }
+  solution5:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
+    ...imageFragment
+  }
+  solution6:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
   site {
@@ -488,22 +453,13 @@ query deliveryapp {
           id
           name
           thumbnail
-          appStore
-          playStore
+          linkPurchase
           weblink
           type
           link
           private
-          services {
-            id
-          }
-          features {
-            id
-          }
-          technologies {
-            id
-            text
-          }
+          littleSatisfied
+          targiSolve
         }
       }
     }

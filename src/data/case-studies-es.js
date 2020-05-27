@@ -108,20 +108,70 @@ const caseStudiesES = {
       }
     },
     deliveryapp: {
-      title: "deliveryapp",
-      brief: "deliveryapp, tu mejor opción para pedir domicilios a tus tiendas de barrio preferidas!",
+      title: "Targi",
+      brief: "App Móvil Para Tu Negocio",
       aboutTitle: "Acerca de deliveryapp",
       weblinkTitle: "",
-      description: "deliveryapp es un nuevo canal de ventas de las tiendas de barrio creado para facilitar las compras en tus tiendas favoritas, obten tus pedidos a través de un celular de manera muy fácil.",
-      services: {
-        title: "Servicios",
-        1: "Levantamiento de Requisitos",
-        2: "Diseño UI & UX",
-        3: "Diseño responsivo (Dispositivos Móviles)",
-        4: "Diseño API",
-        5: "Servicios RESTful",
-        6: "Email templates",
-        7: "Publicación del sitio web y soporte"
+      description: "¡Lleva tu ventas al mundo del eComerce con tu propia marca!",
+      littleSatisfied: {
+        title: "Cuando vendes por Internet o piensas en hacerlo...",
+        subtitle: "¿Has experimentado esto?",
+        case1: {
+          text: "Resulta complicado dar a conocer mi catalogo de productos.",
+          image: "experience1"
+        },
+        case2: {
+          text: "Han disminuido los ingresos con la llegada del COVID-19.",
+          image: "experience1"
+        },
+        case3: {
+          text: "Vendo por Instagram pero tomar los pedidos por teléfono o Whatsapp es complicado.",
+          image: "experience1"
+        },
+        case4: {
+          text: "Quiero vender por internet pero no tengo las herramientas.",
+          image: "experience1"
+        },
+        case5: {
+          text: "Mientras la demanda aumenta, más dificil se hace el proceso de pedidos.",
+          image: "experience1"
+        },
+        case6: {
+          text: "A veces hay errores en las órdenes y es dificil conseguir la dirección de entrega.",
+          image: "experience1"
+        },
+        case7: {
+          text: "Mi negocio vende sólo mientras mis empleados o yo estamos trabajando.",
+          image: "experience1"
+        },
+      },
+      targiSolve: {
+        title: "¡Targi lo resuelve!",
+        description: "Estas son las principales ventajas y beneficios de nuestra solución:",
+        solution1: {
+          title: "Tu negocio tendrá un app con tu marca, disponible para Android y iOS.",
+          text: "Le llegarás a más del 95% del mercado.",
+        },
+        solution2: {
+          title: "Fideliza a tus clientes al tener a tu negocio en su celular.",
+          text: "Hacer ventas recurrentes estará al alcance de un tap.",
+        },
+        solution3: {
+          title: "Presenta tu oferta completa de productos, organizados por categorías.",
+          text: "Hasta 50 categorías y 200 productos.",
+        },
+        solution4: {
+          title: "Permite ordernar por peso o unidades.",
+          text: "Ideal para productos prefabricados o por peso como alimentos y bebidas",
+        },
+        solution5: {
+          title: "Recibe comentarios/notas en los detalles del pedido.",
+          text: "Para que no se escape nada y tengas clientes 100% satisfechos.",
+        },
+        solution6: {
+          title: "Crea tu propia base de datos d clientes y pedidos.",
+          text: "Que puedes usar para compañas de mercadeo y promociones.",
+        },
       },
       features: {
         title: "Funcionalidades",

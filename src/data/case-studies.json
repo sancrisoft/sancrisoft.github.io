@@ -244,27 +244,29 @@
     },
     {
       "id": "deliveryapp",
-      "name": "deliveryapp",
+      "name": "Targi",
       "thumbnail": "deliveryapphero",
-      "appStore": "https://itunes.apple.com/co/app/deliveryapp/id1396794886",
-      "playStore": "https://play.google.com/store/apps/details?id=com.deliveryappappcliente",
       "weblink": "",
+      "linkPurchase": "/linkPurchase",
       "type": "Mobile App",
       "link": "/case-studies/deliveryapp",
       "private": false,
-      "services": [
-        {
-          "id": 1
-        },
-        {
-          "id": 2
-        },
-        {
-          "id": 3
-        },
-        {
-          "id": 4
-        }
+      "littleSatisfied": [
+        "case1",
+        "case2",
+        "case3",
+        "case4",
+        "case5",
+        "case6",
+        "case7"
+      ],
+      "targiSolve": [
+        "solution1",
+        "solution2",
+        "solution3",
+        "solution4",
+        "solution5",
+        "solution6"
       ],
       "features": [
         {
@@ -275,28 +277,6 @@
         },
         {
           "id": 3
-        }
-      ],
-      "technologies": [
-        {
-          "id": "nodeJs",
-          "text": "NodeJs"
-        },
-        {
-          "id": "reactN",
-          "text": "React Native"
-        },
-        {
-          "id": "ignite",
-          "text": "Ignite"
-        },
-        {
-          "id": "styled",
-          "text": "Styled Components"
-        },
-        {
-          "id": "webpack",
-          "text": "Webpack"
         }
       ]
     },

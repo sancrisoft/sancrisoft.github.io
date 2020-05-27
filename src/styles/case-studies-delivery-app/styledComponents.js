@@ -23,22 +23,15 @@ export const CasePageSizer = styled.div`
     `}
 `;
 
-export const ContentBack = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f1f1f1;
-  padding: 2em 0;
-`;
-
-export const ContentAbout = styled.section`
+export const ContentLittleSatisfied = styled.div`
   margin: 0 auto;
   max-width: 90%;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  padding-top: 2em;
   ${breakpoint('tablet')`
     max-width: 90%;
   `}
@@ -47,56 +40,88 @@ export const ContentAbout = styled.section`
   `}
 `;
 
-export const ContentTecnology = styled.section`
-  margin: 0 auto;
-  max-width: 90%;
+export const ExperienceTitle = styled.h2`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  ${breakpoint('tablet')`
-    max-width: 90%;
-  `}
-  ${breakpoint('desktop')`
-    max-width: 78%;
-    padding-top: 1em;
-  `}
-  h2 {
-    text-align: center;
-  }
-`;
-
-export const Tecnologies = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  padding-bottom: 2em;
-  ${breakpoint('tablet')`
-    padding-bottom: 3em;
+  align-items: center;
+  font-size: 1.2em;
+  color: #000;
+`;
+
+export const ExperienceSubtitle = styled.h3`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  padding-top: 14px;
+  color: #000;
+  ${breakpoint('md')`
+    font-size: 2.5em;
+  `}
+  ${breakpoint('xl')`
+    font-size: 3em;
   `}
 `;
 
-export const ContentSimilar = styled.section`
+export const Experiences = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 4em;
+`;
+
+export const ContentTargiSolve = styled.div`
   margin: 0 auto;
   max-width: 90%;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding-top: 2em;
   ${breakpoint('tablet')`
     max-width: 90%;
-    flex-direction: row;
   `}
   ${breakpoint('desktop')`
     max-width: 78%;
-    padding-top: 1em;
   `}
 `;
 
+export const TargiSolveTitle = styled.h3`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  padding-top: 15px;
+  color: #000;
+  ${breakpoint('md')`
+    font-size: 2.5em;
+  `}
+  ${breakpoint('xl')`
+    font-size: 3em;
+  `}
+`;
+
+export const TargiSolveDesc = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  padding-top: 20px;
+  color: #000;
+  font-family: Averta;
+`;
+
+export const BoxTargiSolve = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 4em;
+`;
 
 export const SectionForm = styled.section`
   padding: 2em;
