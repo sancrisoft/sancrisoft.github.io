@@ -14,6 +14,7 @@ export const BoxCase = styled.div`
   p.textOut {
     padding-top: 1em;
     font-size: 1em;
+    width: 100%;
   }
   ${breakpoint('sm')`
     width: 48%;
@@ -29,9 +30,10 @@ export const Box = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-  border: 4px solid #333;
+  // border: 4px solid #333;
   padding: 1em 1em;
   min-height: 270px;
+  box-shadow: 1px 1px 8px #333;
 `;
 
 export const BoxImage = styled.div`

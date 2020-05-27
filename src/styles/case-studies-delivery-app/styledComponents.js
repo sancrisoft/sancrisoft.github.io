@@ -123,6 +123,25 @@ export const BoxTargiSolve = styled.div`
   padding-top: 4em;
 `;
 
+export const ContentSupportTeam = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4em;
+  background: #ececec;
+  padding: 1.2em;
+`;
+
+export const SupportTeamText = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  margin: 0;
+  margin-left: 1rem;
+`;
+
 export const SectionForm = styled.section`
   padding: 2em;
   width: 100%;

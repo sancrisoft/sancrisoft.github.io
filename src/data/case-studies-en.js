@@ -157,10 +157,11 @@ const caseStudies = {
           text: "Para que no se escape nada y tengas clientes 100% satisfechos.",
         },
         solution6: {
-          title: "Crea tu propia base de datos d clientes y pedidos.",
+          title: "Crea tu propia base de datos de clientes y pedidos.",
           text: "Que puedes usar para compañas de mercadeo y promociones.",
         },
       },
+      supportTeam: "Cuentas con un equipo de soporte disponible para ayudarte con tus preguntas, dudas o solicitudes.",
       features: {
         title: "Features",
         1: "Users management and Login",

@@ -11,6 +11,8 @@ import Title from '../../../components/title'
 import CasesImage from '../../../components/targi/casesImageDelivery'
 import LittleSatisfied from '../../../components/targi/LittleSatisfied'
 import TargiSolve from '../../../components/targi/TargiSolve'
+import Icons from '../../../components/icons';
+import { GlobalFonts } from '../../../components/styledComponents'
 
 import i18n from '../../../data/translations'
 
@@ -26,6 +28,8 @@ import {
   TargiSolveTitle,
   TargiSolveDesc,
   BoxTargiSolve,
+  ContentSupportTeam,
+  SupportTeamText,
   SectionForm
 } from '../../../styles/case-studies-delivery-app/styledComponents';
 
@@ -296,7 +300,7 @@ class IndexPage extends Component {
     const [,, projectName] = pathname.split('/')
     return (
       <I18nextProvider i18n={i18n}>
-        <Layout>
+          <GlobalFonts />
           <SEO title={`${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case deliveryapp" />
           <ContentCase>
             <CasePageSizer>
@@ -319,6 +323,18 @@ class IndexPage extends Component {
                 { this.renderTargiSolve() }
               </BoxTargiSolve>
             </ContentTargiSolve>
+
+            <ContentSupportTeam>
+              <Icons
+                backgroundColor="#000"
+                height={40}
+                width={40}
+                iconName={'question'}
+              />
+              <SupportTeamText>
+              {t(`caseStudies.cases.deliveryapp.supportTeam`)}
+              </SupportTeamText>
+            </ContentSupportTeam>
 
 
             <SectionForm>
@@ -386,7 +402,6 @@ class IndexPage extends Component {
             </SectionForm>
 
           </ContentCase>
-      </Layout>
       </I18nextProvider>
     );
   }
