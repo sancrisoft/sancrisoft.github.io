@@ -123,7 +123,7 @@ export const SupportTeamText = styled.p`
   `}
 `;
 
-export const TheBestTitle = styled.h3`
+export const TitleBig = styled.h3`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +140,7 @@ export const TheBestTitle = styled.h3`
   `}
 `;
 
-export const TheBestDesc = styled.p`
+export const TitleDesc = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;

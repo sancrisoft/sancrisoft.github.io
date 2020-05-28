@@ -90,17 +90,20 @@ export const BackgroundItem = styled.div`
   color: white;
   width: 100%;
   height: 100%;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const CarouselItem = styled.div`
   height: auto;
   width: 100%;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-  position: relative;
   .gatsby-image-wrapper {
     height: 70%;
     width: 70%;

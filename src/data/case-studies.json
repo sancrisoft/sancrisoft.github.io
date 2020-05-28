@@ -333,7 +333,19 @@
           "id": 5,
           "name": "veg5"
         }
-      ]
+      ],
+      "pricesCOP": {
+        "priceMonthly": "349.900",
+        "priceAnnual": "299.900",
+        "priceAnnualTotal": "3.598.800",
+        "priceinstalation": "1.800.000"
+      },
+      "pricesUSD": {
+        "priceMonthly": "125.99",
+        "priceAnnual": "99.89",
+        "priceAnnualTotal": "1099",
+        "priceinstalation": "799.00"
+      }
     },
     {
       "id": "hocmobile",

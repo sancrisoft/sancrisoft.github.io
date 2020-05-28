@@ -145,6 +145,7 @@ export const BtnPurchase = styled.a`
   font-family: 'Averta';
   border-radius: 4px;
   color: #fff;
+  margin-top: 1em;
   &:hover {
     transform: scale(1.1);
   }
