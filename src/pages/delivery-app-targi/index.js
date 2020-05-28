@@ -5,18 +5,18 @@ import ReCAPTCHA from "react-google-recaptcha"
 import SweetAlert from 'sweetalert2-react'
 import axios from 'axios'
 
-import Layout from '../../../components/layout'
-import SEO from '../../../components/seo'
-import Title from '../../../components/title'
-import CasesImage from '../../../components/targi/casesImageDelivery'
-import LittleSatisfied from '../../../components/targi/LittleSatisfied'
-import TargiSolve from '../../../components/targi/TargiSolve'
-import Icons from '../../../components/icons';
-import { GlobalFonts } from '../../../components/styledComponents'
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
+import Title from '../../components/title'
+import CasesImage from '../../components/targi/casesImageDelivery'
+import LittleSatisfied from '../../components/targi/LittleSatisfied'
+import TargiSolve from '../../components/targi/TargiSolve'
+import Icons from '../../components/icons';
+import { GlobalFonts } from '../../components/styledComponents'
 
-import i18n from '../../../data/translations'
+import i18n from '../../data/translations'
 
-import ImagePhone from '../../../images/cases-studies/deliveryapp/hero.png'
+import ImagePhone from '../../images/cases-studies/deliveryapp/hero.png'
 import {
   ContentCase,
   CasePageSizer,
@@ -31,7 +31,7 @@ import {
   ContentSupportTeam,
   SupportTeamText,
   SectionForm
-} from '../../../styles/case-studies-delivery-app/styledComponents';
+} from '../../styles/case-studies-delivery-app/styledComponents';
 
 const recaptchaRef = React.createRef();
 
@@ -301,7 +301,7 @@ class IndexPage extends Component {
     return (
       <I18nextProvider i18n={i18n}>
           <GlobalFonts />
-          <SEO title={`${t(`caseStudies.cases.${projectName}.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case deliveryapp" />
+          <SEO title={`${t(`caseStudies.cases.deliveryapp.title`)}`} keywords={['sancrisoft', 'digital-solutions']} description="case deliveryapp" />
           <ContentCase>
             <CasePageSizer>
               { this.renderCases() }
