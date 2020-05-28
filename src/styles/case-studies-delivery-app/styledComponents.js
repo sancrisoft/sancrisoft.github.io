@@ -88,6 +88,7 @@ export const TargiSolveDesc = styled.p`
   color: #000;
   font-family: Averta;
   width: 100%;
+  text-align: center;
 `;
 
 export const BoxTargiSolve = styled.div`
@@ -116,6 +117,10 @@ export const SupportTeamText = styled.p`
   font-size: 1.2em;
   margin: 0;
   margin-left: 1rem;
+  width: 80%;
+  ${breakpoint('tablet')`
+    width: 100%;
+  `}
 `;
 
 export const TheBestTitle = styled.h3`
