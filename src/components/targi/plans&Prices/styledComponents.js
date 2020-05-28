@@ -79,6 +79,49 @@ export const TabPanelCustom = styled(TabPanel)`
   
 `;
 
+export const NotePlans = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 991px;
+  margin: 1.8em auto 0;
+`;
+
+export const NoteTitle = styled.h3`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1em;
+  color: #000;
+  font-family: Averta;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+`;
+
+export const NoteList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-top: .8em;
+  margin: 0;
+`;
+
+export const NoteItem = styled.li`
+  display: flex;
+  font-size: .9em;
+  svg {
+    margin-right: .3em;
+    position: relative;
+    top: 6px;
+  }
+  strong {
+    color: #000;
+    font-size: 1em;
+  }
+`;
+
 export const ContentPrices = styled.div`
   display: flex;
   flex-wrap: wrap;

@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 import BoxPrices from './boxPrices'
+import Icons from '../../icons'
+
 
 import {
   BoxCase,
@@ -10,6 +12,10 @@ import {
   TabListCustom,
   TabCustom,
   TabPanelCustom,
+  NotePlans,
+  NoteTitle,
+  NoteList,
+  NoteItem,
 } from './styledComponents.js'
 
 const theme = {
@@ -61,8 +67,30 @@ const PlansAndPrices = ({ t, data }) => {
               t={t}
             />
           </TabPanelCustom>
-
         </ContentTabs>
+
+        <NotePlans>
+          <NoteTitle>Además ten en cuenta que...</NoteTitle>
+          <NoteList>
+            <NoteItem>
+              <Icons
+                backgroundColor="#000"
+                height={14}
+                width={14}
+                iconName={'check'}
+              />
+              {t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.1`)}</NoteItem>
+            <NoteItem>
+              <Icons
+                backgroundColor="#000"
+                height={14}
+                width={14}
+                iconName={'check'}
+              />
+              <p><strong>{t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.noClausula`)}</strong> {t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.2`)}</p>
+            </NoteItem>
+          </NoteList>
+        </NotePlans>
       </BoxCase>
     </ThemeProvider>
   )

@@ -185,7 +185,12 @@ const caseStudies = {
         costDesc: "Un unico pago para adaptar el app a tu marca",
         titleSolution: "Solución Personalizada",
         solutionDesc: "Te gusta la solución pero tu negocio necesita una solucion diferente que se adapte mejor a sus necesidades?",
-        btnSolution: "Contáctanos"
+        btnSolution: "Contáctanos",
+        notes: {
+          noClausula: "No hay cláusura de permanencia.",
+          1: "La mensualidad es fija, no importa cuántos pedidos ni el valor de los mismos.",
+          2: "Si por alguna razón, desear retirarte, lo puedes hacer cuando quieras, sin penalidad alguna.",
+        },
       },
       features: {
         title: "Features",
