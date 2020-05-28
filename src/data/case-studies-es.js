@@ -174,13 +174,12 @@ const caseStudiesES = {
         },
       },
       supportTeam: "Cuentas con un equipo de soporte disponible para ayudarte con tus preguntas, dudas o solicitudes.",
-      features: {
-        title: "Funcionalidades",
-        1: "Gestion de usuarios e inicio de sesión",
-        2: "Carrito de compras",
-        3: "Integración con Paypal",
-        4: "Notificaciones de órdenes via Email",
-        5: "Administración de contenido"
+      theBestExperience: {
+        title: "La Mejor Experiencia de Usuario",
+        description: "Cualquiera puede usar esta app y poner su pedido en menos de 5 minutos. Mira como luce con estos tipos de negocios.",
+        titleCarniceria: "Carnicerias",
+        titlePescaderia: "Pescaderías",
+        titleFruver: "Fruvers",
       },
       form: {
         title: "¿Estas interesado o quieres saber más de Delivery App?",

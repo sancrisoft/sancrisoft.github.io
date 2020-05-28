@@ -39,6 +39,7 @@
     "react-recaptcha": "^2.3.10",
     "react-reveal": "^1.2.2",
     "react-slick": "^0.23.2",
+    "react-tabs": "^3.1.1",
     "recompose": "^0.30.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.1.2",

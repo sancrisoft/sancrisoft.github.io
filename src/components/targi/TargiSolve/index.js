@@ -14,7 +14,7 @@ import {
 
 const theme = {
   breakpoints: {
-    xs: 0,
+    xs: 480,
     sm: 568,
     md: 768,
     lg: 992,

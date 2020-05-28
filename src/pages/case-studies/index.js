@@ -90,8 +90,6 @@ class IndexPage extends Component {
           arrowColor="#F28724"
           arrows={true}
           swipeToSlide={true}
-          // autoplay
-          // autoplaySpeed={6000}
           responsive={
             [
               {

@@ -28,7 +28,7 @@ export const ContentCases = styled.section`
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 4em 0 3.5em 3em;
+  padding: 0 0 1em;
   ${breakpoint('md')`
     flex-direction: row;
   `}
@@ -185,7 +185,7 @@ export const CaseRightImage = styled.div`
     height: 100%;
     margin: 0 auto;
     transition: all .5s;
-    object-fit: contain;
+    object-fit: cover;
     ${breakpoint('md')`
       height: 85%;
     `}

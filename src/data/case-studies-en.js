@@ -162,6 +162,13 @@ const caseStudies = {
         },
       },
       supportTeam: "Cuentas con un equipo de soporte disponible para ayudarte con tus preguntas, dudas o solicitudes.",
+      theBestExperience: {
+        title: "La Mejor Experiencia de Usuario",
+        description: "Cualquiera puede usar esta app y poner su pedido en menos de 5 minutos. Mira como luce con estos tipos de negocios.",
+        titleCarniceria: "Carnicerias",
+        titlePescaderia: "Pescaderías",
+        titleFruver: "Fruvers",
+      },
       features: {
         title: "Features",
         1: "Users management and Login",

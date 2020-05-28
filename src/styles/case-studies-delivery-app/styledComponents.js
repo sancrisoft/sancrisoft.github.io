@@ -15,6 +15,8 @@ export const CasePageSizer = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 3em 0 1em;
     ${breakpoint('tablet')`
       max-width: 90%;
     `}
@@ -23,22 +25,6 @@ export const CasePageSizer = styled.div`
     `}
 `;
 
-export const ContentLittleSatisfied = styled.div`
-  margin: 0 auto;
-  max-width: 90%;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 2em;
-  ${breakpoint('tablet')`
-    max-width: 90%;
-  `}
-  ${breakpoint('desktop')`
-    max-width: 78%;
-  `}
-`;
 
 export const ExperienceTitle = styled.h2`
   display: flex;
@@ -46,6 +32,8 @@ export const ExperienceTitle = styled.h2`
   align-items: center;
   font-size: 1.2em;
   color: #000;
+  width: 100%;
+  text-align: center;
 `;
 
 export const ExperienceSubtitle = styled.h3`
@@ -55,13 +43,16 @@ export const ExperienceSubtitle = styled.h3`
   font-size: 2em;
   padding-top: 14px;
   color: #000;
-  ${breakpoint('md')`
+  width: 100%;
+  text-align: center;
+  ${breakpoint('tablet')`
     font-size: 2.5em;
   `}
-  ${breakpoint('xl')`
+  ${breakpoint('desktop')`
     font-size: 3em;
   `}
 `;
+
 
 export const Experiences = styled.div`
   display: flex;
@@ -72,23 +63,6 @@ export const Experiences = styled.div`
   padding-top: 4em;
 `;
 
-export const ContentTargiSolve = styled.div`
-  margin: 0 auto;
-  max-width: 90%;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 2em;
-  ${breakpoint('tablet')`
-    max-width: 90%;
-  `}
-  ${breakpoint('desktop')`
-    max-width: 78%;
-  `}
-`;
-
 export const TargiSolveTitle = styled.h3`
   display: flex;
   justify-content: center;
@@ -96,10 +70,11 @@ export const TargiSolveTitle = styled.h3`
   font-size: 2em;
   padding-top: 15px;
   color: #000;
-  ${breakpoint('md')`
+  width: 100%;
+  ${breakpoint('tablet')`
     font-size: 2.5em;
   `}
-  ${breakpoint('xl')`
+  ${breakpoint('desktop')`
     font-size: 3em;
   `}
 `;
@@ -112,6 +87,7 @@ export const TargiSolveDesc = styled.p`
   padding-top: 20px;
   color: #000;
   font-family: Averta;
+  width: 100%;
 `;
 
 export const BoxTargiSolve = styled.div`
@@ -128,7 +104,7 @@ export const ContentSupportTeam = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 4em;
+  margin-top: 2em;
   background: #ececec;
   padding: 1.2em;
 `;
@@ -140,6 +116,40 @@ export const SupportTeamText = styled.p`
   font-size: 1.2em;
   margin: 0;
   margin-left: 1rem;
+`;
+
+export const TheBestTitle = styled.h3`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #000;
+  width: 100%;
+  padding-top: .5em;
+  text-align: center;
+  ${breakpoint('tablet')`
+    font-size: 2.5em;
+  `}
+  ${breakpoint('desktop')`
+    font-size: 3em;
+  `}
+`;
+
+export const TheBestDesc = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  padding-top: 1.5em;
+  color: #000;
+  font-family: Averta;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  ${breakpoint('desktop')`
+    width: 750px;
+  `}
 `;
 
 export const SectionForm = styled.section`

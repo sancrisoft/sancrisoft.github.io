@@ -8,19 +8,32 @@ export const BoxCase = styled.div`
   justify-content: space-around;
   align-content: flex-start;
   width: 90%;
-  padding: 1em 1em;
-  min-height: 420px;
+  padding: 1em;
+  min-height: 360px;
   height: auto;
+  margin: auto;
   p.textOut {
     padding-top: 1em;
-    font-size: 1em;
+    font-size: .9em;
     width: 100%;
+    text-align: center;
+    margin-bottom: 0;
   }
-  ${breakpoint('sm')`
+  ${breakpoint('xs')`
     width: 48%;
+    padding: 1em 0em;
+    min-height: 400px;
+  `}
+  ${breakpoint('sm')`
+    padding: 1em;
   `}
   ${breakpoint('md')`
     width: 32%;
+    min-height: 420px;
+    p.textOut {
+      font-size: 1em;
+      text-align: left;
+    }
   `}
 `;
 
@@ -64,10 +77,14 @@ export const BoxDesc = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 12px;
+  text-align: center;
   h3 {
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.2;
     margin: 0;
+    ${breakpoint('md')`
+      font-size: 19px;
+    `}
     ${breakpoint('xxl')`
       font-size: 24px;
     `}

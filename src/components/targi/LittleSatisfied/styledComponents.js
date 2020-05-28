@@ -7,11 +7,12 @@ export const BoxCase = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
-  margin-bottom: 4%;
   border: 4px solid #333;
   padding: 1em 1em;
+  margin: 0 auto 4%;
   ${breakpoint('sm')`
     width: 48%;
+    margin: 0 0 4%;
   `}
   ${breakpoint('md')`
     width: 48%;

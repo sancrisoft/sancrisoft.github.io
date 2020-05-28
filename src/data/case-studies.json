@@ -268,15 +268,70 @@
         "solution5",
         "solution6"
       ],
-      "features": [
+      "meat": [
         {
-          "id": 1
+          "id": 1,
+          "name": "meat1"
         },
         {
-          "id": 2
+          "id": 2,
+          "name": "meat2"
         },
         {
-          "id": 3
+          "id": 3,
+          "name": "meat3"
+        },
+        {
+          "id": 4,
+          "name": "meat4"
+        },
+        {
+          "id": 5,
+          "name": "meat5"
+        }
+      ],
+      "fish": [
+        {
+          "id": 1,
+          "name": "fish1"
+        },
+        {
+          "id": 2,
+          "name": "fish2"
+        },
+        {
+          "id": 3,
+          "name": "fish3"
+        },
+        {
+          "id": 4,
+          "name": "fish4"
+        },
+        {
+          "id": 5,
+          "name": "fish5"
+        }
+      ],
+      "veg": [
+        {
+          "id": 1,
+          "name": "veg1"
+        },
+        {
+          "id": 2,
+          "name": "veg2"
+        },
+        {
+          "id": 3,
+          "name": "veg3"
+        },
+        {
+          "id": 4,
+          "name": "veg4"
+        },
+        {
+          "id": 5,
+          "name": "veg5"
         }
       ]
     },

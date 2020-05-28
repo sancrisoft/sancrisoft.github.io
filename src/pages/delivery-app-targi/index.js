@@ -5,12 +5,13 @@ import ReCAPTCHA from "react-google-recaptcha"
 import SweetAlert from 'sweetalert2-react'
 import axios from 'axios'
 
-import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import Title from '../../components/title'
 import CasesImage from '../../components/targi/casesImageDelivery'
-import LittleSatisfied from '../../components/targi/LittleSatisfied'
-import TargiSolve from '../../components/targi/TargiSolve'
+import LittleSatisfied from '../../components/targi/littleSatisfied'
+import TargiSolve from '../../components/targi/targiSolve'
+import TheBestExperience from '../../components/targi/theBestExperience'
+
 import Icons from '../../components/icons';
 import { GlobalFonts } from '../../components/styledComponents'
 
@@ -20,16 +21,16 @@ import ImagePhone from '../../images/cases-studies/deliveryapp/hero.png'
 import {
   ContentCase,
   CasePageSizer,
-  ContentLittleSatisfied,
   ExperienceTitle,
   ExperienceSubtitle,
   Experiences,
-  ContentTargiSolve,
   TargiSolveTitle,
   TargiSolveDesc,
   BoxTargiSolve,
   ContentSupportTeam,
   SupportTeamText,
+  TheBestTitle,
+  TheBestDesc,
   SectionForm
 } from '../../styles/case-studies-delivery-app/styledComponents';
 
@@ -100,7 +101,6 @@ class IndexPage extends Component {
       t
     } = this.props;
     const deliver = cases.find(item => item.id === "deliveryapp");
-    console.log('deliver', deliver);
     const {
       id,
       name,
@@ -170,7 +170,6 @@ class IndexPage extends Component {
     const deliveryapp = cases.find(item => item.id === "deliveryapp");
 
     return deliveryapp.targiSolve.map((item) =>{
-      console.log('item', item);
       return  (
         <TargiSolve
           key={item}
@@ -180,6 +179,39 @@ class IndexPage extends Component {
         />
       )
     });
+  }
+
+  renderTheBestExperience = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              cases,
+            }
+          }
+        }
+      },
+      t,
+      data
+    } = this.props;
+
+    const deliveryapp = cases.find(item => item.id === "deliveryapp");
+    const {
+      meat,
+      fish,
+      veg
+    } = deliveryapp;
+
+    return (
+      <TheBestExperience 
+        t={t} 
+        itemsMeat={meat}
+        itemsFish={fish}
+        itemsVeg={veg}
+        data={data}
+      />
+    )
   }
 
   
@@ -297,7 +329,6 @@ class IndexPage extends Component {
     const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
     const emailValidationMessage = (showErrorEmail && replyto !== '') ? t('caseStudies.cases.deliveryapp.form.errorValidEmail') : t('caseStudies.cases.deliveryapp.form.errorFieldEmail');
 
-    const [,, projectName] = pathname.split('/')
     return (
       <I18nextProvider i18n={i18n}>
           <GlobalFonts />
@@ -307,22 +338,21 @@ class IndexPage extends Component {
               { this.renderCases() }
             </CasePageSizer>
 
-            <ContentLittleSatisfied>
+            <CasePageSizer>
               <ExperienceTitle>{t(`caseStudies.cases.deliveryapp.littleSatisfied.title`)}</ExperienceTitle>
               <ExperienceSubtitle>{t(`caseStudies.cases.deliveryapp.littleSatisfied.subtitle`)}</ExperienceSubtitle>
               <Experiences>
                 { this.renderExperiences() }
               </Experiences>
-            </ContentLittleSatisfied>
+            </CasePageSizer>
 
-
-            <ContentTargiSolve>
+            <CasePageSizer>
               <TargiSolveTitle>{t(`caseStudies.cases.deliveryapp.targiSolve.title`)}</TargiSolveTitle>
               <TargiSolveDesc>{t(`caseStudies.cases.deliveryapp.targiSolve.description`)}</TargiSolveDesc>
               <BoxTargiSolve>
                 { this.renderTargiSolve() }
               </BoxTargiSolve>
-            </ContentTargiSolve>
+            </CasePageSizer>
 
             <ContentSupportTeam>
               <Icons
@@ -335,6 +365,12 @@ class IndexPage extends Component {
               {t(`caseStudies.cases.deliveryapp.supportTeam`)}
               </SupportTeamText>
             </ContentSupportTeam>
+
+            <CasePageSizer>
+              <TheBestTitle>{t(`caseStudies.cases.deliveryapp.theBestExperience.title`)}</TheBestTitle>
+              <TheBestDesc>{t(`caseStudies.cases.deliveryapp.theBestExperience.description`)}</TheBestDesc>
+              {this.renderTheBestExperience()}
+            </CasePageSizer>
 
 
             <SectionForm>
@@ -461,6 +497,51 @@ query deliveryapp {
   solution6:file(relativePath: { eq: "cases-studies/deliveryapp/image-case.png" }) {
     ...imageFragment
   }
+  meat1:file(relativePath: { eq: "cases-studies/deliveryapp/meat/meat1.png" }) {
+    ...imageFragment
+  }
+  meat2:file(relativePath: { eq: "cases-studies/deliveryapp/meat/meat2.png" }) {
+    ...imageFragment
+  }
+  meat3:file(relativePath: { eq: "cases-studies/deliveryapp/meat/meat3.png" }) {
+    ...imageFragment
+  }
+  meat4:file(relativePath: { eq: "cases-studies/deliveryapp/meat/meat4.png" }) {
+    ...imageFragment
+  }
+  meat5:file(relativePath: { eq: "cases-studies/deliveryapp/meat/meat5.png" }) {
+    ...imageFragment
+  }
+  fish1:file(relativePath: { eq: "cases-studies/deliveryapp/fish/fish1.png" }) {
+    ...imageFragment
+  }
+  fish2:file(relativePath: { eq: "cases-studies/deliveryapp/fish/fish2.png" }) {
+    ...imageFragment
+  }
+  fish3:file(relativePath: { eq: "cases-studies/deliveryapp/fish/fish3.png" }) {
+    ...imageFragment
+  }
+  fish4:file(relativePath: { eq: "cases-studies/deliveryapp/fish/fish4.png" }) {
+    ...imageFragment
+  }
+  fish5:file(relativePath: { eq: "cases-studies/deliveryapp/fish/fish5.png" }) {
+    ...imageFragment
+  }
+  veg1:file(relativePath: { eq: "cases-studies/deliveryapp/veg/veg1.png" }) {
+    ...imageFragment
+  }
+  veg2:file(relativePath: { eq: "cases-studies/deliveryapp/veg/veg2.png" }) {
+    ...imageFragment
+  }
+  veg3:file(relativePath: { eq: "cases-studies/deliveryapp/veg/veg3.png" }) {
+    ...imageFragment
+  }
+  veg4:file(relativePath: { eq: "cases-studies/deliveryapp/veg/veg4.png" }) {
+    ...imageFragment
+  }
+  veg5:file(relativePath: { eq: "cases-studies/deliveryapp/veg/veg5.png" }) {
+    ...imageFragment
+  }
   site {
     siteMetadata {
       caseStudies {
@@ -475,6 +556,18 @@ query deliveryapp {
           private
           littleSatisfied
           targiSolve
+          meat {
+            id
+            name
+          }
+          fish {
+            id
+            name
+          }
+          veg {
+            id
+            name
+          }
         }
       }
     }
