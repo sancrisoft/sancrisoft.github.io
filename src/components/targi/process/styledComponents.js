@@ -1,0 +1,96 @@
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
+
+export const BoxProcess = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1em 1em;
+  margin: 1em auto 0;
+  ${breakpoint('md')`
+    margin: 3em auto 0;
+  `}
+`;
+
+export const ProcessList = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 230px;
+  margin: 0 auto;
+  list-style: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    background: #000;
+    height: 80%;
+    width: 3px;
+    top: 0;
+    bottom: 0;
+    left: 39px;
+    margin: auto;
+    z-index: 5;
+  }
+  ${breakpoint('md')`
+    max-width: 700px;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    &:after {
+      height: 3px;
+      width: 80%;
+      top: 35px;
+      left: 0;
+      right: 0;
+      bottom: initial;
+    }
+  `}
+  ${breakpoint('lg')`
+    max-width: 800px;
+  `}
+`;
+
+export const ProcessItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  position: relative;
+  z-index: 9;
+  ${breakpoint('md')`
+    margin-bottom: 0;
+    flex-direction: column;
+  `}
+`;
+
+export const ProcessCircle = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 3px solid #000;
+  font-size: 2em;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+`;
+
+export const ProcessText = styled.p`
+  display: flex;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.3;
+  padding-left: 1em;
+  width: 150px;
+  margin: 0 auto;
+  ${breakpoint('md')`
+    text-align: center;
+    padding-left: 0;
+    top: 1em;
+    font-size: .8em;
+  `}
+`;

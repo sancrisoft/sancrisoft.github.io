@@ -199,6 +199,14 @@ const caseStudiesES = {
         solutionDesc: "Te gusta la solución pero tu negocio necesita una solucion diferente que se adapte mejor a sus necesidades?",
         btnSolution: "Contáctanos"
       },
+      process: {
+        title: "Me interesa, ¿Cuál es el proceso?",
+        description: "El proceso son simplemente 4 pasos y toma 2 semanas",
+        1: "Nos contactas y te suscribes",
+        2: "Nos Envías la información de tu negocio",
+        3: "Publicamos tu app en los stores",
+        4: "¡Comienzas a vender!",
+      },
       form: {
         title: "¿Estas interesado o quieres saber más de Delivery App?",
         fieldName: "Nombre Completo",

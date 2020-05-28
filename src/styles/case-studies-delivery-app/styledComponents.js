@@ -16,7 +16,7 @@ export const CasePageSizer = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 3em 0 1em;
+    padding: 3em 0 0;
     ${breakpoint('tablet')`
       max-width: 90%;
     `}

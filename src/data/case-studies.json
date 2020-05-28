@@ -345,7 +345,21 @@
         "priceAnnual": "99.89",
         "priceAnnualTotal": "1099",
         "priceinstalation": "799.00"
-      }
+      },
+      "process": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ]
     },
     {
       "id": "hocmobile",

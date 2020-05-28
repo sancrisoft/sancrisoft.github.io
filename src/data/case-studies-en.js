@@ -192,6 +192,14 @@ const caseStudies = {
           2: "Si por alguna razón, desear retirarte, lo puedes hacer cuando quieras, sin penalidad alguna.",
         },
       },
+      process: {
+        title: "Me interesa, ¿Cuál es el proceso?",
+        description: "El proceso son simplemente 4 pasos y toma 2 semanas",
+        1: "Nos contactas y te suscribes",
+        2: "Nos Envías la información de tu negocio",
+        3: "Publicamos tu app en los stores",
+        4: "¡Comienzas a vender!",
+      },
       features: {
         title: "Features",
         1: "Users management and Login",

@@ -12,6 +12,7 @@ import LittleSatisfied from '../../components/targi/littleSatisfied'
 import TargiSolve from '../../components/targi/targiSolve'
 import TheBestExperience from '../../components/targi/theBestExperience'
 import PlansAndPrices from '../../components/targi/plans&Prices'
+import Process from '../../components/targi/process'
 
 import Icons from '../../components/icons';
 import { GlobalFonts } from '../../components/styledComponents'
@@ -239,6 +240,30 @@ class IndexPage extends Component {
     )
   }
 
+  renderProcess = () => {
+    const {
+      data: {
+        site: {
+          siteMetadata: {
+            caseStudies: {
+              cases,
+            }
+          }
+        }
+      },
+      t,
+    } = this.props;
+
+    const deliveryapp = cases.find(item => item.id === "deliveryapp");
+
+    return (
+      <Process 
+        t={t} 
+        data={deliveryapp}
+      />
+    )
+  }
+
   // Validations Form
   closeAlert = () => {
     this.setState({ showAlert: false });
@@ -400,6 +425,12 @@ class IndexPage extends Component {
               <TitleBig>{t(`caseStudies.cases.deliveryapp.plansAndPrices.title`)}</TitleBig>
               <TitleDesc>{t(`caseStudies.cases.deliveryapp.plansAndPrices.description`)}</TitleDesc>
               {this.renderPlansAndPrices()}
+            </CasePageSizer>
+
+            <CasePageSizer>
+              <TitleBig>{t(`caseStudies.cases.deliveryapp.process.title`)}</TitleBig>
+              <TitleDesc>{t(`caseStudies.cases.deliveryapp.process.description`)}</TitleDesc>
+              {this.renderProcess()}
             </CasePageSizer>
 
 
@@ -609,6 +640,9 @@ query deliveryapp {
             priceAnnual
             priceAnnualTotal 
             priceinstalation 
+          }
+          process {
+            id
           }
         }
       }
