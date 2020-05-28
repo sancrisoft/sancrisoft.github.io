@@ -13,7 +13,7 @@ export const CarouselContainer = styled.div`
     svg {
       width: 25px;
       height: 25px;
-      ${breakpoint('desktop')`
+      ${breakpoint('tablet')`
         width: 36px;
         height: 36px;
       `}

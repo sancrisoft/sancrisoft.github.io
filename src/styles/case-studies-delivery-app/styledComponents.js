@@ -145,7 +145,7 @@ export const TitleDesc = styled.p`
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  padding-top: 1.5em;
+  padding-top: 1.2em;
   color: #000;
   font-family: Averta;
   width: 80%;

@@ -28,7 +28,7 @@ export const Subtitle = styled.h3`
   margin: 0 auto;
   text-align: center;
   line-height: 1.3;
-  ${breakpoint('desktop')`
+  ${breakpoint('lg')`
     width: 750px;
   `}
 `;

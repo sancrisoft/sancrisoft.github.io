@@ -208,11 +208,10 @@ const caseStudiesES = {
         4: "¡Comienzas a vender!",
       },
       form: {
-        title: "¿Estas interesado o quieres saber más de Delivery App?",
+        title: "Contáctanos",
+        description: "¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!",
         fieldName: "Nombre Completo",
         errorFieldName: "Ingrese su nombre completo",
-        fieldCompany: "Nombre de la Empresa",
-        errorFieldCompany: "Ingrese nombre de la empresa",
         errorValidEmail: "Ingresa un correo valido",
         errorFieldEmail: "Por favor ingresa tu correo",
         howDoYouSell: "Como vendes actualmente?",

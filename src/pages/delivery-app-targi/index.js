@@ -42,28 +42,8 @@ class IndexPage extends Component {
   
   state = {
     name: '',
-    company: '',
     replyto: '',
     phone: '',
-    youSell: {
-      instagram: {
-        text: "Instagram",
-        active: false
-      },
-      whatsapp: {
-        text: "Whatsapp",
-        active: false
-      },
-      byPhone: {
-        text: 'Por Teléfono',
-        active: false
-      },
-      inPerson: {
-        text: 'Presencialmente',
-        active: false
-      },
-    },
-    message: '',
     send: false,
     showAlert: false,
     typeAlert: 'success',
@@ -280,11 +260,9 @@ class IndexPage extends Component {
   }
 
   validateForm = () => {
-    const { name, company, replyto, message } = this.state;
+    const { name, replyto } = this.state;
     if(name === '') return false;
-    if(company === '') return false;
     if(replyto === '' || !this.validateEmail(replyto)) return false;
-    if(message === '') return false;
     return true;
   }
 
@@ -301,43 +279,17 @@ class IndexPage extends Component {
     return re.test(String(email).toLowerCase());
   }
 
-  handleToggle = (event) => {
-    const {
-      target: {
-        name,
-      }
-    } = event;
-
-    this.setState(state => ({
-      ...state,
-      youSell:{
-        ...state.youSell,
-        [name]: {
-          ...state.youSell[name],
-          active: !state.youSell[name].active
-        } 
-      }
-    }));
-  }
-
   onChange = (value) => {
     const comp = this;
     const { t } = this.props;
-    const { name, company, youSell, replyto, phone, message } = this.state;
-
-    const youSellData = Object.keys(youSell).filter(item => {
-      return youSell[item].active && item;
-    })
+    const { name, replyto, phone } = this.state;
 
     if(value) {
       const opts = {
         subject: t('caseStudies.cases.deliveryapp.form.interestFormTitle'), 
         name,
-        company,
         replyto,
-        youSellData,
         phone,
-        message,
       };
 
       axios.post(
@@ -353,7 +305,7 @@ class IndexPage extends Component {
             'subject': name
         });
         recaptchaRef.current.props.grecaptcha.reset();
-        comp.setState({ send: false, name: '', company: '', replyto: '', phone: '', youSellData: '', message: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+        comp.setState({ send: false, name: '', replyto: '', phone: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
       })
       .catch(function (error) {
         recaptchaRef.current.props.grecaptcha.reset();
@@ -371,10 +323,8 @@ class IndexPage extends Component {
       },
     } = this.props;
 
-    const { name, company, send, replyto, message, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
+    const { name, send, replyto, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
     const isInValidName = (name === '' && send);
-    const isInValidCompany = (company === '' && send);
-    const isInValidMessage = (message === '' && send);
     const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
     const emailValidationMessage = (showErrorEmail && replyto !== '') ? t('caseStudies.cases.deliveryapp.form.errorValidEmail') : t('caseStudies.cases.deliveryapp.form.errorFieldEmail');
 
@@ -433,59 +383,36 @@ class IndexPage extends Component {
               {this.renderProcess()}
             </CasePageSizer>
 
+            <CasePageSizer>
+              <TitleBig>{t(`caseStudies.cases.deliveryapp.form.title`)}</TitleBig>
+              <TitleDesc>{t(`caseStudies.cases.deliveryapp.form.description`)}</TitleDesc>
+              {/* {this.renderProcess()} */}
+            </CasePageSizer>
+
 
             <SectionForm>
-              <Title
-                type={3}
-                text={t('caseStudies.cases.deliveryapp.form.title')}
-              />
+              
+              <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="https://formspree.io/mgenadeg" onSubmit={this.handleSubmit}>
+                <input className="input-text" type="text" name="name" id="name" placeholder={t('caseStudies.cases.deliveryapp.form.fieldName')} value={name} onChange={this.handleChange}/>
+                {
+                  (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
+                }
+                <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
+                {
+                  (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
+                }
+                <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
 
-              <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
-                  <input className="input-text" type="text" name="name" id="name" placeholder={t('caseStudies.cases.deliveryapp.form.fieldName')} value={name} onChange={this.handleChange}/>
-                  {
-                    (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
-                  }
-                  <input className="input-text" type="text" name="company" id="company" placeholder={t('caseStudies.cases.deliveryapp.form.fieldCompany')} value={company} onChange={this.handleChange}/>
-                  {
-                    (isInValidCompany) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldCompany')}</label>
-                  }
-                  <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
-                  {
-                    (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
-                  }
-                  <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
-
-                  <div className="content-youSell">
-                    <h3>{t('caseStudies.cases.deliveryapp.form.howDoYouSell')}</h3>
-                    {Object.keys(this.state.youSell).map(item => {
-                      return (
-                        <div key={item} className="item-youSell">
-                          <input
-                            type="checkbox"
-                            onChange={this.handleToggle}
-                            name={item}
-                            checked={this.state.youSell[item].active}
-                          />
-                          <label htmlFor={item}>{this.state.youSell[item].text}</label>
-                        </div>
-                      )
-                    })}
-                  </div>
-
-                  <textarea className="input-text text-area" name="message" id="message" cols="0" rows="0" placeholder={t('getQuote.form.message')} value={message} onChange={this.handleChange}></textarea>
-                  {
-                    (isInValidMessage) && <label className="error" htmlFor="message">{t('getQuote.form.errorMessage')}</label>
-                  }
-                  <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    size="invisible"
-                    sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
-                    onChange={this.onChange}
-                  />
-                  <div className="wrapper_button">
-                    <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('caseStudies.cases.deliveryapp.form.buttonForm')}</button>
-                  </div>
+                <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  size="invisible"
+                  sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                  onChange={this.onChange}
+                />
+                <div className="wrapper_button">
+                  <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('caseStudies.cases.deliveryapp.form.buttonForm')}</button>
+                </div>
               </form>
 
               <SweetAlert

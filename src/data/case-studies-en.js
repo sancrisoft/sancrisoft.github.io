@@ -207,11 +207,10 @@ const caseStudies = {
         3: "IOS and Android",
       },
       form: {
-        title: "Are you interested or want to know more about the delivery application?",
+        title: "Contáctanos",
+        description: "¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!",
         fieldName: "Name",
         errorFieldName: "Please enter your name",
-        fieldCompany: "Company Name",
-        errorFieldCompany: "Please enter company name",
         errorValidEmail: "Enter a valid email",
         errorFieldEmail: "Please enter your email",
         howDoYouSell: "How do you currently sell?",

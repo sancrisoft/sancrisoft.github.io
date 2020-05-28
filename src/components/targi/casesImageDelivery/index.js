@@ -41,7 +41,6 @@ const CasesImage = (props) => {
     marginBottom,
   } = props;
 
-  console.log('props', props);
   return(
     <ThemeProvider theme={theme}>
       <ContentCases>

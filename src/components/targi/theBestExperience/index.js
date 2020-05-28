@@ -21,6 +21,8 @@ const theme = {
     sm: 568,
     md: 768,
     lg: 992,
+    tablet: 768,
+    desktop: 991,
     xl: 1200,
     xxl: 1500,
   }
