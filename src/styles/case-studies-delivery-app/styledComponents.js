@@ -6,6 +6,8 @@ export const ContentCase = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 `;
 
 export const CasePageSizer = styled.div`

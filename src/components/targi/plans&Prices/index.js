@@ -29,7 +29,7 @@ const theme = {
   }
 };
 
-const PlansAndPrices = ({ t, data }) => {
+const PlansAndPrices = ({ t, data, onChangePlace, onChangeInterest }) => {
 
   const {
     pricesCOP,
@@ -40,7 +40,7 @@ const PlansAndPrices = ({ t, data }) => {
     <ThemeProvider theme={theme}>
       <BoxCase>
         <Subtitle>{t(`caseStudies.cases.deliveryapp.plansAndPrices.subtitle`)}</Subtitle>
-        <ContentTabs>
+        <ContentTabs  onSelect={index => onChangePlace(!index ? "Colombia" : "Otro País") }>
           <TabListCustom>
             <TabCustom>Colombia</TabCustom>
             <TabCustom>{t(`caseStudies.cases.deliveryapp.plansAndPrices.titleOtherCountry`)}</TabCustom>
@@ -53,6 +53,7 @@ const PlansAndPrices = ({ t, data }) => {
               priceAnnual={pricesCOP.priceAnnual}
               priceAnnualTotal={pricesCOP.priceAnnualTotal}
               costInstalation={pricesCOP.priceinstalation}
+              onChangeInterest={onChangeInterest}
               t={t}
             />
           </TabPanelCustom>
@@ -64,6 +65,7 @@ const PlansAndPrices = ({ t, data }) => {
               priceAnnual={pricesUSD.priceAnnual}
               priceAnnualTotal={pricesUSD.priceAnnualTotal}
               costInstalation={pricesUSD.priceinstalation}
+              onChangeInterest={onChangeInterest}
               t={t}
             />
           </TabPanelCustom>

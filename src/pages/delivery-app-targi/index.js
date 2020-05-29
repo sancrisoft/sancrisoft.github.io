@@ -6,7 +6,6 @@ import SweetAlert from 'sweetalert2-react'
 import axios from 'axios'
 
 import SEO from '../../components/seo'
-import Title from '../../components/title'
 import CasesImage from '../../components/targi/casesImageDelivery'
 import LittleSatisfied from '../../components/targi/littleSatisfied'
 import TargiSolve from '../../components/targi/targiSolve'
@@ -54,6 +53,8 @@ class IndexPage extends Component {
     name: '',
     replyto: '',
     phone: '',
+    country: 'Colombia',
+    interest: 'Targi',
     send: false,
     showAlert: false,
     typeAlert: 'success',
@@ -225,6 +226,8 @@ class IndexPage extends Component {
     return (
       <PlansAndPrices 
         t={t} 
+        onChangePlace={(index) => this.setState({ country: index })}
+        onChangeInterest={(index) => this.setState({ interest: index })}
         data={deliveryapp}
       />
     )
@@ -292,7 +295,7 @@ class IndexPage extends Component {
   onChange = (value) => {
     const comp = this;
     const { t } = this.props;
-    const { name, replyto, phone } = this.state;
+    const { name, replyto, phone, country, interest } = this.state;
 
     if(value) {
       const opts = {
@@ -300,6 +303,8 @@ class IndexPage extends Component {
         name,
         replyto,
         phone,
+        country,
+        interest,
       };
 
       axios.post(
@@ -315,7 +320,7 @@ class IndexPage extends Component {
             'subject': name
         });
         recaptchaRef.current.props.grecaptcha.reset();
-        comp.setState({ send: false, name: '', replyto: '', phone: '', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
+        comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: t('getQuote.form.sentMessage'), typeAlert: 'success', alertMessage: '', showAlert: true, });
       })
       .catch(function (error) {
         recaptchaRef.current.props.grecaptcha.reset();
@@ -408,7 +413,7 @@ class IndexPage extends Component {
 
             <SectionForm>
               <ContentForm>
-                <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
+                <form id="form"  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
                   <Field>
                     <label htmlFor="name">{t('caseStudies.cases.deliveryapp.form.fieldName')}</label>
                     <input className="input-text" type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
@@ -419,7 +424,7 @@ class IndexPage extends Component {
 
                   <Field>
                     <label htmlFor="name">Email</label>
-                    <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
+                    <input className="input-text" type="text" name="replyto" id="replyto" value={replyto} onChange={this.handleChange} />
                     {
                       (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
                     }

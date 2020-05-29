@@ -30,8 +30,15 @@ const theme = {
   }
 };
 
-const BoxPrices = ({ t, priceMonthly, priceAnnual, priceAnnualTotal, currency, costInstalation }) => {
-
+const BoxPrices = ({ 
+    t, 
+    priceMonthly, 
+    priceAnnual, 
+    priceAnnualTotal, 
+    currency, 
+    costInstalation, 
+    onChangeInterest 
+  }) => {
 
   return (
     <ThemeProvider theme={theme}>
@@ -88,7 +95,7 @@ const BoxPrices = ({ t, priceMonthly, priceAnnual, priceAnnualTotal, currency, c
           <PriceDescBig className="descSolution">
             {t(`caseStudies.cases.deliveryapp.plansAndPrices.solutionDesc`)}
           </PriceDescBig>
-          <BtnContact href="/contact">
+          <BtnContact href="#form" onClick={() =>{ onChangeInterest('Solución Personalizada') }}>
             {t(`caseStudies.cases.deliveryapp.plansAndPrices.btnSolution`)}
           </BtnContact>
         </BoxRight>
