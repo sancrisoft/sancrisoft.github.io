@@ -33,7 +33,17 @@ import {
   SupportTeamText,
   TitleBig,
   TitleDesc,
-  SectionForm
+  SectionForm,
+  ContentForm,
+  Field,
+  ContentWhatsapp,
+  WhatsappLogo,
+  WhatsappText,
+  WhatsappButton,
+  FooterInfo,
+  FooterLeft,
+  FooterRight,
+  FooterLink,
 } from '../../styles/case-studies-delivery-app/styledComponents';
 
 const recaptchaRef = React.createRef();
@@ -314,6 +324,12 @@ class IndexPage extends Component {
     }
   }
 
+  renderYear = () => {
+    const date = new Date()
+    const year = date.getFullYear()  
+    return year;
+  }
+
   render() {
     const {
       data,
@@ -391,39 +407,79 @@ class IndexPage extends Component {
 
 
             <SectionForm>
-              
-              <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="https://formspree.io/mgenadeg" onSubmit={this.handleSubmit}>
-                <input className="input-text" type="text" name="name" id="name" placeholder={t('caseStudies.cases.deliveryapp.form.fieldName')} value={name} onChange={this.handleChange}/>
-                {
-                  (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
-                }
-                <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
-                {
-                  (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
-                }
-                <input className="input-text" type="text" name="phone" id="phone" placeholder={t('getQuote.form.phone')} value={phone} onChange={this.handleChange} />
+              <ContentForm>
+                <form  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
+                  <Field>
+                    <label htmlFor="name">{t('caseStudies.cases.deliveryapp.form.fieldName')}</label>
+                    <input className="input-text" type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
+                    {
+                      (isInValidName) && <label className="error" htmlFor="name">{t('caseStudies.cases.deliveryapp.form.errorFieldName')}</label>
+                    }
+                  </Field>
 
-                <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  size="invisible"
-                  sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
-                  onChange={this.onChange}
+                  <Field>
+                    <label htmlFor="name">Email</label>
+                    <input className="input-text" type="text" name="replyto" id="replyto" placeholder="Email" value={replyto} onChange={this.handleChange} />
+                    {
+                      (showErrorEmail) && <label className="error" htmlFor="replyto">{emailValidationMessage}</label>
+                    }
+                  </Field>
+
+                  <Field>
+                    <label htmlFor="name">{t('caseStudies.cases.deliveryapp.form.fieldPhone')}</label>
+                    <input className="input-text" type="text" name="phone" id="phone" value={phone} onChange={this.handleChange} />
+                    <span className="notePhone">{t('caseStudies.cases.deliveryapp.form.notePhone')}</span>
+                  </Field>
+
+                  <input type="hidden" name="subject" value="Tell us about your project | Sancrisoft" />
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey="6LdeBokUAAAAAM01lWglTU0siI1fmMRoGjCE_94b"
+                    onChange={this.onChange}
+                  />
+
+                  <Field>
+                    <div className="wrapper_button">
+                      <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('caseStudies.cases.deliveryapp.form.buttonForm')}</button>
+                    </div>
+                  </Field>
+                </form>
+
+                <ContentWhatsapp>
+                  <WhatsappLogo>
+                    <Icons
+                      height={60}
+                      width={60}
+                      iconName={'whatsapp'}
+                    />
+                  </WhatsappLogo>
+                  <WhatsappText>{t('caseStudies.cases.deliveryapp.whatsapp.text')}</WhatsappText>
+                  <WhatsappButton 
+                    href="https://api.whatsapp.com/send?phone=NUMBER&text=Bienvenido%20a%20Sancrisoft%20en%20un%20momento%20te%20atenderemos">
+                      {t('caseStudies.cases.deliveryapp.whatsapp.textButton')}
+                  </WhatsappButton>
+                </ContentWhatsapp>
+
+                <SweetAlert
+                  show={showAlert}
+                  title={titleAlert}
+                  text={alertMessage}
+                  onConfirm={this.closeAlert}
+                  type={typeAlert}
                 />
-                <div className="wrapper_button">
-                  <button className="input-btn" type="button" onClick={this.handleSubmit}>{t('caseStudies.cases.deliveryapp.form.buttonForm')}</button>
-                </div>
-              </form>
-
-              <SweetAlert
-                show={showAlert}
-                title={titleAlert}
-                text={alertMessage}
-                onConfirm={this.closeAlert}
-                type={typeAlert}
-              />
-
+              </ContentForm>
             </SectionForm>
+
+            <FooterInfo>
+              <FooterLeft>
+                <h2>Sancrisoft SAS © {this.renderYear()}</h2>
+              </FooterLeft>
+              <FooterRight>
+                <FooterLink href="/">Politicas de Privacidad</FooterLink>
+                <FooterLink href="/">Términos y Condiciones</FooterLink>
+              </FooterRight>
+            </FooterInfo>
 
           </ContentCase>
       </I18nextProvider>

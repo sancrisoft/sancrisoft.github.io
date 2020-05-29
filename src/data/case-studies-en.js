@@ -209,13 +209,18 @@ const caseStudies = {
       form: {
         title: "Contáctanos",
         description: "¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!",
-        fieldName: "Name",
+        fieldName: "Nombre y Apellido",
         errorFieldName: "Please enter your name",
         errorValidEmail: "Enter a valid email",
         errorFieldEmail: "Please enter your email",
-        howDoYouSell: "How do you currently sell?",
-        buttonForm: "I'm Interested",
+        fieldPhone: "Teléfono",
+        notePhone: "Por favor incluye el código de tu pais",
+        buttonForm: "Enviar",
         interestFormTitle: "Interest Form on Targi"
+      },
+      whatsapp: {
+        text: "Prefieres comunicarte por Whatsapp?",
+        textButton: "Escríbenos",
       }
     }
   },

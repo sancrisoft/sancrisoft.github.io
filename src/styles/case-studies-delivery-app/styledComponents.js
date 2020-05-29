@@ -158,11 +158,12 @@ export const TitleDesc = styled.p`
 `;
 
 export const SectionForm = styled.section`
-  padding: 2em;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: #ececec;
+  margin-top: 2em;
   h3{
     ${breakpoint('mobile')`
       font-size: 1.2rem;
@@ -176,8 +177,10 @@ export const SectionForm = styled.section`
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
-    input, textarea {
+    width: 100%;
+    padding: 1.5em 2em;
+    margin-bottom: 0;
+    input {
       margin: 5px 0px;
       border-radius: 3px;
       border: 1px solid #e2e2e2;
@@ -187,8 +190,6 @@ export const SectionForm = styled.section`
       &:focus{
         border: 1px solid #f48600;
         outline: 0;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
-        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
       }
     }
@@ -196,24 +197,7 @@ export const SectionForm = styled.section`
       min-height: 150px;
       resize: none;
     }
-    .input-btn {
-      margin-top: 1rem;
-      width: 180px;
-      height: 35px;
-      background: #f48600;
-      border-radius: 4px;
-      color: #ffffff;
-      font-size: 0.85rem;
-      line-height: 0.8rem;
-      text-transform: capitalize;
-      transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -webkit-transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        color: #fff;
-      }
-    }
+    
     label.error {
       font-weight: normal;
       color: #d61400;
@@ -221,59 +205,178 @@ export const SectionForm = styled.section`
       font-style: italic;
       position: relative;
       top: -4px;
-    }
-    .wrapper_button {
-      display: flex;
-      justify-content: center;
-      padding-top: 1em;
-      ${breakpoint('tablet')`
-        justify-content: flex-start;
-        padding-top: 0;
-      `}
-      button {
-        border: none;
-        transition: all .5s;
-        &:hover {
-          border-color: #F28724;
-          background: #FFA449;
-        }
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-    .content-youSell {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 30px 0;
-      h3 {
-        width: 100%;
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-      .item-youSell {
-        width: 48%;
-        margin-bottom: 10px;
-        ${breakpoint('tablet')`
-          width: initial;
-          margin-bottom: 0;
-        `}
-        input {
-          height: 15px;
-          width: 15px;
-        }
-        label {
-          margin-left: 5px;
-          font-size: 15px;
-        }
-      }
-    }
-    ${breakpoint('mobile')`
-      width: 100%;
-    `}
+    }  
     ${breakpoint('tablet')`
-      width: 600px;
+      width: 70%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 2px solid #333;
     `}
   }
+`;
+
+export const ContentForm = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+`;
+
+export const Field = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .notePhone {
+    font-size: .7em;
+  }
+  .wrapper_button {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    ${breakpoint('tablet')`
+      justify-content: flex-start;
+      padding-top: 0;
+    `}
+    .input-btn {
+      width: 100%;
+      background: #f48600;
+      color: #fff;
+      font-size: 0.9rem;
+      line-height: 0.8rem;
+      text-transform: capitalize;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      border: none;
+      transition: all .5s;
+      height: 42px;
+      &:hover {
+        border-color: #F28724;
+        background: #FFA449;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  ${breakpoint('tablet')`
+    width: 48%;
+    input {
+      width: 100%;
+    }
+  `}
+`;
+
+export const ContentWhatsapp  = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 1em 2em;
+  ${breakpoint('tablet')`
+    width: 30%;
+    padding: 1em;
+  `}
+`;
+
+export const WhatsappLogo  = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  ${breakpoint('tablet')`
+    padding-bottom: 0;
+  `}
+  ${breakpoint('desktop')`
+    padding-bottom: 1em;
+  `}
+`;
+
+export const WhatsappText  = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .9em;
+  margin-bottom: 1.1em;
+  ${breakpoint('tablet')`
+    line-height: 1.4;
+  `}
+  ${breakpoint('desktop')`
+    font-size: .9em;
+  `}
+`;
+
+export const WhatsappButton  = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  background: #f48600;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 0.8rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: none;
+  transition: all .5s;
+  height: 42px;
+  text-decoration: none;
+  &:hover {
+    background: #FFA449;
+  }
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const FooterInfo  = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1em 2em;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+export const FooterLeft = styled.div`
+  display: flex;
+  align-item: center;
+  justify-content: flex-start;
+  width: 100%;
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  ${breakpoint('tablet')`
+    width: 40%;
+  `}
+`;
+
+export const FooterRight = styled.div`
+  display: flex;
+  align-item: center;
+  width: 100%;
+  padding-top: 1em;
+  justify-content: space-between;
+  ${breakpoint('tablet')`
+    width: 60%;
+    padding-top: 0;
+    justify-content: flex-end;
+  `}
+`;
+
+export const FooterLink = styled.a`
+  display: flex;
+  font-size: .9em;
+  color: #f48600;
+  ${breakpoint('tablet')`
+    margin-left: 1.2em;
+  `}
 `;
