@@ -186,7 +186,7 @@ export const CaseRightImage = styled.div`
     height: 100%;
     margin: 0 auto;
     transition: all .5s;
-    object-fit: cover;
+    object-fit: contain;
     ${breakpoint('md')`
       height: 85%;
     `}
