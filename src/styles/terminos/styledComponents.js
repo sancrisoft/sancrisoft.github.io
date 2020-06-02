@@ -9,6 +9,7 @@ export const ContentTerms = styled.section`
   padding: 1em 1.5em;
   strong {
     color: #000;
+    font-family: Averta Bold;
   }
 `;
 
@@ -20,6 +21,8 @@ export const TitleTerms = styled.h2`
   padding: 1.8em 0 .8em;
   text-align: center;
   line-height: 1.4;
+  font-weight: 200;
+  color: #F28724;
   ${breakpoint('desktop')`
     font-size: 1.8em;
   `}
@@ -50,6 +53,7 @@ export const DefinitionTitle = styled.h3`
   font-size: 1.3em;
   color: #000;
   padding-bottom: .8em;
+  font-family: Averta Bold;
 `;
 
 export const DefinitionList = styled.ol`
@@ -63,7 +67,7 @@ export const DefinitionItem = styled.li`
   width: 100%;
 `;
 
-export const ItemDescrip = styled.p`
+export const ItemDescrip = styled.div`
   width: 100%;
   font-size: .85em;
   strong {
@@ -93,5 +97,16 @@ export const ObjectItem = styled(DefinitionItem)`
   h4 {
     font-size: 1.1em;
     color: #000;
+    font-family: Averta Bold;
+  }
+  ul {
+    margin-bottom: 0;
+    padding-top: 1em;
+    &.listNumber {
+      list-style: none;
+    }
+  }
+  span {
+    font-size: 1em;
   }
 `;

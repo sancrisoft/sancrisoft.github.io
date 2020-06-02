@@ -22,6 +22,9 @@ import AvertaTTF from './averta/avertastandard-regular-webfont.ttf';
 import AvertaEOT from './averta/avertastandard-regular-webfont.eot';
 import AvertaWOFF from './averta/avertastandard-regular-webfont.woff';
 import AvertaWOFF2 from './averta/avertastandard-regular-webfont.woff2';
+import AvertaBoldOTF from './averta/Averta-Bold.otf';
+import AvertaBoldTTF from './averta/Averta-Bold.ttf';
+import AvertaBoldWOFF2 from './averta/Averta-Bold.woff2';
 
 export default {
     LatoRegularTTF,
@@ -44,4 +47,7 @@ export default {
     AvertaEOT,
     AvertaWOFF,
     AvertaWOFF2,
+    AvertaBoldOTF,
+    AvertaBoldTTF,
+    AvertaBoldWOFF2
 };

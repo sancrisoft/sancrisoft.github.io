@@ -34,6 +34,12 @@ export const GlobalFonts = createGlobalStyle `
     font-weight: normal;
     src: local("Averta"), local("Averta"), url(${fonts.AvertaTTF}) format("ttf"), url(${fonts.AvertaWOFF}) format("woff"), url(${fonts.AvertaEOT}) format("eot"), url(${fonts.AvertaWOFF2}) format("woff2");
   }
+  @font-face {
+    font-family: "Averta Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Averta"), local("Averta"), url(${fonts.AvertaBoldOTF}) format("otf"), url(${fonts.AvertaBoldTTF}) format("ttf"), url(${fonts.AvertaBoldWOFF2}) format("woff2");
+  }
 `
 export const H1 = styled.h1`
     font-family: Averta;
