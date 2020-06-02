@@ -482,7 +482,7 @@ class IndexPage extends Component {
               </FooterLeft>
               <FooterRight>
                 <FooterLink href="/">Politicas de Privacidad</FooterLink>
-                <FooterLink href="/">Términos y Condiciones</FooterLink>
+                <FooterLink href="/terminos">Términos y Condiciones</FooterLink>
               </FooterRight>
             </FooterInfo>
 
