@@ -77,6 +77,7 @@ export const ProcessCircle = styled.span`
   height: 70px;
   background: hsl(12, 88%, 59%);
   color: #fff;
+  padding-bottom: 5px;
 `;
 
 export const ProcessText = styled.p`
