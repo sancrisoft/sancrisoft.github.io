@@ -64,27 +64,38 @@ export const TabCustom = styled(Tab)`
 
 export const TabPanelCustom = styled(TabPanel)`
   .slick-arrow {
-    &.slick-left {
+    &.slick-prev {
       left: 4%;
     }
     &.slick-next {
-      right: 4%;
+      right: 8%;
     }
     svg {
       width: 30px;
       height: 30px;
       path {
-        fill: #333;
+        fill: hsl(228,39%,23%);
       }
     }
   }
   ${breakpoint('tablet')`
     .slick-arrow {
-      top: 40%;
+      top: 30%;
+      &.slick-prev {
+        left: 12%;
+      }
+      &.slick-next {
+        right: 18%;
+      }
       svg {
         width: 48px;
         height: 48px;
       }
+    }
+  `}
+  ${breakpoint('desktop')`
+    .slick-arrow {
+      top: 40%;
     }
   `}
 `;
