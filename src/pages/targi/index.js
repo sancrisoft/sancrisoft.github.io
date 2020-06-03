@@ -26,6 +26,7 @@ import Benefit6Image from '../../images/targi/benefits/2-6-db.svg'
 import HelpImage from '../../images/targi/help.svg'
 
 import Process from '../../components/targi/process'
+import BestExperience from '../../components/targi/bestExperience'
 
 import {
     GlobalContainer,
@@ -154,6 +155,7 @@ class IndexPage extends Component {
                     <h2>La Mejor Experiencia de Usuario</h2>
                     <h3>Cualquiera puede usar esta app y poner un pedido en menos de 5 minutos.</h3>
                     <h3>Mira como luce con estos tipos de negocios.</h3>
+                    <BestExperience />
                 </Section>
 
                 <Section>
