@@ -25,6 +25,8 @@ import Benefit6Image from '../../images/targi/benefits/2-6-db.svg'
 
 import HelpImage from '../../images/targi/help.svg'
 
+import Process from '../../components/targi/process'
+
 import {
     GlobalContainer,
     PageSizer,
@@ -162,6 +164,7 @@ class IndexPage extends Component {
                 <Section>
                     <h2>Me interesa, ¿Ahora qué?</h2>
                     <h3>El proceso son simplemente 4 pasos y toma 2 semanas.</h3>
+                    <Process />
                 </Section>
 
                 <BuySection>
