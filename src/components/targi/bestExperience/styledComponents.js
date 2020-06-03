@@ -12,7 +12,7 @@ export const BoxCase = styled.div`
   margin: auto;
   padding: 1.5em 0;
   height: auto;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     width: 80%;
     padding: 1.5em 1em;
   `}
@@ -28,35 +28,37 @@ export const TabListCustom = styled(TabList)`
   justify-content: center;
   align-items: center;
   margin-left: 0;
+  background: #eeeeee;
+  width: 90%;
+  max-width: 400px;
+  margin: 1em auto 4em;
+  border-radius: 40px;
+  overflow: hidden;
+  ${breakpoint('tablet')`
+    max-width: 490px;
+  `}
 `;
 
 export const TabCustom = styled(Tab)`
   cursor: pointer;
-  padding: .8em 1em;
+  padding: .8em .2em;
   position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 3px;
-    transform: scale3d(0, 1, 1);
-    transform-origin: left center;
-    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s;
-    background: #F28724;
-  }
+  margin-bottom: 0;
+  color: hsl(228,39%,23%);
+  width: 33.333%;
+  transition: all .5s;
+  font-size: .9em;
   &:focus {
     outline: none;
   }
+  &:hover,
   &.react-tabs__tab--selected {
-    &:after {
-      transform: scale3d(1, 1, 1);
-      transition-delay: 0s;
-    }
+    background: hsl(12,88%,59%);
+    color: #fff;
   }
-  ${breakpoint('md')`
-    padding: .8em 2em;
+  ${breakpoint('tablet')`
+    font-size: 1em;
+    padding: .8em 1em;
   `}
 `;
 
@@ -76,8 +78,9 @@ export const TabPanelCustom = styled(TabPanel)`
       }
     }
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     .slick-arrow {
+      top: 40%;
       svg {
         width: 48px;
         height: 48px;
@@ -93,31 +96,27 @@ export const BackgroundItem = styled.div`
   &:focus {
     outline: none;
   }
+  ${breakpoint('tablet')`
+    min-height: 700px;
+  `}
 `;
 
 export const CarouselItem = styled.div`
   height: auto;
-  width: 100%;
   position: relative;
+  width: 70%;
+  margin: auto;
+  max-width: 380px;
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
+    object-position: center;
+    margin-bottom: 0;
   }
-  .gatsby-image-wrapper {
-    height: 70%;
-    width: 70%;
-    margin: auto;
-    img {
-      object-fit: contain !important;
-    }
-  }
-
-  ${breakpoint('lg')`
-    .gatsby-image-wrapper {
-      height: 500px;
-      width: 500px;
-    }
+  ${breakpoint('tablet')`
+    width: 50%;
+    max-width: 420px;
   `}
 `;
 
