@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import axios from 'axios'
-import ReCAPTCHA from "react-google-recaptcha"
-import SweetAlert from 'sweetalert2-react'
-import BigGreyImage from '../../components/bigGreyImage'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import { I18nextProvider, withNamespaces } from "react-i18next"
