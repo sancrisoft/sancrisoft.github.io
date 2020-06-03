@@ -12,7 +12,7 @@ export const BoxCase = styled.div`
   margin: auto;
   padding: 1.5em 0;
   height: auto;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     padding: 1.5em 1em;
   `}
 `;
@@ -28,7 +28,7 @@ export const Subtitle = styled.h3`
   margin: 0 auto;
   text-align: center;
   line-height: 1.3;
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     width: 750px;
   `}
 `;
@@ -70,7 +70,7 @@ export const TabCustom = styled(Tab)`
       transition-delay: 0s;
     }
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     padding: .8em 2em;
   `}
 `;
@@ -135,7 +135,7 @@ export const BoxLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     width: 66.666%;
   `}
 `;
@@ -179,7 +179,7 @@ export const BoxRight = styled.div`
   width: 100%;
   padding: 2.4em 1.5em;
   border-top: 2px solid #333;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     border-left: 2px solid #333;
     border-top: none;
     width: 33.333%;
@@ -199,10 +199,10 @@ export const Price = styled.span`
   text-align: center;
   color: #000;
   padding: 0 10px;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     font-size: 1.3em;
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     font-size: 1.5em;
   `}
 `;
@@ -220,10 +220,10 @@ export const PriceDescSmall = styled.p`
     margin: auto;
     min-height: 55px;
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     font-size: .8em;
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     font-size: .9em;
   `}
 `;
@@ -246,13 +246,13 @@ export const PriceDescBig = styled.p`
     padding-bottom: 2em;
     padding-top: 0;
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     font-size: .9em;
     &.descSolution {
       font-size: 1em;
     }
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     font-size: 1.1em;
     &.descSolution {
       font-size: 1.2em;
