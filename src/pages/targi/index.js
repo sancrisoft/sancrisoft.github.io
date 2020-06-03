@@ -27,6 +27,7 @@ import HelpImage from '../../images/targi/help.svg'
 
 import Process from '../../components/targi/process'
 import BestExperience from '../../components/targi/bestExperience'
+import BuyForm from '../../components/targi/buyForm'
 
 import {
     GlobalContainer,
@@ -173,6 +174,8 @@ class IndexPage extends Component {
                     <PageSizer>
                         <h2>¿Listo para Comprar?</h2>
                         <h3>¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!</h3>
+                        <BuyForm />
+                        { /* TODO: Build whatsapp section here */}
                     </PageSizer>
                 </BuySection>
                 <Footer>
