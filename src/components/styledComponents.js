@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-// import { APP_COLORS } from '../utils/constants';
 import fonts from '../fonts/fonts';
 
 export const GlobalFonts = createGlobalStyle `
@@ -33,6 +32,34 @@ export const GlobalFonts = createGlobalStyle `
     font-style: normal;
     font-weight: normal;
     src: local("Averta"), local("Averta"), url(${fonts.AvertaTTF}) format("ttf"), url(${fonts.AvertaWOFF}) format("woff"), url(${fonts.AvertaEOT}) format("eot"), url(${fonts.AvertaWOFF2}) format("woff2");
+  }
+
+  @font-face {
+    font-family: "BeVietnamRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BeVietnamRegularTTF}) format("ttf"), url(${fonts.BeVietnamRegularWOFF}) format("woff"), url(${fonts.BeVietnamRegularEOT}) format("eot"), url(${fonts.BeVietnamRegularWOFF2}) format("woff2");
+  }
+
+  @font-face {
+    font-family: "BeVietnamLight";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BeVietnamLightTTF}) format("ttf"), url(${fonts.BeVietnamLightWOFF}) format("woff"), url(${fonts.BeVietnamLightEOT}) format("eot"), url(${fonts.BeVietnamLightWOFF2}) format("woff2");
+  }
+
+  @font-face {
+    font-family: "BeVietnamMedium";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BeVietnamMediumTTF}) format("ttf"), url(${fonts.BeVietnamMediumWOFF}) format("woff"), url(${fonts.BeVietnamMediumEOT}) format("eot"), url(${fonts.BeVietnamMediumWOFF2}) format("woff2");
+  }
+
+  @font-face {
+    font-family: "BeVietnamBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BeVietnamBoldTTF}) format("ttf"), url(${fonts.BeVietnamBoldWOFF}) format("woff"), url(${fonts.BeVietnamBoldEOT}) format("eot"), url(${fonts.BeVietnamBoldWOFF2}) format("woff2");
   }
 `
 export const H1 = styled.h1`
