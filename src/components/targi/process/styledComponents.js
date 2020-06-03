@@ -35,7 +35,7 @@ export const ProcessList = styled.ul`
     margin: auto;
     z-index: 5;
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     max-width: 700px;
     width: 100%;
     flex-direction: row;
@@ -49,7 +49,7 @@ export const ProcessList = styled.ul`
       bottom: initial;
     }
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     max-width: 800px;
   `}
 `;
@@ -61,7 +61,7 @@ export const ProcessItem = styled.li`
   margin-bottom: 2em;
   position: relative;
   z-index: 9;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     margin-bottom: 0;
     flex-direction: column;
   `}
@@ -76,7 +76,7 @@ export const ProcessCircle = styled.span`
   width: 70px;
   height: 70px;
   background: hsl(12, 88%, 59%);
-  color: #ffffff;
+  color: #fff;
 `;
 
 export const ProcessText = styled.p`
@@ -88,7 +88,7 @@ export const ProcessText = styled.p`
   width: 150px;
   margin: 0 auto;
   color: hsl(228, 39%, 23%);
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     text-align: center;
     padding-left: 0;
     top: 1em;
