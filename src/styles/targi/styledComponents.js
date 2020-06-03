@@ -109,7 +109,7 @@ export const Section = styled.section`
   h2 {
     font-family: 'BeVietnamBold', sans-serif;
     color: hsl(228, 39%, 23%);
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1rem 0;
   }
 
@@ -147,6 +147,17 @@ export const HelpSection = styled(Section)`
         margin-bottom: 0;
       }
     }
+`;
+
+export const BuySection = styled(Section)`
+  background-color: hsl(12, 88%, 59%);
+  h2{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  h3 {
+    color: #ffffff;
+  }
 `;
 
 export const Problems = styled.div`
