@@ -131,6 +131,7 @@ export const BenefitsSection = styled(Section)`
 export const HelpSection = styled(Section)`
     background-color: #eeeeee;
     padding: 0;
+    text-align: left;
     ${PageSizer} {
       padding: 1rem;
       p {
@@ -237,6 +238,7 @@ export const BenefitCard = styled.div`
     width: 48%;
   `}
   ${breakpoint('desktop')`
+    width: 32%;
   `}
 `;
 
