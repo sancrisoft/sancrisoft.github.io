@@ -63,12 +63,16 @@ export const TabCustom = styled(Tab)`
 `;
 
 export const TabPanelCustom = styled(TabPanel)`
+  .slick-slider {
+    max-width: 320px;
+    margin: auto;
+  }
   .slick-arrow {
     &.slick-prev {
-      left: 4%;
+      right: 1%;
     }
     &.slick-next {
-      right: 8%;
+      right: 7%;
     }
     svg {
       width: 30px;
@@ -79,45 +83,59 @@ export const TabPanelCustom = styled(TabPanel)`
     }
   }
   ${breakpoint('tablet')`
+    .slick-slider {
+      max-width: 650px;
+    }
     .slick-arrow {
-      top: 30%;
+      top: 40%;
       &.slick-prev {
-        left: 12%;
+        left: 16%;
       }
       &.slick-next {
-        right: 18%;
-      }
-      svg {
-        width: 48px;
-        height: 48px;
+        right: 20%;
       }
     }
   `}
   ${breakpoint('desktop')`
     .slick-arrow {
-      top: 40%;
+      &.slick-prev {
+        left: 12%;
+      }
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+      &.slick-next {
+        right: 18%;
+        svg {
+          width: 45px;
+          height: 45px;
+        }
+      }
     }
   `}
 `;
 
 export const BackgroundItem = styled.div`
   color: white;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  max-width: 280px;
+  margin: auto;
   &:focus {
     outline: none;
   }
   ${breakpoint('tablet')`
+    width: 100%;
     min-height: 700px;
+    max-width: 420px;
   `}
 `;
 
 export const CarouselItem = styled.div`
   height: auto;
   position: relative;
-  width: 70%;
-  margin: auto;
-  max-width: 380px;
+  width: 100%;
   img {
     width: 100%;
     height: auto;
@@ -125,10 +143,6 @@ export const CarouselItem = styled.div`
     object-position: center;
     margin-bottom: 0;
   }
-  ${breakpoint('tablet')`
-    width: 50%;
-    max-width: 420px;
-  `}
 `;
 
 
