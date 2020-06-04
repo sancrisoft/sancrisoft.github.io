@@ -38,6 +38,10 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
     
     Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+1.  **Steps to consider**
+
+    You will need to execute  ```"build": "gatsby build"```, in order to generate files and deploy them succesfully into the host server, keep in mind all pages do not use the Layout component will need to use `<></>` a  fragment to include webfonts or global styles like GlobalFonts component define into styledComponents.js file 
     
 ## 🧐 What's inside?
 
