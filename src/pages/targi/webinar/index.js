@@ -17,8 +17,7 @@ import {
   } from '../../../styles/targi/styledComponents';
 
 class IndexPage extends Component {
-    render(props) {
-        console.log('PROPS', props);
+    render() {
         return (<I18nextProvider i18n={i18n}>
             <GlobalFonts />
             <SEO title="Targi | Gracias por inscribirte en nuestro webinar." keywords={['targi', 'delivery app', 'domicilios', 'ecommerce', 'venta en línea']} description="Lleva tu negocio al mundo del ecommerce con tu propia app móvil." />
