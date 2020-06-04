@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
 import Icons from '../../icons'
 
 import {
@@ -8,106 +7,76 @@ import {
   BoxLeft,
   BoxMonthly,
   BoxAnnual,
-  BoxInstalation,
+  InstallationBox,
   BoxRight,
   PriceTitle,
   PriceDescBig,
   PriceDescSmall,
   Price,
-  BtnPurchase,
+  CallToAction,
   BtnContact,
   LowestPrice
 } from './styledComponents.js'
 
-const theme = {
-  breakpoints: {
-    xs: 0,
-    sm: 568,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1500,
-  }
-};
-
 const BoxPrices = ({ 
-    t, 
     priceMonthly, 
     priceAnnual, 
     priceAnnualTotal, 
-    currency, 
-    costInstalation, 
+    currency,
+    installationCost, 
     onChangeInterest 
   }) => {
 
   return (
-    <ThemeProvider theme={theme}>
-      <ContentPrices>
-        <BoxLeft>
-          <BoxMonthly>
-            <PriceTitle>
-              {t(`caseStudies.cases.deliveryapp.plansAndPrices.titleMonthly`)}
-            </PriceTitle>
-            <PriceDescBig className="descPrice">{currency} 
-              <Price> {priceMonthly}</Price>/{t(`caseStudies.cases.deliveryapp.plansAndPrices.month`)} + IVA
-            </PriceDescBig>
-            <PriceDescSmall className="descPlans">
-              {t(`caseStudies.cases.deliveryapp.plansAndPrices.monthlydesc`)}
-            </PriceDescSmall>
-            <BtnPurchase href="/">{t(`caseStudies.cases.deliveryapp.plansAndPrices.btnCompra`)}</BtnPurchase>
-          </BoxMonthly>
-
-          <BoxAnnual>
-            <PriceTitle>
-              {t(`caseStudies.cases.deliveryapp.plansAndPrices.titleAnnual`)}
-            </PriceTitle>
-            <PriceDescBig className="descPrice">{currency}
-              <Price> {priceAnnual}</Price>/{t(`caseStudies.cases.deliveryapp.plansAndPrices.month`)} + IVA
-            </PriceDescBig>
-            <PriceDescSmall className="descPlans">
-              {t(`caseStudies.cases.deliveryapp.plansAndPrices.annualDesc`)} {`${currency} ${priceAnnualTotal}`} + IVA
-            </PriceDescSmall>
-            <BtnPurchase href="/">{t(`caseStudies.cases.deliveryapp.plansAndPrices.btnCompra`)}</BtnPurchase>
-            <LowestPrice>
-              <Icons
-                backgroundColor="#000"
-                height={26}
-                width={26}
-                iconName={'sale'}
-              />
-              <PriceDescSmall>
-                {t(`caseStudies.cases.deliveryapp.plansAndPrices.annualLowCost`)}
-              </PriceDescSmall>
-            </LowestPrice>
-          </BoxAnnual>
-
-          <BoxInstalation>
-            <PriceTitle>{t(`caseStudies.cases.deliveryapp.plansAndPrices.titleCost`)}</PriceTitle>
-            <PriceDescBig>{currency} <Price> {costInstalation}</Price>+ IVA</PriceDescBig>
-            <PriceDescSmall>{t(`caseStudies.cases.deliveryapp.plansAndPrices.costDesc`)}</PriceDescSmall>
-          </BoxInstalation>
-        </BoxLeft>
-
-        <BoxRight>
-          <PriceTitle>
-            {t(`caseStudies.cases.deliveryapp.plansAndPrices.titleSolution`)}
-          </PriceTitle>
-          <PriceDescBig className="descSolution">
-            {t(`caseStudies.cases.deliveryapp.plansAndPrices.solutionDesc`)}
+    <ContentPrices>
+      <BoxLeft>
+        <BoxMonthly>
+          <PriceTitle>Plan Mensual</PriceTitle>
+          <PriceDescBig className="descPrice">{currency} 
+            <Price> {priceMonthly}</Price>/mes + IVA
           </PriceDescBig>
-          <BtnContact href="#form" onClick={() =>{ onChangeInterest('Solución Personalizada') }}>
-            {t(`caseStudies.cases.deliveryapp.plansAndPrices.btnSolution`)}
-          </BtnContact>
-        </BoxRight>
-      </ContentPrices>
-    </ThemeProvider>
+          <PriceDescSmall className="descPlans">Paga mes a mes</PriceDescSmall>
+          <CallToAction href="/">Comprar</CallToAction>
+        </BoxMonthly>
+
+        <BoxAnnual>
+          <PriceTitle>Plan Anual</PriceTitle>
+          <PriceDescBig className="descPrice">{currency}
+            <Price> {priceAnnual}</Price>/mes + IVA
+          </PriceDescBig>
+          <PriceDescSmall className="descPlans">
+            Un solo pago anual de {`${currency} ${priceAnnualTotal}`} + IVA
+          </PriceDescSmall>
+          <CallToAction href="/">Comprar</CallToAction>
+          <LowestPrice>
+            <Icons
+              backgroundColor="#000"
+              height={26}
+              width={26}
+              iconName={'sale'}
+            />
+            <PriceDescSmall>Precio más bajo</PriceDescSmall>
+          </LowestPrice>
+        </BoxAnnual>
+
+        <InstallationBox>
+          <PriceTitle>Costo de Instalación</PriceTitle>
+          <PriceDescBig>{currency} <Price> {installationCost}</Price>+ IVA</PriceDescBig>
+          <PriceDescSmall>Un único pago para crear el app con tu marca.</PriceDescSmall>
+        </InstallationBox>
+      </BoxLeft>
+
+      <BoxRight>
+        <PriceTitle>Solución Personalizada</PriceTitle>
+        <PriceDescBig className="descSolution">
+          Te gusta la idea de un app pero tu negocio necesita una solución diferente, que se adapte mejor a sus necesidades?
+        </PriceDescBig>
+        <CallToAction href="#form" onClick={() =>{ onChangeInterest('Solución Personalizada') }}>Contáctanos</CallToAction>
+      </BoxRight>
+    </ContentPrices>
   )
 }
-;
 
-BoxPrices.propTypes = {
-  textExperience: PropTypes.string,
-  image: PropTypes.object,
-};
+// TODO: Add prop types here
 
-export default BoxPrices
+export default BoxPrices;

@@ -1,107 +1,48 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
 import BoxPrices from './boxPrices'
-import Icons from '../../icons'
-
 
 import {
   BoxCase,
-  Subtitle,
   ContentTabs,
   TabListCustom,
   TabCustom,
   TabPanelCustom,
-  NotePlans,
-  NoteTitle,
-  NoteList,
-  NoteItem,
 } from './styledComponents.js'
 
-const theme = {
-  breakpoints: {
-    xs: 480,
-    sm: 568,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1500,
-  }
-};
-
-const PlansAndPrices = ({ t, data, onChangePlace, onChangeInterest }) => {
-
-  const {
-    pricesCOP,
-    pricesUSD,
-  } = data;
-
+const PlansAndPrices = () => {
   return (
-    <ThemeProvider theme={theme}>
       <BoxCase>
-        <Subtitle>{t(`caseStudies.cases.deliveryapp.plansAndPrices.subtitle`)}</Subtitle>
-        <ContentTabs  onSelect={index => onChangePlace(!index ? "Colombia" : "Otro País") }>
+        <h5>¿Dónde está tu negocio?</h5>
+        <ContentTabs  onSelect={index => {}}>
           <TabListCustom>
             <TabCustom>Colombia</TabCustom>
-            <TabCustom>{t(`caseStudies.cases.deliveryapp.plansAndPrices.titleOtherCountry`)}</TabCustom>
+            <TabCustom>Otro País</TabCustom>
           </TabListCustom>
       
           <TabPanelCustom>
             <BoxPrices 
               currency="COP"
-              priceMonthly={pricesCOP.priceMonthly}
-              priceAnnual={pricesCOP.priceAnnual}
-              priceAnnualTotal={pricesCOP.priceAnnualTotal}
-              costInstalation={pricesCOP.priceinstalation}
-              onChangeInterest={onChangeInterest}
-              t={t}
+              priceMonthly="349.900"
+              priceAnnual="299.900"
+              priceAnnualTotal="3.598.800"
+              installationCost="1.800.000"
+              onChangeInterest={() => { console.log('interest'); }}
             />
           </TabPanelCustom>
 
           <TabPanelCustom>
             <BoxPrices 
               currency="USD"
-              priceMonthly={pricesUSD.priceMonthly}
-              priceAnnual={pricesUSD.priceAnnual}
-              priceAnnualTotal={pricesUSD.priceAnnualTotal}
-              costInstalation={pricesUSD.priceinstalation}
-              onChangeInterest={onChangeInterest}
-              t={t}
+              priceMonthly="80"
+              priceAnnual="66.66"
+              priceAnnualTotal="800"
+              installationCost="500"
+              onChangeInterest={() => { console.log('interest'); }}
             />
           </TabPanelCustom>
         </ContentTabs>
-
-        <NotePlans>
-          <NoteTitle>Además ten en cuenta que...</NoteTitle>
-          <NoteList>
-            <NoteItem>
-              <Icons
-                backgroundColor="#000"
-                height={14}
-                width={14}
-                iconName={'check'}
-              />
-              {t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.1`)}</NoteItem>
-            <NoteItem>
-              <Icons
-                backgroundColor="#000"
-                height={14}
-                width={14}
-                iconName={'check'}
-              />
-              <p><strong>{t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.noClausula`)}</strong> {t(`caseStudies.cases.deliveryapp.plansAndPrices.notes.2`)}</p>
-            </NoteItem>
-          </NoteList>
-        </NotePlans>
       </BoxCase>
-    </ThemeProvider>
   )
 }
-;
-
-PlansAndPrices.propTypes = {
-  textExperience: PropTypes.string,
-  image: PropTypes.object,
-};
 
 export default PlansAndPrices

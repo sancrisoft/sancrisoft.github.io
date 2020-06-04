@@ -27,6 +27,7 @@ import HelpImage from '../../images/targi/help.svg'
 
 import Process from '../../components/targi/process'
 import BestExperience from '../../components/targi/bestExperience'
+import PlansPrices from '../../components/targi/plansPrices'
 import BuyForm from '../../components/targi/buyForm'
 
 import {
@@ -50,7 +51,7 @@ class IndexPage extends Component {
         return (
         <I18nextProvider i18n={i18n}>
             <GlobalFonts />
-            <SEO title="Targi | Delivery app para tu negocio" keywords={['targi', 'delivery app']} description="Lleva tu negocio al mundo del ecommerce con tu propia app móvil." />
+            <SEO title="Targi | App de delivery para tu negocio, con tu propia marca." keywords={['targi', 'delivery app', 'domicilios', 'ecommerce', 'venta en línea']} description="Lleva tu negocio al mundo del ecommerce con tu propia app móvil." />
             <GlobalContainer>
                 <Hero bg={HeroBackground}>
                     <PageSizer>
@@ -162,6 +163,7 @@ class IndexPage extends Component {
                 <Section>
                     <h2>Planes y Precios</h2>
                     <h3>Targi está pensado para PyMEs, con precios que negocios como el tuyo pueden asumir.</h3>
+                    <PlansPrices />
                 </Section>
 
                 <Section>

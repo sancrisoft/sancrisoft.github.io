@@ -17,22 +17,6 @@ export const BoxCase = styled.div`
   `}
 `;
 
-export const Subtitle = styled.h3`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-  color: #000;
-  font-family: Averta;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.3;
-  ${breakpoint('desktop')`
-    width: 750px;
-  `}
-`;
-
 export const ContentTabs = styled(Tabs)`
   width: 100%;
 `;
@@ -41,94 +25,41 @@ export const TabListCustom = styled(TabList)`
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-left: 0;
+  background: #eeeeee;
+  max-width: 400px;
+  margin: 1em auto 4em auto;
+  border-radius: 40px;
+  overflow: hidden;
 `;
 
 export const TabCustom = styled(Tab)`
   cursor: pointer;
-  padding: .8em 1em;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 3px;
-    transform: scale3d(0, 1, 1);
-    transform-origin: left center;
-    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s;
-    background: #F28724;
-  }
+  padding: .8em .2em;
+  margin-bottom: 0;
+  color: hsl(228,39%,23%);
+  width: 50%;
+  transition: all .5s;
+  font-size: .9em;
   &:focus {
     outline: none;
   }
+  &:hover,
   &.react-tabs__tab--selected {
-    &:after {
-      transform: scale3d(1, 1, 1);
-      transition-delay: 0s;
-    }
-  }
-  ${breakpoint('tablet')`
-    padding: .8em 2em;
-  `}
-`;
-
-export const TabPanelCustom = styled(TabPanel)`
-  
-`;
-
-export const NotePlans = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 991px;
-  margin: 1.8em auto 0;
-`;
-
-export const NoteTitle = styled.h3`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1.1em;
-  color: #000;
-  font-family: Averta;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.4;
-`;
-
-export const NoteList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-top: .8em;
-  margin: 0;
-`;
-
-export const NoteItem = styled.li`
-  display: flex;
-  font-size: .9em;
-  svg {
-    margin-right: .3em;
-    position: relative;
-    top: 6px;
-  }
-  strong {
-    color: #000;
-    font-size: 1em;
+    background: hsl(12,88%,59%);
+    color: #fff;
   }
 `;
+
+export const TabPanelCustom = styled(TabPanel)``;
 
 export const ContentPrices = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border: 2px solid #333;
   max-width: 991px;
   margin: 0 auto;
+  padding: 1rem;
+  justify-content: space-between;
 `;
 
 export const BoxLeft = styled.div`
@@ -136,7 +67,7 @@ export const BoxLeft = styled.div`
   flex-wrap: wrap;
   width: 100%;
   ${breakpoint('tablet')`
-    width: 66.666%;
+    width: 68%;
   `}
 `;
 
@@ -153,68 +84,60 @@ export const BoxMonthly = styled.div`
   `}
 `;
 export const BoxAnnual = styled(BoxMonthly)`
-  border-top: 2px solid #333;
+  background-color: #eeeeee;
   ${breakpoint('sm')`
     width: 50%;
-    border-left: 2px solid #333;
-    border-top: none;
   `}
 `;
 
-export const BoxInstalation = styled.div`
+export const InstallationBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-top: 2px solid #333;
   padding: 1.1em;
+  background-color: cyan;
 `;
 
 export const BoxRight = styled.div`
+  background-color: #eeeeee;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 2.4em 1.5em;
-  border-top: 2px solid #333;
   ${breakpoint('tablet')`
-    border-left: 2px solid #333;
-    border-top: none;
-    width: 33.333%;
+    width: 30%;
   `}
 `;
 
-export const PriceTitle = styled.h2`
-  display: flex;
-  font-size: 1.5em;
-  text-align: center;
-  color: #000;
+export const PriceTitle = styled.h4`
+  color: hsl(228, 39%, 23%);
 `;
 
 export const Price = styled.span`
-  display: flex;
-  font-size: 1.5em;
-  text-align: center;
-  color: #000;
-  padding: 0 10px;
-  ${breakpoint('tablet')`
-    font-size: 1.3em;
-  `}
-  ${breakpoint('desktop')`
-    font-size: 1.5em;
-  `}
+  // display: flex;
+  // font-size: 1.5em;
+  // text-align: center;
+  // color: #000;
+  // padding: 0 10px;
+  // ${breakpoint('tablet')`
+  //   font-size: 1.3em;
+  // `}
+  // ${breakpoint('desktop')`
+  //   font-size: 1.5em;
+  // `}
 `;
 
 export const PriceDescSmall = styled.p`
   display: flex;
-  text-align: center;
   font-size: .9em;
   margin-bottom: .3em;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.5;
+  // justify-content: center;
+//   align-items: center;
+//   line-height: 1.5;
   &.descPlans {
     width: 64%;
     margin: auto;
@@ -245,6 +168,7 @@ export const PriceDescBig = styled.p`
     font-size: 1.2em;
     padding-bottom: 2em;
     padding-top: 0;
+    color: #9B9BA6;
   }
   ${breakpoint('tablet')`
     font-size: .9em;
@@ -262,46 +186,17 @@ export const PriceDescBig = styled.p`
   `}
 `;
 
-export const BtnPurchase = styled.a`
-  display: flex;
-  transition: all .5s;
-  background: #F28724;
-  text-decoration: none;
-  padding: 0.7em 1.8em;
-  width: 80%;
-  margin: 0 auto;
-  font-family: 'Averta';
-  border-radius: 4px;
+export const CallToAction = styled.button`
+  font-family: 'BeVietnamMedium', sans-serif;
+  font-size: 0.8rem;
+  background-color: hsl(12, 88%, 59%);
   color: #fff;
-  justify-content: center;
-  align-items: center;
-  &:hover {
-    transform: scale(1.1);
-  }
-  ${breakpoint('sm')`
-    padding: 0.2em 1.8em;
-    width: initial;
-    margin: 1em auto 0;
-  `}
-`;
-
-export const BtnContact = styled(BtnPurchase)`
-  background: #fff;
-  border: 2px solid #333;
-  padding: 0.7em 1.8em;
-  width: 80%;
-  margin: 0 auto;
-  color: #333;
-  &:hover {
-    border: 2px solid #F28724;
-    background: #F28724;
-    color: #fff;
-  }
-  ${breakpoint('sm')`
-    padding: 0.2em 1.6em;
-    width: initial;
-    margin: 0 0 1em;
-  `}
+  border: 0 none;
+  padding: 0.8rem 1.5rem 1rem 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  line-height: 1rem;
+  outline: 0 none;
 `;
 
 export const LowestPrice = styled.div`
