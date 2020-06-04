@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
 
-export const ContentTerms = styled.section`
+export const ContentPolicy = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,106 +13,102 @@ export const ContentTerms = styled.section`
   }
 `;
 
-export const TitleTerms = styled.h2`
+export const TitlePolicy = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.4em;
-  padding: 1.8em 0 .8em;
+  padding: 1.8em 0 0em;
   text-align: center;
   line-height: 1.4;
   font-weight: 200;
   color: #F28724;
+  width: 100%;
   font-family: 'BeVietnamBold', sans-serif;
   ${breakpoint('desktop')`
     font-size: 1.8em;
   `}
 `;
 
-export const SubtitleTerms = styled.h3`
+export const SubtitlePolicy = styled.h3`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1em;
   line-height: 1.4;
+  padding-bottom: .2em;
+  width: 100%;
   font-family: 'BeVietnamMedium',sans-serif;
 `;
 
-export const TermsDesc = styled.p`
+export const PolicyDesc = styled.p`
   font-size: .9em;
   line-height: 1.3;
   font-family: 'BeVietnamMedium',sans-serif;
 `;
 
-export const ContentDefinitions = styled.div`
+export const BoxPolicy = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: .5em;
+  span {
+    width: 100%;
+    margin-bottom: .5em;
+    font-size: .9em;
+    font-family: 'BeVietnamMedium',sans-serif;
+  }
+`;
+
+export const BoxTitle = styled.h2`
   display: flex;
   flex-wrap: wrap;
   padding-top: .5em;
-`;
-
-export const DefinitionTitle = styled.h3`
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.3em;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: 'BeVietnamMedium',sans-serif;
   color: #000;
-  padding-bottom: .8em;
-  font-family: 'BeVietnamMedium',sans-serif;
+  line-height: 1.4;
 `;
 
-export const DefinitionList = styled.ol`
+export const BoxSubtitle = styled.h3`
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  padding-top: .5em;
+  font-size: .9em;
   width: 100%;
-  padding-bottom: 1em;
-`;
-
-export const DefinitionItem = styled.li`
-  width: 100%;
-`;
-
-export const ItemDescrip = styled.div`
-  width: 100%;
-  font-size: .85em;
   font-family: 'BeVietnamMedium',sans-serif;
-  strong {
-    font-size: 1em;
-  }
-  ul {
-    list-style: disc;
-  }
-  i {
-    color: #000;
-    margin-top: 1em;
-    display: flex;
-  }
+  color: #000;
 `;
 
-export const ContentObject = styled(ContentDefinitions)``;
-
-export const ObjectTitle = styled(DefinitionTitle)``;
-
-export const ObjectDescription = styled.p`
-  width: 100%;
-`;
-
-export const ObjectList = styled(DefinitionList)``;
-
-export const ObjectItem = styled(DefinitionItem)`
-  h4 {
-    font-size: 1.1em;
-    color: #000;
-    font-family: Averta Bold;
-  }
-  ul {
+export const BoxDesc = styled.p`
+  font-size: .9em;
+  line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
+  &.info {
+    width: 100%;
     margin-bottom: 0;
-    padding-top: 1em;
-    &.listNumber {
-      list-style: none;
+    margin-top: 15px;
+  }
+  &.boxSeparate {
+    strong.strongTitle {
+      display: block;
     }
   }
-  span {
-    font-size: 1em;
+`;
+
+export const BoxList = styled.ul`
+  &.styleNone {
+    list-style: none;
   }
+`;
+
+export const BoxItem = styled.li`
+  font-size: .9em;
+  line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const Back = styled.a`
@@ -125,7 +121,7 @@ export const Back = styled.a`
   text-decoration: none;
   border-radius: 4px;
   color: #fff;
-  margin-top: 1em;
+  margin: 1.5em 0 0;
   font-family: 'BeVietnamMedium',sans-serif;
   &:hover {
     background-color: #ffa44f;
