@@ -29,6 +29,7 @@ import {
 } from '../../styles/terminos/styledComponents';
 
 class Terminos extends Component {  
+  
     render() {
       return (
         <I18nextProvider i18n={i18n}>
@@ -36,7 +37,6 @@ class Terminos extends Component {
           <SEO title="Terminos" keywords={['sancrisoft', 'digital-solutions', 'terminos']} description="page Terminos" />
           <PageSizer>
             <ContentTerms>
-              <Back href="/targi">Ir a TARGI</Back>
               <TitleTerms>TÉRMINOS Y CONDICIONES DE USO DE LA PLATAFORMA TARGI DE SANCRISOFT S.A.S.</TitleTerms>
               <SubtitleTerms>
                 POR FAVOR LEA CUIDADOSAMENTE ESTAS CONDICIONES DEL SERVICIO, YA QUE CONTIENEN CONDICIONES DE USO DE LA APP, 
@@ -552,6 +552,8 @@ class Terminos extends Component {
 
                 </ObjectList>
               </ContentObject>
+
+              <Back href="/targi">Volver a Targi</Back>
             </ContentTerms>
           </PageSizer>
         </I18nextProvider>
