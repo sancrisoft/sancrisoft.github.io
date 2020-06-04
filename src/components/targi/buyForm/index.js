@@ -57,39 +57,35 @@ class BuyForm extends Component {
         return re.test(String(email).toLowerCase());
     }
     
-    onChange = (value) => {
+    onChange = () => {
         const comp = this;
         const { name, replyto, phone, country, interest } = this.state;
-    
-        if(value) {
-            console.log('entro aqui para enviar')
-            const opts = {
-                subject: 'Formulario de Interés en Targi', 
-                name,
-                replyto,
-                phone,
-                country,
-                interest,
-            };
-    
-            axios.post(
-                "https://submit-form.com/BXef95h140v6_B6pU1irm", 
-                opts, 
-                {headers: {"Accept": "application/json"}}
-            )
-            .then(function (response) {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'form_submitted',
-                    'category': 'Delivery App',
-                    'subject': name
-                });
-                comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, });
-            })
-            .catch(function (error) {
-                comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops algo ha sucedido enviando tu mensaje', showAlert: true });
+
+        const opts = {
+            Nombre: name,
+            Email: replyto,
+            Teléfono: phone,
+            País: country,
+            Interés: interest,
+        };
+
+        axios.post(
+            "https://submit-form.com/cQZSMszk1LzdI_o9KRAQM", 
+            opts, 
+            {headers: {"Accept": "application/json"}}
+        )
+        .then(function (response) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submitted',
+                'category': 'Delivery App',
+                'Sujeto': name
             });
-        }
+            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, });
+        })
+        .catch(function (error) {
+            comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops algo ha sucedido enviando tu mensaje', showAlert: true });
+        });
     }
 
     render() {
@@ -104,7 +100,7 @@ class BuyForm extends Component {
         const emailValidationMessage = (showErrorEmail && replyto !== '') ? 'Ingresa un correo valido' : 'Por favor ingresa tu correo';
         return (
             <ContentForm>
-                <form id="form"  ref={(form) => this.form = form} className="form contact_form"  method="POST" action="http://formspree.io/info@sancrisoft.com" onSubmit={this.handleSubmit}>
+                <form id="form"  ref={(form) => this.form = form} className="form form_targi"  method="POST" onSubmit={this.handleSubmit}>
                     <Field>
                         <label htmlFor="name">Nombre y Apellido</label>
                         <input className="input-text" type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
