@@ -19,7 +19,8 @@ import {
   BoxSubtitle,
   BoxDesc,
   BoxList,
-  BoxItem
+  BoxItem,
+  Back
 } from '../../styles/privacidad/styledComponents';
 
 class Privacidad extends Component {    
@@ -697,6 +698,7 @@ class Privacidad extends Component {
                       <span>Última Actualización:  1 de Junio de 2020</span>
                     </BoxPolicy>
 
+                    <Back href="/targi">Ir a TARGI</Back>
                   </ContentPolicy>
                 </PageSizer>
             </Layout>

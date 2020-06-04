@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
 
 import {
   BoxProcess,
@@ -10,39 +9,28 @@ import {
   ProcessText
 } from './styledComponents.js'
 
-const theme = {
-  breakpoints: {
-    xs: 480,
-    sm: 568,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1500,
-  }
-};
-const Process = ({ t, data }) => {
-
-  const { process } = data;
-
+const Process = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <BoxProcess>
-        <ProcessList>
-          {
-            process.map(item => {
-              return (
-                <ProcessItem key={item.id}>
-                  <ProcessCircle>{item.id}</ProcessCircle>
-                  <ProcessText>
-                    {t(`caseStudies.cases.deliveryapp.process.${item.id}`)}
-                  </ProcessText>
-                </ProcessItem>
-              )
-            })
-          }
-        </ProcessList>
-      </BoxProcess>
-    </ThemeProvider>
+    <BoxProcess>
+      <ProcessList>
+        <ProcessItem>
+          <ProcessCircle>1</ProcessCircle>
+          <ProcessText>Nos contactas y te suscribes</ProcessText>
+        </ProcessItem>
+        <ProcessItem>
+          <ProcessCircle>2</ProcessCircle>
+          <ProcessText>Nos envías la información de tu negocio</ProcessText>
+        </ProcessItem>
+        <ProcessItem>
+          <ProcessCircle>3</ProcessCircle>
+          <ProcessText>Publicamos tu app en los stores</ProcessText>
+        </ProcessItem>
+        <ProcessItem>
+          <ProcessCircle>4</ProcessCircle>
+          <ProcessText>¡Comienzas a vender!</ProcessText>
+        </ProcessItem>
+      </ProcessList>
+    </BoxProcess>
   )
 }
 ;

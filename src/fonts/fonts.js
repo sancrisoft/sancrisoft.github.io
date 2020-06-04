@@ -26,6 +26,26 @@ import AvertaBoldOTF from './averta/Averta-Bold.otf';
 import AvertaBoldTTF from './averta/Averta-Bold.ttf';
 import AvertaBoldWOFF2 from './averta/Averta-Bold.woff2';
 
+import BeVietnamRegularTTF from './bevietnam/BeVietnam-Regular.ttf';
+import BeVietnamRegularEOT from './bevietnam/BeVietnam-Regular.eot';
+import BeVietnamRegularWOFF from './bevietnam/BeVietnam-Regular.woff';
+import BeVietnamRegularWOFF2 from './bevietnam/BeVietnam-Regular.woff2';
+
+import BeVietnamLightTTF from './bevietnam/BeVietnam-Light.ttf';
+import BeVietnamLightEOT from './bevietnam/BeVietnam-Light.eot';
+import BeVietnamLightWOFF from './bevietnam/BeVietnam-Light.woff';
+import BeVietnamLightWOFF2 from './bevietnam/BeVietnam-Light.woff2';
+
+import BeVietnamMediumTTF from './bevietnam/BeVietnam-Medium.ttf';
+import BeVietnamMediumEOT from './bevietnam/BeVietnam-Medium.eot';
+import BeVietnamMediumWOFF from './bevietnam/BeVietnam-Medium.woff';
+import BeVietnamMediumWOFF2 from './bevietnam/BeVietnam-Medium.woff2';
+
+import BeVietnamBoldTTF from './bevietnam/BeVietnam-Bold.ttf';
+import BeVietnamBoldEOT from './bevietnam/BeVietnam-Bold.eot';
+import BeVietnamBoldWOFF from './bevietnam/BeVietnam-Bold.woff';
+import BeVietnamBoldWOFF2 from './bevietnam/BeVietnam-Bold.woff2';
+
 export default {
     LatoRegularTTF,
     LatoRegularEOT,
@@ -49,5 +69,21 @@ export default {
     AvertaWOFF2,
     AvertaBoldOTF,
     AvertaBoldTTF,
-    AvertaBoldWOFF2
+    AvertaBoldWOFF2,
+    BeVietnamRegularTTF,
+    BeVietnamRegularEOT,
+    BeVietnamRegularWOFF,
+    BeVietnamRegularWOFF2,
+    BeVietnamLightTTF,
+    BeVietnamLightEOT,
+    BeVietnamLightWOFF,
+    BeVietnamLightWOFF2,
+    BeVietnamMediumTTF,
+    BeVietnamMediumEOT,
+    BeVietnamMediumWOFF,
+    BeVietnamMediumWOFF2,
+    BeVietnamBoldTTF,
+    BeVietnamBoldEOT,
+    BeVietnamBoldWOFF,
+    BeVietnamBoldWOFF2,
 };

@@ -5,7 +5,7 @@ export const ContentPolicy = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 1em 1.5em;
   strong {
     color: #000;
@@ -100,4 +100,20 @@ export const BoxList = styled.ul`
 export const BoxItem = styled.li`
   font-size: .9em;
   line-height: 1.3;
+`;
+
+export const Back = styled.a`
+  display: flex;
+  max-width: 220px;
+  background: #F28724;
+  border: 1px solid #F28724;
+  padding: 4px 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  margin: 1.5em 0 1em;
+  &:hover {
+    background-color: #ffa44f;
+  }
 `;

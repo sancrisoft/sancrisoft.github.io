@@ -26,22 +26,22 @@ export const ProcessList = styled.ul`
   &:after {
     content: '';
     position: absolute;
-    background: #000;
+    background: hsl(12, 88%, 59%);
     height: 80%;
-    width: 3px;
+    width: 5px;
     top: 0;
     bottom: 0;
     left: 39px;
     margin: auto;
     z-index: 5;
   }
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     max-width: 700px;
     width: 100%;
     flex-direction: row;
     align-items: flex-start;
     &:after {
-      height: 3px;
+      height: 5px;
       width: 80%;
       top: 35px;
       left: 0;
@@ -49,7 +49,7 @@ export const ProcessList = styled.ul`
       bottom: initial;
     }
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('desktop')`
     max-width: 800px;
   `}
 `;
@@ -61,7 +61,7 @@ export const ProcessItem = styled.li`
   margin-bottom: 2em;
   position: relative;
   z-index: 9;
-  ${breakpoint('md')`
+  ${breakpoint('tablet')`
     margin-bottom: 0;
     flex-direction: column;
   `}
@@ -72,11 +72,12 @@ export const ProcessCircle = styled.span`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 3px solid #000;
   font-size: 2em;
   width: 70px;
   height: 70px;
-  background: #fff;
+  background: hsl(12, 88%, 59%);
+  color: #fff;
+  padding-bottom: 5px;
 `;
 
 export const ProcessText = styled.p`
@@ -87,10 +88,11 @@ export const ProcessText = styled.p`
   padding-left: 1em;
   width: 150px;
   margin: 0 auto;
-  ${breakpoint('md')`
+  color: hsl(228, 39%, 23%);
+  ${breakpoint('tablet')`
     text-align: center;
     padding-left: 0;
     top: 1em;
-    font-size: .8em;
+    font-size: 1rem;
   `}
 `;

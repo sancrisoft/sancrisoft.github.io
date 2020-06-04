@@ -23,7 +23,8 @@ import {
   ObjectTitle,
   ObjectDescription,
   ObjectList,
-  ObjectItem
+  ObjectItem,
+  Back
 } from '../../styles/terminos/styledComponents';
 
 class Terminos extends Component {    
@@ -549,6 +550,8 @@ class Terminos extends Component {
 
                       </ObjectList>
                     </ContentObject>
+
+                    <Back href="/targi">Ir a TARGI</Back>
                   </ContentTerms>
                 </PageSizer>
             </Layout>

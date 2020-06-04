@@ -5,7 +5,7 @@ export const ContentTerms = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 1em 1.5em;
   strong {
     color: #000;
@@ -108,5 +108,21 @@ export const ObjectItem = styled(DefinitionItem)`
   }
   span {
     font-size: 1em;
+  }
+`;
+
+export const Back = styled.a`
+  display: flex;
+  max-width: 220px;
+  background: #F28724;
+  border: 1px solid #F28724;
+  padding: 4px 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 1em;
+  &:hover {
+    background-color: #ffa44f;
   }
 `;
