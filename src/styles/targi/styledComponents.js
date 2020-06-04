@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
 import BgForm from '../../images/targi/form/pattern.svg';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 /*
 * Primary Colors 
@@ -84,7 +85,7 @@ export const Hero = styled.section`
   `}
 `
 
-export const CallToAction = styled.button`
+export const CallToAction = styled(AnchorLink)`
   font-family: 'BeVietnamMedium', sans-serif;
   font-size: 0.8rem;
   background-color: hsl(12, 88%, 59%);
@@ -95,6 +96,7 @@ export const CallToAction = styled.button`
   cursor: pointer;
   line-height: 1rem;
   outline: 0 none;
+  text-decoration: none;
 `;
 
 export const Section = styled.section`

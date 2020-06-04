@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export const BoxCase = styled.div`
   display: flex;
@@ -61,7 +62,7 @@ export const PageSizer = styled.div`
     `}
 `;
 
-export const CallToAction = styled.a`
+export const CallToAction = styled(AnchorLink)`
   font-family: 'BeVietnamMedium', sans-serif;
   font-size: 0.8rem;
   background-color: hsl(12, 88%, 59%);
