@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
+import BgForm from '../../images/targi/form/pattern.svg';
 
 /*
 * Primary Colors 
@@ -152,6 +153,53 @@ export const HelpSection = styled(Section)`
 
 export const BuySection = styled(Section)`
   background-color: hsl(12, 88%, 59%);
+  position: relative;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    background: url(${props => props.bg}) top no-repeat;
+    background-size: contain;
+    width: 62%;
+    height: 150%;
+    z-index: 1;
+    opacity: .1;
+  }
+  &:before {
+    top: -4%;
+    left: -23%;
+  }
+  &:after {
+    bottom: -75%;
+    right: -35%;
+  }
+  ${breakpoint('tablet')`
+    &:after  {
+      bottom: 66%;
+      right: -44%;
+    }
+  `}
+  ${breakpoint('desktop')`
+    &:before,
+    &:after {
+      width: 56%;
+      height: 220%;
+    }
+    &:before  {
+      top: -20%;
+      left: -5%;
+    }
+    &:after  {
+      bottom: 20%;
+      right: -39%;
+    }
+  `}
+  .contentForm {
+    position: relative;
+    z-index: 5;
+  }
   h2{
     color: #ffffff;
     font-size: 2rem;
@@ -276,17 +324,11 @@ export const Footer  = styled.footer`
 `;
 
 
-
-
-
-
-
 export const SectionForm = styled.section`
   width: 100%;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  background: #ececec;
   margin-top: 2em;
   h3{
     ${breakpoint('mobile')`
@@ -298,100 +340,6 @@ export const SectionForm = styled.section`
       line-height: 1.3;
     `}
   }
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1.5em 2em;
-    margin-bottom: 0;
-    input {
-      margin: 5px 0px;
-      border-radius: 3px;
-      border: 1px solid #e2e2e2;
-      padding: 8px;
-      padding-left: 10px;
-      font-size: 0.85rem;
-      &:focus{
-        border: 1px solid #f48600;
-        outline: 0;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 197, 118, 0.3);
-      }
-    }
-    textarea {
-      min-height: 150px;
-      resize: none;
-    }
-    
-    label.error {
-      font-weight: normal;
-      color: #d61400;
-      font-size: 14px;
-      font-style: italic;
-      position: relative;
-      top: -4px;
-    }  
-    ${breakpoint('tablet')`
-      width: 70%;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      border-right: 2px solid #333;
-    `}
-  }
-`;
-
-export const ContentForm = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-`;
-
-export const Field = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  .notePhone {
-    font-size: .7em;
-  }
-  .wrapper_button {
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
-    ${breakpoint('tablet')`
-      justify-content: flex-start;
-      padding-top: 0;
-    `}
-    .input-btn {
-      width: 100%;
-      background: #f48600;
-      color: #fff;
-      font-size: 0.9rem;
-      line-height: 0.8rem;
-      text-transform: capitalize;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      border: none;
-      transition: all .5s;
-      height: 42px;
-      &:hover {
-        border-color: #F28724;
-        background: #FFA449;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-  ${breakpoint('tablet')`
-    width: 48%;
-    input {
-      width: 100%;
-    }
-  `}
 `;
 
 export const ContentWhatsapp  = styled.div`
@@ -425,6 +373,7 @@ export const WhatsappText  = styled.p`
   text-align: center;
   font-size: .9em;
   margin-bottom: 1.1em;
+  color: #fff;
   ${breakpoint('tablet')`
     line-height: 1.4;
   `}
@@ -439,7 +388,7 @@ export const WhatsappButton  = styled.a`
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  background: #f48600;
+  background: #1e1e26;
   color: #fff;
   font-size: 0.9rem;
   line-height: 0.8rem;
@@ -450,8 +399,9 @@ export const WhatsappButton  = styled.a`
   transition: all .5s;
   height: 42px;
   text-decoration: none;
+  border-radius: 1.5rem;
   &:hover {
-    background: #FFA449;
+    background: #3e3e48;
   }
   &:focus {
     outline: none;
