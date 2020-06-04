@@ -23,6 +23,8 @@ export const TitlePolicy = styled.h2`
   line-height: 1.4;
   font-weight: 200;
   color: #F28724;
+  width: 100%;
+  font-family: 'BeVietnamBold', sans-serif;
   ${breakpoint('desktop')`
     font-size: 1.8em;
   `}
@@ -35,11 +37,14 @@ export const SubtitlePolicy = styled.h3`
   font-size: 1.1em;
   line-height: 1.4;
   padding-bottom: .2em;
+  width: 100%;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const PolicyDesc = styled.p`
   font-size: .9em;
   line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const BoxPolicy = styled.div`
@@ -50,6 +55,8 @@ export const BoxPolicy = styled.div`
   span {
     width: 100%;
     margin-bottom: .5em;
+    font-size: .9em;
+    font-family: 'BeVietnamMedium',sans-serif;
   }
 `;
 
@@ -60,7 +67,7 @@ export const BoxTitle = styled.h2`
   font-size: 1em;
   text-transform: uppercase;
   width: 100%;
-  font-family: Averta Bold;
+  font-family: 'BeVietnamMedium',sans-serif;
   color: #000;
   line-height: 1.4;
 `;
@@ -72,13 +79,14 @@ export const BoxSubtitle = styled.h3`
   padding-top: .5em;
   font-size: .9em;
   width: 100%;
-  font-family: Averta Bold;
+  font-family: 'BeVietnamMedium',sans-serif;
   color: #000;
 `;
 
 export const BoxDesc = styled.p`
   font-size: .9em;
   line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
   &.info {
     width: 100%;
     margin-bottom: 0;
@@ -100,6 +108,7 @@ export const BoxList = styled.ul`
 export const BoxItem = styled.li`
   font-size: .9em;
   line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const Back = styled.a`
@@ -112,7 +121,8 @@ export const Back = styled.a`
   text-decoration: none;
   border-radius: 4px;
   color: #fff;
-  margin: 1.5em 0 1em;
+  margin: 1.5em 0 0;
+  font-family: 'BeVietnamMedium',sans-serif;
   &:hover {
     background-color: #ffa44f;
   }

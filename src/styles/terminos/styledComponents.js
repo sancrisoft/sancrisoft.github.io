@@ -23,6 +23,7 @@ export const TitleTerms = styled.h2`
   line-height: 1.4;
   font-weight: 200;
   color: #F28724;
+  font-family: 'BeVietnamBold', sans-serif;
   ${breakpoint('desktop')`
     font-size: 1.8em;
   `}
@@ -34,11 +35,13 @@ export const SubtitleTerms = styled.h3`
   align-items: center;
   font-size: 1.1em;
   line-height: 1.4;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const TermsDesc = styled.p`
   font-size: .9em;
   line-height: 1.3;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const ContentDefinitions = styled.div`
@@ -53,7 +56,7 @@ export const DefinitionTitle = styled.h3`
   font-size: 1.3em;
   color: #000;
   padding-bottom: .8em;
-  font-family: Averta Bold;
+  font-family: 'BeVietnamMedium',sans-serif;
 `;
 
 export const DefinitionList = styled.ol`
@@ -70,6 +73,7 @@ export const DefinitionItem = styled.li`
 export const ItemDescrip = styled.div`
   width: 100%;
   font-size: .85em;
+  font-family: 'BeVietnamMedium',sans-serif;
   strong {
     font-size: 1em;
   }
@@ -121,7 +125,8 @@ export const Back = styled.a`
   text-decoration: none;
   border-radius: 4px;
   color: #fff;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  font-family: 'BeVietnamMedium',sans-serif;
   &:hover {
     background-color: #ffa44f;
   }
