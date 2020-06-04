@@ -1,10 +1,7 @@
 import React from 'react'
 import Carousel from '../../carousel';
 
-import Meat1 from '../../../images/targi/meat/meat-1.png'
-import Fish1 from '../../../images/targi/fish/fish-1.png'
-import Veg1 from '../../../images/targi/veg/veg-1.png'
-import Frame from '../../../images/targi/frame.png'
+import { dataCarousel } from './data'
 
 import {
   BoxCase,
@@ -15,45 +12,6 @@ import {
   BackgroundItem,
   CarouselItem
 } from './styledComponents.js'
-
-const dataCarousel = {
-  meat: [
-    {
-      id: 1,
-      urlImage: Meat1,
-      name: "Meat 1"
-    },
-    {
-      id: 2,
-      urlImage: Frame,
-      name: "Frame"
-    }
-  ],
-  fish: [
-    {
-      id: 1,
-      urlImage: Fish1,
-      name: "Fish 1"
-    },
-    {
-      id: 2,
-      urlImage: Frame,
-      name: "Frame"
-    }
-  ],
-  veg: [
-    {
-      id: 1,
-      urlImage: Veg1,
-      name: "Veg 1"
-    },
-    {
-      id: 2,
-      urlImage: Frame,
-      name: "Frame"
-    }
-  ],
-}
 
 const renderImagesCarousel = (data) => {
   return data.map((carouselItem) => {
