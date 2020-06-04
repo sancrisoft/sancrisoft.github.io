@@ -43,6 +43,7 @@ import {
     BenefitsSection,
     Benefits,
     BenefitCard,
+    PriceNotes,
     HelpSection,
     BuySection,
     SectionForm,
@@ -171,6 +172,13 @@ class IndexPage extends Component {
                     <h2>Planes y Precios</h2>
                     <h3>Targi está pensado para PyMEs, con precios que negocios como el tuyo pueden asumir.</h3>
                     <PlansPrices />
+                    <PriceNotes>
+                        <p>Además ten en cuenta que....</p>
+                        <ul>
+                            <li>La mensualidad es fija, no importa cuántos pedidos recibas ni el valor de los mismos.</li>
+                            <li><strong>No hay cláusula de permanencia</strong>. Si por alguna razón, deseas retirarte, lo puedes hacer cuando quieras, sin penalidad alguna.</li>
+                        </ul>
+                    </PriceNotes>
                 </Section>
 
                 <Section>

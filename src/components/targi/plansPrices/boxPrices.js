@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Icons from '../../icons'
 
 import {
   CallToAction,
@@ -45,12 +43,10 @@ const BoxPrices = ({
         </CustomSolutions>
       </Plans>
       <SetupCost>
-        <p>Se requiere costo de instalación de {currency} {installationCost} + IVA. Un único pago para crear el app con tu marca.</p>
+        <p>Se requiere costo de instalación de {currency} {installationCost} + IVA.<br />Un único pago para crear el app con tu marca.</p>
       </SetupCost>
     </React.Fragment>
   )
 }
-
-// TODO: Add prop types here
 
 export default BoxPrices;

@@ -290,6 +290,22 @@ export const BenefitCard = styled.div`
   `}
 `;
 
+export const PriceNotes = styled.div`
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  p {
+    margin-bottom: 0.5rem;
+  }
+  li {
+    margin-bottom: 0.2rem;
+  }
+  strong {
+    font-family: 'BeVietnamBold', sans-serif;
+  }
+`;
+
 export const Footer  = styled.footer`
   background-color: #1e1e26;
   text-align: center;
