@@ -62,6 +62,7 @@ class BuyForm extends Component {
         const { name, replyto, phone, country, interest } = this.state;
     
         if(value) {
+            console.log('entro aqui para enviar')
             const opts = {
                 subject: 'Formulario de Interés en Targi', 
                 name,

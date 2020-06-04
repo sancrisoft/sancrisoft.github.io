@@ -31,6 +31,7 @@ export const ContentForm = styled.div`
     label {
       text-align: left;
       padding-left: 20px;
+      color: #fff;
     }
     
     label.error {
@@ -62,6 +63,7 @@ export const Field = styled.div`
     font-size: .7em;
     text-align: left;
     padding-left: 20px;
+    color: #fff;
   }
   .wrapper_button {
     display: flex;
