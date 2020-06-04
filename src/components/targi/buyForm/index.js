@@ -20,7 +20,7 @@ class BuyForm extends Component {
         alertMessage: '',
         titleAlert: 'Message',
         sortedCases: [],
-     loading: false,
+        loading: false,
     }
 
     // Validations Form
