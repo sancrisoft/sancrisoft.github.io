@@ -24,11 +24,13 @@ import Benefit5Image from '../../images/targi/benefits/2-5-comment.svg'
 import Benefit6Image from '../../images/targi/benefits/2-6-db.svg'
 
 import HelpImage from '../../images/targi/help.svg'
+import BgForm from '../../images/targi/form/pattern.svg';
 
 import Process from '../../components/targi/process'
 import BestExperience from '../../components/targi/bestExperience'
 import PlansPrices from '../../components/targi/plansPrices'
 import BuyForm from '../../components/targi/buyForm'
+import Icons from '../../components/icons'
 
 import {
     GlobalContainer,
@@ -43,6 +45,11 @@ import {
     BenefitCard,
     HelpSection,
     BuySection,
+    SectionForm,
+    ContentWhatsapp,
+    WhatsappLogo,
+    WhatsappText,
+    WhatsappButton,
     Footer,
   } from '../../styles/targi/styledComponents';
 
@@ -172,12 +179,28 @@ class IndexPage extends Component {
                     <Process />
                 </Section>
 
-                <BuySection>
-                    <PageSizer>
+                <BuySection bg={BgForm}>
+                    <PageSizer className="contentForm">
                         <h2>¿Listo para Comprar?</h2>
                         <h3>¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!</h3>
-                        <BuyForm />
-                        { /* TODO: Build whatsapp section here */}
+                        <SectionForm>
+                            <BuyForm />
+                            <ContentWhatsapp>
+                                <WhatsappLogo>
+                                    <Icons
+                                        height={60}
+                                        width={60}
+                                        iconName={'whatsapp'}
+                                        backgroundColor="#fff"
+                                    />
+                                </WhatsappLogo>
+                                <WhatsappText>Prefieres comunicarte por Whatsapp?</WhatsappText>
+                                <WhatsappButton 
+                                    href="https://api.whatsapp.com/send?phone=NUMBER&text=Bienvenido%20a%20Sancrisoft%20en%20un%20momento%20te%20atenderemos">
+                                    Escríbenos
+                                </WhatsappButton>
+                            </ContentWhatsapp>
+                        </SectionForm>
                     </PageSizer>
                 </BuySection>
                 <Footer>
