@@ -22,7 +22,7 @@ export const TitlePolicy = styled.h2`
   text-align: center;
   line-height: 1.4;
   font-weight: 200;
-  color: #F28724;
+  color: hsl(12,88%,59%);
   width: 100%;
   font-family: 'BeVietnamBold', sans-serif;
   ${breakpoint('desktop')`
@@ -56,6 +56,10 @@ export const BoxPolicy = styled.div`
     width: 100%;
     margin-bottom: .5em;
     font-size: .9em;
+    font-family: 'BeVietnamMedium',sans-serif;
+  }
+  a {
+    color: hsl(12,88%,59%);
     font-family: 'BeVietnamMedium',sans-serif;
   }
 `;
@@ -114,16 +118,17 @@ export const BoxItem = styled.li`
 export const Back = styled.a`
   display: flex;
   max-width: 220px;
-  background: #F28724;
-  border: 1px solid #F28724;
-  padding: 4px 16px;
+  background: hsl(12,88%,59%);
+  border: 1px solid hsl(12,88%,59%);
+  padding: 5px 16px;
   transition: all 0.3s ease;
   text-decoration: none;
   border-radius: 4px;
   color: #fff;
-  margin: 1.5em 0 0;
+  margin: 1.5em 0;
   font-family: 'BeVietnamMedium',sans-serif;
+  border-radius: 1.5rem;
   &:hover {
-    background-color: #ffa44f;
+    background-color: hsl(12,87%,64%);
   }
 `;

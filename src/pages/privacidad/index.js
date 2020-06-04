@@ -34,7 +34,6 @@ class Privacidad extends Component {
           <SEO title="Privacidad" keywords={['sancrisoft', 'digital-solutions', 'privacidad']} description="page Privacidad" />
           <PageSizer>
             <ContentPolicy>
-              <Back href="/targi">Ir a TARGI</Back>
               <TitlePolicy>Políticas de Privacidad</TitlePolicy>
               <SubtitlePolicy>ASPECTOS GENERALES</SubtitlePolicy>
               <PolicyDesc>
@@ -82,7 +81,7 @@ class Privacidad extends Component {
                   <BoxItem>Adoptar buenas prácticas, referentes a los cumplimientos de los requisitos legales, en lo concerniente a la protección de los datos 
                     y privacidad de la información personal.</BoxItem>
                   <BoxItem>Dar cumplimiento de los derechos contenidos en el <strong>Reglamento General de Protección de Datos Personales Europeo</strong>, los cuales corresponde a 
-                    <strong>SANCRISOFT</strong>, a los Usuarios, Proveedores, Terceros y contactos web en relación con el tratamiento de los datos personales.</BoxItem>
+                     <strong> SANCRISOFT</strong>, a los Usuarios, Proveedores, Terceros y contactos web en relación con el tratamiento de los datos personales.</BoxItem>
                 </BoxList>
               </BoxPolicy>
 
@@ -702,6 +701,7 @@ class Privacidad extends Component {
                 <span>Última Actualización:  1 de Junio de 2020</span>
               </BoxPolicy>
 
+              <Back href="/targi">Volver a Targi</Back>
             </ContentPolicy>
           </PageSizer>
         </I18nextProvider>
