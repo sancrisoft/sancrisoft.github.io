@@ -52,138 +52,13 @@ export const TabCustom = styled(Tab)`
 
 export const TabPanelCustom = styled(TabPanel)``;
 
-export const ContentPrices = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 991px;
-  margin: 0 auto;
-  padding: 1rem;
-  justify-content: space-between;
-`;
-
-export const BoxLeft = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  ${breakpoint('tablet')`
-    width: 68%;
-  `}
-`;
-
-export const BoxMonthly = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  padding: 2.5em 1.5em 3.2em;
-  position: relative;
-  ${breakpoint('sm')`
-    width: 50%;
-  `}
-`;
-export const BoxAnnual = styled(BoxMonthly)`
-  background-color: #eeeeee;
-  ${breakpoint('sm')`
-    width: 50%;
-  `}
-`;
-
-export const InstallationBox = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1.1em;
-  background-color: cyan;
-`;
-
-export const BoxRight = styled.div`
-  background-color: #eeeeee;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 2.4em 1.5em;
-  ${breakpoint('tablet')`
-    width: 30%;
-  `}
-`;
-
-export const PriceTitle = styled.h4`
-  color: hsl(228, 39%, 23%);
-`;
-
-export const Price = styled.span`
-  // display: flex;
-  // font-size: 1.5em;
-  // text-align: center;
-  // color: #000;
-  // padding: 0 10px;
-  // ${breakpoint('tablet')`
-  //   font-size: 1.3em;
-  // `}
-  // ${breakpoint('desktop')`
-  //   font-size: 1.5em;
-  // `}
-`;
-
-export const PriceDescSmall = styled.p`
-  display: flex;
-  font-size: .9em;
-  margin-bottom: .3em;
-  // justify-content: center;
-//   align-items: center;
-//   line-height: 1.5;
-  &.descPlans {
-    width: 64%;
-    margin: auto;
-    min-height: 55px;
-  }
-  ${breakpoint('tablet')`
-    font-size: .8em;
-  `}
-  ${breakpoint('desktop')`
-    font-size: .9em;
-  `}
-`;
-
-export const PriceDescBig = styled.p`
-  display: flex;
-  text-align: center;
-  padding-top: 1em;
-  font-size: 1.1em;
-  margin-bottom: 0;
-  padding-bottom: .8em;
-  &.descPrice {
-    max-width: 230px;
-    margin: auto;
-  }
-  &.descSolution {
-    width: 90%;
-    margin: auto;
-    font-size: 1.2em;
-    padding-bottom: 2em;
-    padding-top: 0;
-    color: #9B9BA6;
-  }
-  ${breakpoint('tablet')`
-    font-size: .9em;
-    &.descSolution {
-      font-size: 1em;
-    }
-  `}
-  ${breakpoint('desktop')`
-    font-size: 1.1em;
-    &.descSolution {
-      font-size: 1.2em;
-      width: 80%;
-      padding-bottom: 0;
-    }
-  `}
+export const PageSizer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1em;
+    ${breakpoint('tablet')`
+      max-width: 900px;
+    `}
 `;
 
 export const CallToAction = styled.button`
@@ -197,17 +72,108 @@ export const CallToAction = styled.button`
   cursor: pointer;
   line-height: 1rem;
   outline: 0 none;
+  width: 160px;
 `;
 
-export const LowestPrice = styled.div`
-  display: flex;
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  left: 0;
-  justify-content: center;
-  svg {
-    margin-right: .2em;
+export const CallToActionWhite = styled(CallToAction)`
+  color: hsl(12, 88%, 59%);
+  background-color: #ffffff;
+`;
+
+export const CallToActionSecondary = styled(CallToAction)`
+  border: solid 3px hsl(12, 88%, 59%);
+  background-color: transparent;
+  color: hsl(12, 88%, 59%);
+`;
+
+export const Plans = styled.div`
+  ${breakpoint('tablet')`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  `}
+`;
+
+export const PlanPanel = styled.div`
+  background-color: #eeeeee;
+  padding: 2rem 0.5rem 6rem 0.5rem;
+  max-width: 300px;
+  position: relative;
+  margin: 0 auto 0 auto;
+  h4 {
+    color: hsl(228,39%,23%);
+  }
+  ${breakpoint('tablet')`
+    max-width: none;
+    width: 33%;
+    ${CallToAction} {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -80px;
+    }
+  `}
+`;
+
+export const PlanPanelYear = styled.div`
+  background-color: hsl(228,39%,23%);
+  color: #ffffff;
+  padding: 1rem 0.5rem;
+  max-width: 300px;
+  outline: solid 30px hsl(228,39%,23%);
+  z-index: 99;
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  ${breakpoint('tablet')`
+    max-width: none;
+    width: calc(33% - 50px);
+    ${CallToActionWhite} {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -80px;
+    }
+  `}
+`;
+
+export const CustomSolutions = styled.div`
+  background-color: #eeeeee;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  max-width: 300px;
+  position: relative;
+  margin: 0 auto;
+  h4 {
+    color: hsl(228,39%,23%);
+  }
+  p {
+    margin-top: 2rem;
+  }
+  ${breakpoint('tablet')`
+    max-width: none;
+    width: 33%;
+    padding-top: 2rem;
+    ${CallToAction} {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -80px;
+    }
+  `}
+`;
+
+export const Price = styled.p`
+  margin-top: 2rem;
+  padding: 0 1rem;
+  span.currency{
+    
+  }
+  span.amount{
+    font-family: 'BeVietnamBold', sans-serif;
+    font-size: 2rem;
   }
 `;
 
+export const SetupCost = styled.div`
+  margin-top: 2rem;
+`;

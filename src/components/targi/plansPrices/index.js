@@ -7,6 +7,7 @@ import {
   TabListCustom,
   TabCustom,
   TabPanelCustom,
+  PageSizer,
 } from './styledComponents.js'
 
 const PlansAndPrices = () => {
@@ -20,25 +21,29 @@ const PlansAndPrices = () => {
           </TabListCustom>
       
           <TabPanelCustom>
-            <BoxPrices 
-              currency="COP"
-              priceMonthly="349.900"
-              priceAnnual="299.900"
-              priceAnnualTotal="3.598.800"
-              installationCost="1.800.000"
-              onChangeInterest={() => { console.log('interest'); }}
-            />
+            <PageSizer>
+              <BoxPrices 
+                currency="COP"
+                priceMonthly="349.900"
+                priceAnnual="299.900"
+                priceAnnualTotal="3.598.800"
+                installationCost="1.800.000"
+                onChangeInterest={() => { console.log('interest'); }}
+              />
+            </PageSizer>
           </TabPanelCustom>
 
           <TabPanelCustom>
-            <BoxPrices 
-              currency="USD"
-              priceMonthly="80"
-              priceAnnual="66.66"
-              priceAnnualTotal="800"
-              installationCost="500"
-              onChangeInterest={() => { console.log('interest'); }}
-            />
+            <PageSizer>
+              <BoxPrices 
+                currency="USD"
+                priceMonthly="80"
+                priceAnnual="66.66"
+                priceAnnualTotal="800"
+                installationCost="500"
+                onChangeInterest={() => { console.log('interest'); }}
+              />
+            </PageSizer>
           </TabPanelCustom>
         </ContentTabs>
       </BoxCase>

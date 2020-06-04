@@ -3,19 +3,15 @@ import PropTypes from 'prop-types'
 import Icons from '../../icons'
 
 import {
-  ContentPrices,
-  BoxLeft,
-  BoxMonthly,
-  BoxAnnual,
-  InstallationBox,
-  BoxRight,
-  PriceTitle,
-  PriceDescBig,
-  PriceDescSmall,
-  Price,
   CallToAction,
-  BtnContact,
-  LowestPrice
+  CallToActionWhite,
+  CallToActionSecondary,
+  Plans,
+  CustomSolutions,
+  PlanPanel,
+  PlanPanelYear,
+  Price,
+  SetupCost,
 } from './styledComponents.js'
 
 const BoxPrices = ({ 
@@ -28,52 +24,30 @@ const BoxPrices = ({
   }) => {
 
   return (
-    <ContentPrices>
-      <BoxLeft>
-        <BoxMonthly>
-          <PriceTitle>Plan Mensual</PriceTitle>
-          <PriceDescBig className="descPrice">{currency} 
-            <Price> {priceMonthly}</Price>/mes + IVA
-          </PriceDescBig>
-          <PriceDescSmall className="descPlans">Paga mes a mes</PriceDescSmall>
+    <React.Fragment>
+      <Plans>
+        <PlanPanel>
+          <h4>Plan Mensual</h4>
+          <Price><span className="currency">{currency}</span> <span className="amount">{priceMonthly}</span><br />/mes + IVA</Price>
+          <p>Pagas mes a mes</p>
           <CallToAction href="/">Comprar</CallToAction>
-        </BoxMonthly>
-
-        <BoxAnnual>
-          <PriceTitle>Plan Anual</PriceTitle>
-          <PriceDescBig className="descPrice">{currency}
-            <Price> {priceAnnual}</Price>/mes + IVA
-          </PriceDescBig>
-          <PriceDescSmall className="descPlans">
-            Un solo pago anual de {`${currency} ${priceAnnualTotal}`} + IVA
-          </PriceDescSmall>
-          <CallToAction href="/">Comprar</CallToAction>
-          <LowestPrice>
-            <Icons
-              backgroundColor="#000"
-              height={26}
-              width={26}
-              iconName={'sale'}
-            />
-            <PriceDescSmall>Precio más bajo</PriceDescSmall>
-          </LowestPrice>
-        </BoxAnnual>
-
-        <InstallationBox>
-          <PriceTitle>Costo de Instalación</PriceTitle>
-          <PriceDescBig>{currency} <Price> {installationCost}</Price>+ IVA</PriceDescBig>
-          <PriceDescSmall>Un único pago para crear el app con tu marca.</PriceDescSmall>
-        </InstallationBox>
-      </BoxLeft>
-
-      <BoxRight>
-        <PriceTitle>Solución Personalizada</PriceTitle>
-        <PriceDescBig className="descSolution">
-          Te gusta la idea de un app pero tu negocio necesita una solución diferente, que se adapte mejor a sus necesidades?
-        </PriceDescBig>
-        <CallToAction href="#form" onClick={() =>{ onChangeInterest('Solución Personalizada') }}>Contáctanos</CallToAction>
-      </BoxRight>
-    </ContentPrices>
+        </PlanPanel>
+        <PlanPanelYear>
+          <h4>Plan Anual</h4>
+          <Price><span className="currency">{currency}</span> <span className="amount">{priceAnnual}</span><br />/mes + IVA</Price>
+          <p>Un solo pago anual de {currency} {priceAnnualTotal} + IVA</p>
+          <CallToActionWhite href="/">Comprar</CallToActionWhite>
+        </PlanPanelYear>
+        <CustomSolutions>
+          <h4>Solución Personalizada</h4>
+          <p>¿Te agrada la idea de un app pero tu negocio necesita una solución diferente para sus necesidades?</p>
+          <CallToActionSecondary href="/">Contáctanos</CallToActionSecondary>
+        </CustomSolutions>
+      </Plans>
+      <SetupCost>
+        <p>Se requiere costo de instalación de {currency} {installationCost} + IVA. Un único pago para crear el app con tu marca.</p>
+      </SetupCost>
+    </React.Fragment>
   )
 }
 
