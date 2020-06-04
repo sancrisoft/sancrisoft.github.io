@@ -36,7 +36,7 @@ export const ContentForm = styled.div`
     
     label.error {
       font-weight: normal;
-      color: #d61400;
+      color: #fff;
       font-size: 14px;
       font-style: italic;
       position: relative;
