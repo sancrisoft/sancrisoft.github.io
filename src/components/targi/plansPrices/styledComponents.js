@@ -61,7 +61,7 @@ export const PageSizer = styled.div`
     `}
 `;
 
-export const CallToAction = styled.button`
+export const CallToAction = styled.a`
   font-family: 'BeVietnamMedium', sans-serif;
   font-size: 0.8rem;
   background-color: hsl(12, 88%, 59%);
@@ -73,6 +73,7 @@ export const CallToAction = styled.button`
   line-height: 1rem;
   outline: 0 none;
   width: 160px;
+  text-decoration: none;
 `;
 
 export const CallToActionWhite = styled(CallToAction)`

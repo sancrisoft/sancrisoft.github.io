@@ -10,11 +10,11 @@ import {
   PageSizer,
 } from './styledComponents.js'
 
-const PlansAndPrices = () => {
+const PlansAndPrices = ({onChangePlace, onChangeInterest}) => {
   return (
       <BoxCase>
         <h5>¿Dónde está tu negocio?</h5>
-        <ContentTabs  onSelect={index => {}}>
+        <ContentTabs  onSelect={index => onChangePlace(!index ? "Colombia" : "Otro País") }>
           <TabListCustom>
             <TabCustom>Colombia</TabCustom>
             <TabCustom>Otro País</TabCustom>
@@ -28,7 +28,7 @@ const PlansAndPrices = () => {
                 priceAnnual="299.900"
                 priceAnnualTotal="3.598.800"
                 installationCost="1.800.000"
-                onChangeInterest={() => { console.log('interest'); }}
+                onChangeInterest={onChangeInterest}
               />
             </PageSizer>
           </TabPanelCustom>
@@ -41,7 +41,7 @@ const PlansAndPrices = () => {
                 priceAnnual="66.66"
                 priceAnnualTotal="800"
                 installationCost="500"
-                onChangeInterest={() => { console.log('interest'); }}
+                onChangeInterest={onChangeInterest}
               />
             </PageSizer>
           </TabPanelCustom>
