@@ -55,7 +55,16 @@ import {
   } from '../../styles/targi/styledComponents';
 
 class IndexPage extends Component {
+    state = {
+        country: 'Colombia',
+        interest: 'Targi',
+    }
     render() {
+        const {
+            interest,
+            country
+        } = this.state;
+
         return (
         <I18nextProvider i18n={i18n}>
             <GlobalFonts />
@@ -171,7 +180,10 @@ class IndexPage extends Component {
                 <Section>
                     <h2>Planes y Precios</h2>
                     <h3>Targi está pensado para PyMEs, con precios que negocios como el tuyo pueden asumir.</h3>
-                    <PlansPrices />
+                    <PlansPrices
+                        onChangePlace={(index) => this.setState({ country: index })}
+                        onChangeInterest={(index) => this.setState({ interest: index })}
+                    />
                     <PriceNotes>
                         <p>Además ten en cuenta que....</p>
                         <ul>
@@ -187,12 +199,16 @@ class IndexPage extends Component {
                     <Process />
                 </Section>
 
-                <BuySection bg={BgForm}>
+                <BuySection bg={BgForm} id="form">
                     <PageSizer className="contentForm">
                         <h2>¿Listo para Comprar?</h2>
                         <h3>¿Necesitas un demo? ¿Tienes alguna pregunta? ¡Hablemos!</h3>
                         <SectionForm>
-                            <BuyForm />
+                            <BuyForm 
+                                interest={interest}
+                                country={country}
+                                onChange={(interestIndex, countryIndex) => this.setState({ interest: interestIndex, country: countryIndex })}
+                            />
                             <ContentWhatsapp>
                                 <WhatsappLogo>
                                     <Icons

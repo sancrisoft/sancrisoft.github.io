@@ -8,12 +8,13 @@ import {
 } from './styledComponents'
 
 class BuyForm extends Component {
-      state = {
+
+    
+    
+    state = {
         name: '',
         replyto: '',
         phone: '',
-        country: 'Colombia',
-        interest: 'Targi',
         send: false,
         showAlert: false,
         typeAlert: 'success',
@@ -60,15 +61,18 @@ class BuyForm extends Component {
     
     onChange = () => {
         const comp = this;
-        const { name, replyto, phone, country, interest, loading } = this.state;
+        const { name, replyto, phone, loading } = this.state;
+        const { country, interest, onChange } = this.props;
+
         this.setState({ loading: true });
 
+        // These keys have accent mark because those will be used as labels in the email
         const opts = {
-            Nombre: name,
-            Email: replyto,
-            Teléfono: phone,
-            País: country,
-            Interés: interest,
+            'Nombre': name,
+            'Email': replyto,
+            'Teléfono': phone,
+            'País': country,
+            'Interés': interest,
         };
 
         axios.post(
@@ -83,7 +87,8 @@ class BuyForm extends Component {
                 'category': 'Delivery App',
                 'Sujeto': name
             });
-            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, loading: false });
+            comp.setState({ send: false, name: '', replyto: '', phone: '', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, loading: false });
+            onChange('Targi', 'Colombia');
         })
         .catch(function (error) {
             comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops algo ha sucedido enviando tu mensaje', showAlert: true });
@@ -95,14 +100,14 @@ class BuyForm extends Component {
             data,
             t
         } = this.props;
-
+        
         const { name, send, replyto, phone, showAlert, titleAlert, typeAlert, alertMessage, loading } = this.state;
         const isInValidName = (name === '' && send);
         const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
         const emailValidationMessage = (showErrorEmail && replyto !== '') ? 'Ingresa un correo valido' : 'Por favor ingresa tu correo';
         return (
             <ContentForm>
-                <form id="form"  ref={(form) => this.form = form} className="form form_targi"  method="POST" onSubmit={this.handleSubmit}>
+                <form ref={(form) => this.form = form} className="form form_targi"  method="POST" onSubmit={this.handleSubmit}>
                     <Field>
                         <label htmlFor="name">Nombre y Apellido</label>
                         <input className="input-text" type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
