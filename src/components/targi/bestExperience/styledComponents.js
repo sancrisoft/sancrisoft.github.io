@@ -29,7 +29,7 @@ export const TabListCustom = styled(TabList)`
   align-items: center;
   margin-left: 0;
   background: #eeeeee;
-  width: 90%;
+  width: 95%;
   max-width: 400px;
   margin: 1em auto 4em;
   border-radius: 40px;
@@ -41,7 +41,7 @@ export const TabListCustom = styled(TabList)`
 
 export const TabCustom = styled(Tab)`
   cursor: pointer;
-  padding: .8em .2em;
+  padding: 1em .2em;
   position: relative;
   margin-bottom: 0;
   color: hsl(228,39%,23%);

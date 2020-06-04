@@ -100,7 +100,7 @@ export const CallToAction = styled(AnchorLink)`
 `;
 
 export const Section = styled.section`
-  padding: 2rem 0;
+  padding: 2rem 1em;
   text-align: center;
   h3 {
     font-family: 'BeVietnamMedium', sans-serif;
@@ -117,6 +117,7 @@ export const Section = styled.section`
   }
 
   ${breakpoint('tablet')`
+    padding: 2rem 0;
     h2{
       font-size: 3rem;
     }

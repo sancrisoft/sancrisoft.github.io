@@ -27,7 +27,8 @@ export const TabListCustom = styled(TabList)`
   display: flex;
   justify-content: center;
   background: #eeeeee;
-  max-width: 400px;
+  max-width: 380px;
+  width: 95%;
   margin: 1em auto 4em auto;
   border-radius: 40px;
   overflow: hidden;
@@ -35,7 +36,7 @@ export const TabListCustom = styled(TabList)`
 
 export const TabCustom = styled(Tab)`
   cursor: pointer;
-  padding: .8em .2em;
+  padding: 1em .2em;
   margin-bottom: 0;
   color: hsl(228,39%,23%);
   width: 50%;
@@ -49,6 +50,9 @@ export const TabCustom = styled(Tab)`
     background: hsl(12,88%,59%);
     color: #fff;
   }
+  ${breakpoint('tablet')`
+    padding: .8em .2em;
+  `}
 `;
 
 export const TabPanelCustom = styled(TabPanel)``;
