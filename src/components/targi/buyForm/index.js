@@ -19,7 +19,8 @@ class BuyForm extends Component {
         typeAlert: 'success',
         alertMessage: '',
         titleAlert: 'Message',
-        sortedCases: []
+        sortedCases: [],
+     loading: false,
     }
 
     // Validations Form
@@ -59,7 +60,8 @@ class BuyForm extends Component {
     
     onChange = () => {
         const comp = this;
-        const { name, replyto, phone, country, interest } = this.state;
+        const { name, replyto, phone, country, interest, loading } = this.state;
+        this.setState({ loading: true });
 
         const opts = {
             Nombre: name,
@@ -81,7 +83,7 @@ class BuyForm extends Component {
                 'category': 'Delivery App',
                 'Sujeto': name
             });
-            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, });
+            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, loading: false });
         })
         .catch(function (error) {
             comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops algo ha sucedido enviando tu mensaje', showAlert: true });
@@ -94,7 +96,7 @@ class BuyForm extends Component {
             t
         } = this.props;
 
-        const { name, send, replyto, phone, showAlert, titleAlert, typeAlert, alertMessage } = this.state;
+        const { name, send, replyto, phone, showAlert, titleAlert, typeAlert, alertMessage, loading } = this.state;
         const isInValidName = (name === '' && send);
         const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);
         const emailValidationMessage = (showErrorEmail && replyto !== '') ? 'Ingresa un correo valido' : 'Por favor ingresa tu correo';
@@ -125,7 +127,9 @@ class BuyForm extends Component {
 
                     <Field>
                         <div className="wrapper_button">
-                        <button className="input-btn" type="button" onClick={this.handleSubmit}>Enviar</button>
+                            <button className="input-btn"  type="button" onClick={this.handleSubmit}>
+                                {loading ? (<span className="loading"></span>) : 'Enviar'}
+                            </button>
                         </div>
                     </Field>
                 </form>
