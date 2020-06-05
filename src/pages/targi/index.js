@@ -80,7 +80,7 @@ class IndexPage extends Component {
                                     <h2>Targi</h2>
                                     <h1>App Móvil para Tu Negocio</h1>
                                     <h3>¡Lleva tus ventas al mundo del ecommerce con tu propia marca!</h3>
-                                    <CallToAction>¡Comprar Ahora!</CallToAction>
+                                    <CallToAction href="#form">¡Comprar Ahora!</CallToAction>
                                 </div>
                                 <img src={HeroImage} alt="Targi" />
                             </PageSizer>

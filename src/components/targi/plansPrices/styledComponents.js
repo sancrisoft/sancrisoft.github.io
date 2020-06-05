@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export const BoxCase = styled.div`
   display: flex;
@@ -26,7 +27,8 @@ export const TabListCustom = styled(TabList)`
   display: flex;
   justify-content: center;
   background: #eeeeee;
-  max-width: 400px;
+  max-width: 380px;
+  width: 95%;
   margin: 1em auto 4em auto;
   border-radius: 40px;
   overflow: hidden;
@@ -34,7 +36,7 @@ export const TabListCustom = styled(TabList)`
 
 export const TabCustom = styled(Tab)`
   cursor: pointer;
-  padding: .8em .2em;
+  padding: 1em .2em;
   margin-bottom: 0;
   color: hsl(228,39%,23%);
   width: 50%;
@@ -48,6 +50,9 @@ export const TabCustom = styled(Tab)`
     background: hsl(12,88%,59%);
     color: #fff;
   }
+  ${breakpoint('tablet')`
+    padding: .8em .2em;
+  `}
 `;
 
 export const TabPanelCustom = styled(TabPanel)``;
@@ -61,7 +66,7 @@ export const PageSizer = styled.div`
     `}
 `;
 
-export const CallToAction = styled.button`
+export const CallToAction = styled(AnchorLink)`
   font-family: 'BeVietnamMedium', sans-serif;
   font-size: 0.8rem;
   background-color: hsl(12, 88%, 59%);
@@ -73,11 +78,13 @@ export const CallToAction = styled.button`
   line-height: 1rem;
   outline: 0 none;
   width: 160px;
+  text-decoration: none;
 `;
 
 export const CallToActionWhite = styled(CallToAction)`
   color: hsl(12, 88%, 59%);
   background-color: #ffffff;
+  text-decoration: none;
 `;
 
 export const CallToActionSecondary = styled(CallToAction)`

@@ -28,18 +28,18 @@ const BoxPrices = ({
           <h4>Plan Mensual</h4>
           <Price><span className="currency">{currency}</span> <span className="amount">{priceMonthly}</span><br />/mes + IVA</Price>
           <p>Pagas mes a mes</p>
-          <CallToAction href="/">Comprar</CallToAction>
+          <CallToAction href="#form">Comprar</CallToAction>
         </PlanPanel>
         <PlanPanelYear>
           <h4>Plan Anual</h4>
           <Price><span className="currency">{currency}</span> <span className="amount">{priceAnnual}</span><br />/mes + IVA</Price>
           <p>Un solo pago anual de {currency} {priceAnnualTotal} + IVA</p>
-          <CallToActionWhite href="/">Comprar</CallToActionWhite>
+          <CallToActionWhite href="#form">Comprar</CallToActionWhite>
         </PlanPanelYear>
         <CustomSolutions>
           <h4>Solución Personalizada</h4>
           <p>¿Te agrada la idea de un app pero tu negocio necesita una solución diferente para sus necesidades?</p>
-          <CallToActionSecondary href="/">Contáctanos</CallToActionSecondary>
+          <CallToActionSecondary href="#form">Contáctanos</CallToActionSecondary>
         </CustomSolutions>
       </Plans>
       <SetupCost>
