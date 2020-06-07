@@ -43,7 +43,7 @@ const BoxPrices = ({
         </CustomSolutions>
       </Plans>
       <SetupCost>
-        <p>Se requiere costo de instalación de {currency} {installationCost} + IVA.<br />Un único pago para crear el app con tu marca.</p>
+        <p>Se requiere costo de instalación de {currency} {installationCost}.<br />Un único pago para crear el app con tu marca.</p>
       </SetupCost>
     </React.Fragment>
   )

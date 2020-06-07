@@ -60,7 +60,7 @@ class BuyForm extends Component {
     
     onChange = () => {
         const comp = this;
-        const { name, replyto, phone, country, interest, loading } = this.state;
+        const { name, replyto, phone, country, interest } = this.state;
         this.setState({ loading: true });
 
         const opts = {
@@ -91,11 +91,6 @@ class BuyForm extends Component {
     }
 
     render() {
-        const {
-            data,
-            t
-        } = this.props;
-
         const { name, send, replyto, phone, showAlert, titleAlert, typeAlert, alertMessage, loading } = this.state;
         const isInValidName = (name === '' && send);
         const showErrorEmail = (replyto !== '' && !this.validateEmail(replyto)) || (replyto === '' && send);

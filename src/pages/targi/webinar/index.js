@@ -28,7 +28,7 @@ class IndexPage extends Component {
                             <h2>Targi</h2>
                             <h1>¡Gracias por suscribirte a nuestro webinar!</h1>
                             <h3>Te enviaremos un recordatorio un día antes del evento.</h3>
-                            <CallToActionLink href="/targi">Conocer Más</CallToActionLink>
+                            <CallToActionLink to="/targi">Conocer Más</CallToActionLink>
                         </div>
                         <img src={HeroImage} alt="Targi" />
                     </PageSizer>

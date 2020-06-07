@@ -5,7 +5,6 @@ import Viewport from '../../components/HOC/withViewportHandler'
 
 import SEO from '../../components/seo'
 import { GlobalFonts } from '../../components/styledComponents'
-import Layout from '../../components/layout'
 
 import HeroImage from '../../images/targi/hero.png'
 import HeroBackground from '../../images/targi/bg.jpg'
@@ -49,10 +48,10 @@ import {
     HelpSection,
     BuySection,
     SectionForm,
-    ContentWhatsapp,
-    WhatsappLogo,
-    WhatsappText,
-    WhatsappButton,
+    ContentWhatsApp,
+    WhatsAppLogo,
+    WhatsAppText,
+    WhatsAppButton,
     Footer,
   } from '../../styles/targi/styledComponents';
 
@@ -78,7 +77,7 @@ class IndexPage extends Component {
                             <PageSizer>
                                 <div>
                                     <h2>Targi</h2>
-                                    <h1>App Móvil para Tu Negocio</h1>
+                                    <h1>App de Delivery para Tu Negocio</h1>
                                     <h3>¡Lleva tus ventas al mundo del ecommerce con tu propia marca!</h3>
                                     <CallToAction href="#form">¡Comprar Ahora!</CallToAction>
                                 </div>
@@ -215,21 +214,21 @@ class IndexPage extends Component {
                                         onChange={(interestIndex, countryIndex) => this.setState({ interest: interestIndex, country: countryIndex })}
                                     />
 
-                                    <ContentWhatsapp>
-                                        <WhatsappLogo>
+                                    <ContentWhatsApp>
+                                        <WhatsAppLogo>
                                             <Icons
                                                 height={60}
                                                 width={60}
                                                 iconName={'whatsapp'}
                                                 backgroundColor="#fff"
                                             />
-                                        </WhatsappLogo>
-                                        <WhatsappText>Prefieres comunicarte por Whatsapp?</WhatsappText>
-                                        <WhatsappButton 
-                                            href="https://api.whatsapp.com/send?phone=NUMBER&text=Bienvenido%20a%20Sancrisoft%20en%20un%20momento%20te%20atenderemos">
+                                        </WhatsAppLogo>
+                                        <WhatsAppText>¿Prefieres comunicarte por Whatsapp?</WhatsAppText>
+                                        <WhatsAppButton 
+                                            href={`https://api.whatsapp.com/send?phone=${encodeURIComponent('+573054288364')}&text=${encodeURIComponent('Hola Sancrisoft, estoy interesado en Targi y necesito más información.')}`}>
                                             Escríbenos
-                                        </WhatsappButton>
-                                    </ContentWhatsapp>
+                                        </WhatsAppButton>
+                                    </ContentWhatsApp>
                                 </SectionForm>
                             </PageSizer>
                         </BuySection>

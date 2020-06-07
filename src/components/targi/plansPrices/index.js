@@ -24,10 +24,10 @@ const PlansAndPrices = () => {
             <PageSizer>
               <BoxPrices 
                 currency="COP"
-                priceMonthly="349.900"
-                priceAnnual="299.900"
-                priceAnnualTotal="3.598.800"
-                installationCost="1.800.000"
+                priceMonthly="299.900"
+                priceAnnual="249.917"
+                priceAnnualTotal="2.999.000"
+                installationCost="1.800.000 + IVA"
                 onChangeInterest={() => { console.log('interest'); }}
               />
             </PageSizer>

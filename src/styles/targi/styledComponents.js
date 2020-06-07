@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint';
-import BgForm from '../../images/targi/form/pattern.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Link } from 'gatsby';
 
 /*
 * Primary Colors 
@@ -43,6 +43,7 @@ export const Hero = styled.section`
     color: hsl(228, 39%, 23%);
     font-size: 2.5rem;
     padding: 1rem 0;
+    max-width: 600px;
   }
 
   h2 {
@@ -56,7 +57,7 @@ export const Hero = styled.section`
     color: #9B9BA6;
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   img {
@@ -81,8 +82,6 @@ export const Hero = styled.section`
       font-size: 3rem;
     }
   `}
-  ${breakpoint('desktop')`
-  `}
 `
 
 export const CallToAction = styled(AnchorLink)`
@@ -99,7 +98,7 @@ export const CallToAction = styled(AnchorLink)`
   text-decoration: none;
 `;
 
-export const CallToActionLink = styled.a`
+export const CallToActionLink = styled(Link)`
   font-family: 'BeVietnamMedium', sans-serif;
   font-size: 0.8rem;
   background-color: hsl(12, 88%, 59%);
@@ -135,8 +134,6 @@ export const Section = styled.section`
     h2{
       font-size: 3rem;
     }
-  `}
-  ${breakpoint('desktop')`
   `}
 `;
 
@@ -234,8 +231,6 @@ export const Problems = styled.div`
       flex-wrap: wrap;
       justify-content: space-between;
     `}
-    ${breakpoint('desktop')`
-    `}
 `;
 
 export const ProblemCard = styled.div`
@@ -259,8 +254,6 @@ export const ProblemCard = styled.div`
   ${breakpoint('tablet')`
     width: 48%;
   `}
-  ${breakpoint('desktop')`
-  `}
 `;
 
 export const Benefits = styled.div`
@@ -274,8 +267,6 @@ export const Benefits = styled.div`
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-    `}
-    ${breakpoint('desktop')`
     `}
 `;
 
@@ -351,8 +342,6 @@ export const Footer  = styled.footer`
       margin: 0;
     }  
   `}
-  ${breakpoint('desktop')`
-  `}
   }
 `;
 
@@ -375,7 +364,7 @@ export const SectionForm = styled.section`
   }
 `;
 
-export const ContentWhatsapp  = styled.div`
+export const ContentWhatsApp  = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -386,7 +375,7 @@ export const ContentWhatsapp  = styled.div`
   `}
 `;
 
-export const WhatsappLogo  = styled.div`
+export const WhatsAppLogo  = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,7 +388,7 @@ export const WhatsappLogo  = styled.div`
   `}
 `;
 
-export const WhatsappText  = styled.p`
+export const WhatsAppText  = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,7 +404,7 @@ export const WhatsappText  = styled.p`
   `}
 `;
 
-export const WhatsappButton  = styled.a`
+export const WhatsAppButton  = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import { I18nextProvider, withNamespaces } from "react-i18next"
 import i18n from '../../data/translations'
