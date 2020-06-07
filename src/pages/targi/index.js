@@ -5,6 +5,7 @@ import Viewport from '../../components/HOC/withViewportHandler'
 
 import SEO from '../../components/seo'
 import { GlobalFonts } from '../../components/styledComponents'
+import Layout from '../../components/layout'
 
 import HeroImage from '../../images/targi/hero.png'
 import HeroBackground from '../../images/targi/bg.jpg'
