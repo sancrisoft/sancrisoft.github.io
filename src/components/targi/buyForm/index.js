@@ -83,10 +83,10 @@ class BuyForm extends Component {
                 'category': 'Delivery App',
                 'Sujeto': name
             });
-            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: 'Tu mensaje ha sido enviado', typeAlert: 'success', alertMessage: '', showAlert: true, loading: false });
+            comp.setState({ send: false, name: '', replyto: '', phone: '', country: 'Colombia', interest: 'Targi', titleAlert: '¡Gracias por escribirnos!\nAlguien de nuestro equipo te contactará en breve.', typeAlert: 'success', alertMessage: '', showAlert: true, loading: false });
         })
         .catch(function (error) {
-            comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops algo ha sucedido enviando tu mensaje', showAlert: true });
+            comp.setState({ titleAlert: 'Oops algo ha sucedido enviando tu mensaje', typeAlert: 'info', alertMessage: 'Oops, algo ha sucedido enviando tu mensaje', showAlert: true });
         });
     }
 
