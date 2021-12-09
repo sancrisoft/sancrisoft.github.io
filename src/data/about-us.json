@@ -17,6 +17,19 @@
             ]
         },
         {
+            "id": "samuel",
+            "fullName": "Samuel Granja",
+            "socialMedia": [{
+                    "type": "mail",
+                    "value": "mailto:samuel@sancrisoft.com"
+                },
+                {
+                    "type": "linkedin",
+                    "value": "https://www.linkedin.com/in/samuelgranja"
+                }
+            ]
+        },
+        {
             "id": "juan",
             "fullName": "Juan Gonzalez",
             "socialMedia": [{
@@ -73,36 +86,6 @@
                 {
                     "type": "linkedin",
                     "value": "https://www.linkedin.com/in/johanjmoncada/"
-                }
-            ]
-        },
-        {
-            "id": "samuel",
-            "fullName": "Samuel Granja",
-            "socialMedia": [{
-                    "type": "mail",
-                    "value": "mailto:samuel@sancrisoft.com"
-                },
-                {
-                    "type": "linkedin",
-                    "value": "https://www.linkedin.com/in/samuelgranja"
-                }
-            ]
-        },
-        {
-            "id": "bryan",
-            "fullName": "Bryan Villamil",
-            "socialMedia": [{
-                    "type": "mail",
-                    "value": "mailto:bryan.v@sancrisoft.com"
-                },
-                {
-                    "type": "twitter",
-                    "value": "https://twitter.com/bryan1017200"
-                },
-                {
-                    "type": "linkedin",
-                    "value": "https://www.linkedin.com/in/bryanvillamil/"
                 }
             ]
         },

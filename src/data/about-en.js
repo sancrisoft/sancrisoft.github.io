@@ -17,7 +17,7 @@ const about = {
                 message1: "Crafting web & mobile solutions that users love",
             },
             samuel: {
-                position: "Full Stack Developer & Co-founder",
+                position: "COO & Co-founder",
                 message1: "In God I trust, in apps I work",
             },
             carlos: {

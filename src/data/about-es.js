@@ -17,7 +17,7 @@ const aboutES = {
                 message1: "Creando soluciones web & móvil que los usuarios amen",
             },
             samuel: {
-                position: "Desarrollador Full Stack & Co-fundador",
+                position: "COO & Co-fundador",
                 message1: "En Dios confío, en apps trabajo",
             },
             carlos: {
