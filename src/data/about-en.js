@@ -9,15 +9,15 @@ const about = {
         title: 'Meet the Team',
         members: {
             jhony: {
-                position: "CEO & Co-founder",
+                position: "CEO",
                 message1: "Working on weekdays, riding on weekends",
             },
             juan: {
-                position: "Project Leader & Co-founder",
+                position: "Project Leader",
                 message1: "Crafting web & mobile solutions that users love",
             },
             samuel: {
-                position: "COO & Co-founder",
+                position: "COO",
                 message1: "In God I trust, in apps I work",
             },
             carlos: {
@@ -29,7 +29,7 @@ const about = {
                 message1: "I'm Drummer, I love to create and add value to the apps"
             },
             johan: {
-                position: "Full Stack Developer & Co-founder",
+                position: "Full Stack Developer",
                 message1: "I’m passionate about trucks, reggaeton, soccer, cars and technology",
             },
             bryan: {

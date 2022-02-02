@@ -9,15 +9,15 @@ const aboutES = {
         title: 'Conoce al Equipo',
         members: {
             jhony: {
-                position: "CEO & Co-fundador",
+                position: "CEO",
                 message1: "Trabajo en la semana, monto bicicleta los fines de semana",
             },
             juan: {
-                position: "Líder de Proyecto & Co-fundador",
+                position: "Líder de Proyecto",
                 message1: "Creando soluciones web & móvil que los usuarios amen",
             },
             samuel: {
-                position: "COO & Co-fundador",
+                position: "COO",
                 message1: "En Dios confío, en apps trabajo",
             },
             carlos: {
@@ -29,7 +29,7 @@ const aboutES = {
                 message1: "Soy baterista, amo crear y agregar valor a las aplicaciones"
             },
             johan: {
-                position: "Desarrollador Full Stack & Co-fundador",
+                position: "Desarrollador Full Stack",
                 message1: "Me apasionan los camiones, el reggaeton, el fútbol, los carros y la tecnología",
             },
             bryan: {

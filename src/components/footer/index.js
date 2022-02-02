@@ -42,10 +42,6 @@ class Footer extends Component {
                 <Menu isBlack />
                 <LanguageButtons isBlack changeLanguage={this.changeLanguage} language={language} />
               </div>
-              <Address>
-                <span>Calle 49 Sur #45 A 300.</span>
-                <span>Envigado, Antioquia, Colombia.</span>
-                <a href="tel:+5744797416">+57 (4) 4797416</a></Address>
             </div>
             <Networks>
               <ContentIcon>
